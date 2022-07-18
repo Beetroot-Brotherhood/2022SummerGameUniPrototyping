@@ -10,9 +10,20 @@ public class FmodStudioFootstepsEvents : MonoBehaviour
     [FMODUnity.EventRef]
     public string inputsound;
     
-    void PlayFootsteps()
+    void PlayStep()
     {
         FMODUnity.RuntimeManager.PlayOneShot (inputsound);
     }
+
+
+
+
+
+
+
+
+
+
+
 
 }
