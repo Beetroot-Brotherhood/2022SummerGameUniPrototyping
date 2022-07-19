@@ -28,7 +28,6 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Player created");
         characterController = GetComponent<CharacterController>();
         cameraTransform = Camera.main.transform;
     }
@@ -67,7 +66,6 @@ public class PlayerController : MonoBehaviour
     /// <param name="iv"></param>
     void OnMovement(InputValue iv)
     {
-        Debug.Log("Movement pressed");
         playerMovementInput = iv.Get<Vector2>();
     }
 }

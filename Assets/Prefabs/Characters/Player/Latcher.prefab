@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8911988291483106482}
   m_Layer: 6
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 8248098430749926601}
   - component: {fileID: 1245692847111400964}
   - component: {fileID: 7125598834688475303}
+  - component: {fileID: 7125598834688475304}
   m_Layer: 6
   m_Name: Latcher
   m_TagString: Player
@@ -195,6 +196,19 @@ MonoBehaviour:
   m_DefaultActionMap: LatcherControls
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &7125598834688475304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8334651529645444596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a947fe3f916ec994da3f4742de834af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  latchRange: 3
 --- !u!1 &8649772069631329641
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +223,7 @@ GameObject:
   - component: {fileID: 8413712436530276064}
   m_Layer: 6
   m_Name: Eyes
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

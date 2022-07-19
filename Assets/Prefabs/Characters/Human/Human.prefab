@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4441160647575501756}
   - component: {fileID: 2803112902609952506}
   - component: {fileID: 8471019446518578648}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Eyes
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,9 +109,9 @@ GameObject:
   - component: {fileID: 6158576561523511789}
   - component: {fileID: 55152313}
   - component: {fileID: 2455964782768224780}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Human
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -192,7 +192,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard + Mouse
-  m_DefaultActionMap: 71ff8ced-b75c-4cc1-9aef-f9bbbea4a161
+  m_DefaultActionMap: HumanControls
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!1 &7888923812695120908
@@ -207,9 +207,9 @@ GameObject:
   - component: {fileID: 2823085468300006867}
   - component: {fileID: 220708454704829875}
   - component: {fileID: 6491707328687326135}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
