@@ -9,6 +9,30 @@ using UnityEngine;
 
 public class FmodStudioFootstepsEvents : MonoBehaviour
 {
+    private FMOD.Studio.EventInstance instance;
+
+    [FMODUnity.EventRef]
+    public string fmodEvent;
+
+    [SerializeField] [Range(0, 10)]
+    public int surfaceType = 0;
+
+    void start()
+    {
+        instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
+        instance.start();
+    }
+
+    void FixedUpdate()
+    {
+        Debug.Log("Surface #: " +surfaceType);
+        instance.setParameterByName("SurfaceType", surfaceType);
+    }
+
+
+//! https://www.youtube.com/watch?v=xC8ssCCiRUQ&ab_channel=AlessandroFam%C3%A0 - Continue watching / Similar
+
+
     void PlayStep()
     {
         /* FMOD.Studio.EventInstance footstepSound;
@@ -18,10 +42,7 @@ public class FmodStudioFootstepsEvents : MonoBehaviour
         FMODUnity.RuntimeManager.PlayOneShot ("event:/FootstepsMultiSurfaceTest", GetComponent<Transform> ().position);
         Debug.Log("Animation Sound Trigger");
 
-
     }
-
-
 
 
 
