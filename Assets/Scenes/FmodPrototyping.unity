@@ -241,7 +241,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &552776282
 Transform:
   m_ObjectHideFlags: 0
@@ -360,6 +360,9 @@ MonoBehaviour:
       Data4: -332889090
     Path: event:/Footsteps/FootStepsMultiSurfaceTest
   surfaceType: 0
+  RayDistance: 1.2
+  MaterialTypes: []
+  DefaultMaterialValue: 0
 --- !u!1001 &573226322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -506,12 +509,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1147103750}
-  - component: {fileID: 1147103749}
   - component: {fileID: 1147103752}
   - component: {fileID: 1147103751}
   - component: {fileID: 1147103753}
   - component: {fileID: 1147103755}
   - component: {fileID: 1147103754}
+  - component: {fileID: 1147103757}
+  - component: {fileID: 1147103756}
   m_Layer: 0
   m_Name: FmodEmitter1
   m_TagString: Untagged
@@ -519,36 +523,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1147103749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1147103748}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -2053789829
-      Data2: 1100239229
-      Data3: -2136581231
-      Data4: 399335133
-    Path: event:/SoundTests/FootstepsTest
-  Event: 
-  PlayEvent: 13
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!4 &1147103750
 Transform:
   m_ObjectHideFlags: 0
@@ -640,15 +614,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: 
+  CollisionTag: Player
   Emitters:
   - Target: {fileID: 1147103755}
     Params:
     - Name: SurfaceType
       Value: 0
-  - Target: {fileID: 1147103749}
+  - Target: {fileID: 0}
     Params: []
-  TriggerEvent: 0
+  TriggerEvent: 13
 --- !u!114 &1147103755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -679,6 +653,35 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!65 &1147103756
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147103748}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.88, y: 9.61, z: 8.69}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1147103757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147103748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Parameter: SurfaceType
+  TriggerEvent: 3
+  Value: 2
 --- !u!1 &1321597265
 GameObject:
   m_ObjectHideFlags: 0

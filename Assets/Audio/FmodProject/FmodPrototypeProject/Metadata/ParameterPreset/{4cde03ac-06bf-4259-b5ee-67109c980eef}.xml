@@ -30,8 +30,14 @@
 			<value>Value I</value>
 			<value>Value J</value>
 		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
 		<property name="initialValue">
 			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
 		</property>
 		<relationship name="automators">
 			<destination>{a7294961-60b8-4927-b0c8-44ccf30e9019}</destination>
