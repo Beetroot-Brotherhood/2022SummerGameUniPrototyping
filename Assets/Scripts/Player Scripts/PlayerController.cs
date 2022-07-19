@@ -1,8 +1,10 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterController))]
-public class PlayerMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private CharacterController characterController;
 
@@ -15,13 +17,15 @@ public class PlayerMovement : MonoBehaviour
 
     #endregion
 
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
         Debug.Log("Player created");
         characterController = GetComponent<CharacterController>();
     }
 
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
         MovePlayer();
     }
@@ -41,6 +45,4 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("Movement pressed");
         playerMovementInput = iv.Get<Vector2>();
     }
-
-
 }
