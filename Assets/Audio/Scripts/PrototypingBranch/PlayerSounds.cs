@@ -48,25 +48,25 @@ public class PlayerSounds : MonoBehaviour
             if (surfaceRenderer)
             {
                 Debug.Log(surfaceRenderer.material.name);
-                if (surfaceRenderer.material.name.Contains("wood")) //! Sorry for the "if" mess to anyoone who reads this
+                if (surfaceRenderer.material.name.Contains("wood"))
                 {
                     //footsteps.setParameterByName("Footsteps", 1);
                     surfaceType = 1.0f;    
                 }
                 else if (surfaceRenderer.material.name.Contains("stone")) 
                 {
-                //footsteps.setParameterByName("Footsteps", 2);
-                surfaceType = 2.0f;
+                    //footsteps.setParameterByName("Footsteps", 2);
+                    surfaceType = 2.0f;
                 }
                 else if (surfaceRenderer.material.name.Contains("metal")) 
                 {
-                //footsteps.setParameterByName("Footsteps", 3);
-                surfaceType = 3.0f;
+                    //footsteps.setParameterByName("Footsteps", 3);
+                    surfaceType = 3.0f;
                 }
                 else if (surfaceRenderer.material.name.Contains("dirt")) 
                 {
-                //footsteps.setParameterByName("Footsteps", 4);
-                surfaceType = 4.0f;
+                    //footsteps.setParameterByName("Footsteps", 4);
+                    surfaceType = 4.0f;
                 }
                 else
                 {
