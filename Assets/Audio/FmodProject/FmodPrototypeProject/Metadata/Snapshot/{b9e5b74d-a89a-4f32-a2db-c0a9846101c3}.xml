@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="Snapshot" id="{b9e5b74d-a89a-4f32-a2db-c0a9846101c3}">
+		<property name="name">
+			<value>ReverbRoom2</value>
+		</property>
+		<relationship name="mixer">
+			<destination>{32a79eba-065d-4d83-a4a0-3fbed04aada1}</destination>
+		</relationship>
+		<relationship name="automatableProperties">
+			<destination>{717cce35-c745-4caa-b004-6e15e33ccc78}</destination>
+		</relationship>
+		<relationship name="markerTracks">
+			<destination>{a13c878f-a28b-4f1b-a7aa-d980fde1ddac}</destination>
+		</relationship>
+		<relationship name="timeline">
+			<destination>{ceab01b8-5f8b-4d6e-8585-fcd04724a64c}</destination>
+		</relationship>
+		<relationship name="snapshotMasterTrack">
+			<destination>{8d4dad92-e77f-41d6-9f53-f81cb77f2717}</destination>
+		</relationship>
+		<relationship name="snapshotProperties">
+			<destination>{451cce39-f3bf-4e17-a5bb-7e62fa8a0261}</destination>
+			<destination>{6658fa28-3478-4ce4-8df8-0573396775a9}</destination>
+		</relationship>
+		<relationship name="snapshotTracks">
+			<destination>{16d99f1f-9c1c-483b-98b8-cd6bcf1ff71e}</destination>
+		</relationship>
+	</object>
+	<object class="EventAutomatableProperties" id="{717cce35-c745-4caa-b004-6e15e33ccc78}" />
+	<object class="MarkerTrack" id="{a13c878f-a28b-4f1b-a7aa-d980fde1ddac}" />
+	<object class="Timeline" id="{ceab01b8-5f8b-4d6e-8585-fcd04724a64c}" />
+	<object class="SnapshotMasterTrack" id="{8d4dad92-e77f-41d6-9f53-f81cb77f2717}" />
+	<object class="SnapshotProperty" id="{451cce39-f3bf-4e17-a5bb-7e62fa8a0261}">
+		<property name="propertyName">
+			<value>wetLevel</value>
+		</property>
+		<property name="value">
+			<value>-30</value>
+		</property>
+		<relationship name="automatableObject">
+			<destination>{c43d52a8-2275-4080-9b88-db76400dd579}</destination>
+		</relationship>
+	</object>
+	<object class="SnapshotProperty" id="{6658fa28-3478-4ce4-8df8-0573396775a9}">
+		<property name="propertyName">
+			<value>wetLevel</value>
+		</property>
+		<property name="value">
+			<value>-80</value>
+		</property>
+		<relationship name="automatableObject">
+			<destination>{b74d55ed-f0bb-4d26-937b-1f5b46f55f99}</destination>
+		</relationship>
+	</object>
+	<object class="SnapshotTrack" id="{16d99f1f-9c1c-483b-98b8-cd6bcf1ff71e}">
+		<relationship name="mixerStrip">
+			<destination>{57527527-78d0-4a74-ae87-1ae7041c455f}</destination>
+		</relationship>
+	</object>
+</objects>

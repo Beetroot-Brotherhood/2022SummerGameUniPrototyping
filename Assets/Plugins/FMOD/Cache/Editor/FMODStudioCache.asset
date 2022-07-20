@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7822591130415693328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/ReverbRoom1
+  m_EditorClassIdentifier: 
+  Path: snapshot:/ReverbRoom1
+  Guid:
+    Data1: 1736749637
+    Data2: 1085209327
+    Data3: 553114274
+    Data4: -2094220695
+  Banks:
+  - {fileID: 2845926049900087284}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-7505748010946410005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,6 +234,33 @@ MonoBehaviour:
   - Metal
   - Dirt
   Exists: 1
+--- !u!114 &-2276894783013628027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/ReverbRoom2
+  m_EditorClassIdentifier: 
+  Path: snapshot:/ReverbRoom2
+  Guid:
+    Data1: -1176127667
+    Data2: 1328720026
+    Data3: -1446978654
+    Data4: -1023319676
+  Banks:
+  - {fileID: 2845926049900087284}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-2097673836119146341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +276,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637939245893315206
+  lastModified: 637939331301598348
   FileSizes:
   - Name: Desktop
     Value: 3333952
@@ -252,13 +306,15 @@ MonoBehaviour:
   - {fileID: -3006840868483530849}
   - {fileID: -7071922583498245288}
   - {fileID: 7381969449368291289}
+  - {fileID: -7822591130415693328}
+  - {fileID: -2276894783013628027}
   EditorParameters:
   - {fileID: 7458867300031834703}
   MasterBanks:
   - {fileID: 2845926049900087284}
   StringsBanks:
   - {fileID: 8845892068328792093}
-  cacheTime: 637939246162315104
+  cacheTime: 637939331301598348
   cacheVersion: 131591
 --- !u!114 &2566225087383993895
 MonoBehaviour:
@@ -275,10 +331,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637939246162315104
+  lastModified: 637939331291680567
   FileSizes:
   - Name: Desktop
-    Value: 24730144
+    Value: 12499584
   Exists: 1
 --- !u!114 &2845926049900087284
 MonoBehaviour:
@@ -295,10 +351,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637939245892724698
+  lastModified: 637939331290030189
   FileSizes:
   - Name: Desktop
-    Value: 29184
+    Value: 14472416
   Exists: 1
 --- !u!114 &7053653640678032035
 MonoBehaviour:
@@ -432,8 +488,8 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637939246161654536
+  lastModified: 637939331290040197
   FileSizes:
   - Name: Desktop
-    Value: 1294
+    Value: 1490
   Exists: 1

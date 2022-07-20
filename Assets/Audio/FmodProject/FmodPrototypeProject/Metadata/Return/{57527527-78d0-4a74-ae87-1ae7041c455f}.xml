@@ -19,18 +19,33 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{f735b930-1ebb-4925-bcd0-b70e6de84431}">
 		<relationship name="effects">
-			<destination>{db48bbad-8276-466d-b36a-e85b6693c2c5}</destination>
+			<destination>{c43d52a8-2275-4080-9b88-db76400dd579}</destination>
+			<destination>{b74d55ed-f0bb-4d26-937b-1f5b46f55f99}</destination>
 			<destination>{f46aa997-e035-4cba-8b9e-e6084f637b0e}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{4c53a3a0-882e-44d1-88b2-f688b1bd3b18}" />
-	<object class="SFXReverbEffect" id="{db48bbad-8276-466d-b36a-e85b6693c2c5}">
-		<property name="wetLevel">
-			<value>0</value>
+	<object class="ConvolutionReverbEffect" id="{c43d52a8-2275-4080-9b88-db76400dd579}">
+		<property name="endFrame">
+			<value>552725</value>
 		</property>
-		<property name="dryLevel">
+		<property name="wetLevel">
 			<value>-80</value>
 		</property>
+		<relationship name="referenceableData">
+			<destination>{118c1caa-bebe-451d-886b-d6b6c8c73a5d}</destination>
+		</relationship>
+	</object>
+	<object class="ConvolutionReverbEffect" id="{b74d55ed-f0bb-4d26-937b-1f5b46f55f99}">
+		<property name="endFrame">
+			<value>3057634</value>
+		</property>
+		<property name="wetLevel">
+			<value>-30</value>
+		</property>
+		<relationship name="referenceableData">
+			<destination>{32d05e52-01c9-4291-8cf1-925cfcc1e6c2}</destination>
+		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{f46aa997-e035-4cba-8b9e-e6084f637b0e}" />
 </objects>

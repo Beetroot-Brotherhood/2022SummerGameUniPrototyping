@@ -5,7 +5,7 @@
 			<value>HumanFootsteps</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{384940f2-78c9-47b4-b7c5-c286abd83c5d}</destination>
@@ -56,7 +56,7 @@
 			<destination>{24e20bec-8710-450f-927f-75c5faee4ebd}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{da2910f3-4c9f-4b82-8afd-5a03c706d2d0}</destination>
+			<destination>{a1d4b992-5cd6-4172-8e8d-bf3ffc6f8e32}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{0dc62423-7f2c-49aa-8ea9-8a6916b9c802}" />
@@ -213,7 +213,7 @@
 		<relationship name="effects">
 			<destination>{ea261fc4-eb4b-4cf1-b6ea-e5eaaa29e6f9}</destination>
 			<destination>{84ea13ca-78a0-425d-a4d9-b13f43839e0a}</destination>
-			<destination>{e9e06bbd-9d1c-45f7-b606-576d14be9be8}</destination>
+			<destination>{9b218fd1-e3c1-409c-8368-0da88b61cd2e}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{e56e04b7-a121-4051-8095-98de34d51e34}" />
@@ -526,21 +526,15 @@
 	<object class="MixerBusPanner" id="{1c2f04d6-809f-4749-b18f-e23fda33a7db}" />
 	<object class="MixerBusFader" id="{ea261fc4-eb4b-4cf1-b6ea-e5eaaa29e6f9}" />
 	<object class="SpatialiserEffect" id="{84ea13ca-78a0-425d-a4d9-b13f43839e0a}" />
-	<object class="ConvolutionReverbEffect" id="{e9e06bbd-9d1c-45f7-b606-576d14be9be8}">
-		<property name="bypass">
-			<value>true</value>
-		</property>
-		<property name="endFrame">
-			<value>3057634</value>
-		</property>
-		<property name="wetLevel">
-			<value>-32</value>
-		</property>
-		<property name="dryLevel">
+	<object class="MixerSend" id="{9b218fd1-e3c1-409c-8368-0da88b61cd2e}">
+		<property name="level">
 			<value>0</value>
 		</property>
-		<relationship name="referenceableData">
-			<destination>{32d05e52-01c9-4291-8cf1-925cfcc1e6c2}</destination>
+		<property name="inputFormat">
+			<value>2</value>
+		</property>
+		<relationship name="mixerReturn">
+			<destination>{57527527-78d0-4a74-ae87-1ae7041c455f}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{7404e0b7-70db-4752-ba18-4e64eeb6a70b}" />
