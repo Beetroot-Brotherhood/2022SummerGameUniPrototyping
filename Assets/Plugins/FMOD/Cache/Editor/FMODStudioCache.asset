@@ -116,6 +116,40 @@ MonoBehaviour:
   - Value I
   - Value J
   Exists: 1
+--- !u!114 &-3911427334045334996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/FootstepsMultiSurfaceTestOriginal/SurfaceType
+  m_EditorClassIdentifier: 
+  Name: SurfaceType
+  StudioPath: 
+  Min: 0
+  Max: 9
+  Default: 0
+  ID:
+    data1: 3520193432
+    data2: 1097992514
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - Value F
+  - Value G
+  - Value H
+  - Value I
+  - Value J
+  Exists: 1
 --- !u!114 &-3006840868483530849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,7 +193,7 @@ MonoBehaviour:
   Name: Footsteps
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 4
   Default: 0
   ID:
     data1: 1613936621
@@ -167,9 +201,11 @@ MonoBehaviour:
   Type: 2
   IsGlobal: 0
   Labels:
-  - Dirt
+  - DefaultBank
+  - Wood
   - Stone
   - Metal
+  - Dirt
   Exists: 1
 --- !u!114 &-2097673836119146341
 MonoBehaviour:
@@ -186,7 +222,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637938833784912419
+  lastModified: 637939194627091062
   FileSizes:
   - Name: Desktop
     Value: 3333952
@@ -215,13 +251,14 @@ MonoBehaviour:
   - {fileID: 8128013306256509966}
   - {fileID: -3006840868483530849}
   - {fileID: -7071922583498245288}
+  - {fileID: 7381969449368291289}
   EditorParameters:
   - {fileID: 7458867300031834703}
   MasterBanks:
   - {fileID: 2845926049900087284}
   StringsBanks:
   - {fileID: 8845892068328792093}
-  cacheTime: 637938833784912419
+  cacheTime: 637939194627091062
   cacheVersion: 131591
 --- !u!114 &2566225087383993895
 MonoBehaviour:
@@ -238,10 +275,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637938833784572339
+  lastModified: 637939194600071138
   FileSizes:
   - Name: Desktop
-    Value: 24695328
+    Value: 24730144
   Exists: 1
 --- !u!114 &2845926049900087284
 MonoBehaviour:
@@ -258,7 +295,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637938833782392622
+  lastModified: 637939194593840316
   FileSizes:
   - Name: Desktop
     Value: 29184
@@ -291,6 +328,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &7381969449368291289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FootstepsMultiSurfaceTestOriginal
+  m_EditorClassIdentifier: 
+  Path: event:/FootstepsMultiSurfaceTestOriginal
+  Guid:
+    Data1: 316120308
+    Data2: 1278157358
+    Data3: 1293066899
+    Data4: -517456005
+  Banks:
+  - {fileID: 2566225087383993895}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -3911427334045334996}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &7458867300031834703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,8 +432,8 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637938833782401843
+  lastModified: 637939194593850314
   FileSizes:
   - Name: Desktop
-    Value: 1228
+    Value: 1294
   Exists: 1

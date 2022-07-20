@@ -28,8 +28,8 @@ public class FmodStudioFootstepsEventsV2 : MonoBehaviour
         {
             //FMODUnity.RuntimeManager.AttachInstanceToGameObject(footsteps, transform);
             footsteps.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
-
-            //footsteps.setParameterByName("Footsteps", surfaceType); //! Enable for debugging using surface slider in the inspector
+            GroundSwitch();
+            footsteps.setParameterByName("Footsteps", surfaceType); //! Enable for debugging using surface slider in the inspector
             footsteps.start();
         }
 
@@ -48,28 +48,33 @@ public class FmodStudioFootstepsEventsV2 : MonoBehaviour
             if (surfaceRenderer)
             {
                 Debug.Log(surfaceRenderer.material.name);
-                if (surfaceRenderer.material.name.Contains("Wood")) //! Sorry for the "if" mess to anyoone who reads this
+                if (surfaceRenderer.material.name.Contains("wood")) //! Sorry for the "if" mess to anyoone who reads this
                 {
-                    footsteps.setParameterByName("Footsteps", 1);
+                    //footsteps.setParameterByName("Footsteps", 1);
+                    surfaceType = 1.0f;
 
                         if (surfaceRenderer.material.name.Contains("stone")) 
                         {
-                        footsteps.setParameterByName("Footsteps", 2);
+                        //footsteps.setParameterByName("Footsteps", 2);
+                        surfaceType = 2.0f;
                         }
 
                             if (surfaceRenderer.material.name.Contains("metal")) 
                             {
-                            footsteps.setParameterByName("Footsteps", 3);
+                            //footsteps.setParameterByName("Footsteps", 3);
+                            surfaceType = 3.0f;
                             }
 
-                                if (surfaceRenderer.material.name.Contains("Dirt")) 
+                                if (surfaceRenderer.material.name.Contains("dirt")) 
                                 {
-                                footsteps.setParameterByName("Footsteps", 4);
+                                //footsteps.setParameterByName("Footsteps", 4);
+                                surfaceType = 4.0f;
                                 }
                 }
                 else
                 {
-                    footsteps.setParameterByName("Footsteps", 0);
+                    //footsteps.setParameterByName("Footsteps", 0);
+                    surfaceType = 0.0f;
                 }
             }
         }
