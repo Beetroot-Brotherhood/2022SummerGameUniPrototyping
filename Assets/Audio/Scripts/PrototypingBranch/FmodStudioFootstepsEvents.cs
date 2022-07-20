@@ -9,13 +9,14 @@ using UnityEngine;
 
 public class FmodStudioFootstepsEvents : MonoBehaviour
 {
-    private FMOD.Studio.EventInstance stepController;
+    private FMOD.Studio.EventInstance instance;
 
     public FMODUnity.EventReference fmodEvent;
 
     
     [SerializeField] [Range(0, 10)]
     public int surfaceType = 0; //* Creating a scroll bar in the inspector window which can be used to test the material values
+
 
 
     private RaycastHit hit;
@@ -28,10 +29,9 @@ public class FmodStudioFootstepsEvents : MonoBehaviour
 
     void start()
     {
-        //instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
         //!stepController = FMODUnity.RuntimeManager.CreateInstance("event:/Footsteps/FootstepsMultiSurfaceTest");
-        stepController = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
-        stepController.start();
+        instance = FMODUnity.RuntimeManager.CreateInstance("fmodEvent");
+        instance.start();
 
 
         //instance.getParameterByName("SurfaceType", out surfaceType);
@@ -47,30 +47,30 @@ public class FmodStudioFootstepsEvents : MonoBehaviour
         Debug.Log("Surface #: " +surfaceType);
     
 
-        /* if (surfaceType == 0)
+        if (surfaceType == 0)
         {
-            stepController.setParameterByName("SurfaceType", surfaceType);
+            instance.setParameterByName("SurfaceType", surfaceType);
         }
 
         if (surfaceType == 1)
         {
-            stepController.setParameterByName("SurfaceType", surfaceType);
+            instance.setParameterByName("SurfaceType", surfaceType);
         }
 
         if (surfaceType == 2)
         {
-            stepController.setParameterByName("SurfaceType", surfaceType);
+            instance.setParameterByName("SurfaceType", surfaceType);
         }
 
         if (surfaceType == 3)
         {
-            stepController.setParameterByName("SurfaceType", surfaceType);
+            instance.setParameterByName("SurfaceType", surfaceType);
         }
 
         if (surfaceType == 4)
         {
-            stepController.setParameterByName("SurfaceType", surfaceType);
-        } */
+            instance.setParameterByName("SurfaceType", surfaceType);
+        }
 
     }
 
@@ -80,13 +80,13 @@ public class FmodStudioFootstepsEvents : MonoBehaviour
 //! https://alessandrofama.com/tutorials/fmod/unity/parameters
 
 
-    void PlayStep()
+    private void PlayStep()
     {
         /* FMOD.Studio.EventInstance footstepSound;
         footstepSound = FMODUnity.RuntimeManager.CreateInstance ("event:/FootstepsMultiSurfaceTest");
         footstepSound.start(); */
 
-        FMODUnity.RuntimeManager.PlayOneShot ("event:/Footsteps/FootstepsMultiSurfaceTest", GetComponent<Transform> ().position); //* Plays footstep sound bank
+        FMODUnity.RuntimeManager.PlayOneShot ("event:/Footsteps/FootStepsMultiSurfaceTest", GetComponent<Transform> ().position); //* Plays footstep sound bank
 
         FMODUnity.RuntimeManager.PlayOneShot ("event:/Footsteps/FootstepCloth", GetComponent<Transform> ().position); //* Plays footstep cloth layer sound bank
 
