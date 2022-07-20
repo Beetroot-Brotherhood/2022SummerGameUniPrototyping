@@ -1,0 +1,74 @@
+{
+    "name": "Slicer",
+    "maps": [
+        {
+            "name": "Slicer",
+            "id": "f532ce48-4f4c-4f3a-a6a6-06a4599afe94",
+            "actions": [
+                {
+                    "name": "RotateAntiClock",
+                    "type": "PassThrough",
+                    "id": "05506662-b82c-4d61-8c13-1af77813a792",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RotateClock",
+                    "type": "PassThrough",
+                    "id": "2a15071b-b4c2-4062-ab63-5ae68121f29b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Slice",
+                    "type": "Button",
+                    "id": "b5793949-9703-4b61-90cc-f39ca6c7b75b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "34531679-c1b4-4d2f-a269-43333b93d681",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateAntiClock",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5c5a3c61-4135-47e8-9a0b-8958ef9a8d12",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateClock",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "537b4cfe-4aaf-40d5-9f73-b6118a09441b",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Slice",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
