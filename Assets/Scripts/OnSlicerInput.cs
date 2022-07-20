@@ -18,6 +18,8 @@ public class OnSlicerInput : MonoBehaviour
     [HideInInspector] public bool onRotateAntiClock;
     [HideInInspector] public bool onRotateClock;
     [HideInInspector] public bool onSlice;
+
+    public GameObject slicer;
     
     public void OnRotateAntiClock (InputValue value) {
         onRotateAntiClock = value.isPressed;
@@ -31,12 +33,12 @@ public class OnSlicerInput : MonoBehaviour
         onSlice = value.isPressed;
     }
 
-    public void Update () {
+    public void FixedUpdate () {
         if (onRotateAntiClock) {
-            gameObject.transform.Rotate(Vector3.forward*0.8f, Space.Self);
+            slicer.transform.Rotate(Vector3.forward*5f, Space.Self);
             //onRotateAntiClock = false;
         }else if (onRotateClock) {
-            gameObject.transform.Rotate(Vector3.back*0.8f, Space.Self);
+            slicer.transform.Rotate(Vector3.back*5f, Space.Self);
             //onRotateClock = false;
         }
     }

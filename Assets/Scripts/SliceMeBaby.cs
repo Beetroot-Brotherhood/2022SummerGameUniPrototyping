@@ -44,6 +44,8 @@ public class SliceMeBaby : MonoBehaviour
                     Destroy(hitGameobjects[i].gameObject);
                 }
             }
+            cutPlane.transform.Rotate(Vector3.forward*180, Space.Self);
+            OnSlicerInput.instance.onSlice = false;
         }
     }
 
