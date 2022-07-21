@@ -107,8 +107,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8334651529645444597}
   - component: {fileID: 8248098430749926601}
-  - component: {fileID: 1245692847111400964}
   - component: {fileID: 7125598834688475303}
+  - component: {fileID: 1245692847111400964}
   - component: {fileID: 7125598834688475304}
   m_Layer: 6
   m_Name: Latcher
@@ -152,20 +152,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1245692847111400964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8334651529645444596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16855345b3ea15243a3748627d93155c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  rotationSpeed: 10
 --- !u!114 &7125598834688475303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,6 +182,20 @@ MonoBehaviour:
   m_DefaultActionMap: LatcherControls
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1245692847111400964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8334651529645444596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16855345b3ea15243a3748627d93155c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  rotationSpeed: 10
 --- !u!114 &7125598834688475304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +209,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   latchRange: 3
+  latchSpot: {fileID: 0}
+  latcherController: {fileID: 1245692847111400964}
+  humanController: {fileID: 0}
 --- !u!1 &8649772069631329641
 GameObject:
   m_ObjectHideFlags: 0
