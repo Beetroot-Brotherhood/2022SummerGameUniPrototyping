@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
 	<object class="MixerReturn" id="{57527527-78d0-4a74-ae87-1ae7041c455f}">
+		<property name="volume">
+			<value>-80</value>
+		</property>
 		<property name="overridingInputFormat">
 			<value>2</value>
 		</property>
 		<property name="name">
-			<value>Reverb</value>
+			<value>RoomRev</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{f735b930-1ebb-4925-bcd0-b70e6de84431}</destination>

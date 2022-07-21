@@ -55,33 +55,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 87272
---- !u!114 &-6337192277104883965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/Room1
-  m_EditorClassIdentifier: 
-  Path: snapshot:/Room1
-  Guid:
-    Data1: -1285415090
-    Data2: 1268016420
-    Data3: -887524417
-    Data4: 459042861
-  Banks:
-  - {fileID: 2845926049900087284}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
 --- !u!114 &-6104593363809947373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,7 +222,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637939565748313359
+  lastModified: 637939628005624840
   FileSizes:
   - Name: Desktop
     Value: 3333952
@@ -279,14 +252,15 @@ MonoBehaviour:
   - {fileID: -3006840868483530849}
   - {fileID: -7071922583498245288}
   - {fileID: 7381969449368291289}
-  - {fileID: -6337192277104883965}
+  - {fileID: 3663485237031296624}
+  - {fileID: 7829217468782157027}
   EditorParameters:
   - {fileID: 7458867300031834703}
   MasterBanks:
   - {fileID: 2845926049900087284}
   StringsBanks:
   - {fileID: 8845892068328792093}
-  cacheTime: 637939565748313359
+  cacheTime: 637939628005624840
   cacheVersion: 131591
 --- !u!114 &2566225087383993895
 MonoBehaviour:
@@ -303,7 +277,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637939565731266128
+  lastModified: 637939627992324114
   FileSizes:
   - Name: Desktop
     Value: 12499584
@@ -323,11 +297,38 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637939565729793860
+  lastModified: 637939627990803756
   FileSizes:
   - Name: Desktop
-    Value: 12260832
+    Value: 12263360
   Exists: 1
+--- !u!114 &3663485237031296624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Tunnel
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Tunnel
+  Guid:
+    Data1: 1707366710
+    Data2: 1136045103
+    Data3: -867084624
+    Data4: 436196137
+  Banks:
+  - {fileID: 2845926049900087284}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &7053653640678032035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -418,6 +419,33 @@ MonoBehaviour:
   - Value I
   - Value J
   Exists: 1
+--- !u!114 &7829217468782157027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Room
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Room
+  Guid:
+    Data1: -1285415090
+    Data2: 1268016420
+    Data3: -887524417
+    Data4: 459042861
+  Banks:
+  - {fileID: 2845926049900087284}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &8128013306256509966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,8 +488,8 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637939565729813856
+  lastModified: 637939627990833749
   FileSizes:
   - Name: Desktop
-    Value: 1440
+    Value: 1538
   Exists: 1
