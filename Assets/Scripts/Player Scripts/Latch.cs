@@ -65,6 +65,7 @@ public class Latch : MonoBehaviour
         if (canLatch) /// checks to see if the player can latch (Raycast check in OnUpdate)
         {
             transform.position = latchSpot.position;
+            transform.rotation = latchSpot.rotation;
             transform.parent = humanObject.transform;
             latcherController.enabled = false;
             humanController.enabled = true;

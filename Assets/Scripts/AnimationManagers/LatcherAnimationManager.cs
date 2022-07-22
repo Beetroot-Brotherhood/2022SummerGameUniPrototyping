@@ -2,23 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HumanAnimationManager : MonoBehaviour
+public class LatcherAnimationManager : MonoBehaviour
 {
     public Animator animator;
     public float speed;
 
-    public GameObject humanObject;
+    public GameObject latcherObject;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        bool walking = humanObject.GetComponent<PlayerController>().walking;
+        bool walking = latcherObject.GetComponent<PlayerController>().walking;
 
         if (walking == false)
         {
@@ -26,7 +26,7 @@ public class HumanAnimationManager : MonoBehaviour
         }
         else
         {
-            speed = 4;
+            speed = 5;
         }
         animator.SetFloat("Speed", speed);
     }

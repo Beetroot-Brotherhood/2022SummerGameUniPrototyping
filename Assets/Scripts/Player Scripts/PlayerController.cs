@@ -10,11 +10,14 @@ public class PlayerController : MonoBehaviour
 
     #region Movement Variables
 
-    private Vector2 playerMovementInput;
+    [HideInInspector]
+    public Vector2 playerMovementInput;
 
-    public float speed = 0f;
+    public float speed = 5f;
     [SerializeField]
     private float rotationSpeed = 20.0f;
+
+    public bool walking = false;
 
     #endregion
 
@@ -46,10 +49,20 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = new Vector3(playerMovementInput.x, 0.0f, playerMovementInput.y);
 
         movement = cameraTransform.forward * movement.z + cameraTransform.right * movement.x; /// moves the player in the direction the camera is looking
-        //movement.y = 0.0f;
+        movement.y = 0.0f;
+        Debug.Log(movement);
 
         characterController.Move(movement * Time.deltaTime * speed); /// lets the player move around
         characterController.Move(Physics.gravity * Time.deltaTime); /// adds gravity to the object - lets the player fall
+
+        if(movement.x == 0 & movement.z == 0)
+        {
+            walking = false;
+        }
+        else
+        {
+            walking = true;
+        }
     }
 
     void RotatePlayer()
@@ -66,6 +79,5 @@ public class PlayerController : MonoBehaviour
     void OnMovement(InputValue iv)
     {
         playerMovementInput = iv.Get<Vector2>();
-        speed = 5f;
     }
 }
