@@ -12,8 +12,7 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 playerMovementInput;
 
-    [SerializeField]
-    private float speed = 5.0f;
+    public float speed = 0f;
     [SerializeField]
     private float rotationSpeed = 20.0f;
 
@@ -67,5 +66,6 @@ public class PlayerController : MonoBehaviour
     void OnMovement(InputValue iv)
     {
         playerMovementInput = iv.Get<Vector2>();
+        speed = 5f;
     }
 }

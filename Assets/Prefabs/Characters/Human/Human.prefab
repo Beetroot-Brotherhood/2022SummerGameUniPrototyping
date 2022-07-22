@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6803439431966342512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.837, z: -0.169}
+  m_LocalPosition: {x: 0, y: 0.11, z: -0.292}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43,6 +43,8 @@ GameObject:
   - component: {fileID: 6158576561523511789}
   - component: {fileID: 55152313}
   - component: {fileID: 385200850}
+  - component: {fileID: 385200852}
+  - component: {fileID: 385200853}
   m_Layer: 7
   m_Name: Human
   m_TagString: Enemy
@@ -129,6 +131,41 @@ MonoBehaviour:
   m_DefaultActionMap: HumanControls
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!95 &385200852
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7374499353152715050}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 60450dfd6ba8b1f48ae79d1d09660189, type: 3}
+  m_Controller: {fileID: 9100000, guid: 6e0df60a71df04b4b9ad087e2732dfd9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &385200853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7374499353152715050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00077a66fd45e2442ae2ce0e7477ace4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 385200852}
+  speed: 0.19
+  humanObject: {fileID: 7374499353152715050}
 --- !u!1001 &17916130178861271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -141,12 +178,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 60450dfd6ba8b1f48ae79d1d09660189, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 60450dfd6ba8b1f48ae79d1d09660189, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 60450dfd6ba8b1f48ae79d1d09660189, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 60450dfd6ba8b1f48ae79d1d09660189, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 60450dfd6ba8b1f48ae79d1d09660189, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 60450dfd6ba8b1f48ae79d1d09660189, type: 3}
       propertyPath: m_LocalPosition.z
@@ -180,6 +229,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 60450dfd6ba8b1f48ae79d1d09660189, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6778770331015697573, guid: 60450dfd6ba8b1f48ae79d1d09660189, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4f1c67310342c424d8451dc684c67d0f, type: 2}
     - target: {fileID: 919132149155446097, guid: 60450dfd6ba8b1f48ae79d1d09660189, type: 3}
       propertyPath: m_Name
       value: Placeholder Jim
