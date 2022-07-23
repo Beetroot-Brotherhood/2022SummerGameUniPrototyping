@@ -55,33 +55,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-7071922583498245288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/ReverbTesting
-  m_EditorClassIdentifier: 
-  Path: event:/ReverbTesting
-  Guid:
-    Data1: -658833488
-    Data2: 1110972665
-    Data3: -1431518075
-    Data4: 154986206
-  Banks:
-  - {fileID: -2097673836119146341}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 87272
 --- !u!114 &-6104593363809947373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,10 +222,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637941334253227905
+  lastModified: 637941393046311513
   FileSizes:
   - Name: Desktop
-    Value: 3333952
+    Value: 1122912
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -277,18 +250,18 @@ MonoBehaviour:
   - {fileID: -6104593363809947373}
   - {fileID: 8128013306256509966}
   - {fileID: -3006840868483530849}
-  - {fileID: -7071922583498245288}
   - {fileID: 7381969449368291289}
   - {fileID: 3663485237031296624}
   - {fileID: 7829217468782157027}
   - {fileID: -8354494395336174928}
+  - {fileID: 7808210054214470601}
   EditorParameters:
   - {fileID: 7458867300031834703}
   MasterBanks:
   - {fileID: 2845926049900087284}
   StringsBanks:
   - {fileID: 8845892068328792093}
-  cacheTime: 637941334253227905
+  cacheTime: 637941393046311513
   cacheVersion: 131591
 --- !u!114 &2566225087383993895
 MonoBehaviour:
@@ -305,7 +278,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637941334227867511
+  lastModified: 637941393035977643
   FileSizes:
   - Name: Desktop
     Value: 12499584
@@ -325,10 +298,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637941334223487866
+  lastModified: 637941393034472273
   FileSizes:
   - Name: Desktop
-    Value: 12265856
+    Value: 12266176
   Exists: 1
 --- !u!114 &3663485237031296624
 MonoBehaviour:
@@ -447,6 +420,33 @@ MonoBehaviour:
   - Value I
   - Value J
   Exists: 1
+--- !u!114 &7808210054214470601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/AudioOcclusionTest
+  m_EditorClassIdentifier: 
+  Path: event:/AudioOcclusionTest
+  Guid:
+    Data1: -658833488
+    Data2: 1110972665
+    Data3: -1431518075
+    Data4: 154986206
+  Banks:
+  - {fileID: -2097673836119146341}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 87272
 --- !u!114 &7829217468782157027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,8 +516,8 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637941334223517868
+  lastModified: 637941393034492807
   FileSizes:
   - Name: Desktop
-    Value: 1618
+    Value: 1622
   Exists: 1

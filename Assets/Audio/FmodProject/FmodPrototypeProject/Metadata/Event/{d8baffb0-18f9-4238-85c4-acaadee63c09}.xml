@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{d8baffb0-18f9-4238-85c4-acaadee63c09}">
 		<property name="name">
-			<value>ReverbTesting</value>
+			<value>AudioOcclusionTest</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
@@ -100,6 +100,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{6680c7a9-d46a-4091-9a24-7d616deabeff}">
+		<property name="volume">
+			<value>-5</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -138,25 +141,10 @@
 	<object class="MixerBusEffectChain" id="{fff228ae-9f05-4041-a082-dc4c25155feb}">
 		<relationship name="effects">
 			<destination>{62b24ffb-69dc-4af8-9c84-a45d2c308c84}</destination>
-			<destination>{5b534cfd-6402-4736-9d20-bad63204051d}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{ef47b490-f0b5-43a2-b008-1a15cdfd03e1}" />
 	<object class="MixerBusFader" id="{a5704039-83bd-457d-a046-168295c003f6}" />
 	<object class="SpatialiserEffect" id="{c8c5511c-3dba-4329-86e9-c30193c731da}" />
 	<object class="MixerBusFader" id="{62b24ffb-69dc-4af8-9c84-a45d2c308c84}" />
-	<object class="ConvolutionReverbEffect" id="{5b534cfd-6402-4736-9d20-bad63204051d}">
-		<property name="endFrame">
-			<value>552725</value>
-		</property>
-		<property name="wetLevel">
-			<value>-43</value>
-		</property>
-		<property name="dryLevel">
-			<value>0</value>
-		</property>
-		<relationship name="referenceableData">
-			<destination>{118c1caa-bebe-451d-886b-d6b6c8c73a5d}</destination>
-		</relationship>
-	</object>
 </objects>
