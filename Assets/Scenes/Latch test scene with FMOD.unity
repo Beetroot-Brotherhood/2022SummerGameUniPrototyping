@@ -3609,7 +3609,7 @@ MonoBehaviour:
       Data2: 1231715391
       Data3: -1228178757
       Data4: -393254616
-    Path: event:/Footsteps/HumanFootsteps
+    Path: event:/Enemies/HumanFootsteps
   surfaceType: 0
 --- !u!4 &402718064
 Transform:
@@ -5791,7 +5791,7 @@ MonoBehaviour:
       Data2: 1231715391
       Data3: -1228178757
       Data4: -393254616
-    Path: event:/Footsteps/HumanFootsteps
+    Path: event:/Enemies/HumanFootsteps
   surfaceType: 0
 --- !u!4 &577195319
 Transform:
@@ -9747,7 +9747,6 @@ GameObject:
   m_Component:
   - component: {fileID: 944435347}
   - component: {fileID: 944435348}
-  - component: {fileID: 944435349}
   - component: {fileID: 944435350}
   m_Layer: 0
   m_Name: InsideRevTrigger
@@ -9784,36 +9783,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 46.1, y: 21.5, z: 44.4}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &944435349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 944435346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  EventReference:
-    Guid:
-      Data1: 1707366710
-      Data2: 1136045103
-      Data3: -867084624
-      Data4: 436196137
-    Path: snapshot:/Tunnel
-  Event: 
-  PlayEvent: 3
-  StopEvent: 4
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!114 &944435350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11264,7 +11233,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1026746520}
   - component: {fileID: 1026746522}
-  - component: {fileID: 1026746521}
   - component: {fileID: 1026746523}
   m_Layer: 0
   m_Name: OutsideRevTrigger
@@ -11288,36 +11256,6 @@ Transform:
   m_Father: {fileID: 1316158639}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1026746521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1026746519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  EventReference:
-    Guid:
-      Data1: -666256021
-      Data2: 1192758655
-      Data3: -1630376314
-      Data4: 674890428
-    Path: snapshot:/Outside
-  Event: 
-  PlayEvent: 3
-  StopEvent: 4
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!65 &1026746522
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26445,6 +26383,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Human (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7374499353152715050, guid: 9aec0cf67b7ab5e4d833ff29dc67a262, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7515610284000091129, guid: 9aec0cf67b7ab5e4d833ff29dc67a262, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -29947,7 +29889,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38906
+  m_Name: pb_Mesh73142
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

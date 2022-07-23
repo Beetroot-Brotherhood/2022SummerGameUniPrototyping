@@ -27,34 +27,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-7505748010946410005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SoundTests/FootstepsTest
-  m_EditorClassIdentifier: 
-  Path: event:/SoundTests/FootstepsTest
-  Guid:
-    Data1: -2053789829
-    Data2: 1100239229
-    Data3: -2136581231
-    Data4: 399335133
-  Banks:
-  - {fileID: 2845926049900087284}
-  - {fileID: 2566225087383993895}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-7033451422179485334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,7 +42,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637941909608387838
+  lastModified: 637941978356165344
   FileSizes:
   - Name: Desktop
     Value: 359264
@@ -201,7 +173,7 @@ MonoBehaviour:
   - {fileID: -2097673836119146341}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters:
   - {fileID: -4513117716936827606}
   MinDistance: 1
@@ -222,10 +194,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637941909608077765
+  lastModified: 637941978355985311
   FileSizes:
   - Name: Desktop
-    Value: 1413568
+    Value: 1413696
   Exists: 1
 --- !u!114 &-1888122231634846467
 MonoBehaviour:
@@ -285,6 +257,34 @@ MonoBehaviour:
   - Value I
   - Value J
   Exists: 1
+--- !u!114 &-1096751385609593747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Testing/FootstepsTest
+  m_EditorClassIdentifier: 
+  Path: event:/Testing/FootstepsTest
+  Guid:
+    Data1: -2053789829
+    Data2: 1100239229
+    Data3: -2136581231
+    Data4: 399335133
+  Banks:
+  - {fileID: 2845926049900087284}
+  - {fileID: 2566225087383993895}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,7 +304,6 @@ MonoBehaviour:
   - {fileID: -2097673836119146341}
   - {fileID: -7033451422179485334}
   EditorEvents:
-  - {fileID: -7505748010946410005}
   - {fileID: 3663485237031296624}
   - {fileID: 7829217468782157027}
   - {fileID: -8354494395336174928}
@@ -316,13 +315,14 @@ MonoBehaviour:
   - {fileID: 5265959137099050179}
   - {fileID: -5328250446649939161}
   - {fileID: -3260390537923834930}
+  - {fileID: -1096751385609593747}
   EditorParameters:
   - {fileID: 7458867300031834703}
   MasterBanks:
   - {fileID: 2845926049900087284}
   StringsBanks:
   - {fileID: 8845892068328792093}
-  cacheTime: 637941909608387838
+  cacheTime: 637941978356165344
   cacheVersion: 131591
 --- !u!114 &816488870915212680
 MonoBehaviour:
@@ -425,7 +425,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637941909605688774
+  lastModified: 637941978355745253
   FileSizes:
   - Name: Desktop
     Value: 12511808
@@ -445,7 +445,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637941909604288452
+  lastModified: 637941978354279861
   FileSizes:
   - Name: Desktop
     Value: 12266176
@@ -663,8 +663,8 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637941909604318451
+  lastModified: 637941978354309865
   FileSizes:
   - Name: Desktop
-    Value: 1822
+    Value: 1812
   Exists: 1
