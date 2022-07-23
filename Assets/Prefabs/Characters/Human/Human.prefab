@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6803439431966342512}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.154, z: -0.292}
+  m_LocalPosition: {x: 0, y: 0, z: -0.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 7167514886977473024}
   - component: {fileID: 6158576561523511789}
   - component: {fileID: 385200850}
-  - component: {fileID: 55152313}
+  - component: {fileID: 3690036670572186811}
   - component: {fileID: 385200852}
   - component: {fileID: 385200853}
   m_Layer: 7
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_DefaultActionMap: HumanControls
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &55152313
+--- !u!114 &3690036670572186811
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7374499353152715050}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16855345b3ea15243a3748627d93155c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e56c7852cd2bd14da421ee630579d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovementInput: {x: 0, y: 0}

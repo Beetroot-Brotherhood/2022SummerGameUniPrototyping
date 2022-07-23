@@ -9,16 +9,10 @@ public class HumanAnimationManager : MonoBehaviour
 
     public GameObject humanObject;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        bool walking = humanObject.GetComponent<PlayerController>().walking;
+        bool walking = humanObject.GetComponent<HumanController>().walking;
 
         if (walking == false)
         {

@@ -2,25 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 public class Latch : MonoBehaviour
 {
     [SerializeField]
     private float latchRange = 10.0f;
-    private bool canLatch = false;
+    public bool canLatch = false;
 
     public Transform latchSpot;
     public GameObject latcherObject, humanObject;
 
-    public PlayerController latcherController, humanController;
+    public LatcherController latcherController;
+    public HumanController humanController;
 
     public Cinemachine.CinemachineFreeLook cameraManager;
 
     private PlayerInput latchInput;
     private PlayerInput humanInput;
-
-    public Text latchText;
 
 
     // Start is called before the first frame update
@@ -34,7 +32,6 @@ public class Latch : MonoBehaviour
         humanInput = humanObject.GetComponent<PlayerInput>();
 
         latchInput.enabled = true;
-        latchText.enabled = false;
     }
 
     // Update is called once per frame
@@ -49,12 +46,10 @@ public class Latch : MonoBehaviour
             {
                 Debug.Log("Can Latch");
                 canLatch = true;
-                latchText.enabled = true;
             }
             else
             {
                 canLatch = false;
-                latchText.enabled = false;
             }
             
         }

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterController))]
-public class PlayerController : MonoBehaviour
+public class HumanController : MonoBehaviour
 {
     private CharacterController characterController;
 
@@ -27,11 +27,22 @@ public class PlayerController : MonoBehaviour
 
     #endregion
 
+    #region Interaction Variables
+
+    [SerializeField]
+    private float interactRange = 3.0f;
+    public bool canInteract = false;
+
+    public bool dooropen = false;
+
+    #endregion
+
     // Start is called before the first frame update
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         cameraTransform = Camera.main.transform;
+
     }
 
     // Update is called once per frame
@@ -39,6 +50,7 @@ public class PlayerController : MonoBehaviour
     {
         MovePlayer();
         RotatePlayer();
+        CanInteract();
     }
 
     /// <summary>
@@ -50,12 +62,11 @@ public class PlayerController : MonoBehaviour
 
         movement = cameraTransform.forward * movement.z + cameraTransform.right * movement.x; /// moves the player in the direction the camera is looking
         movement.y = 0.0f;
-        Debug.Log(movement);
 
         characterController.Move(movement * Time.deltaTime * speed); /// lets the player move around
         characterController.Move(Physics.gravity * Time.deltaTime); /// adds gravity to the object - lets the player fall
 
-        if(movement.x == 0 & movement.z == 0)
+        if (movement.x == 0 & movement.z == 0)
         {
             walking = false;
         }
@@ -72,6 +83,26 @@ public class PlayerController : MonoBehaviour
         transform.rotation = Quaternion.Lerp(transform.rotation, playerRotation, Time.deltaTime * rotationSpeed); /// turns the player in the direction the camera is looking
     }
 
+    void CanInteract()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, interactRange))
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+
+            if (hit.collider.tag == "Interactable")
+            {
+                Debug.Log("Can Interact");
+                canInteract = true;
+            }
+            else
+            {
+                canInteract = false;
+            }
+
+        }
+    }
+
     /// <summary>
     /// Gets the value from the InputSystem
     /// </summary>
@@ -79,5 +110,14 @@ public class PlayerController : MonoBehaviour
     void OnMovement(InputValue iv)
     {
         playerMovementInput = iv.Get<Vector2>();
+    }
+
+    void OnInteract()
+    {
+        if (canInteract)
+        {
+            Debug.Log("DoorOpen");
+            dooropen = true;
+        }
     }
 }
