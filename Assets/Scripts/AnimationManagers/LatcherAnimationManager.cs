@@ -9,16 +9,10 @@ public class LatcherAnimationManager : MonoBehaviour
 
     public GameObject latcherObject;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
-        bool walking = latcherObject.GetComponent<PlayerController>().walking;
+        bool walking = latcherObject.GetComponent<LatcherController>().walking;
 
         if (walking == false)
         {
