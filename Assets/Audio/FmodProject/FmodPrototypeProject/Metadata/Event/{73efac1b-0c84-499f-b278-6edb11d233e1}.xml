@@ -189,6 +189,9 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{c22c063b-2a07-4899-9614-74de5b444b41}">
+		<property name="start">
+			<value>1</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{e4a6d470-4f18-4d9b-bbdb-c9d530504d12}</destination>
 		</relationship>
@@ -219,9 +222,6 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{c795f101-52f7-4beb-94a8-45653706cb9a}">
-		<property name="start">
-			<value>1</value>
-		</property>
 		<relationship name="audioFile">
 			<destination>{aa1bf77e-fd7c-4c26-a690-455081799cc3}</destination>
 		</relationship>
@@ -391,7 +391,7 @@
 	</object>
 	<object class="AutomationPoint" id="{9104a9e7-1785-4387-98ab-b1e118ccc0d8}">
 		<property name="position">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<property name="value">
 			<value>3.81469727e-06</value>
@@ -399,7 +399,7 @@
 	</object>
 	<object class="AutomationPoint" id="{b6ffebd5-c69d-4886-9a1b-d4fa2a4fbfa2}">
 		<property name="position">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<property name="value">
 			<value>-80</value>
@@ -407,7 +407,7 @@
 	</object>
 	<object class="AutomationPoint" id="{cddad8dc-eb32-4741-8939-d3e3fbe66a08}">
 		<property name="position">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<property name="value">
 			<value>-19.5</value>
@@ -415,7 +415,7 @@
 	</object>
 	<object class="AutomationPoint" id="{6d71d5fa-de12-4a6e-934a-d63526b5856e}">
 		<property name="position">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<property name="value">
 			<value>-80</value>
@@ -423,7 +423,7 @@
 	</object>
 	<object class="AutomationPoint" id="{1990e036-4f58-48c6-bb7f-3add4f4d1356}">
 		<property name="position">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<property name="value">
 			<value>-19.5</value>
@@ -431,7 +431,7 @@
 	</object>
 	<object class="AutomationPoint" id="{6066dba5-31de-4947-a07c-d1f323c0f5fc}">
 		<property name="position">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<property name="value">
 			<value>-80</value>
