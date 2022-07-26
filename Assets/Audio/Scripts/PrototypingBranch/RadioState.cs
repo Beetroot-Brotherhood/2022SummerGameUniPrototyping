@@ -28,6 +28,19 @@ public class RadioState : MonoBehaviour
     void FixedUpdate()
     {
         radio.setParameterByName("RadioState", radioState);
-    }
+        //radio.setParameterByName("RadioState", radioState);
 
+        if (radioState == 1.0f)
+        {
+            radio.setParameterByName("RadioState", 0.0f);
+            Debug.Log("Radio On");
+        }
+        else 
+        {
+            radio.setParameterByName("RadioState", 1.0f);
+            Debug.Log("Radio Off");
+        }
+
+
+    }
 }
