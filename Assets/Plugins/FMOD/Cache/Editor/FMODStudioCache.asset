@@ -1,5 +1,29 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8628977840900549350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RadioTest/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3098557548
+    data2: 3029766217
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-8354494395336174928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,7 +66,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637942793943597120
+  lastModified: 637943952176316023
   FileSizes:
   - Name: Desktop
     Value: 359264
@@ -75,6 +99,35 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 87272
+--- !u!114 &-4902899465174522218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Testing/RadioTest
+  m_EditorClassIdentifier: 
+  Path: event:/Testing/RadioTest
+  Guid:
+    Data1: 1945087003
+    Data2: 1235160196
+    Data3: -613517134
+    Data4: -516697583
+  Banks:
+  - {fileID: -2097673836119146341}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -8628977840900549350}
+  - {fileID: 3349095417434135633}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 250909
 --- !u!114 &-4513117716936827606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,10 +247,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637942793946861551
+  lastModified: 637943952179276678
   FileSizes:
   - Name: Desktop
-    Value: 1413696
+    Value: 4578272
   Exists: 1
 --- !u!114 &-1888122231634846467
 MonoBehaviour:
@@ -316,13 +369,14 @@ MonoBehaviour:
   - {fileID: -5328250446649939161}
   - {fileID: -3260390537923834930}
   - {fileID: -1096751385609593747}
+  - {fileID: -4902899465174522218}
   EditorParameters:
   - {fileID: 7458867300031834703}
   MasterBanks:
   - {fileID: 2845926049900087284}
   StringsBanks:
   - {fileID: 8845892068328792093}
-  cacheTime: 637942793946861551
+  cacheTime: 637943952179276678
   cacheVersion: 131591
 --- !u!114 &816488870915212680
 MonoBehaviour:
@@ -425,7 +479,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637942793945951282
+  lastModified: 637943952178856589
   FileSizes:
   - Name: Desktop
     Value: 12511808
@@ -445,10 +499,36 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637942793945008248
+  lastModified: 637943952177386264
   FileSizes:
   - Name: Desktop
     Value: 12266176
+  Exists: 1
+--- !u!114 &3349095417434135633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RadioTest/RadioState
+  m_EditorClassIdentifier: 
+  Name: RadioState
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1088831446
+    data2: 1811705897
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - On
+  - Off
   Exists: 1
 --- !u!114 &3663485237031296624
 MonoBehaviour:
@@ -663,8 +743,8 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637942793945038249
+  lastModified: 637943952177406264
   FileSizes:
   - Name: Desktop
-    Value: 1812
+    Value: 1892
   Exists: 1

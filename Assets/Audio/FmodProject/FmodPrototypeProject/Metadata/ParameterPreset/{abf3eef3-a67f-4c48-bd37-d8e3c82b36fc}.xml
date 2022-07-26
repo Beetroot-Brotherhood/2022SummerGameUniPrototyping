@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{abf3eef3-a67f-4c48-bd37-d8e3c82b36fc}">
+		<property name="name">
+			<value>RadioState</value>
+		</property>
+		<relationship name="folder">
+			<destination>{de7fd34e-c197-4fdc-8953-d4fcb4d65a96}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{57086e47-53ef-47b0-bb1d-de025331157a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{57086e47-53ef-47b0-bb1d-de025331157a}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>On</value>
+			<value>Off</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
