@@ -5,17 +5,16 @@ using UnityEngine;
 public class RadioState : MonoBehaviour
 {
 
-    [SerializeField]
-    //[EventRef]
-    private FMODUnity.EventReference _radio;
-    public HumanController humanController;
-
-    private bool RadioOn = true;
+    [SerializeField] private FMODUnity.EventReference _radio;
 
     private FMOD.Studio.EventInstance radio;
 
 
+    public HumanController humanController;
 
+
+    [SerializeField] [Range(0, 1)]
+    private float radioState = 1.0f;
 
    private void Awake()
    {
@@ -26,25 +25,9 @@ public class RadioState : MonoBehaviour
    }
 
 
-    void start()
-    {
-        radio.start();
-    }
-    
-
     void FixedUpdate()
     {
-
-        if (RadioOn == true)
-        {
-            radio.setParameterByName("Footsteps", 0);
-
-        }
-        else 
-        {
-            radio.setParameterByName("Footsteps", 1);
-        }
-
+        radio.setParameterByName("RadioState", radioState);
     }
 
 }
