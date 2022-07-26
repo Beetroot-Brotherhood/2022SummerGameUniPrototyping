@@ -405,6 +405,7 @@
 	<object class="MixerBusEffectChain" id="{8a40752e-170c-43af-b192-127f82845049}">
 		<relationship name="effects">
 			<destination>{7d03c4de-2d17-4ffd-b4cc-e59c012e5718}</destination>
+			<destination>{dffad225-2db7-4b33-a649-1ff7c2e5dff8}</destination>
 			<destination>{3ce5dfcf-57b6-49f7-80c6-90ee51cd7635}</destination>
 			<destination>{3042f1e7-e826-42ad-b34d-cf989886f3db}</destination>
 		</relationship>
@@ -828,6 +829,14 @@
 	</object>
 	<object class="MixerBusPanner" id="{4f8ec99c-57bb-42a1-8756-0ee545af4a8b}" />
 	<object class="MixerBusFader" id="{7d03c4de-2d17-4ffd-b4cc-e59c012e5718}" />
+	<object class="ProxyEffect" id="{dffad225-2db7-4b33-a649-1ff7c2e5dff8}">
+		<property name="inputFormat">
+			<value>1</value>
+		</property>
+		<relationship name="preset">
+			<destination>{44cc6064-ff00-45c1-9a4e-7c4d4a11d0a8}</destination>
+		</relationship>
+	</object>
 	<object class="SpatialiserEffect" id="{3ce5dfcf-57b6-49f7-80c6-90ee51cd7635}" />
 	<object class="ConvolutionReverbEffect" id="{3042f1e7-e826-42ad-b34d-cf989886f3db}">
 		<property name="bypass">
