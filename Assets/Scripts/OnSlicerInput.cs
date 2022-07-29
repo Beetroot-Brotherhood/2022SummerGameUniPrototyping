@@ -18,6 +18,7 @@ public class OnSlicerInput : MonoBehaviour
     [HideInInspector] public bool onRotateAntiClock;
     [HideInInspector] public bool onRotateClock;
     [HideInInspector] public bool onSlice;
+    [HideInInspector] public bool onGatherSlicedParts;
 
     public GameObject slicer;
     
@@ -31,6 +32,10 @@ public class OnSlicerInput : MonoBehaviour
 
     public void OnSlice (InputValue value) {
         onSlice = value.isPressed;
+    }
+
+    public void OnGatherSlicedParts(InputValue value) {
+        onGatherSlicedParts = value.isPressed;
     }
 
     public void FixedUpdate () {
