@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000028E345E3CD8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000001888A831998 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -21,6 +21,427 @@
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187691BD278
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187691BD278
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187691BD278
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187691BD278
+[LOG] SystemI::createSound                     : filename = Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018896BEC358 : node = 000001875DE07140
+[LOG] SystemI::createSound                     : add node to async list : head = 00000188816F4988.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018896BEC358
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 356288
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 2976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001875DE07250
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MachineryFan1', format=5, channels=2, frequency=48000, lengthbytes=355936, lengthpcm=1368000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.891266.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018896BEC358
+[LOG] SoundI::release                          : MachineryFan1 (00000187691BA4E8)
+[LOG] SoundI::release                          :     MachineryFan1 (000001887D278728)
+[LOG] SoundI::release                          :     MachineryFan1 (00000187691BD278)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187691B9E28
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187691B9E28
+[LOG] SystemI::createSound                     : filename = Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018896BEB938 : node = 000001875DE07280
+[LOG] SystemI::createSound                     : add node to async list : head = 00000188816F4988.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018896BEB938
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10742432
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 9088
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001875DE07390
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='AudioOcclusionTalkingTest', format=5, channels=1, frequency=48000, lengthbytes=287520, lengthpcm=1475674, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.891296.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018896BEB938
+[LOG] SoundI::release                          : AudioOcclusionTalkingTest (00000187691BC198)
+[LOG] SoundI::release                          :     AudioOcclusionTalkingTest (000001887D288CC8)
+[LOG] SoundI::release                          :     AudioOcclusionTalkingTest (00000187691BA338)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187691BDAE8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187691BDAE8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187691BDAE8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187691BDAE8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187691BDAE8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187691BDAE8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187691BDAE8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187691BDAE8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187691BDAE8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187691BDAE8
+[LOG] SystemI::createSound                     : filename = Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018896BEBC98 : node = 000001875DE073C0
+[LOG] SystemI::createSound                     : add node to async list : head = 00000188816F4988.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018896BEBC98
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 356288
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 2976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001875DE074D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MachineryFan1', format=5, channels=2, frequency=48000, lengthbytes=355936, lengthpcm=1368000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.891266.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018896BEBC98
+[LOG] SoundI::release                          : MachineryFan1 (0000018896BEC358)
+[LOG] SoundI::release                          :     MachineryFan1 (000001887D28A388)
+[LOG] SoundI::release                          :     MachineryFan1 (00000187691B9E28)
+[LOG] SystemI::createSound                     : filename = Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018896BEBAE8 : node = 000001875DE07640
+[LOG] SystemI::createSound                     : add node to async list : head = 00000188816F4988.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018896BEBAE8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10742432
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 9088
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001875DE07750
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='AudioOcclusionTalkingTest', format=5, channels=1, frequency=48000, lengthbytes=287520, lengthpcm=1475674, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.891296.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018896BEBAE8
+[LOG] SoundI::release                          : AudioOcclusionTalkingTest (0000018896BEB938)
+[LOG] SoundI::release                          :     AudioOcclusionTalkingTest (000001887D27AAE8)
+[LOG] SoundI::release                          :     AudioOcclusionTalkingTest (00000187691BDAE8)
+[LOG] SystemI::createSound                     : filename = Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018896BEB938 : node = 000001875DE07000
+[LOG] SystemI::createSound                     : add node to async list : head = 00000188816F4988.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018896BEB938
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 356288
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 2976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001875DE07110
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MachineryFan1', format=5, channels=2, frequency=48000, lengthbytes=355936, lengthpcm=1368000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.891266.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018896BEB938
+[LOG] SoundI::release                          : MachineryFan1 (0000018896BEBC98)
+[LOG] SoundI::release                          :     MachineryFan1 (000001887D28D788)
+[LOG] SoundI::release                          :     MachineryFan1 (000001875AB99738)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000188808DBC78
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000188808DBC78
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000188808DBC78
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000188808DBC78
+[LOG] SystemI::createSound                     : filename = Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018896BEC358 : node = 000001875DE07140
+[LOG] SystemI::createSound                     : add node to async list : head = 00000188816F4988.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018896BEC358
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10742432
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 9088
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001875DE07250
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='AudioOcclusionTalkingTest', format=5, channels=1, frequency=48000, lengthbytes=287520, lengthpcm=1475674, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.891296.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018896BEC358
+[LOG] SoundI::release                          : AudioOcclusionTalkingTest (0000018896BEBAE8)
+[LOG] SoundI::release                          :     AudioOcclusionTalkingTest (000001887D28E7C8)
+[LOG] SoundI::release                          :     AudioOcclusionTalkingTest (0000018790CF8208)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000188808DBC78
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000188808DBC78
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000188808DBC78
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000188808DBC78
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000188808DBC78
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000188808DBC78
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000188808DBC78
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000188808DBC78
+[LOG] SystemI::createSound                     : filename = Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018896BEC508 : node = 000001875DE073C0
+[LOG] SystemI::createSound                     : add node to async list : head = 00000188816F4988.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018896BEC508
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 356288
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 2976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001875DE074D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MachineryFan1', format=5, channels=2, frequency=48000, lengthbytes=355936, lengthpcm=1368000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.891266.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018896BEC508
+[LOG] SoundI::release                          : MachineryFan1 (0000018896BEB938)
+[LOG] SoundI::release                          :     MachineryFan1 (000001887D278728)
+[LOG] SoundI::release                          :     MachineryFan1 (00000188808DBC78)
+[LOG] SystemI::createSound                     : filename = Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 00000188C8FB03E8 : node = 0000018896F676C0
+[LOG] SystemI::createSound                     : add node to async list : head = 00000188816F4988.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000188C8FB03E8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 10742432
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 9088
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018896F677D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='AudioOcclusionTalkingTest', format=5, channels=1, frequency=48000, lengthbytes=287520, lengthpcm=1475674, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.891296.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000188C8FB03E8
+[LOG] SoundI::release                          : AudioOcclusionTalkingTest (0000018896BEC358)
+[LOG] SoundI::release                          :     AudioOcclusionTalkingTest (000001887D28BA48)
+[LOG] SoundI::release                          :     AudioOcclusionTalkingTest (00000188808DAEF8)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000187691BD938
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000187691BD938
+[LOG] SystemI::createSound                     : filename = Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 00000188C8FB0088 : node = 0000018896F67BC0
+[LOG] SystemI::createSound                     : add node to async list : head = 00000188816F4988.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000188C8FB0088
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 356288
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 2976
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018896F67CD0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MachineryFan1', format=5, channels=2, frequency=48000, lengthbytes=355936, lengthpcm=1368000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.891266.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000188C8FB0088
+[LOG] SoundI::release                          : MachineryFan1 (0000018896BEC508)
+[LOG] SoundI::release                          :     MachineryFan1 (000001887D28E7C8)
+[LOG] SoundI::release                          :     MachineryFan1 (00000187691BCA08)
+[LOG] SoundI::release                          :  (00000188816C1008)
+[LOG] SoundI::release                          :     FootstepsWood (1) (000001887D27C688)
+[LOG] SoundI::release                          :  (00000188816C22B8)
+[LOG] SoundI::release                          :     FootstepsWood (10) (000001887D284F08)
+[LOG] SoundI::release                          :  (00000188816BEEF8)
+[LOG] SoundI::release                          :     FootstepsWood (11) (000001887D277BC8)
+[LOG] SoundI::release                          :  (00000188816BFA78)
+[LOG] SoundI::release                          :     FootstepsWood (12) (000001887D285A68)
+[LOG] SoundI::release                          :  (00000188816C4AF8)
+[LOG] SoundI::release                          :     FootstepsWood (2) (000001887D283848)
+[LOG] SoundI::release                          :  (00000188816C0BB8)
+[LOG] SoundI::release                          :     FootstepsWood (3) (000001887D27B988)
+[LOG] SoundI::release                          :  (00000188816BF068)
+[LOG] SoundI::release                          :     FootstepsWood (4) (000001887D27F8E8)
+[LOG] SoundI::release                          :  (00000188816C4818)
+[LOG] SoundI::release                          :     FootstepsWood (5) (000001887D282E88)
+[LOG] SoundI::release                          :  (00000188816BD238)
+[LOG] SoundI::release                          :     FootstepsWood (6) (000001887D287128)
+[LOG] SoundI::release                          :  (00000188816C3288)
+[LOG] SoundI::release                          :     FootstepsWood (7) (000001887D282808)
+[LOG] SoundI::release                          :  (00000188816BE658)
+[LOG] SoundI::release                          :     FootstepsWood (8) (000001887D27CD08)
+[LOG] SoundI::release                          :  (00000188816C2CC8)
+[LOG] SoundI::release                          :     FootstepsWood (9) (000001887D2843A8)
+[LOG] SoundI::release                          :  (00000188816BF348)
+[LOG] SoundI::release                          :     DirtFootstep (3) (000001887D27C9C8)
+[LOG] SoundI::release                          :  (00000188816C40E8)
+[LOG] SoundI::release                          :     DirtFootstep (4) (000001887D283B88)
+[LOG] SoundI::release                          :  (00000188816BF908)
+[LOG] SoundI::release                          :     DirtFootstep (5) (000001887D2824C8)
+[LOG] SoundI::release                          :  (00000188816BE098)
+[LOG] SoundI::release                          :     DirtFootstep (6) (000001887D27EF28)
+[LOG] SoundI::release                          :  (00000188816C2428)
+[LOG] SoundI::release                          :     DirtFootstep (7) (000001887D282B48)
+[LOG] SoundI::release                          :  (00000188816C0038)
+[LOG] SoundI::release                          :     DirtFootstep (8) (000001887D286768)
+[LOG] SoundI::release                          :  (00000188816BBB38)
+[LOG] SoundI::release                          :     DirtFootstep (9) (000001887D27E3C8)
+[LOG] SoundI::release                          :  (00000188816BE378)
+[LOG] SoundI::release                          :     DirtFootstep (10) (000001887D27DD48)
+[LOG] SoundI::release                          :  (00000188816BDDB8)
+[LOG] SoundI::release                          :     DirtFootstep (11) (000001887D281628)
+[LOG] SoundI::release                          : MachineryFan1 (00000188C8FB0088)
+[LOG] SoundI::release                          :     MachineryFan1 (000001887D28DAC8)
+[LOG] SoundI::release                          :     MachineryFan1 (000001876601F178)
+[LOG] SoundI::release                          : LatchGameRadioShow 28 07 22#2 (00000188808DB918)
+[LOG] SoundI::release                          :     LatchGameRadioShow 28 07 22#2 (000001887D28C0C8)
+[LOG] SoundI::release                          :     LatchGameRadioShow 28 07 22#2 (00000187691BD938)
+[LOG] SoundI::release                          : AudioOcclusionTalkingTest (00000188C8FB03E8)
+[LOG] SoundI::release                          :     AudioOcclusionTalkingTest (000001887D28FE88)
+[LOG] SoundI::release                          :     AudioOcclusionTalkingTest (000001876601F838)
+[LOG] SoundI::release                          :  (00000188816C3C98)
+[LOG] SoundI::release                          :     FootstepsStone (8) (000001887D28ECA8)
+[LOG] SoundI::release                          :  (00000188816C4F48)
+[LOG] SoundI::release                          :     FootstepsStone (9) (000001887D28D2A8)
+[LOG] SoundI::release                          :  (00000188816C3118)
+[LOG] SoundI::release                          :     FootstepsStone (10) (000001887D28C408)
+[LOG] SoundI::release                          :  (00000188816C29E8)
+[LOG] SoundI::release                          :     FootstepsStone (11) (000001887D28D5E8)
+[LOG] SoundI::release                          :  (00000188816C57E8)
+[LOG] SoundI::release                          :     FootstepsStone (12) (000001887D28BF28)
+[LOG] SoundI::release                          :  (00000188816C4C68)
+[LOG] SoundI::release                          :     FootstepsStone (1) (000001887D2865C8)
+[LOG] SoundI::release                          :  (00000188816C4DD8)
+[LOG] SoundI::release                          :     FootstepsStone (2) (000001887D288988)
+[LOG] SoundI::release                          :  (00000188816C5AC8)
+[LOG] SoundI::release                          :     FootstepsStone (3) (000001887D28DFA8)
+[LOG] SoundI::release                          :  (00000188816C46A8)
+[LOG] SoundI::release                          :     FootstepsStone (4) (000001887D28B568)
+[LOG] SoundI::release                          :  (00000188816C3568)
+[LOG] SoundI::release                          :     FootstepsStone (5) (000001887D288B28)
+[LOG] SoundI::release                          :  (00000188816C5508)
+[LOG] SoundI::release                          :     FootstepsStone (6) (000001887D28BD88)
+[LOG] SoundI::release                          :  (00000188816C2598)
+[LOG] SoundI::release                          :     FootstepsStone (7) (000001887D28A048)
+[LOG] SoundI::release                          :  (00000188816C4538)
+[LOG] SoundI::release                          :     DirtFootstep (12) (000001887D284208)
+[LOG] SoundI::release                          :  (00000188816BC3D8)
+[LOG] SoundI::release                          :     DirtFootstep (1) (000001887D277068)
+[LOG] SoundI::release                          :  (00000188816BD968)
+[LOG] SoundI::release                          :     DirtFootstep (2) (000001887D27C828)
+[LOG] SoundI::release                          :  (00000188816BC548)
+[LOG] SoundI::release                          :     DefaultBank 7 (000001887D27F268)
+[LOG] SoundI::release                          :  (00000188816C01A8)
+[LOG] SoundI::release                          :     DefaultBank 8 (000001887D283EC8)
+[LOG] SoundI::release                          :  (00000188816BD0C8)
+[LOG] SoundI::release                          :     DefaultBank 9 (000001887D27FDC8)
+[LOG] SoundI::release                          :  (00000188816BEC18)
+[LOG] SoundI::release                          :     DefaultBank 10 (000001887D280C68)
+[LOG] SoundI::release                          :  (00000188816BFEC8)
+[LOG] SoundI::release                          :     DefaultBank 11 (000001887D27C1A8)
+[LOG] SoundI::release                          :  (00000188816C12E8)
+[LOG] SoundI::release                          :     DefaultBank 12 (000001887D282328)
+[LOG] SoundI::release                          :  (00000188816BF628)
+[LOG] SoundI::release                          :     DefaultBank 1 (000001887D27D868)
+[LOG] SoundI::release                          :  (00000188816BCC78)
+[LOG] SoundI::release                          :     DefaultBank 2 (000001887D281968)
+[LOG] SoundI::release                          :  (00000188816BDAD8)
+[LOG] SoundI::release                          :     DefaultBank 3 (000001887D27BB28)
+[LOG] SoundI::release                          :  (00000188816BCF58)
+[LOG] SoundI::release                          :     DefaultBank 4 (000001887D27FA88)
+[LOG] SoundI::release                          :  (00000188816BDC48)
+[LOG] SoundI::release                          :     DefaultBank 5 (000001887D282188)
+[LOG] SoundI::release                          :  (00000188816BCDE8)
+[LOG] SoundI::release                          :     DefaultBank 6 (000001887D280AC8)
+[LOG] SoundI::release                          :  (00000188816BC6B8)
+[LOG] SoundI::release                          :     FootstepsMetal (9) (000001887D280448)
+[LOG] SoundI::release                          :  (00000188816C1458)
+[LOG] SoundI::release                          :     FootstepsMetal (10) (000001887D2850A8)
+[LOG] SoundI::release                          :  (00000188816C39B8)
+[LOG] SoundI::release                          :     FootstepsMetal (11) (000001887D2836A8)
+[LOG] SoundI::release                          :  (00000188816BE4E8)
+[LOG] SoundI::release                          :     FootstepsMetal (12) (000001887D278588)
+[LOG] SoundI::release                          :  (00000188816C2878)
+[LOG] SoundI::release                          :     FootstepsMetal (1) (000001887D284888)
+[LOG] SoundI::release                          :  (00000188816BFD58)
+[LOG] SoundI::release                          :     FootstepsMetal (2) (000001887D2858C8)
+[LOG] SoundI::release                          :  (00000188816BDF28)
+[LOG] SoundI::release                          :     FootstepsMetal (3) (000001887D287948)
+[LOG] SoundI::release                          :  (00000188816C43C8)
+[LOG] SoundI::release                          :     FootstepsMetal (4) (000001887D286C48)
+[LOG] SoundI::release                          :  (00000188816BE208)
+[LOG] SoundI::release                          :     FootstepsMetal (5) (000001887D280E08)
+[LOG] SoundI::release                          :  (00000188816BF1D8)
+[LOG] SoundI::release                          :     FootstepsMetal (6) (000001887D2887E8)
+[LOG] SoundI::release                          :  (00000188816BB9C8)
+[LOG] SoundI::release                          :     FootstepsMetal (7) (000001887D287FC8)
+[LOG] SoundI::release                          :  (00000188816C0D28)
+[LOG] SoundI::release                          :     FootstepsMetal (8) (000001887D2817C8)
+[LOG] SoundI::release                          :  (00000188816C0E98)
+[LOG] SoundI::release                          :     LatcherScuttle (5) (000001887D27ED88)
+[LOG] SoundI::release                          :  (00000188816C5958)
+[LOG] SoundI::release                          :     LatcherScuttle (6) (000001887D2853E8)
+[LOG] SoundI::release                          :  (00000188816BE938)
+[LOG] SoundI::release                          :     LatcherScuttle (7) (000001887D27EA48)
+[LOG] SoundI::release                          :  (00000188816C0768)
+[LOG] SoundI::release                          :     LatcherScuttle (8) (000001887D27BE68)
+[LOG] SoundI::release                          :  (00000188816BE7C8)
+[LOG] SoundI::release                          :     LatcherScuttle (9) (000001887D27D388)
+[LOG] SoundI::release                          :  (00000188816BD688)
+[LOG] SoundI::release                          :     LatcherScuttle (10) (000001887D27F5A8)
+[LOG] SoundI::release                          :  (00000188816C3E08)
+[LOG] SoundI::release                          :     LatcherScuttle (11) (000001887D2831C8)
+[LOG] SoundI::release                          :  (00000188816BF4B8)
+[LOG] SoundI::release                          :     LatcherScuttle (12) (000001887D281E48)
+[LOG] SoundI::release                          :  (00000188816C3F78)
+[LOG] SoundI::release                          :     LatcherScuttle (13) (000001887D285DA8)
+[LOG] SoundI::release                          :  (00000188816BD3A8)
+[LOG] SoundI::release                          :     LatcherScuttle (14) (000001887D27F0C8)
+[LOG] SoundI::release                          :  (00000188816BD7F8)
+[LOG] SoundI::release                          :     LatcherScuttle (15) (000001887D285728)
+[LOG] SoundI::release                          :  (00000188816C0A48)
+[LOG] SoundI::release                          :     LatcherScuttle (16) (000001887D286AA8)
+[LOG] SoundI::release                          :  (00000188816C1E68)
+[LOG] SoundI::release                          :     LatcherScuttle (17) (000001887D287608)
+[LOG] SoundI::release                          :  (00000188816C08D8)
+[LOG] SoundI::release                          :     LatcherScuttle (18) (000001887D27F748)
+[LOG] SoundI::release                          :  (00000188816BFBE8)
+[LOG] SoundI::release                          :     LatcherScuttle (1) (000001887D281148)
+[LOG] SoundI::release                          :  (00000188816BD518)
+[LOG] SoundI::release                          :     LatcherScuttle (2) (000001887D284D68)
+[LOG] SoundI::release                          :  (00000188816C1178)
+[LOG] SoundI::release                          :     LatcherScuttle (3) (000001887D27BCC8)
+[LOG] SoundI::release                          :  (00000188816C4988)
+[LOG] SoundI::release                          :     LatcherScuttle (4) (000001887D2872C8)
+[LOG] SoundI::release                          :  (00000188816C50B8)
+[LOG] SoundI::release                          :     RadioOff (000001887D28E968)
+[LOG] SoundI::release                          :  (00000188816C15C8)
+[LOG] SoundI::release                          :     RadioOn (000001887D288E68)
+[LOG] Thread::callback                         : FMOD Convolution thread finished.
+[LOG] Thread::callback                         : FMOD Convolution thread finished.
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 142)
+[ERR] FMOD_OS_File_Open                        : CreateFileW failed, GetLastError = 32 (name = Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank)
+[ERR] RuntimeBankModel::openFile               : Failed to open file 'Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank'
+[LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
@@ -28,3 +449,5 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
