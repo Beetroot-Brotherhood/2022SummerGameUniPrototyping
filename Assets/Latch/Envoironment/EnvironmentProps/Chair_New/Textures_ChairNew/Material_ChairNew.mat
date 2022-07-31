@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5605310484291199083
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 12
+  hdPluginSubTargetMaterialVersions:
+    m_Keys: []
+    m_Values: 
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -7,8 +23,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Material_EnvironmentProps_A_Metal
-  m_Shader: {fileID: -6465566751694194690, guid: 921cde688c441e9429dc12532ffb2f39, type: 3}
+  m_Name: Material_ChairNew
+  m_Shader: {fileID: -6465566751694194690, guid: 9c5859f650575ee4b8c2485121e02b2c, type: 3}
   m_ValidKeywords:
   - _DISABLE_SSR_TRANSPARENT
   m_InvalidKeywords:
@@ -84,40 +100,24 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_1b604dfc45ff4706a1edb7e60dcbe4e2_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 8298b737925e3a14db8be56333484ba5, type: 3}
+    - _SampleTexture2D_2c6734c753d6434d80b840cf67fbacd8_Texture_1:
+        m_Texture: {fileID: 2800000, guid: e6db8385f0bb08d48a8c087a229182ac, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_4b6dc64b016c4480b3e32b6e85db89ca_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 4c8e7b76cd65af244a11ab168a7d8ce6, type: 3}
+    - _SampleTexture2D_2d4a883211404f84b0538a271bad1f92_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 379ab79f3a946254e91ae6144997021c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_9e93c1eafdc14bcbb034d01fa4b246a9_Texture_1:
-        m_Texture: {fileID: 2800000, guid: a5b0224195caf6d41b93f7cfdc956ad3, type: 3}
+    - _SampleTexture2D_715d077c6d664f9a9e36059caf3d4c58_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 66947965162999445a5e69e0cdfaa237, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_a3d771404b8d43c699ba011b6da8663a_Texture_1:
-        m_Texture: {fileID: 2800000, guid: d96758387143ff64ebc8b0e8bf2299c0, type: 3}
+    - _SampleTexture2D_ac6e3019bac049b58c89ef642ac19e52_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 2d14eac205666764aa75d9b7cb70764f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_b733c18c9285458abeb5bc91965a97f9_Texture_1:
-        m_Texture: {fileID: 2800000, guid: c49b01a50d3f8e64db371574752c268c, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_c228a170604c46e2baabbcd49d7309ce_Texture_1:
-        m_Texture: {fileID: 2800000, guid: d531c6ca872051f4994c6fdb91f44416, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_dd767b37cf844c749670145c5da2a99d_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 8298b737925e3a14db8be56333484ba5, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_e53627be47114e5aab93f98cac9c9a34_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 6aa1ac3c0bbbb6b47ad1a59950ee9363, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_ecb924f600d04756a36b03490cac12e5_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 4d9148f749184c74ca02af5787696fe2, type: 3}
+    - _SampleTexture2D_f09c9cfd21c44ca980a10b02ce11de9e_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 5fb4497fbcd9d964a9575cf88d391412, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecularColorMap:
@@ -290,19 +290,3 @@ Material:
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &3402659424795628154
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 12
-  hdPluginSubTargetMaterialVersions:
-    m_Keys: []
-    m_Values: 
