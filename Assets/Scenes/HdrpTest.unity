@@ -10514,6 +10514,10 @@ PrefabInstance:
       propertyPath: m_BounceIntensity
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
+      propertyPath: m_Intensity
+      value: 19.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8811860252461315276, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -16388,6 +16392,26 @@ PrefabInstance:
     - target: {fileID: 4277132381427457998, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BounceIntensity
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
+      propertyPath: m_Color.b
+      value: 0.25943398
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
+      propertyPath: m_Color.g
+      value: 0.66574514
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
+      propertyPath: m_Intensity
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8811860252461315276, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -49895,18 +49919,6 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 964238461730366874, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.54038
-      objectReference: {fileID: 0}
-    - target: {fileID: 964238461730366874, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.54038
-      objectReference: {fileID: 0}
-    - target: {fileID: 964238461730366874, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.54038
-      objectReference: {fileID: 0}
-    - target: {fileID: 964238461730366874, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.535
       objectReference: {fileID: 0}
@@ -49946,32 +49958,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2101638518578798325, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
-      propertyPath: m_StaticShadowCaster
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277132381427457998, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
-      propertyPath: m_Intensity
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277132381427457998, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
-      propertyPath: m_Lightmapping
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277132381427457998, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4277132381427457998, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
-      propertyPath: m_BounceIntensity
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8811860252461315276, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4968976683415609141, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
 --- !u!1001 &1898342532
 PrefabInstance:
@@ -53948,7 +53935,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &2032592468
 Light:
   m_ObjectHideFlags: 0
