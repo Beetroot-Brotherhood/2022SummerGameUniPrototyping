@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &475813189949888084
 Transform:
@@ -54,7 +54,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
+  m_StaticShadowCaster: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -169,6 +169,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 209e0f5086641b640b824501b54d6cac, type: 3}
       propertyPath: m_Name
       value: Mesh_Glass
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 209e0f5086641b640b824501b54d6cac, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 209e0f5086641b640b824501b54d6cac, type: 3}
