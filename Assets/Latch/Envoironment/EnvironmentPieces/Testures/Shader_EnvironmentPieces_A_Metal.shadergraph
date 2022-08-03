@@ -27,9 +27,6 @@
             "m_Id": "9ab8983e56e74351a4fffddb969a3d57"
         },
         {
-            "m_Id": "31907a713c51494280f81f6a350ceb70"
-        },
-        {
             "m_Id": "9959ec3518b246e684ba76b9c951cce9"
         },
         {
@@ -40,9 +37,6 @@
         },
         {
             "m_Id": "ec2ba6313bf545059463ac700edf1034"
-        },
-        {
-            "m_Id": "354bb7ff78e941978c927d6b66e8c751"
         },
         {
             "m_Id": "bd86f4d2bce94fec8ffdefa2c56f30fe"
@@ -167,9 +161,6 @@
                 "m_Id": "9ab8983e56e74351a4fffddb969a3d57"
             },
             {
-                "m_Id": "31907a713c51494280f81f6a350ceb70"
-            },
-            {
                 "m_Id": "9959ec3518b246e684ba76b9c951cce9"
             },
             {
@@ -180,9 +171,6 @@
             },
             {
                 "m_Id": "ec2ba6313bf545059463ac700edf1034"
-            },
-            {
-                "m_Id": "354bb7ff78e941978c927d6b66e8c751"
             }
         ]
     },
@@ -201,7 +189,7 @@
     },
     "m_ActiveTargets": [
         {
-            "m_Id": "f82501de149f48958865c36ce2db47c7"
+            "m_Id": "fff02e6de95e4d559743dcf38bf71b40"
         }
     ]
 }
@@ -273,6 +261,15 @@
     "m_TextureType": 0,
     "m_NormalMapSpace": 0,
     "m_EnableGlobalMipBias": true
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.Rendering.Universal.ShaderGraph.UniversalLitSubTarget",
+    "m_ObjectId": "077d8531701b48229c348737ada9f589",
+    "m_WorkflowMode": 1,
+    "m_NormalDropOffSpace": 0,
+    "m_ClearCoat": false
 }
 
 {
@@ -547,39 +544,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
-    "m_ObjectId": "31907a713c51494280f81f6a350ceb70",
-    "m_Group": {
-        "m_Id": ""
-    },
-    "m_Name": "SurfaceDescription.BentNormal",
-    "m_DrawState": {
-        "m_Expanded": true,
-        "m_Position": {
-            "serializedVersion": "2",
-            "x": 0.0,
-            "y": 0.0,
-            "width": 0.0,
-            "height": 0.0
-        }
-    },
-    "m_Slots": [
-        {
-            "m_Id": "e0ebe230374149f8a5386f76c7d768ec"
-        }
-    ],
-    "synonyms": [],
-    "m_Precision": 0,
-    "m_PreviewExpanded": true,
-    "m_PreviewMode": 0,
-    "m_CustomColors": {
-        "m_SerializableColors": []
-    },
-    "m_SerializedDescriptor": "SurfaceDescription.BentNormal"
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "345e043c115f4b74bb9ceea19baa83f2",
     "m_Id": 6,
@@ -591,39 +555,6 @@
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
-    "m_ObjectId": "354bb7ff78e941978c927d6b66e8c751",
-    "m_Group": {
-        "m_Id": ""
-    },
-    "m_Name": "SurfaceDescription.Alpha",
-    "m_DrawState": {
-        "m_Expanded": true,
-        "m_Position": {
-            "serializedVersion": "2",
-            "x": 0.0,
-            "y": 0.0,
-            "width": 0.0,
-            "height": 0.0
-        }
-    },
-    "m_Slots": [
-        {
-            "m_Id": "83d1ff68b0e44e639b68fcb99e8ef89b"
-        }
-    ],
-    "synonyms": [],
-    "m_Precision": 0,
-    "m_PreviewExpanded": true,
-    "m_PreviewMode": 0,
-    "m_CustomColors": {
-        "m_SerializableColors": []
-    },
-    "m_SerializedDescriptor": "SurfaceDescription.Alpha"
 }
 
 {
@@ -1057,21 +988,6 @@
     "m_ObjectId": "828d078990ed4c3aa718e687f793ba74",
     "m_Name": "",
     "m_ChildObjectList": []
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
-    "m_ObjectId": "83d1ff68b0e44e639b68fcb99e8ef89b",
-    "m_Id": 0,
-    "m_DisplayName": "Alpha",
-    "m_SlotType": 0,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Alpha",
-    "m_StageCapability": 2,
-    "m_Value": 1.0,
-    "m_DefaultValue": 1.0,
-    "m_Labels": []
 }
 
 {
@@ -1699,30 +1615,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.NormalMaterialSlot",
-    "m_ObjectId": "e0ebe230374149f8a5386f76c7d768ec",
-    "m_Id": 0,
-    "m_DisplayName": "Bent Normal",
-    "m_SlotType": 0,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "BentNormal",
-    "m_StageCapability": 2,
-    "m_Value": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-    },
-    "m_DefaultValue": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-    },
-    "m_Labels": [],
-    "m_Space": 3
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.SampleTexture2DNode",
     "m_ObjectId": "e16ba79189254b429c979bd9a6722dde",
     "m_Group": {
@@ -2012,31 +1904,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.Rendering.HighDefinition.ShaderGraph.HDTarget",
-    "m_ObjectId": "f82501de149f48958865c36ce2db47c7",
-    "m_ActiveSubTarget": {
-        "m_Id": "2ca2f0dba6aa49a89d67b1a0c504c5de"
-    },
-    "m_Datas": [
-        {
-            "m_Id": "5d9973171c6f4ca59ad5c593f54e15cf"
-        },
-        {
-            "m_Id": "4032fb8c073442deacc80fe7393dbff4"
-        },
-        {
-            "m_Id": "7a87fdaf28524460a643e1cd105f3740"
-        },
-        {
-            "m_Id": "abf01102bd704eb097f56333a89f7905"
-        }
-    ],
-    "m_CustomEditorGUI": "",
-    "m_SupportVFX": false
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.BlockNode",
     "m_ObjectId": "f90e747524064d4db9c2a584bbed8ff8",
     "m_Group": {
@@ -2088,5 +1955,25 @@
     },
     "m_Labels": [],
     "m_Channel": 0
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
+    "m_ObjectId": "fff02e6de95e4d559743dcf38bf71b40",
+    "m_ActiveSubTarget": {
+        "m_Id": "077d8531701b48229c348737ada9f589"
+    },
+    "m_AllowMaterialOverride": false,
+    "m_SurfaceType": 0,
+    "m_ZTestMode": 4,
+    "m_ZWriteControl": 0,
+    "m_AlphaMode": 0,
+    "m_RenderFace": 2,
+    "m_AlphaClip": false,
+    "m_CastShadows": true,
+    "m_ReceiveShadows": true,
+    "m_CustomEditorGUI": "",
+    "m_SupportVFX": false
 }
 
