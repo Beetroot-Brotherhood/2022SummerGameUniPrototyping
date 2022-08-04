@@ -48,25 +48,40 @@ public class PlayerSounds : MonoBehaviour
             if (surfaceRenderer)
             {
                 Debug.Log(surfaceRenderer.material.name);
-                if (surfaceRenderer.material.name.Contains("wood"))
+                if (surfaceRenderer.material.name.Contains("Wood"))
                 {
                     //footsteps.setParameterByName("Footsteps", 1);
                     surfaceType = 1.0f;    
                 }
-                else if (surfaceRenderer.material.name.Contains("stone")) 
+                else if (surfaceRenderer.material.name.Contains("Stone")) 
                 {
                     //footsteps.setParameterByName("Footsteps", 2);
                     surfaceType = 2.0f;
                 }
-                else if (surfaceRenderer.material.name.Contains("metal")) 
+                else if (surfaceRenderer.material.name.Contains("Metal")) 
                 {
                     //footsteps.setParameterByName("Footsteps", 3);
                     surfaceType = 3.0f;
                 }
-                else if (surfaceRenderer.material.name.Contains("dirt")) 
+                else if (surfaceRenderer.material.name.Contains("Dirt")) 
                 {
                     //footsteps.setParameterByName("Footsteps", 4);
                     surfaceType = 4.0f;
+                }
+                else if (surfaceRenderer.material.name.Contains("Rock")) 
+                {
+                    //footsteps.setParameterByName("Footsteps", 4);
+                    surfaceType = 4.0f;
+                }
+                else if (surfaceRenderer.material.name.Contains("Mud")) 
+                {
+                    //footsteps.setParameterByName("Footsteps", 4);
+                    surfaceType = 5.0f;
+                }
+                else if (surfaceRenderer.material.name.Contains("Blood")) 
+                {
+                    //footsteps.setParameterByName("Footsteps", 4);
+                    surfaceType = 5.0f;
                 }
                 else
                 {
