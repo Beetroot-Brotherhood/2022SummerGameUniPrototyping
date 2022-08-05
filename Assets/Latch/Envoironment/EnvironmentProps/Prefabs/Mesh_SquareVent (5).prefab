@@ -30,7 +30,8 @@ Transform:
   m_LocalPosition: {x: -7.5498724, y: 2.102, z: -24.397488}
   m_LocalScale: {x: 0.39012, y: 0.39012, z: 0.39012}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6244693804134066414}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -108.401, z: 0}
@@ -98,3 +99,59 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8324664898330503918, guid: 838b185d1f125474c8911ea9ea9cd71a, type: 3}
+--- !u!1 &6295372030552720806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6244693804134066414}
+  - component: {fileID: 7792841503731547992}
+  m_Layer: 0
+  m_Name: SFX VentSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6244693804134066414
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6295372030552720806}
+  m_LocalRotation: {x: -0.41362146, y: 0.41362146, z: 0.57351315, w: -0.57351315}
+  m_LocalPosition: {x: 28.355848, y: -5.193274, z: -1.5178412}
+  m_LocalScale: {x: 2.453143, y: 2.4531431, z: 2.4531434}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3335937477240831175}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7792841503731547992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6295372030552720806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21b5004b78324e840a24548c2447d2f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SelectAudio:
+    Guid:
+      Data1: 1701710940
+      Data2: 1158322689
+      Data3: 120125858
+      Data4: -359416822
+    Path: event:/Environment/SteamVent
+  SoundOcclusionWidening: 1
+  PlayerOcclusionWidening: 1
+  OcclusionLayer:
+    serializedVersion: 2
+    m_Bits: 256
