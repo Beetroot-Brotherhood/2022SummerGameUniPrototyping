@@ -109,7 +109,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6941318085851523262}
   - component: {fileID: 4882046574731625798}
-  - component: {fileID: 1403529987135009951}
   m_Layer: 0
   m_Name: Spot Light
   m_TagString: Untagged
@@ -195,26 +194,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 1
   m_ShadowAngle: 0
---- !u!114 &1403529987135009951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760062936234623168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1001 &1054068263226608695
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -289,6 +268,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ab0aec80ab7d7644abe494ce5d8118ff, type: 3}
       propertyPath: m_Name
       value: fakevolumetricmesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ab0aec80ab7d7644abe494ce5d8118ff, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab0aec80ab7d7644abe494ce5d8118ff, type: 3}
