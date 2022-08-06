@@ -18,22 +18,13 @@ public class OnPlayerInput : MonoBehaviour
     }
 
     [HideInInspector]
-    public bool onEquipRight;
-    public bool onEquipLeft;
+    public bool onInteract;
 
-    public void OnEquipRight(InputValue value) {
-        EquipRightInput(value.isPressed);
+    public void OnInteract(InputValue value) {
+        InteractInput(value.isPressed);
     }
 
-    public void OnEquipLeft(InputValue value) {
-        EquipLeftInput(value.isPressed);
-    }
-
-    public void EquipRightInput(bool state) {
-        onEquipRight = state;
-    }
-
-    public void EquipLeftInput(bool state) {
-        onEquipLeft = state;
+    public void InteractInput(bool state) {
+        onInteract = state;
     }
 }

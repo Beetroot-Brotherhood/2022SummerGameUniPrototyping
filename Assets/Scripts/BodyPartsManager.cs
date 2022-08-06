@@ -24,10 +24,12 @@ public class BodyPartsManager : MonoBehaviour
 
     public GameObject dropPosition;
 
+    public GameObject pressEUiText;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        DollHouseGeneral.UpdateUIBodyPartImage();
     }
 
     // Update is called once per frame
@@ -38,24 +40,18 @@ public class BodyPartsManager : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit hit, raycastRange, layerMask, QueryTriggerInteraction.UseGlobal)) {
             
             PartInfo partInfo = hit.collider.gameObject.GetComponent<PartInfo>();
+            pressEUiText.SetActive(true);
             //Functionality for possible input "Press E" or "Press Q" or Both
-
-            if (partInfo.partInfoSO.bodyPartPos == BodyPartNames.HeadPartPos || partInfo.partInfoSO.bodyPartPos == BodyPartNames.TorsoPartPos) {
-                if (OnPlayerInput.instance.onEquipRight) {
-                    DollHouseGeneral.SwitchBodyPart(hit.collider.gameObject, partInfo.partInfoSO.bodyPartPos, dropPosition);
-                    OnPlayerInput.instance.onEquipRight = false;
-                }
-            }else {
-                if (OnPlayerInput.instance.onEquipRight) {
-                    DollHouseGeneral.SwitchBodyPart(hit.collider.gameObject, partInfo.partInfoSO.bodyPartPos, dropPosition);
-                    OnPlayerInput.instance.onEquipRight = false;
-                }
-                if (OnPlayerInput.instance.onEquipLeft) {
-                    DollHouseGeneral.SwitchBodyPart(hit.collider.gameObject, partInfo.partInfoSO.bodyPartPos, dropPosition);
-                    OnPlayerInput.instance.onEquipLeft = false;
-                }
-            }
+            if (OnPlayerInput.instance.onInteract) {
+                DollHouseGeneral.SwitchBodyPart(hit.collider.gameObject, partInfo.partInfoSO.bodyPartPos, dropPosition);
+                DollHouseGeneral.UpdateUIBodyPartImage();
+                OnPlayerInput.instance.onInteract = false;
+            }           
         }
+        else {
+            pressEUiText.SetActive(false);
+        }
+        OnPlayerInput.instance.onInteract = false;
     }
 
     #if UNITY_EDITOR

@@ -36,6 +36,15 @@ public static class DollHouseGeneral
                 oldPart.GetComponent<Rigidbody>().isKinematic = false;
             }
         }
-        
+    }
+
+    public static void UpdateUIBodyPartImage() {
+        foreach (BodyParts bodyPartsUI in BodyPartsManager.instance.partsUIReference.bodyPartsUI) {
+            foreach (BodyParts bodyParts in BodyPartsManager.instance.partsReference.bodyParts) {
+                if (bodyPartsUI.tag == bodyParts.tag) {
+                    bodyPartsUI.gameObject.GetComponent<UnityEngine.UI.Image>().color = bodyParts.gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().materials[0].color;
+                }
+            }
+        }
     }
 }
