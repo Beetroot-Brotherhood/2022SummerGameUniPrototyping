@@ -10,6 +10,17 @@ public class BodyParts {
 
 public class PartsReference : MonoBehaviour
 {
+    public static PartsReference instance;
+
+    void Awake () {
+        if (instance != null) {
+            Debug.LogError("PartsReference has two instances!");
+        }
+        else {
+            instance = this;
+        }
+    }
+
     public GameObject spine;
 
     public BodyParts[] bodyParts;
