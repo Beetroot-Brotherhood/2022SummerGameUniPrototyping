@@ -247,7 +247,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &7141804
 MonoBehaviour:
@@ -261,14 +261,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!108 &7141805
 Light:
   m_ObjectHideFlags: 0
@@ -287,7 +279,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1075,6 +1067,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3842425376940077694, guid: eb493e0b1f45d434d954cdd847a68784, type: 3}
   m_PrefabInstance: {fileID: 1993157853}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &38779243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 38779244}
+  - component: {fileID: 38779245}
+  m_Layer: 0
+  m_Name: Reflection Probe (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &38779244
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38779243}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.69, y: 2.29, z: -28.32}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1065474091}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!215 &38779245
+ReflectionProbe:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38779243}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 1
+  m_RefreshMode: 0
+  m_TimeSlicingMode: 0
+  m_Resolution: 512
+  m_UpdateFrequency: 0
+  m_BoxSize: {x: 6.5499067, y: 6.267976, z: 25.415102}
+  m_BoxOffset: {x: 0.13932562, y: 0.6364136, z: 0.5792799}
+  m_NearClip: 0.01
+  m_FarClip: 1000
+  m_ShadowDistance: 100
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IntensityMultiplier: 1
+  m_BlendDistance: 1
+  m_HDR: 1
+  m_BoxProjection: 1
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_Importance: 1
+  m_CustomBakedTexture: {fileID: 0}
 --- !u!1001 &42179620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2593,14 +2650,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!4 &101083348
 Transform:
   m_ObjectHideFlags: 0
@@ -3897,14 +3946,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!108 &153116037
 Light:
   m_ObjectHideFlags: 0
@@ -3923,7 +3964,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -4622,11 +4663,11 @@ ReflectionProbe:
   m_Mode: 1
   m_RefreshMode: 0
   m_TimeSlicingMode: 0
-  m_Resolution: 128
+  m_Resolution: 512
   m_UpdateFrequency: 0
   m_BoxSize: {x: 3.804658, y: 4.2502546, z: 13.569207}
   m_BoxOffset: {x: -0.75619984, y: -0.0033216476, z: -0.062302113}
-  m_NearClip: 0.3
+  m_NearClip: 0.01
   m_FarClip: 1000
   m_ShadowDistance: 100
   m_ClearFlags: 1
@@ -5191,14 +5232,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!108 &210325419
 Light:
   m_ObjectHideFlags: 0
@@ -5217,7 +5250,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -6912,6 +6945,22 @@ PrefabInstance:
       propertyPath: m_BounceIntensity
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 1.8795174e+15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 8.87e-43
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 7.1e-44
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8811860252461315276, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -7125,14 +7174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!108 &317874403
 Light:
   m_ObjectHideFlags: 0
@@ -8752,14 +8793,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!108 &386791309
 Light:
   m_ObjectHideFlags: 0
@@ -8778,7 +8811,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -10017,14 +10050,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!108 &419601120
 Light:
   m_ObjectHideFlags: 0
@@ -10610,6 +10635,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 794548622030944426, guid: 1e6d71f33e6169e458e9ad8ed91d9158, type: 3}
   m_PrefabInstance: {fileID: 743577568}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &458924927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 458924928}
+  - component: {fileID: 458924929}
+  m_Layer: 0
+  m_Name: Reflection Probe (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &458924928
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458924927}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.940002, y: 2.29, z: -22.07}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1065474091}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!215 &458924929
+ReflectionProbe:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458924927}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 1
+  m_RefreshMode: 0
+  m_TimeSlicingMode: 0
+  m_Resolution: 512
+  m_UpdateFrequency: 0
+  m_BoxSize: {x: 20.250725, y: 6.267976, z: 11.009439}
+  m_BoxOffset: {x: 0.85531235, y: 0.6364136, z: 0.16802502}
+  m_NearClip: 0.01
+  m_FarClip: 1000
+  m_ShadowDistance: 100
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IntensityMultiplier: 1
+  m_BlendDistance: 1
+  m_HDR: 1
+  m_BoxProjection: 1
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_Importance: 1
+  m_CustomBakedTexture: {fileID: 0}
 --- !u!1001 &459657501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11550,15 +11640,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: -9.901752e+13
+      value: 1.5852284e+15
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: NaN
+      value: 8.87e-43
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 3e-45
+      value: 7.1e-44
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8811860252461315276, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -16059,14 +16153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!108 &574734257
 Light:
   m_ObjectHideFlags: 0
@@ -17279,14 +17365,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!108 &629813863
 Light:
   m_ObjectHideFlags: 0
@@ -17456,11 +17534,11 @@ ReflectionProbe:
   m_Mode: 1
   m_RefreshMode: 0
   m_TimeSlicingMode: 0
-  m_Resolution: 128
+  m_Resolution: 512
   m_UpdateFrequency: 0
   m_BoxSize: {x: 16.173412, y: 4.2502546, z: 3.8768504}
   m_BoxOffset: {x: -0.2136538, y: -0.0033216476, z: -0.4498595}
-  m_NearClip: 0.3
+  m_NearClip: 0.01
   m_FarClip: 1000
   m_ShadowDistance: 100
   m_ClearFlags: 1
@@ -17585,19 +17663,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 0
+      value: 1.5852284e+15
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 3.9640935e-30
+      value: 8.87e-43
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: NaN
+      value: 7.1e-44
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 5.23e-43
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8811860252461315276, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -23922,26 +24000,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 1
-  m_Antialiasing: 2
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_Version: 2
 --- !u!1 &712650592
 GameObject:
   m_ObjectHideFlags: 0
@@ -25862,14 +25920,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!108 &786985256
 Light:
   m_ObjectHideFlags: 0
@@ -25888,7 +25938,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -26714,14 +26764,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!108 &844755733
 Light:
   m_ObjectHideFlags: 0
@@ -33087,14 +33129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!108 &1068799337
 Light:
   m_ObjectHideFlags: 0
@@ -33113,7 +33147,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -33279,11 +33313,11 @@ ReflectionProbe:
   m_Mode: 1
   m_RefreshMode: 0
   m_TimeSlicingMode: 0
-  m_Resolution: 128
+  m_Resolution: 512
   m_UpdateFrequency: 0
   m_BoxSize: {x: 12.487571, y: 4.2502546, z: 12.032897}
   m_BoxOffset: {x: -0.5309768, y: -0.0033216476, z: -0.48221922}
-  m_NearClip: 0.3
+  m_NearClip: 0.01
   m_FarClip: 1000
   m_ShadowDistance: 100
   m_ClearFlags: 1
@@ -33540,19 +33574,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: -5.925409e+16
+      value: 1.5852284e+15
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 7.09e-43
+      value: 8.87e-43
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: -4.032361e+22
+      value: 7.1e-44
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 7.08e-43
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8811860252461315276, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -36947,6 +36981,67 @@ LightProbeGroup:
   m_GameObject: {fileID: 1193097445}
   m_Enabled: 1
   m_SourcePositions:
+  - {x: 0.45369554, y: 0, z: 8.387916}
+  - {x: 0.45369554, y: -2, z: 8.387916}
+  - {x: 0.45369554, y: 1.75, z: 8.387916}
+  - {x: -5.991951, y: 1.75, z: 8.387916}
+  - {x: -5.991951, y: 0, z: 8.387916}
+  - {x: -5.991951, y: -2, z: 8.387916}
+  - {x: -5.991951, y: 1.75, z: 10.387916}
+  - {x: -5.991951, y: 0, z: 10.387916}
+  - {x: -5.991951, y: -2, z: 10.387916}
+  - {x: 0.45369554, y: 1.75, z: 10.387916}
+  - {x: 0.45369554, y: 0, z: 10.387916}
+  - {x: 0.45369554, y: -2, z: 10.387916}
+  - {x: -5.991951, y: 1.75, z: 6.6379156}
+  - {x: -5.991951, y: 0, z: 6.6379156}
+  - {x: -5.991951, y: -2, z: 6.6379156}
+  - {x: 0.45369554, y: 1.75, z: 6.6379156}
+  - {x: 0.45369554, y: 0, z: 6.6379156}
+  - {x: 0.45369554, y: -2, z: 6.6379156}
+  - {x: 1.8281989, y: 0, z: 3.3879156}
+  - {x: 1.8281989, y: 1.75, z: 3.3879156}
+  - {x: 1.8281989, y: -2, z: 3.3879156}
+  - {x: 3.828199, y: -2, z: 8.387916}
+  - {x: 3.828199, y: 0, z: 8.387916}
+  - {x: 3.828199, y: 1.75, z: 8.387916}
+  - {x: 3.828199, y: 1.75, z: 10.387916}
+  - {x: 3.828199, y: 0, z: 10.387916}
+  - {x: 3.828199, y: -2, z: 10.387916}
+  - {x: -7.098666, y: 0, z: 3.3879156}
+  - {x: -7.098666, y: 1.75, z: 3.3879156}
+  - {x: -7.098666, y: -2, z: 3.3879156}
+  - {x: -9.098666, y: -2, z: 8.387916}
+  - {x: -9.098666, y: 0, z: 8.387916}
+  - {x: -9.098666, y: 1.75, z: 8.387916}
+  - {x: -9.098666, y: 1.75, z: 10.387916}
+  - {x: -9.098666, y: 0, z: 10.387916}
+  - {x: -9.098666, y: -2, z: 10.387916}
+  - {x: -2.4999998, y: -2, z: 10.387916}
+  - {x: -2.4999998, y: 0.25, z: 9.637916}
+  - {x: -2.4999998, y: 1.75, z: 10.387916}
+  - {x: -2.4999998, y: -2, z: -2.9550762}
+  - {x: -2.4999998, y: 1.75, z: -2.9550762}
+  - {x: -4.5, y: -2, z: -2.9550762}
+  - {x: -4.5, y: 0, z: -2.9550762}
+  - {x: -4.5, y: 1.75, z: -2.9550762}
+  - {x: -0.99999976, y: -2, z: -2.9550762}
+  - {x: -0.99999976, y: 0, z: -2.9550762}
+  - {x: -0.99999976, y: 1.75, z: -2.9550762}
+  - {x: -0.99999976, y: -2, z: 6.2090597}
+  - {x: -0.99999976, y: 0, z: 6.2090597}
+  - {x: -0.99999976, y: 1.75, z: 6.2090597}
+  - {x: -2.7499998, y: -2, z: 8.045306}
+  - {x: -2.7499998, y: 0, z: 8.045306}
+  - {x: -2.7499998, y: 1.75, z: 8.045306}
+  - {x: -4.25, y: -2, z: 6.2090597}
+  - {x: -4.25, y: 0, z: 6.2090597}
+  - {x: -4.25, y: 1.75, z: 6.2090597}
+  - {x: -2.4999998, y: 0.25, z: -3.2050762}
+  - {x: -1.9999998, y: -0.75, z: 10.137916}
+  - {x: -3.2499998, y: -0.75, z: 10.137916}
+  - {x: -2.4999998, y: -0.75, z: 9.637916}
+  - {x: -2.4999998, y: -0.75, z: -3.9550762}
   - {x: -1, y: 1, z: 1}
   - {x: -1, y: -1, z: 1}
   - {x: -1, y: 2.75, z: 1}
@@ -37009,6 +37104,123 @@ LightProbeGroup:
   - {x: -3.2499998, y: 0.25, z: 2.75}
   - {x: -2.4999998, y: 0.25, z: 2.25}
   - {x: -2.4999998, y: 0.25, z: 3.5}
+  - {x: 0.45369554, y: 0, z: -6.455076}
+  - {x: 0.45369554, y: -2, z: -6.455076}
+  - {x: 0.45369554, y: 1.75, z: -6.455076}
+  - {x: -5.991951, y: 1.75, z: -6.455076}
+  - {x: -5.991951, y: 0, z: -6.455076}
+  - {x: -5.991951, y: -2, z: -6.455076}
+  - {x: -5.991951, y: 1.75, z: -4.455076}
+  - {x: -5.991951, y: 0, z: -4.455076}
+  - {x: -5.991951, y: -2, z: -4.455076}
+  - {x: 0.45369554, y: 1.75, z: -4.455076}
+  - {x: 0.45369554, y: 0, z: -4.455076}
+  - {x: 0.45369554, y: -2, z: -4.455076}
+  - {x: -5.991951, y: 1.75, z: -8.205076}
+  - {x: -5.991951, y: 0, z: -8.205076}
+  - {x: -5.991951, y: -2, z: -8.205076}
+  - {x: 0.45369554, y: 1.75, z: -8.205076}
+  - {x: 0.45369554, y: 0, z: -8.205076}
+  - {x: 0.45369554, y: -2, z: -8.205076}
+  - {x: 3.828199, y: 0, z: -8.205076}
+  - {x: 3.828199, y: 1.75, z: -8.205076}
+  - {x: 3.828199, y: -2, z: -8.205076}
+  - {x: 3.828199, y: -2, z: -6.455076}
+  - {x: 3.828199, y: 0, z: -6.455076}
+  - {x: 3.828199, y: 1.75, z: -6.455076}
+  - {x: 3.828199, y: 1.75, z: -4.455076}
+  - {x: 3.828199, y: 0, z: -4.455076}
+  - {x: 3.828199, y: -2, z: -4.455076}
+  - {x: -9.098666, y: 0, z: -8.205076}
+  - {x: -9.098666, y: 1.75, z: -8.205076}
+  - {x: -9.098666, y: -2, z: -8.205076}
+  - {x: -9.098666, y: -2, z: -6.455076}
+  - {x: -9.098666, y: 0, z: -6.455076}
+  - {x: -9.098666, y: 1.75, z: -6.455076}
+  - {x: -9.098666, y: 1.75, z: -4.455076}
+  - {x: -9.098666, y: 0, z: -4.455076}
+  - {x: -9.098666, y: -2, z: -4.455076}
+  - {x: -2.4999998, y: -2, z: -4.455076}
+  - {x: -2.4999998, y: 0.25, z: -5.205076}
+  - {x: -2.4999998, y: 1.75, z: -4.455076}
+  - {x: -0.99999976, y: -2, z: -8.633932}
+  - {x: -0.99999976, y: 0, z: -8.633932}
+  - {x: -0.99999976, y: 1.75, z: -8.633932}
+  - {x: -2.7499998, y: -2, z: -6.7976856}
+  - {x: -2.7499998, y: 0, z: -6.7976856}
+  - {x: -2.7499998, y: 1.75, z: -6.7976856}
+  - {x: -4.25, y: -2, z: -8.633932}
+  - {x: -4.25, y: 0, z: -8.633932}
+  - {x: -4.25, y: 1.75, z: -8.633932}
+  - {x: -1.9999998, y: -0.75, z: -4.705076}
+  - {x: -3.2499998, y: -0.75, z: -4.705076}
+  - {x: -2.4999998, y: -0.75, z: -5.205076}
+  - {x: 3.828199, y: 0, z: 6.6379156}
+  - {x: 3.828199, y: 1.75, z: 6.6379156}
+  - {x: 3.828199, y: -2, z: 6.6379156}
+  - {x: -9.098666, y: 0, z: 6.6379156}
+  - {x: -9.098666, y: 1.75, z: 6.6379156}
+  - {x: -9.098666, y: -2, z: 6.6379156}
+  - {x: 3.828199, y: 0, z: 4.3879156}
+  - {x: 3.828199, y: 1.75, z: 4.3879156}
+  - {x: 3.828199, y: -2, z: 4.3879156}
+  - {x: -9.098666, y: 0, z: 4.3879156}
+  - {x: -9.098666, y: 1.75, z: 4.3879156}
+  - {x: -9.098666, y: -2, z: 4.3879156}
+  - {x: 3.828199, y: 0, z: 2.6379156}
+  - {x: 3.828199, y: 1.75, z: 2.6379156}
+  - {x: 3.828199, y: -2, z: 2.6379156}
+  - {x: -9.098666, y: 0, z: 2.6379156}
+  - {x: -9.098666, y: 1.75, z: 2.6379156}
+  - {x: -9.098666, y: -2, z: 2.6379156}
+  - {x: 3.828199, y: 0, z: 0.13791561}
+  - {x: 3.828199, y: 1.75, z: 0.13791561}
+  - {x: 3.828199, y: -2, z: 0.13791561}
+  - {x: -9.098666, y: 0, z: 0.13791561}
+  - {x: -9.098666, y: 1.75, z: 0.13791561}
+  - {x: -9.098666, y: -2, z: 0.13791561}
+  - {x: 1.8281989, y: 0, z: 3.3879156}
+  - {x: 1.8281989, y: 1.75, z: 3.3879156}
+  - {x: 1.8281989, y: -2, z: 3.3879156}
+  - {x: -7.098666, y: 0, z: 3.3879156}
+  - {x: -7.098666, y: 1.75, z: 3.3879156}
+  - {x: -7.098666, y: -2, z: 3.3879156}
+  - {x: 3.828199, y: 0, z: -2.1120844}
+  - {x: 3.828199, y: 1.75, z: -2.1120844}
+  - {x: 3.828199, y: -2, z: -2.1120844}
+  - {x: 3.828199, y: 0, z: -2.1120844}
+  - {x: 3.828199, y: 1.75, z: -2.1120844}
+  - {x: 3.828199, y: -2, z: -2.1120844}
+  - {x: -9.098666, y: 0, z: -2.1120844}
+  - {x: -9.098666, y: 1.75, z: -2.1120844}
+  - {x: -9.098666, y: -2, z: -2.1120844}
+  - {x: -9.098666, y: 0, z: -2.1120844}
+  - {x: -9.098666, y: 1.75, z: -2.1120844}
+  - {x: -9.098666, y: -2, z: -2.1120844}
+  - {x: -7.098666, y: 0, z: -2.1120844}
+  - {x: -7.098666, y: 1.75, z: -2.1120844}
+  - {x: -7.098666, y: -2, z: -2.1120844}
+  - {x: -7.098666, y: 0, z: -2.1120844}
+  - {x: -7.098666, y: 1.75, z: -2.1120844}
+  - {x: -7.098666, y: -2, z: -2.1120844}
+  - {x: 1.8281989, y: 0, z: -2.1120844}
+  - {x: 1.8281989, y: 1.75, z: -2.1120844}
+  - {x: 1.8281989, y: -2, z: -2.1120844}
+  - {x: 1.8281989, y: 0, z: -2.1120844}
+  - {x: 1.8281989, y: 1.75, z: -2.1120844}
+  - {x: 1.8281989, y: -2, z: -2.1120844}
+  - {x: -7.098666, y: 0, z: 0.13791561}
+  - {x: -7.098666, y: 1.75, z: 0.13791561}
+  - {x: -7.098666, y: -2, z: 0.13791561}
+  - {x: -7.098666, y: 0, z: 0.13791561}
+  - {x: -7.098666, y: 1.75, z: 0.13791561}
+  - {x: -7.098666, y: -2, z: 0.13791561}
+  - {x: 1.8281989, y: 0, z: 0.13791561}
+  - {x: 1.8281989, y: 1.75, z: 0.13791561}
+  - {x: 1.8281989, y: -2, z: 0.13791561}
+  - {x: 1.8281989, y: 0, z: 0.13791561}
+  - {x: 1.8281989, y: 1.75, z: 0.13791561}
+  - {x: 1.8281989, y: -2, z: 0.13791561}
   m_Dering: 1
 --- !u!4 &1193097447
 Transform:
@@ -37061,14 +37273,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!108 &1194306135
 Light:
   m_ObjectHideFlags: 0
@@ -37126,7 +37330,7 @@ Light:
   m_BounceIntensity: 2
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 0, z: 0, w: -2.4913965e-30}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 1
@@ -37776,6 +37980,71 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f4af03bf4871224fa5497ece699902d, type: 3}
+--- !u!1 &1209199378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1209199379}
+  - component: {fileID: 1209199380}
+  m_Layer: 0
+  m_Name: Reflection Probe (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1209199379
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209199378}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.69, y: 2.29, z: -13.54}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1065474091}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!215 &1209199380
+ReflectionProbe:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209199378}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 1
+  m_RefreshMode: 0
+  m_TimeSlicingMode: 0
+  m_Resolution: 512
+  m_UpdateFrequency: 0
+  m_BoxSize: {x: 6.4937496, y: 6.267976, z: 25.415102}
+  m_BoxOffset: {x: 0.51448345, y: 0.6364136, z: 0.5792799}
+  m_NearClip: 0.01
+  m_FarClip: 1000
+  m_ShadowDistance: 100
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IntensityMultiplier: 1
+  m_BlendDistance: 1
+  m_HDR: 1
+  m_BoxProjection: 1
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_Importance: 1
+  m_CustomBakedTexture: {fileID: 0}
 --- !u!1001 &1214431342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38563,7 +38832,7 @@ Light:
       e32: 0
       e33: 1
     m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
+  m_Cookie: {fileID: 2800000, guid: 5a4b4dd3626b954439607582c830e20e, type: 3}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
@@ -38594,14 +38863,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1001 &1257685945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39508,14 +39769,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!108 &1310071047
 Light:
   m_ObjectHideFlags: 0
@@ -39534,7 +39787,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -41660,19 +41913,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 7.772429e+31
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 1.7410903e+25
+      value: 1.05e-43
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 2.7953574e+20
+      value: 4.2105167e-11
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 1.85236e+28
+      value: 1.0652986e-38
       objectReference: {fileID: 0}
     - target: {fileID: 8811860252461315276, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -43421,15 +43674,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: -1.5294802e+12
+      value: 6.798861e+16
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 0
+      value: 8.87e-43
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 159
+      value: 7.1e-44
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.z
@@ -46703,14 +46956,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!108 &1474761241
 Light:
   m_ObjectHideFlags: 0
@@ -46862,15 +47107,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 2.45e-43
+      value: 6.194218e+14
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 7.1e-43
+      value: 8.87e-43
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 8.5e-44
+      value: 7.1e-44
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.z
@@ -55208,14 +55453,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!108 &1627743816
 Light:
   m_ObjectHideFlags: 0
@@ -55234,7 +55471,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -55429,19 +55666,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: -1.1429273e+15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 12
+      value: 1.05e-43
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 0
+      value: 4.0968288e-11
       objectReference: {fileID: 0}
     - target: {fileID: 4882046574731625798, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 0
+      value: 1.0652988e-38
       objectReference: {fileID: 0}
     - target: {fileID: 8811860252461315276, guid: 98710b3aa0b5421488a06bd5ab9d9c05, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -56798,7 +57035,7 @@ Light:
       e32: 0
       e33: 1
     m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
+  m_Cookie: {fileID: 2800000, guid: 899383f06bfe570428f67a904c8cecea, type: 3}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
@@ -56829,14 +57066,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1001 &1696550669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58235,7 +58464,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767300295}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.69, y: 2.29, z: -19.1}
+  m_LocalPosition: {x: 23.69, y: 2.29, z: -23.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -58255,11 +58484,11 @@ ReflectionProbe:
   m_Mode: 1
   m_RefreshMode: 0
   m_TimeSlicingMode: 0
-  m_Resolution: 128
+  m_Resolution: 512
   m_UpdateFrequency: 0
-  m_BoxSize: {x: 20.888998, y: 6.267976, z: 27.34319}
-  m_BoxOffset: {x: -1.7340784, y: 0.6364137, z: -0.0805645}
-  m_NearClip: 0.3
+  m_BoxSize: {x: 4.6727915, y: 6.267976, z: 8.5229}
+  m_BoxOffset: {x: 0.4522581, y: 0.6364136, z: -0.31100464}
+  m_NearClip: 0.01
   m_FarClip: 1000
   m_ShadowDistance: 100
   m_ClearFlags: 1
@@ -59845,7 +60074,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &1778138868
 MonoBehaviour:
@@ -59859,14 +60088,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!108 &1778138869
 Light:
   m_ObjectHideFlags: 0
@@ -59885,7 +60106,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -62142,6 +62363,71 @@ Transform:
   m_Father: {fileID: 1120023198}
   m_RootOrder: 327
   m_LocalEulerAnglesHint: {x: -90, y: -360, z: 279.472}
+--- !u!1 &1864665121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1864665122}
+  - component: {fileID: 1864665123}
+  m_Layer: 0
+  m_Name: Reflection Probe (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1864665122
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864665121}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 32.690002, y: 2.29, z: -21.32}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1065474091}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!215 &1864665123
+ReflectionProbe:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864665121}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 1
+  m_RefreshMode: 0
+  m_TimeSlicingMode: 0
+  m_Resolution: 512
+  m_UpdateFrequency: 0
+  m_BoxSize: {x: 20.250725, y: 6.267976, z: 11.009439}
+  m_BoxOffset: {x: 0.85531235, y: 0.6364136, z: 0.16802502}
+  m_NearClip: 0.01
+  m_FarClip: 1000
+  m_ShadowDistance: 100
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IntensityMultiplier: 1
+  m_BlendDistance: 1
+  m_HDR: 1
+  m_BoxProjection: 1
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_Importance: 1
+  m_CustomBakedTexture: {fileID: 0}
 --- !u!1001 &1873429516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66601,7 +66887,7 @@ Light:
   m_BounceIntensity: 1.3
   m_ColorTemperature: 6819
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.1e-43, y: 7.1e-44, z: 0, w: 0.0000024035635}
+  m_BoundingSphereOverride: {x: -0.41915783, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -67327,26 +67613,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 1
-  m_Antialiasing: 2
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_Version: 2
 --- !u!114 &2058564969
 MonoBehaviour:
   m_ObjectHideFlags: 0
