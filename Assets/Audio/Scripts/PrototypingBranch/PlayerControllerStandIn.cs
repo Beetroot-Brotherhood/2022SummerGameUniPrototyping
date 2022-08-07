@@ -9,9 +9,14 @@ public class PlayerControllerStandIn : MonoBehaviour
     [SerializeField] private PlayerSounds playerSounds; //* This provides a reference point for the script which allows you to call the various sound functions which will be written into the 'PlayerSounds' script
 
 
-    void PlayStep() //* This will trigger the PlayerSounds script to execute the code within the PlaySteo function 
+    void PlayStepLeft() //* This will trigger the PlayerSounds script to execute the code within the PlayStep function 
     {
-        playerSounds.PlayStep();
+        playerSounds.PlayStepLeft();
+    }
+
+    void PlayStepRight() //* This will trigger the PlayerSounds script to execute the code within the PlaySteo function 
+    {
+        playerSounds.PlayStepRight();
     }
 
 }

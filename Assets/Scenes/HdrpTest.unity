@@ -2288,6 +2288,8 @@ MonoBehaviour:
       Data3: -1228178757
       Data4: -393254616
     Path: event:/Enemies/HumanFootsteps
+  leftFoot: {fileID: 0}
+  rightFoot: {fileID: 0}
   surfaceType: 0
 --- !u!4 &87340383
 Transform:
@@ -2421,6 +2423,10 @@ PrefabInstance:
     - target: {fileID: 5924251156185468324, guid: 4ca87abd7aabaab42b78549f0e49d1a0, type: 3}
       propertyPath: m_Name
       value: Wall_Quater (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924251156185468324, guid: 4ca87abd7aabaab42b78549f0e49d1a0, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6448305453751441182, guid: 4ca87abd7aabaab42b78549f0e49d1a0, type: 3}
       propertyPath: m_RootOrder
@@ -6907,6 +6913,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Quater (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 5924251156185468324, guid: 4ca87abd7aabaab42b78549f0e49d1a0, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6448305453751441182, guid: 4ca87abd7aabaab42b78549f0e49d1a0, type: 3}
       propertyPath: m_RootOrder
       value: 473
@@ -9295,7 +9305,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32512
+  m_Name: pb_Mesh32418
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10192,6 +10202,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Quater (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5924251156185468324, guid: 4ca87abd7aabaab42b78549f0e49d1a0, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6448305453751441182, guid: 4ca87abd7aabaab42b78549f0e49d1a0, type: 3}
       propertyPath: m_RootOrder
       value: 43
@@ -10655,6 +10669,10 @@ PrefabInstance:
     - target: {fileID: 5924251156185468324, guid: 4ca87abd7aabaab42b78549f0e49d1a0, type: 3}
       propertyPath: m_Name
       value: Wall_Quater (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924251156185468324, guid: 4ca87abd7aabaab42b78549f0e49d1a0, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6448305453751441182, guid: 4ca87abd7aabaab42b78549f0e49d1a0, type: 3}
       propertyPath: m_RootOrder
@@ -18089,6 +18107,10 @@ PrefabInstance:
     - target: {fileID: 5924251156185468324, guid: 4ca87abd7aabaab42b78549f0e49d1a0, type: 3}
       propertyPath: m_Name
       value: Wall_Quater (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924251156185468324, guid: 4ca87abd7aabaab42b78549f0e49d1a0, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6448305453751441182, guid: 4ca87abd7aabaab42b78549f0e49d1a0, type: 3}
       propertyPath: m_RootOrder
@@ -29324,6 +29346,8 @@ MonoBehaviour:
       Data3: -1024047980
       Data4: -1797246206
     Path: event:/Footsteps/LatcherScuttle
+  leftFoot: {fileID: 0}
+  rightFoot: {fileID: 0}
   surfaceType: 0
 --- !u!4 &891105711
 Transform:
@@ -34129,6 +34153,8 @@ MonoBehaviour:
       Data3: -1228178757
       Data4: -393254616
     Path: event:/Enemies/HumanFootsteps
+  leftFoot: {fileID: 1433910832}
+  rightFoot: {fileID: 2049471057}
   surfaceType: 0
 --- !u!4 &1039904937
 Transform:
@@ -37596,6 +37622,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Quater (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 5924251156185468324, guid: 4ca87abd7aabaab42b78549f0e49d1a0, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6448305453751441182, guid: 4ca87abd7aabaab42b78549f0e49d1a0, type: 3}
       propertyPath: m_RootOrder
       value: 474
@@ -40844,13 +40874,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tube (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2164609292014206268, guid: d3e7af635f3a3054dacebc93f8eaefa3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041760166081560081, guid: d3e7af635f3a3054dacebc93f8eaefa3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6842958330809212868, guid: d3e7af635f3a3054dacebc93f8eaefa3, type: 3}
       propertyPath: m_StaticShadowCaster
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7184264380599161657, guid: d3e7af635f3a3054dacebc93f8eaefa3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8697398744782828268, guid: d3e7af635f3a3054dacebc93f8eaefa3, type: 3}
       propertyPath: m_StaticShadowCaster
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8751279415899783391, guid: d3e7af635f3a3054dacebc93f8eaefa3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3e7af635f3a3054dacebc93f8eaefa3, type: 3}
@@ -45588,6 +45634,11 @@ Transform:
   m_Father: {fileID: 1120023198}
   m_RootOrder: 324
   m_LocalEulerAnglesHint: {x: -270, y: -180, z: -134.998}
+--- !u!4 &1433910832 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7055732452257071462, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+  m_PrefabInstance: {fileID: 1443391614}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1434656054 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4253771820984434867, guid: ad3c5895060e2cc4180204c3bdadcae5, type: 3}
@@ -66300,6 +66351,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Quater (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5924251156185468324, guid: 4ca87abd7aabaab42b78549f0e49d1a0, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6448305453751441182, guid: 4ca87abd7aabaab42b78549f0e49d1a0, type: 3}
       propertyPath: m_RootOrder
       value: 470
@@ -67715,6 +67770,10 @@ PrefabInstance:
     - target: {fileID: 5924251156185468324, guid: 4ca87abd7aabaab42b78549f0e49d1a0, type: 3}
       propertyPath: m_Name
       value: Wall_Quater (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924251156185468324, guid: 4ca87abd7aabaab42b78549f0e49d1a0, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6448305453751441182, guid: 4ca87abd7aabaab42b78549f0e49d1a0, type: 3}
       propertyPath: m_RootOrder
@@ -72663,6 +72722,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1531764842199017350, guid: d3e7af635f3a3054dacebc93f8eaefa3, type: 3}
   m_PrefabInstance: {fileID: 2079982017}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2049471057 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4898551326864551934, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+  m_PrefabInstance: {fileID: 1443391614}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2052560741
 PrefabInstance:
