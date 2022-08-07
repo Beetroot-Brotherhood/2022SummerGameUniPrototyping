@@ -12,10 +12,15 @@ namespace StarterAssets
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
     [RequireComponent(typeof(PlayerInput))]
 #endif
+
+
     public class ThirdPersonController : MonoBehaviour
     {
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
+
+        [SerializeField] private PlayerSounds playerSounds; //* This provides a reference point for the script which allows you to call the various sound functions which will be written into the 'PlayerSounds' script
+
         public float MoveSpeed = 2.0f;
 
         [Tooltip("Sprint speed of the character in m/s")]
@@ -387,6 +392,15 @@ namespace StarterAssets
             {
                 AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
             }
+        }
+        void PlayStepLeft() //* This will trigger the PlayerSounds script to execute the code within the PlayStep function 
+        {
+        playerSounds.PlayStepLeft();
+        }
+
+        void PlayStepRight() //* This will trigger the PlayerSounds script to execute the code within the PlaySteo function 
+        {
+        playerSounds.PlayStepRight();
         }
     }
 }
