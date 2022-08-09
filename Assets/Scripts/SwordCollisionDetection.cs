@@ -27,7 +27,7 @@ public class SwordCollisionDetection : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag  == "Enemy")
+        if(other.tag  == "Enemy" && wp.canSlice == true)
         {
             hitGameobjects = Physics.OverlapBox(cutPlane.transform.position, cutPlaneSize / 2, cutPlane.transform.rotation, layerMask);
 
@@ -62,6 +62,8 @@ public class SwordCollisionDetection : MonoBehaviour
 
                     }
                 }
+
+                wp.canSlice = false;
             }
             cutPlane.transform.Rotate(Vector3.forward * 180, Space.Self);
             OnSlicerInput.instance.onSlice = false;

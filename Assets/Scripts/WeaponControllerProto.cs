@@ -7,6 +7,7 @@ public class WeaponControllerProto : MonoBehaviour
 {
     public GameObject Sword;
     public bool canAttack = true;
+    public bool canSlice = false;
     public bool canParry = true;
     public float attackCooldown = 1.0f;
     public float parryCooldown = 1.0f;
@@ -31,6 +32,7 @@ public class WeaponControllerProto : MonoBehaviour
             if (canAttack)
             {
                 SwordAttack();
+                canSlice = true;
             }
 
 
@@ -58,6 +60,7 @@ public class WeaponControllerProto : MonoBehaviour
     {
         canParry = false;
         canAttack = false;
+        
         int rnd = Random.Range(0, 2);
 
         Animator anim = Sword.GetComponent<Animator>();
