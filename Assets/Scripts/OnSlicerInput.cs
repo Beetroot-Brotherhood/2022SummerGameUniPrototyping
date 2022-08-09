@@ -19,6 +19,7 @@ public class OnSlicerInput : MonoBehaviour
     [HideInInspector] public bool onRotateClock;
     [HideInInspector] public bool onSlice;
     [HideInInspector] public bool onGatherSlicedParts;
+    [HideInInspector] public bool onParry;
 
     public GameObject slicer;
     
@@ -47,4 +48,14 @@ public class OnSlicerInput : MonoBehaviour
             //onRotateClock = false;
         }
     }
+
+    public void OnParry(InputValue value)
+    {
+        onParry = value.isPressed;
+    }
+
+
+
 }
+
+
