@@ -10,9 +10,19 @@ public class WeaponControllerProto : MonoBehaviour
     public bool canParry = true;
     public float attackCooldown = 1.0f;
     public float parryCooldown = 1.0f;
+    public float parryDuration = 0.1f;
 
     public AudioClip swordAttackSound;
 
+
+    public GameObject parryBoxCol;
+
+
+
+    private void Start()
+    {
+        parryBoxCol.SetActive(false);
+    }
     void Update()
     {
         if(OnSlicerInput.instance.onSlice)
@@ -92,6 +102,8 @@ public class WeaponControllerProto : MonoBehaviour
 
         anim.SetTrigger("Parry");
 
+        
+        StartCoroutine(ParryBoxTimer());
         StartCoroutine(ResetParryCooldown());
 
         canAttack = true;
@@ -103,6 +115,16 @@ public class WeaponControllerProto : MonoBehaviour
         canParry = true;
         
     }
+
+    IEnumerator ParryBoxTimer()
+    {
+        parryBoxCol.SetActive(true);
+        yield return new WaitForSeconds(parryDuration);
+        parryBoxCol.SetActive(false);
+
+    }
+
+
     //parrying ends
 
 }
