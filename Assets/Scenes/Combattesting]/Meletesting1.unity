@@ -926,6 +926,7 @@ GameObject:
   - component: {fileID: 526790258}
   - component: {fileID: 526790259}
   - component: {fileID: 526790260}
+  - component: {fileID: 526790261}
   m_Layer: 0
   m_Name: ParryBox
   m_TagString: Blocker
@@ -977,6 +978,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &526790261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526790257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed54e58cf595e3479d386ed6bcbdb36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parryReactBool: 0
 --- !u!1 &603930976
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,6 +1706,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: shitana
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b95af3d1b51afe54ab329b2df5322068, type: 3}
+      propertyPath: m_TagString
+      value: EnemyWeapon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b95af3d1b51afe54ab329b2df5322068, type: 3}
 --- !u!1 &1257624841
@@ -2068,6 +2086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sword: {fileID: 1600490844}
+  parryBox: {fileID: 526790257}
   canAttack: 1
   canSlice: 1
   canParry: 1

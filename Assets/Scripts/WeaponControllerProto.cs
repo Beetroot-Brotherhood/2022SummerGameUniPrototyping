@@ -6,6 +6,7 @@ using UnityEngine;
 public class WeaponControllerProto : MonoBehaviour
 {
     public GameObject Sword;
+    public GameObject parryBox;
     public bool canAttack = true;
     public bool canSlice = false;
     public bool canParry = true;
@@ -26,7 +27,9 @@ public class WeaponControllerProto : MonoBehaviour
     }
     void Update()
     {
-        if(OnSlicerInput.instance.onSlice)
+        Animator anim = Sword.GetComponent<Animator>();
+
+        if (OnSlicerInput.instance.onSlice)
         {
 
             if (canAttack)
@@ -52,6 +55,11 @@ public class WeaponControllerProto : MonoBehaviour
         }
 
 
+
+        if (parryBox.GetComponent<PlayerParryBox>().parryReactBool == true && anim.GetBool("Parrying") == true)
+        {
+            SwordParryReact();
+        }
 
     }
 
@@ -102,7 +110,7 @@ public class WeaponControllerProto : MonoBehaviour
 
         Animator anim = Sword.GetComponent<Animator>();
 
-
+        anim.SetBool("Parrying", true);
         anim.SetTrigger("Parry");
 
         
@@ -121,12 +129,22 @@ public class WeaponControllerProto : MonoBehaviour
 
     IEnumerator ParryBoxTimer()
     {
+        Animator anim = Sword.GetComponent<Animator>();
         parryBoxCol.SetActive(true);
         yield return new WaitForSeconds(parryDuration);
         parryBoxCol.SetActive(false);
-
+        anim.SetBool("Parrying", false);
+        
     }
 
+    public void SwordParryReact()
+    {
+        Animator anim = Sword.GetComponent<Animator>();
+
+        anim.SetTrigger("ParryReact");
+
+        parryBox.GetComponent<PlayerParryBox>().parryReactBool = false;
+    }
 
     //parrying ends
 

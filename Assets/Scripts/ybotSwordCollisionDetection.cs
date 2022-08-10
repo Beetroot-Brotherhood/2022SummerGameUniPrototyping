@@ -16,11 +16,11 @@ public class ybotSwordCollisionDetection : MonoBehaviour
             staggerCollision = true;
 
 
-            Debug.Log("lungsbungus");
+           
         }
 
      
-
+        
 
 
 
