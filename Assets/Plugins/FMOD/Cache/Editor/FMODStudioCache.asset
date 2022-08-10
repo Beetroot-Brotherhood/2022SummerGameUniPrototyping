@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637957630844120348
+  lastModified: 637957663803916873
   FileSizes:
   - Name: Desktop
     Value: 10692384
@@ -126,8 +126,8 @@ MonoBehaviour:
     Data3: -2136581231
     Data4: 399335133
   Banks:
-  - {fileID: 3879535657337526303}
   - {fileID: -4842344412843522935}
+  - {fileID: 3879535657337526303}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -291,10 +291,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637957630733326177
+  lastModified: 637957663801606326
   FileSizes:
   - Name: Desktop
-    Value: 12266176
+    Value: 24497984
   Exists: 1
 --- !u!114 &-4597689122092199292
 MonoBehaviour:
@@ -349,6 +349,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-2318803830489419933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Cabin
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Cabin
+  Guid:
+    Data1: -1300884677
+    Data2: 1297012394
+    Data3: 1713445765
+    Data4: 568627983
+  Banks:
+  - {fileID: -4842344412843522935}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-2061690393597419483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -573,13 +600,14 @@ MonoBehaviour:
   - {fileID: -4597689122092199292}
   - {fileID: -2061690393597419483}
   - {fileID: 3360173967324878149}
+  - {fileID: -2318803830489419933}
   EditorParameters:
   - {fileID: -754482486958039952}
   MasterBanks:
   - {fileID: -4842344412843522935}
   StringsBanks:
   - {fileID: 5281460975032158907}
-  cacheTime: 637957630844120348
+  cacheTime: 637957663803916873
   cacheVersion: 131591
 --- !u!114 &676395392266713971
 MonoBehaviour:
@@ -805,7 +833,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637957630738870674
+  lastModified: 637957663803326752
   FileSizes:
   - Name: Desktop
     Value: 12662944
@@ -853,10 +881,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637957630733356312
+  lastModified: 637957663801636335
   FileSizes:
   - Name: Desktop
-    Value: 2158
+    Value: 2232
   Exists: 1
 --- !u!114 &5960602537059652942
 MonoBehaviour:
@@ -907,7 +935,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637957630731475761
+  lastModified: 637957663799590687
   FileSizes:
   - Name: Desktop
     Value: 5535072
