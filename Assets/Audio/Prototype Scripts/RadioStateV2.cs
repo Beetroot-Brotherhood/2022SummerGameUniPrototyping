@@ -34,7 +34,7 @@ public class RadioStateV2 : MonoBehaviour
 
 
 
-    public HumanController humanController;
+    //!public HumanController humanController;
 
 
     [SerializeField] [Range(0, 1)]
