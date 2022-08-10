@@ -70,7 +70,7 @@ public class PlayerSounds : MonoBehaviour
                     //footsteps.setParameterByName("Footsteps", 1);
                     surfaceType = 1.0f;    
                 }
-                else if (surfaceRenderer.material.name.Contains("Stone") || surfaceRenderer.material.name.Contains("stone")) 
+                else if (surfaceRenderer.material.name.Contains("Stone") || surfaceRenderer.material.name.Contains("stone") || (surfaceRenderer.material.name.Contains("Rock") || surfaceRenderer.material.name.Contains("rock")))
                 {
                     //footsteps.setParameterByName("Footsteps", 2);
                     surfaceType = 2.0f;
@@ -81,11 +81,6 @@ public class PlayerSounds : MonoBehaviour
                     surfaceType = 3.0f;
                 }
                 else if (surfaceRenderer.material.name.Contains("Dirt") || surfaceRenderer.material.name.Contains("dirt")) 
-                {
-                    //footsteps.setParameterByName("Footsteps", 4);
-                    surfaceType = 4.0f;
-                }
-                else if (surfaceRenderer.material.name.Contains("Rock") || surfaceRenderer.material.name.Contains("rock")) 
                 {
                     //footsteps.setParameterByName("Footsteps", 4);
                     surfaceType = 4.0f;
