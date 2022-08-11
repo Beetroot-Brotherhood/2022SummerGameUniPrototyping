@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637957741643538209
+  lastModified: 637957836007224388
   FileSizes:
   - Name: Desktop
     Value: 10692384
@@ -76,6 +76,32 @@ MonoBehaviour:
   - Metal
   - Dirt
   - Mud
+  Exists: 1
+--- !u!114 &-7083889046077315077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MechainTheme/RadioState
+  m_EditorClassIdentifier: 
+  Name: RadioState
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 1088831446
+    data2: 1811705897
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Off
+  - On
   Exists: 1
 --- !u!114 &-7077213212965445609
 MonoBehaviour:
@@ -291,7 +317,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637957741640591997
+  lastModified: 637957836004963863
   FileSizes:
   - Name: Desktop
     Value: 24497984
@@ -601,13 +627,14 @@ MonoBehaviour:
   - {fileID: -2061690393597419483}
   - {fileID: 3360173967324878149}
   - {fileID: -2318803830489419933}
+  - {fileID: 5479509034638150765}
   EditorParameters:
   - {fileID: -754482486958039952}
   MasterBanks:
   - {fileID: -4842344412843522935}
   StringsBanks:
   - {fileID: 5281460975032158907}
-  cacheTime: 637957741643538209
+  cacheTime: 637957836007224388
   cacheVersion: 131591
 --- !u!114 &676395392266713971
 MonoBehaviour:
@@ -833,7 +860,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637957741642439182
+  lastModified: 637957836006644267
   FileSizes:
   - Name: Desktop
     Value: 12662944
@@ -866,6 +893,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 17600
+--- !u!114 &4680208534613916040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MechainTheme/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3098557548
+    data2: 3029766217
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &5281460975032158907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -881,11 +932,40 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637957741640628432
+  lastModified: 637957836004993871
   FileSizes:
   - Name: Desktop
-    Value: 2232
+    Value: 2284
   Exists: 1
+--- !u!114 &5479509034638150765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MECHAIN/MechainTheme
+  m_EditorClassIdentifier: 
+  Path: event:/MECHAIN/MechainTheme
+  Guid:
+    Data1: 947965068
+    Data2: 1171251368
+    Data3: 2002512303
+    Data4: 1211084651
+  Banks:
+  - {fileID: 6454103502693541807}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 4680208534613916040}
+  - {fileID: -7083889046077315077}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 91200
 --- !u!114 &5960602537059652942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,10 +1015,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637957741639693675
+  lastModified: 637957836003078477
   FileSizes:
   - Name: Desktop
-    Value: 5535072
+    Value: 6946752
   Exists: 1
 --- !u!114 &6734060015546071212
 MonoBehaviour:
