@@ -1038,6 +1038,7 @@ GameObject:
   - component: {fileID: 5885216827943657505}
   - component: {fileID: 135756642000475821}
   - component: {fileID: 4416926081852918493}
+  - component: {fileID: 4822377318912420297}
   m_Layer: 8
   m_Name: PlayerArmature
   m_TagString: Player
@@ -1113,6 +1114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e54e5a728a9234ab24fcf1460ed8a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSounds: {fileID: 0}
   MoveSpeed: 2
   SprintSpeed: 5.335
   RotationSmoothTime: 0.12
@@ -1279,6 +1281,30 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &4822377318912420297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416926081852918481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e12aeb62644333944ad5eb3cd18812fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SelectAudio:
+    Guid:
+      Data1: -1315568711
+      Data2: 1081833456
+      Data3: -42814800
+      Data4: -1482734036
+    Path: event:/Environment/PlanetWind
+  SoundOcclusionWidening: 3.04
+  PlayerOcclusionWidening: 3.09
+  OcclusionLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &4523139366846529165
 GameObject:
   m_ObjectHideFlags: 0
