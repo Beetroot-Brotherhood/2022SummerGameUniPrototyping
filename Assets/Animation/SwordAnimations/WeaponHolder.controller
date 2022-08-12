@@ -17,7 +17,7 @@ AnimatorStateMachine:
     m_Position: {x: -80, y: 420, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5015577781076344752}
-    m_Position: {x: 140, y: 420, z: 0}
+    m_Position: {x: 150, y: 420, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4263035511947749386}
     m_Position: {x: 190, y: 150, z: 0}
@@ -70,7 +70,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SwordAttack2_1
-  m_Speed: 1.66
+  m_Speed: 2.4
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 3394924064899601142}
@@ -213,37 +213,37 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Attack2
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Attacking
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Parry
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Parrying
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: ParryReact
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -317,7 +317,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SwordAttack2_2
-  m_Speed: 1.66
+  m_Speed: 2.4
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 8202171445103474938}

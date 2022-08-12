@@ -1317,7 +1317,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5921116, y: 3.6434941, z: 0.23183179}
+  m_Size: {x: 0.5921116, y: 3.6434941, z: 0.1}
   m_Center: {x: -0.04050535, y: 1.2059667, z: 0}
 --- !u!54 &2073886079
 Rigidbody:
@@ -1354,6 +1354,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   hitGameobjects: []
+  slicedMaterial: {fileID: 2100000, guid: 90540b72cd2379e418754a09305731eb, type: 2}
 --- !u!1 &2091688292
 GameObject:
   m_ObjectHideFlags: 0
