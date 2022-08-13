@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8189614386002016533
 Transform:
@@ -109,6 +109,10 @@ PrefabInstance:
     - target: {fileID: 3704693620936723433, guid: 43fab83a4e6d4db4c92518f984f0e42f, type: 3}
       propertyPath: m_Name
       value: Mesh_Stand_Top (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704693620936723433, guid: 43fab83a4e6d4db4c92518f984f0e42f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4044909304294576467, guid: 43fab83a4e6d4db4c92518f984f0e42f, type: 3}
       propertyPath: m_RootOrder
