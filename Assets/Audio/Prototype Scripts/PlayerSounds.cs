@@ -119,46 +119,44 @@ public class PlayerSounds : MonoBehaviour
             Renderer surfaceRenderer = hit.collider.GetComponentInChildren<Renderer>();
             if (surfaceRenderer)
             {
-                Debug.Log(surfaceRenderer.material.name);
-                if (surfaceRenderer.material.name.Contains("Wood") || surfaceRenderer.material.name.Contains("wood"))
+                if (surfaceRenderer.gameObject.TryGetComponent<FMODMaterialSoundOverride>(out FMODMaterialSoundOverride matOverride))
                 {
-                    //footsteps.setParameterByName("Footsteps", 1);
-                    surfaceType = 1.0f;    
-                }
-                else if (surfaceRenderer.material.name.Contains("Stone") || surfaceRenderer.material.name.Contains("stone")) 
-                {
-                    //footsteps.setParameterByName("Footsteps", 2);
-                    surfaceType = 2.0f;
-                }
-                else if (surfaceRenderer.material.name.Contains("Metal") || surfaceRenderer.material.name.Contains("metal")) 
-                {
-                    //footsteps.setParameterByName("Footsteps", 3);
-                    surfaceType = 3.0f;
-                }
-                else if (surfaceRenderer.material.name.Contains("Dirt") || surfaceRenderer.material.name.Contains("dirt")) 
-                {
-                    //footsteps.setParameterByName("Footsteps", 4);
-                    surfaceType = 4.0f;
-                }
-                else if (surfaceRenderer.material.name.Contains("Rock") || surfaceRenderer.material.name.Contains("rock")) 
-                {
-                    //footsteps.setParameterByName("Footsteps", 4);
-                    surfaceType = 4.0f;
-                }
-                else if (surfaceRenderer.material.name.Contains("Mud") || surfaceRenderer.material.name.Contains("mud")) 
-                {
-                    //footsteps.setParameterByName("Footsteps", 4);
-                    surfaceType = 5.0f;
-                }
-                else if (surfaceRenderer.material.name.Contains("Blood") || surfaceRenderer.material.name.Contains("blood")) 
-                {
-                    //footsteps.setParameterByName("Footsteps", 4);
-                    surfaceType = 5.0f;
+                    surfaceType = (int)matOverride.materials;
                 }
                 else
                 {
-                    //footsteps.setParameterByName("Footsteps", 0);
-                    surfaceType = 0.0f;
+
+                    Debug.Log(surfaceRenderer.material.name);
+                    if (surfaceRenderer.material.name.Contains("Wood") || surfaceRenderer.material.name.Contains("wood"))
+                    {
+                        //footsteps.setParameterByName("Footsteps", 1);
+                        surfaceType = 1.0f;    
+                    }
+                    else if (surfaceRenderer.material.name.Contains("Stone") || surfaceRenderer.material.name.Contains("stone") || (surfaceRenderer.material.name.Contains("Rock") || surfaceRenderer.material.name.Contains("rock")))
+                    {
+                        //footsteps.setParameterByName("Footsteps", 2);
+                        surfaceType = 2.0f;
+                    }
+                    else if (surfaceRenderer.material.name.Contains("Metal") || surfaceRenderer.material.name.Contains("metal")) 
+                    {
+                        //footsteps.setParameterByName("Footsteps", 3);
+                        surfaceType = 3.0f;
+                    }
+                    else if (surfaceRenderer.material.name.Contains("Dirt") || surfaceRenderer.material.name.Contains("dirt")) 
+                    {
+                        //footsteps.setParameterByName("Footsteps", 4);
+                        surfaceType = 4.0f;
+                    }
+                    else if (surfaceRenderer.material.name.Contains("Mud") || surfaceRenderer.material.name.Contains("mud")) 
+                    {
+                        //footsteps.setParameterByName("Footsteps", 4);
+                        surfaceType = 5.0f;
+                    }
+                    else
+                    {
+                        //footsteps.setParameterByName("Footsteps", 0);
+                        surfaceType = 0.0f;
+                    }
                 }
             }
         }
