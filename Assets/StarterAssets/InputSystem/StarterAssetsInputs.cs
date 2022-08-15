@@ -12,6 +12,7 @@ namespace StarterAssets
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
+		public bool onAttack;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -42,6 +43,10 @@ namespace StarterAssets
 		public void OnSprint(InputValue value)
 		{
 			SprintInput(value.isPressed);
+		}
+
+		public void OnAttack(InputValue value){
+			AttackInput(value.isPressed);
 		}
 #endif
 
@@ -75,6 +80,11 @@ namespace StarterAssets
 		{
 			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
 		}
+
+		private void AttackInput(bool state)
+        {
+			onAttack = state;
+        }
 	}
 	
 }

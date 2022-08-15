@@ -164,6 +164,12 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
+
+            if (_input.onAttack)
+            {
+                _animator.SetBool("Attack", true);
+                _input.onAttack = false;
+            }
         }
 
         private void LateUpdate()
@@ -402,5 +408,10 @@ namespace StarterAssets
             {
             playerSounds.PlayStepRight();
             }
+
+        public void StopAttack()
+        {
+            _animator.SetBool("Attack", false);
+        }
     }
 }
