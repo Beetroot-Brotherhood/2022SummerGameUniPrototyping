@@ -6,16 +6,18 @@ public class ybotSwordCollisionDetection : MonoBehaviour
 {
     public bool staggerCollision = false;
 
+    public YbotTestController2 ybat;
 
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Blocker")
+        if (other.tag == "Blocker" && ybat.isAttacking == true)
         {
 
             staggerCollision = true;
 
-
+            ybat.staggered = true;
+            
            
         }
 
