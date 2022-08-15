@@ -7,8 +7,14 @@ public class PlayerSounds : MonoBehaviour
 {
    
    [SerializeField] private FMODUnity.EventReference _footsteps;
+   [SerializeField] private FMODUnity.EventReference _cloth;
+   [SerializeField] private FMODUnity.EventReference _jingle;
    
    private FMOD.Studio.EventInstance footsteps;
+   private FMOD.Studio.EventInstance cloth;
+   private FMOD.Studio.EventInstance jingle;
+
+
 
    public Transform leftFoot;
 
@@ -24,6 +30,16 @@ public class PlayerSounds : MonoBehaviour
         {
             footsteps = FMODUnity.RuntimeManager.CreateInstance(_footsteps);
         }
+
+        if (!_cloth.IsNull)
+        {
+            cloth = FMODUnity.RuntimeManager.CreateInstance(_cloth);
+        }
+
+        if (!_jingle.IsNull)
+        {
+            jingle = FMODUnity.RuntimeManager.CreateInstance(_jingle);
+        }
    }
 
     public void PlayStepLeft()
@@ -36,9 +52,12 @@ public class PlayerSounds : MonoBehaviour
             footsteps.setParameterByName("Footsteps", surfaceType); //! Enable for debugging using surface slider in the inspector
             footsteps.start();
 
-            FMODUnity.RuntimeManager.PlayOneShot ("event:/Enemies/Jim/Footsteps/FootstepClothJIM", GetComponent<Transform> ().position); //* Plays footstep cloth layer sound bank
 
-            FMODUnity.RuntimeManager.PlayOneShot ("event:/Enemies/Jim/Footsteps/FootstepJingleJIM", GetComponent<Transform> ().position); //* Plays footstep jingle layer sound bank
+            cloth.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+            cloth.start();
+
+            jingle.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+            jingle.start();
 
         }
 
@@ -54,9 +73,12 @@ public class PlayerSounds : MonoBehaviour
             footsteps.setParameterByName("Footsteps", surfaceType); //! Enable for debugging using surface slider in the inspector
             footsteps.start();
 
-            FMODUnity.RuntimeManager.PlayOneShot ("event:/Enemies/Jim/Footsteps/FootstepClothJIM", GetComponent<Transform> ().position); //* Plays footstep cloth layer sound bank
+            cloth.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+            cloth.start();
+            
+            jingle.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+            jingle.start();
 
-            FMODUnity.RuntimeManager.PlayOneShot ("event:/Enemies/Jim/Footsteps/FootstepJingleJIM", GetComponent<Transform> ().position); //* Plays footstep jingle layer sound bank
         }
 
     }
