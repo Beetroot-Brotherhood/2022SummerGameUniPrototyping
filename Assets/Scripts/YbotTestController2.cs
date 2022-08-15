@@ -24,9 +24,9 @@ public class YbotTestController2 : MonoBehaviour
 
     public void Update()
     {
-        if(staggered == true)
+        if(weaponHitbox.GetComponent<ybotSwordCollisionDetection>().staggerCollision == true)
         {
-            canAttack = false;
+            
             YbotStagger();
         }
 
@@ -79,9 +79,9 @@ public class YbotTestController2 : MonoBehaviour
     //stagger functions
     void YbotStagger()
     {
-
+        weaponHitbox.GetComponent<ybotSwordCollisionDetection>().staggerCollision = false;
         staggered = true;
-
+        canAttack = false;
 
 
         anim.SetBool("Staggering", true);
@@ -94,13 +94,13 @@ public class YbotTestController2 : MonoBehaviour
 
         IEnumerator YbotStaggerTimer()
     {
-        weaponHitbox.GetComponent<ybotSwordCollisionDetection>().staggerCollision = false;
+        
         yield return new WaitForSeconds(parryStunTime);
 
 
         anim.SetBool("Staggering", false);
 
-
+        canAttack = true;
         staggered = false;
     }
 

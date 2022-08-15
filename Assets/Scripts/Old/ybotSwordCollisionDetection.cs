@@ -11,12 +11,12 @@ public class ybotSwordCollisionDetection : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Blocker" && ybat.isAttacking == true)
+        if (other.tag == "Blocker")
         {
 
             staggerCollision = true;
 
-            ybat.staggered = true;
+            
             
            
         }
