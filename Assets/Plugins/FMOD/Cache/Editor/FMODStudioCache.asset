@@ -76,36 +76,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-7632159020575759098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/HumanFootsteps/Footsteps
-  m_EditorClassIdentifier: 
-  Name: Footsteps
-  StudioPath: 
-  Min: 0
-  Max: 5
-  Default: 0
-  ID:
-    data1: 1613936621
-    data2: 1075788159
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - DefaultBank
-  - Wood
-  - Stone
-  - Metal
-  - Dirt
-  - Mud
-  Exists: 1
 --- !u!114 &-7624485456783870511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,11 +119,38 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637961698069791409
+  lastModified: 637961934747069536
   FileSizes:
   - Name: Desktop
     Value: 6907840
   Exists: 1
+--- !u!114 &-7189204176305246943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Jim/FootstepClothJIM
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Jim/FootstepClothJIM
+  Guid:
+    Data1: -106030388
+    Data2: 1097192309
+    Data3: -176338789
+    Data4: -2042774122
+  Banks:
+  - {fileID: 8430083926468423398}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 800
 --- !u!114 &-6886996333803516053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,6 +177,34 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+  Length: 0
+--- !u!114 &-6588364357594896678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Jim/HumanFootsteps
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Jim/HumanFootsteps
+  Guid:
+    Data1: 1499407956
+    Data2: 1231715391
+    Data3: -1228178757
+    Data4: -393254616
+  Banks:
+  - {fileID: 8430083926468423398}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 7342339427773329306}
+  MinDistance: 1
+  MaxDistance: 20
   Length: 0
 --- !u!114 &-6427091475434277086
 MonoBehaviour:
@@ -289,33 +314,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 121250
---- !u!114 &-4590421704122679104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemies/FootStepJingle
-  m_EditorClassIdentifier: 
-  Path: event:/Enemies/FootStepJingle
-  Guid:
-    Data1: 760845255
-    Data2: 1149890248
-    Data3: 1272316813
-    Data4: -1241839348
-  Banks:
-  - {fileID: 8430083926468423398}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-4276169407730268950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,33 +459,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 776307
---- !u!114 &-1773327886886080717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemies/FootStepCloth
-  m_EditorClassIdentifier: 
-  Path: event:/Enemies/FootStepCloth
-  Guid:
-    Data1: -106030388
-    Data2: 1097192309
-    Data3: -176338789
-    Data4: -2042774122
-  Banks:
-  - {fileID: 8430083926468423398}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-1518406181069190025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -566,22 +537,22 @@ MonoBehaviour:
   - {fileID: 1151370066955303980}
   - {fileID: 2585847670208558920}
   - {fileID: 7311705916423163048}
-  - {fileID: 5822396926785169443}
-  - {fileID: -4590421704122679104}
-  - {fileID: -1773327886886080717}
   - {fileID: 7092745382078784620}
   - {fileID: -3832691278414172713}
   - {fileID: -2128454827392962108}
   - {fileID: -7624485456783870511}
   - {fileID: -6427091475434277086}
   - {fileID: 5105747293793322626}
+  - {fileID: -6588364357594896678}
+  - {fileID: 6090574935581588058}
+  - {fileID: -7189204176305246943}
   EditorParameters:
   - {fileID: -4276169407730268950}
   MasterBanks:
   - {fileID: 1694097518466003450}
   StringsBanks:
   - {fileID: 3743328676668485975}
-  cacheTime: 637961698075795837
+  cacheTime: 637961934750746504
   cacheVersion: 131591
 --- !u!114 &316210463170389488
 MonoBehaviour:
@@ -737,7 +708,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637961698071161715
+  lastModified: 637961934748225937
   FileSizes:
   - Name: Desktop
     Value: 12266176
@@ -836,10 +807,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637961698071171719
+  lastModified: 637961934748255944
   FileSizes:
   - Name: Desktop
-    Value: 2186
+    Value: 2216
   Exists: 1
 --- !u!114 &3949865255320204353
 MonoBehaviour:
@@ -908,7 +879,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637961698075795837
+  lastModified: 637961934750746504
   FileSizes:
   - Name: Desktop
     Value: 10692384
@@ -941,34 +912,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1500
---- !u!114 &5822396926785169443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemies/HumanFootsteps
-  m_EditorClassIdentifier: 
-  Path: event:/Enemies/HumanFootsteps
-  Guid:
-    Data1: 1499407956
-    Data2: 1231715391
-    Data3: -1228178757
-    Data4: -393254616
-  Banks:
-  - {fileID: 8430083926468423398}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -7632159020575759098}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &5838240180067370526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -997,6 +940,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 17600
+--- !u!114 &6090574935581588058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Jim/FootstepJingleJIM
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Jim/FootstepJingleJIM
+  Guid:
+    Data1: 760845255
+    Data2: 1149890248
+    Data3: 1272316813
+    Data4: -1241839348
+  Banks:
+  - {fileID: 8430083926468423398}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 744
 --- !u!114 &7092745382078784620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1054,6 +1024,36 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &7342339427773329306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/HumanFootsteps/Footsteps
+  m_EditorClassIdentifier: 
+  Name: Footsteps
+  StudioPath: 
+  Min: 0
+  Max: 5
+  Default: 0
+  ID:
+    data1: 1613936621
+    data2: 1075788159
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - DefaultBank
+  - Wood
+  - Stone
+  - Metal
+  - Dirt
+  - Mud
+  Exists: 1
 --- !u!114 &7584084762373926595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1117,10 +1117,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637961698075065654
+  lastModified: 637961934750176378
   FileSizes:
   - Name: Desktop
-    Value: 12640448
+    Value: 12760480
   Exists: 1
 --- !u!114 &8517061442190815871
 MonoBehaviour:

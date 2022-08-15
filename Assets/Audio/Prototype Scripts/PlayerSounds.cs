@@ -35,6 +35,11 @@ public class PlayerSounds : MonoBehaviour
             GroundSwitchLeft();
             footsteps.setParameterByName("Footsteps", surfaceType); //! Enable for debugging using surface slider in the inspector
             footsteps.start();
+
+            FMODUnity.RuntimeManager.PlayOneShot ("event:/Enemies/Jim/Footsteps/FootstepClothJIM", GetComponent<Transform> ().position); //* Plays footstep cloth layer sound bank
+
+            FMODUnity.RuntimeManager.PlayOneShot ("event:/Enemies/Jim/Footsteps/FootstepJingleJIM", GetComponent<Transform> ().position); //* Plays footstep jingle layer sound bank
+
         }
 
     }
@@ -48,6 +53,10 @@ public class PlayerSounds : MonoBehaviour
             GroundSwitchRight();
             footsteps.setParameterByName("Footsteps", surfaceType); //! Enable for debugging using surface slider in the inspector
             footsteps.start();
+
+            FMODUnity.RuntimeManager.PlayOneShot ("event:/Enemies/Jim/Footsteps/FootstepClothJIM", GetComponent<Transform> ().position); //* Plays footstep cloth layer sound bank
+
+            FMODUnity.RuntimeManager.PlayOneShot ("event:/Enemies/Jim/Footsteps/FootstepJingleJIM", GetComponent<Transform> ().position); //* Plays footstep jingle layer sound bank
         }
 
     }
