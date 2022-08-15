@@ -13260,6 +13260,7 @@ GameObject:
   - component: {fileID: 532681532}
   - component: {fileID: 532681531}
   - component: {fileID: 532681534}
+  - component: {fileID: 532681535}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -13380,6 +13381,19 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_DirtyAABB: 0
+--- !u!114 &532681535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532681530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d61e265b7b25574288e46bc44049dae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials: 4
 --- !u!1001 &536085024
 PrefabInstance:
   m_ObjectHideFlags: 0
