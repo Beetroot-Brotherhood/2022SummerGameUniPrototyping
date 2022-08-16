@@ -1244,8 +1244,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.39396322, y: 0.28717157, z: 2.1082568}
-  m_Center: {x: 0.12828203, y: -0.043590143, z: 0.8299139}
+  m_Size: {x: 0.39396322, y: 0.1264942, z: 2.1082568}
+  m_Center: {x: 0.12828201, y: -0.06774984, z: 0.82991457}
 --- !u!54 &1261628061
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1276,6 +1276,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   staggerCollision: 0
   ybat: {fileID: 1325776865}
+  metalSparksEffect: {fileID: 7226583673155636401, guid: a2ab56839e1c9504ea9d141e95d0b16b, type: 3}
+  sparkPoint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1325776860
 PrefabInstance:
   m_ObjectHideFlags: 0
