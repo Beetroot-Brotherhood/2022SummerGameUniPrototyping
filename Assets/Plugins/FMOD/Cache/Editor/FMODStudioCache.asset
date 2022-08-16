@@ -119,10 +119,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637962153733694634
+  lastModified: 637962630679939403
   FileSizes:
   - Name: Desktop
-    Value: 6907840
+    Value: 9183200
   Exists: 1
 --- !u!114 &-7189204176305246943
 MonoBehaviour:
@@ -543,13 +543,14 @@ MonoBehaviour:
   - {fileID: -7189204176305246943}
   - {fileID: 3584395064864645737}
   - {fileID: 8121469655880870978}
+  - {fileID: 6242804590271936502}
   EditorParameters:
   - {fileID: -4276169407730268950}
   MasterBanks:
   - {fileID: 1694097518466003450}
   StringsBanks:
   - {fileID: 3743328676668485975}
-  cacheTime: 637962221033778121
+  cacheTime: 637962630683561497
   cacheVersion: 131591
 --- !u!114 &316210463170389488
 MonoBehaviour:
@@ -705,7 +706,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637962221033778121
+  lastModified: 637962630681280961
   FileSizes:
   - Name: Desktop
     Value: 12955424
@@ -832,10 +833,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637962153734244725
+  lastModified: 637962630681310962
   FileSizes:
   - Name: Desktop
-    Value: 2324
+    Value: 2360
   Exists: 1
 --- !u!114 &3949865255320204353
 MonoBehaviour:
@@ -904,7 +905,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637962079361655681
+  lastModified: 637962630683561497
   FileSizes:
   - Name: Desktop
     Value: 10692384
@@ -992,6 +993,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 840
+--- !u!114 &6242804590271936502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Testing/Saul
+  m_EditorClassIdentifier: 
+  Path: event:/Testing/Saul
+  Guid:
+    Data1: 774946693
+    Data2: 1252180619
+    Data3: -1434616165
+    Data4: -1195665098
+  Banks:
+  - {fileID: -7239724491679766044}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 950
+  Length: 198760
 --- !u!114 &7092745382078784620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1169,7 +1197,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637962153734784391
+  lastModified: 637962630683011371
   FileSizes:
   - Name: Desktop
     Value: 12879456
