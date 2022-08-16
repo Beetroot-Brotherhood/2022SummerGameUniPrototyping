@@ -52,7 +52,7 @@ public class YbotTestController2 : MonoBehaviour
 
     IEnumerator ResetYbotAttackCooldown()
     {
-        Animator anim = this.GetComponent<Animator>();
+
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
         anim.SetBool("Attacking", false);
@@ -84,7 +84,7 @@ public class YbotTestController2 : MonoBehaviour
         weaponHitbox.GetComponent<ybotSwordCollisionDetection>().staggerCollision = false;
 
         anim.SetBool("Staggering", true);
-        anim.SetTrigger("Stagger");
+        anim.SetTrigger("YbotStagger");
         
 
         StartCoroutine(YbotStaggerTimer());

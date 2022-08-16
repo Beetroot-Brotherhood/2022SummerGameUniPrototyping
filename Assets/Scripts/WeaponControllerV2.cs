@@ -43,7 +43,14 @@ public class WeaponControllerV2 : MonoBehaviour
             OnSlicerInput.instance.onParry = false;
         }
 
-        
+        if(parryBox.GetComponent<PlayerParryBox>().parryReactBool == true)
+        {
+
+            ParryReact();
+
+
+
+        }
 
 
 
@@ -145,4 +152,19 @@ public class WeaponControllerV2 : MonoBehaviour
 
         anim.SetBool("Parrying", isParrying);
     }
+
+    public void ParryReact()
+    {
+        parryBox.GetComponent<PlayerParryBox>().parryReactBool = false;
+
+        anim.SetTrigger("ParryReact");
+
+
+
+
+    }
+
+
+
+
 }

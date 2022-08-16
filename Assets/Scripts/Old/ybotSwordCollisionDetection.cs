@@ -16,13 +16,13 @@ public class ybotSwordCollisionDetection : MonoBehaviour
 
             staggerCollision = true;
 
-            
-            
-           
+            Debug.Log("stagger colission");
+
+
+
         }
 
 
-        Debug.Log("stagger colission");
 
 
 
