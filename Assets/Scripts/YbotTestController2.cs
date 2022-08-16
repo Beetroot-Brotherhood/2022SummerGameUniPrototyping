@@ -64,13 +64,13 @@ public class YbotTestController2 : MonoBehaviour
     public void YbotAttackingTrue()
     {
 
-        weaponHitbox.SetActive(true);
+        
         anim.SetBool("Attacking", true);
     }
 
     public void YbotAttackingFalse()
     {
-        weaponHitbox.SetActive(false);
+        
         anim.SetBool("Attacking", false);
     }
     //
@@ -79,10 +79,9 @@ public class YbotTestController2 : MonoBehaviour
     //stagger functions
     void YbotStagger()
     {
-        weaponHitbox.GetComponent<ybotSwordCollisionDetection>().staggerCollision = false;
         staggered = true;
         canAttack = false;
-
+        weaponHitbox.GetComponent<ybotSwordCollisionDetection>().staggerCollision = false;
 
         anim.SetBool("Staggering", true);
         anim.SetTrigger("Stagger");
