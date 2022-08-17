@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="MixerReturn" id="{6c825085-eb89-414d-8217-2b1f289e4845}">
+		<property name="volume">
+			<value>-80</value>
+		</property>
+		<property name="name">
+			<value>RoomTunnel</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{afa50855-3aee-42ee-a9d3-d78e7d27db75}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{bb2dfc1a-3e42-44aa-8864-dbdd0885fc1c}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{da2910f3-4c9f-4b82-8afd-5a03c706d2d0}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{afa50855-3aee-42ee-a9d3-d78e7d27db75}">
+		<relationship name="effects">
+			<destination>{5082e9c0-77b7-413b-b945-12e1c8ae0b43}</destination>
+			<destination>{6299de99-cd51-4e3f-b433-c2991010b9a3}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{bb2dfc1a-3e42-44aa-8864-dbdd0885fc1c}" />
+	<object class="MixerBusFader" id="{5082e9c0-77b7-413b-b945-12e1c8ae0b43}" />
+	<object class="SFXReverbEffect" id="{6299de99-cd51-4e3f-b433-c2991010b9a3}">
+		<property name="dryLevel">
+			<value>-80</value>
+		</property>
+	</object>
+</objects>

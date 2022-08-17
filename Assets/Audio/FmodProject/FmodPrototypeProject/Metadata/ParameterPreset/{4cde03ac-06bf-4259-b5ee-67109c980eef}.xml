@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{4cde03ac-06bf-4259-b5ee-67109c980eef}">
+		<property name="name">
+			<value>SurfaceType</value>
+		</property>
+		<relationship name="folder">
+			<destination>{de7fd34e-c197-4fdc-8953-d4fcb4d65a96}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{d6fe9f59-3bb9-4862-aa8c-141f51dd0ca0}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{d6fe9f59-3bb9-4862-aa8c-141f51dd0ca0}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>10</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>0</value>
+			<value>1</value>
+			<value>2</value>
+			<value>3</value>
+			<value>4</value>
+			<value>Value F</value>
+			<value>Value G</value>
+			<value>Value H</value>
+			<value>Value I</value>
+			<value>Value J</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+		<relationship name="automators">
+			<destination>{a7294961-60b8-4927-b0c8-44ccf30e9019}</destination>
+		</relationship>
+	</object>
+	<object class="Automator" id="{a7294961-60b8-4927-b0c8-44ccf30e9019}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>cursorPosition</value>
+		</property>
+	</object>
+</objects>
