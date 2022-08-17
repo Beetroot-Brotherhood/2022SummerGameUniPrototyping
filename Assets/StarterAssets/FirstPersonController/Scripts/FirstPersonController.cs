@@ -11,7 +11,7 @@ namespace StarterAssets
 #endif
 	public class FirstPersonController : MonoBehaviour
 	{
-		public PlayerSounds playerSounds;
+		[SerializeField] private PlayerSounds playerSounds;
 
 
 
@@ -268,20 +268,34 @@ namespace StarterAssets
 			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
 		}
+
+
+		void PlayStepLeft()
+		{
+			playerSounds.PlayStepLeft();
+		}
+
+		void PlayStepRight()
+		{
+			playerSounds.PlayStepRight();
+		}
+
+		void PlaySwing()
+		{
+			playerSounds.PlaySwing();
+		}
+
+		void PlaySwingHit()
+		{
+			playerSounds.PlaySwingHit();
+		}
+
+
+
+
+
+
+
+
 	}
-
-	/* private void PlayStepLeft()
-	{
-
-
-
-	}
-
- */
-
-
-
-
-
-
 }

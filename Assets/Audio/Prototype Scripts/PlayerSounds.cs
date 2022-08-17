@@ -214,14 +214,14 @@ public class PlayerSounds : MonoBehaviour
         }
     }
 
-    public void playerSwing()
+    public void PlaySwing()
     {
         swing.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
         swing.start();
     }
 
 
-    public void playerSwingHit()
+    public void PlaySwingHit()
     {
         swingHit.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
         swingHit.start();

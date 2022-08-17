@@ -2430,6 +2430,7 @@ GameObject:
   - component: {fileID: 1589485963}
   - component: {fileID: 1589485964}
   - component: {fileID: 1589485965}
+  - component: {fileID: 1589485966}
   m_Layer: 0
   m_Name: WeaponHolder
   m_TagString: Untagged
@@ -2499,6 +2500,56 @@ MonoBehaviour:
   canParry: 1
   isAttacking: 0
   isParrying: 0
+--- !u!114 &1589485966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589485962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 131e1e0cc0eca8248909be203499b4c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _footsteps:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  _cloth:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  _jingle:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  leftFoot: {fileID: 0}
+  rightFoot: {fileID: 0}
+  surfaceType: 0
+  _swing:
+    Guid:
+      Data1: 785098725
+      Data2: 1194722892
+      Data3: 2136378279
+      Data4: 457410828
+    Path: event:/--- Code Slicer ---/Player/PlayerSwordSwing
+  _swingHit:
+    Guid:
+      Data1: 1548852705
+      Data2: 1234914350
+      Data3: 1525666470
+      Data4: -506639327
+    Path: event:/--- Code Slicer ---/Player/PlayerSwordHit
 --- !u!1001 &1828509056
 PrefabInstance:
   m_ObjectHideFlags: 0
