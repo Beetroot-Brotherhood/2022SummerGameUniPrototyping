@@ -2223,6 +2223,88 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1414270765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1414270766}
+  - component: {fileID: 1414270767}
+  m_Layer: 8
+  m_Name: PlayerSounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1414270766
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414270765}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3192314450529383304}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1414270767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414270765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 131e1e0cc0eca8248909be203499b4c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _footsteps:
+    Guid:
+      Data1: 1499407956
+      Data2: 1231715391
+      Data3: -1228178757
+      Data4: -393254616
+    Path: event:/Enemies/Jim/HumanFootsteps
+  _cloth:
+    Guid:
+      Data1: -106030388
+      Data2: 1097192309
+      Data3: -176338789
+      Data4: -2042774122
+    Path: event:/Enemies/Jim/FootstepClothJIM
+  _jingle:
+    Guid:
+      Data1: 760845255
+      Data2: 1149890248
+      Data3: 1272316813
+      Data4: -1241839348
+    Path: event:/Enemies/Jim/FootstepJingleJIM
+  leftFoot: {fileID: 0}
+  rightFoot: {fileID: 0}
+  surfaceType: 0
+  _swing:
+    Guid:
+      Data1: 785098725
+      Data2: 1194722892
+      Data3: 2136378279
+      Data4: 457410828
+    Path: event:/--- Code Slicer ---/Player/PlayerSwordSwing
+  _swingHit:
+    Guid:
+      Data1: 1548852705
+      Data2: 1234914350
+      Data3: 1525666470
+      Data4: -506639327
+    Path: event:/--- Code Slicer ---/Player/PlayerSwordHit
 --- !u!1 &1563150027
 GameObject:
   m_ObjectHideFlags: 0
@@ -3351,6 +3433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55919ac34a26952479f3fc91f777b2fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSounds: {fileID: 1414270767}
   MoveSpeed: 4
   SprintSpeed: 6
   RotationSpeed: 1
@@ -3498,6 +3581,7 @@ Transform:
   m_Children:
   - {fileID: 7633788891138609262}
   - {fileID: 1894506251953290535}
+  - {fileID: 1414270766}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
