@@ -2545,11 +2545,11 @@ MonoBehaviour:
     Path: event:/--- Code Slicer ---/Player/PlayerSwordSwing
   _swingHit:
     Guid:
-      Data1: 1548852705
-      Data2: 1234914350
-      Data3: 1525666470
-      Data4: -506639327
-    Path: event:/--- Code Slicer ---/Player/PlayerSwordHit
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1001 &1828509056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3017,6 +3017,13 @@ MonoBehaviour:
       Data3: 1400705431
       Data4: 629029240
     Path: event:/--- Code Slicer ---/Environment/BoxBreakPlaceholder
+  _swingHit:
+    Guid:
+      Data1: 1548852705
+      Data2: 1234914350
+      Data3: 1525666470
+      Data4: -506639327
+    Path: event:/--- Code Slicer ---/Player/PlayerSwordHit
 --- !u!1 &2091688292
 GameObject:
   m_ObjectHideFlags: 0

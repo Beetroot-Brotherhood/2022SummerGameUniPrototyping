@@ -285,10 +285,10 @@ namespace StarterAssets
 			playerSounds.PlaySwing();
 		}
 
-		void PlaySwingHit()
+		/* void PlaySwingHit()
 		{
 			playerSounds.PlaySwingHit();
-		}
+		} */
 
 
 

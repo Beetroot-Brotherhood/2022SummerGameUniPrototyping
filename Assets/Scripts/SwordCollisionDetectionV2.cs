@@ -20,26 +20,31 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
 
 
     [SerializeField] private FMODUnity.EventReference _boxBreakingSound;
+    [SerializeField] private FMODUnity.EventReference _swingHit;
+
 
 
 
     private FMOD.Studio.EventInstance boxBreakingSound;
+    private FMOD.Studio.EventInstance swingHit;
 
-    //!private Vector3 boxLocation;
+    private Vector3 boxLocation;
+
+    //[SerializeField] private PlayerSounds playerSounds;
 
 
 
-    void start()
+    void Start()
     {
         if (!_boxBreakingSound.IsNull)
         {
             boxBreakingSound = FMODUnity.RuntimeManager.CreateInstance(_boxBreakingSound);
         }
 
-                        boxBreakingSound.setParameterByName("BoxBreak", 0.0f);
-                        boxBreakingSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(this.transform.position));
-                        boxBreakingSound.start();
-
+        if (!_swingHit.IsNull)
+        {
+            swingHit = FMODUnity.RuntimeManager.CreateInstance(_swingHit);
+        }
     }
 
 
@@ -64,7 +69,7 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
 
             //!boxLocation = other.gameObject.transform.position; //Rhys - Just trying to get the location of the box being sliced so I can attach a sound instance to it
 
-            //!boxLocation = new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z);
+            boxLocation = new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z);
             
 
             Debug.Log("Enemy Hit");
@@ -77,20 +82,11 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
 
                 if (slicedCounter == null || slicedCounter.counter < 2)
                 {
-                    boxBreakingSound.setParameterByName("BoxBreak", 2.0f);
-                    boxBreakingSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(this.transform.position));
-                    boxBreakingSound.start();
-
 
                     thisObjectSlicedCounterInt = slicedCounter ? slicedCounter.counter : 0;
                     SlicedHull hull = hitGameobjects[i].gameObject.Slice(cutPlane.transform.position, cutPlane.transform.up, slicedMaterial);
                     if (hull != null)
                     {
-
-                        boxBreakingSound.setParameterByName("BoxBreak", 0.0f);
-                        boxBreakingSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(this.transform.position));
-                        boxBreakingSound.start();
-                            
 
                         GameObject bottom = hull.CreateLowerHull(hitGameobjects[i].gameObject, slicedMaterial);
                         MeshCollider tempMeshCol = bottom.AddComponent<MeshCollider>();
@@ -101,6 +97,19 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
                         bottom.gameObject.layer = LayerMask.NameToLayer("awawa");
                         bottom.gameObject.tag = "Enemy";
                         tempRB.AddExplosionForce(20, cutPlane.transform.position, 15);
+
+
+
+                        boxBreakingSound.setParameterByName("BoxBreak", 2.0f);
+                        boxBreakingSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(boxLocation));
+                        boxBreakingSound.start();
+
+                        swingHit.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(boxLocation));
+                        swingHit.start();
+
+                        //playerSounds.PlaySwingHit();
+                        
+                        
                         
 
                         GameObject top = hull.CreateUpperHull(hitGameobjects[i].gameObject, slicedMaterial);

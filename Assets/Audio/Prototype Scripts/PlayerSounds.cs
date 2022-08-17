@@ -61,6 +61,12 @@ public class PlayerSounds : MonoBehaviour
             swing = FMODUnity.RuntimeManager.CreateInstance(_swing);
 
         }
+
+        if (!_swingHit.IsNull)
+        {
+            swing = FMODUnity.RuntimeManager.CreateInstance(_swingHit);
+
+        }
     }
 
     public void PlayStepLeft()
@@ -228,7 +234,7 @@ public class PlayerSounds : MonoBehaviour
     }
 
 
-
+    
 
 
 
