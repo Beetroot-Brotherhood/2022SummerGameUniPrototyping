@@ -20,7 +20,7 @@ MonoBehaviour:
     moveToPosition: {x: 0, y: 0, z: 0}
   description: 
   drawGizmos: 0
-  child: {fileID: 0}
+  child: {fileID: 8126561689242183466}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37,5 +37,28 @@ MonoBehaviour:
   treeState: 0
   nodes:
   - {fileID: -4892340381729487024}
+  - {fileID: 8126561689242183466}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &8126561689242183466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9111b31c590d2954e9b36bbcd3c0ede1, type: 3}
+  m_Name: Patrol
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: beab2c6dec4ed7447b9e137fb8e60150
+  position: {x: 0, y: 185}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+  description: 
+  drawGizmos: 0
+  points: []
+  destPoint: 0
