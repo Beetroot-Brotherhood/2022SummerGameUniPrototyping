@@ -209,6 +209,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-6964561589434780467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/--- Code Slicer ---/Environment/BoxBreakPlaceholder
+  m_EditorClassIdentifier: 
+  Path: event:/--- Code Slicer ---/Environment/BoxBreakPlaceholder
+  Guid:
+    Data1: 263144168
+    Data2: 1320608141
+    Data3: 1400705431
+    Data4: 629029240
+  Banks:
+  - {fileID: 4285419202487991781}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -895086440997777704}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6481429753444877762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,6 +346,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4904962942828522743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/skrleeb
+  m_EditorClassIdentifier: 
+  Path: event:/skrleeb
+  Guid:
+    Data1: -543255930
+    Data2: 1158923833
+    Data3: 1335541431
+    Data4: 49172056
+  Banks:
+  - {fileID: -3456964901717015798}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 4.6
+  MaxDistance: 200
+  Length: 5000
 --- !u!114 &-4389487415361382963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -388,10 +443,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637963446279246082
+  lastModified: 637963510554306199
   FileSizes:
   - Name: Desktop
-    Value: 13185952
+    Value: 13191872
   Exists: 1
 --- !u!114 &-2880387357753163404
 MonoBehaviour:
@@ -512,7 +567,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637963446279623237
+  lastModified: 637963510556022440
   FileSizes:
   - Name: Desktop
     Value: 12955680
@@ -532,10 +587,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637963446279256003
+  lastModified: 637963510554336201
   FileSizes:
   - Name: Desktop
-    Value: 2680
+    Value: 2804
   Exists: 1
 --- !u!114 &-965846939391379660
 MonoBehaviour:
@@ -564,6 +619,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 400
   Length: 15000
+--- !u!114 &-895086440997777704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BoxBreakPlaceholder/BoxBreak
+  m_EditorClassIdentifier: 
+  Name: BoxBreak
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 831369074
+    data2: 2856716304
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - SmallBox
+  - MediumBox
+  - LargeBox
+  Exists: 1
 --- !u!114 &-612325850653220219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -719,13 +801,15 @@ MonoBehaviour:
   - {fileID: 439540255163333961}
   - {fileID: -6481429753444877762}
   - {fileID: -8962880205900734840}
+  - {fileID: -6964561589434780467}
+  - {fileID: -4904962942828522743}
   EditorParameters:
   - {fileID: 3840399898623572621}
   MasterBanks:
   - {fileID: -3456964901717015798}
   StringsBanks:
   - {fileID: -1282451633158703896}
-  cacheTime: 637963446280158138
+  cacheTime: 637963510556562594
   cacheVersion: 131591
 --- !u!114 &439540255163333961
 MonoBehaviour:
@@ -770,7 +854,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637963446280158138
+  lastModified: 637963510556562594
   FileSizes:
   - Name: Desktop
     Value: 10692384
@@ -1015,10 +1099,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637963446278766005
+  lastModified: 637963510553023470
   FileSizes:
   - Name: Desktop
-    Value: 9183200
+    Value: 9652096
   Exists: 1
 --- !u!114 &4515690283565301627
 MonoBehaviour:
