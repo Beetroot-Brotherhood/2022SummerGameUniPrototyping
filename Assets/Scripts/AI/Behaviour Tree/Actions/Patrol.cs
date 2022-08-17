@@ -9,6 +9,8 @@ public class Patrol : ActionNode
     [HideInInspector]
     public int destPoint = 0;
 
+    private int damping = 2;
+
     protected override void OnStart() {
 
         points = context.pathFollow.points;
@@ -40,9 +42,15 @@ public class Patrol : ActionNode
         if (points.Length == 0)
             return;
 
+        // Set the agent to look at the destination it is moving towards
+        var lookPos = points[destPoint].position - context.agent.transform.position;
+        lookPos.y = 0;
+
+        var rotation = Quaternion.LookRotation(lookPos);
+        context.agent.transform.rotation = Quaternion.Slerp(context.agent.transform.rotation, rotation, Time.deltaTime * damping);
+
         // Set the agent to go to the currently selected destination.
         context.agent.destination = points[destPoint].position;
-        //context.pathFollow.points[destPoint].position = blackboard.moveToPosition;
 
         // Choose the next point in the array as the destination,
         // cycling to the start if necessary.
