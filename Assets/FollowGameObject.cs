@@ -6,9 +6,13 @@ public class FollowGameObject : MonoBehaviour
 {
     public GameObject followGameObject;
 
+    public GameObject cameraBodyRoot;
+
     public float speed;
 
     public float thresholdDistance;
+
+    public Vector3 rotationOffset;
 
     private float passedTimeToCompleteSwing;
 
@@ -28,5 +32,8 @@ public class FollowGameObject : MonoBehaviour
             passedTimeToCompleteSwing = Time.deltaTime;
         }
         this.transform.position = Vector3.Lerp(this.transform.position, followGameObject.transform.position, speed * passedTimeToCompleteSwing);
+
+        //this.transform.rotation = Quaternion.LookRotation(-Camera.main.transform.right, Vector3.up);
+        this.transform.eulerAngles = new Vector3(-cameraBodyRoot.transform.eulerAngles.z + rotationOffset.x, cameraBodyRoot.transform.eulerAngles.y + rotationOffset.y, -cameraBodyRoot.transform.eulerAngles.x + rotationOffset.z);
     }
 }
