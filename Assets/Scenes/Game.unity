@@ -524,6 +524,74 @@ Transform:
   m_Father: {fileID: 1022033608}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &144901805
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 144901806}
+  - component: {fileID: 144901807}
+  m_Layer: 6
+  m_Name: PlayerSounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &144901806
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144901805}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 490576248517676361}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &144901807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144901805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 131e1e0cc0eca8248909be203499b4c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _footsteps:
+    Guid:
+      Data1: 1499407956
+      Data2: 1231715391
+      Data3: -1228178757
+      Data4: -393254616
+    Path: event:/Enemies/Jim/HumanFootsteps
+  _cloth:
+    Guid:
+      Data1: -106030388
+      Data2: 1097192309
+      Data3: -176338789
+      Data4: -2042774122
+    Path: event:/Enemies/Jim/FootstepClothJIM
+  _jingle:
+    Guid:
+      Data1: 760845255
+      Data2: 1149890248
+      Data3: 1272316813
+      Data4: -1241839348
+    Path: event:/Enemies/Jim/FootstepJingleJIM
+  leftFoot: {fileID: 1529948625}
+  rightFoot: {fileID: 676919718}
+  surfaceType: 0
 --- !u!1 &146080149
 GameObject:
   m_ObjectHideFlags: 0
@@ -3148,8 +3216,8 @@ GameObject:
   m_Component:
   - component: {fileID: 893509303}
   - component: {fileID: 893509302}
-  - component: {fileID: 893509301}
   - component: {fileID: 893509304}
+  - component: {fileID: 893509305}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3157,14 +3225,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &893509301
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 893509300}
-  m_Enabled: 1
 --- !u!20 &893509302
 Camera:
   m_ObjectHideFlags: 0
@@ -3257,6 +3317,19 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &893509305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893509300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &915181613
 GameObject:
   m_ObjectHideFlags: 0
@@ -8693,6 +8766,7 @@ Transform:
   - {fileID: 4860276693960912559}
   - {fileID: 1613344358}
   - {fileID: 883054939}
+  - {fileID: 144901806}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8731,6 +8805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e54e5a728a9234ab24fcf1460ed8a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSounds: {fileID: 144901807}
   MoveSpeed: 2
   SprintSpeed: 5.335
   RotationSmoothTime: 0.12
@@ -9007,7 +9082,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.1931818, y: 1}
+    m_SensorSize: {x: 1.7784091, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

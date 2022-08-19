@@ -14,6 +14,9 @@ namespace StarterAssets
 #endif
     public class ThirdPersonController : MonoBehaviour
     {
+        [SerializeField] private PlayerSounds playerSounds;
+
+
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
         public float MoveSpeed = 2.0f;
@@ -388,5 +391,20 @@ namespace StarterAssets
                 AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
             }
         }
+
+
+        void PlayStepLeft()
+        {
+            playerSounds.PlayStepLeft();
+        }
+
+        void PlayStepRight()
+        {
+            playerSounds.PlayStepRight();
+        }
+
+
+
+
     }
 }
