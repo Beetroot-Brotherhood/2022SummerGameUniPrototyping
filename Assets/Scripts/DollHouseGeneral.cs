@@ -42,7 +42,7 @@ public static class DollHouseGeneral
         foreach (BodyParts bodyPartsUI in BodyPartsManager.instance.partsUIReference.bodyPartsUI) {
             foreach (BodyParts bodyParts in BodyPartsManager.instance.partsReference.bodyParts) {
                 if (bodyPartsUI.tag == bodyParts.tag) {
-                    bodyPartsUI.gameObject.GetComponent<UnityEngine.UI.Image>().color = bodyParts.gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().materials[0].color;
+                    bodyPartsUI.gameObject.GetComponent<UnityEngine.UI.Image>().color = bodyParts.gameObject.transform.GetChild(0).GetComponent<PartInfo>().meshRenderer.materials[0].color;
                 }
             }
         }
