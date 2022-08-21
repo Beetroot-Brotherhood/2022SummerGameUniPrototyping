@@ -14,6 +14,8 @@ public class FieldOfView : MonoBehaviour
     [HideInInspector]
     public List<Transform> visibleTargets = new List<Transform>();
 
+    public bool targetvisible = false;
+
     void Start()
     {
         StartCoroutine("FindTargetsWithDelay", 0.2f);
@@ -44,6 +46,7 @@ public class FieldOfView : MonoBehaviour
                 if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask)) /// if the raycast doesn't hit an obstacle blocking the target
                 {
                     visibleTargets.Add(target); /// adds the target to the visible targets list
+                    targetvisible = true;
                 }
             }
         }
