@@ -159,6 +159,7 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
+            Attack();
         }
 
         private void LateUpdate()
@@ -387,6 +388,20 @@ namespace StarterAssets
             {
                 AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
             }
+        }
+
+        public void Attack() {
+            if (OnPlayerInput.instance.onAttack) {
+
+                _animator.SetLayerWeight(_animator.GetLayerIndex("Attacking"), 1.0f);
+                _animator.SetBool("Attack", true);
+                OnPlayerInput.instance.onAttack = false;
+            }
+        }
+
+        public void StopAttack() {
+            _animator.SetLayerWeight(_animator.GetLayerIndex("Attacking"), 0f);
+            _animator.SetBool("Attack", false);
         }
     }
 }

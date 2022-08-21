@@ -19,12 +19,22 @@ public class OnPlayerInput : MonoBehaviour
 
     [HideInInspector]
     public bool onInteract;
+    [HideInInspector]
+    public bool onAttack;
 
     public void OnInteract(InputValue value) {
         InteractInput(value.isPressed);
     }
 
+    public void OnAttack(InputValue value) {
+        AttackInput(value.isPressed);
+    }
+
     public void InteractInput(bool state) {
         onInteract = state;
+    }
+
+    public void AttackInput(bool state) {
+        onAttack = state;
     }
 }
