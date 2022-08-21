@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{e317782b-5789-4d05-a8c9-95c8b353e0a4}">
+		<property name="name">
+			<value>TrentBoardState</value>
+		</property>
+		<relationship name="folder">
+			<destination>{de7fd34e-c197-4fdc-8953-d4fcb4d65a96}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{c3927e89-708d-4c52-bbe7-3cd1476f7119}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{c3927e89-708d-4c52-bbe7-3cd1476f7119}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Off</value>
+			<value>On</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
