@@ -65,6 +65,7 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
 
         if (other.tag == "Enemy")
         {
+            
             hitGameobjects = Physics.OverlapBox(cutPlane.transform.position, cutPlaneSize / 2, cutPlane.transform.rotation, layerMask);
 
             //!boxLocation = other.gameObject.transform.position; //Rhys - Just trying to get the location of the box being sliced so I can attach a sound instance to it
@@ -72,7 +73,6 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
             boxLocation = new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z);
             
 
-            Debug.Log("Enemy Hit");
 
             for (int i = 0; i < hitGameobjects.Length; i++)
             {
@@ -131,7 +131,7 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
                 
             }
             cutPlane.transform.Rotate(Vector3.forward * 180, Space.Self);
-
+            this.gameObject.SetActive(false);
         }
     }
     
