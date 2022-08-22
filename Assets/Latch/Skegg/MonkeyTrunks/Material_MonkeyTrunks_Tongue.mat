@@ -17,7 +17,8 @@ Material:
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2225
-  stringTagMap: {}
+  stringTagMap:
+    MotionVector: User
   disabledShaderPasses:
   - TransparentDepthPrepass
   - TransparentDepthPostpass
@@ -85,6 +86,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_16db057be2ba405d9b5fb9875b09b9b3_Texture_1:
         m_Texture: {fileID: 2800000, guid: e841c3f99424ab740815940b708b89c4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_3866926ac31f445cb30eab76dc9e60b6_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 94eac1296626cef46bbcb32129ff8877, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_5bfc5359497a4582af8520285cfad216_Texture_1:
