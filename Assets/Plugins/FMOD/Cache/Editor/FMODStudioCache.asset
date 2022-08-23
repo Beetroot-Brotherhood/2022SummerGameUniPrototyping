@@ -119,7 +119,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637968024756361237
+  lastModified: 637968748368907254
   FileSizes:
   - Name: Desktop
     Value: 9183200
@@ -455,6 +455,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 776307
+--- !u!114 &-1777041623708624079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Vehicles/TrentBoard/TrentBoard_Hovering
+  m_EditorClassIdentifier: 
+  Path: event:/Vehicles/TrentBoard/TrentBoard_Hovering
+  Guid:
+    Data1: -103822445
+    Data2: 1256719971
+    Data3: -826532219
+    Data4: -1957968047
+  Banks:
+  - {fileID: 1694097518466003450}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2650
 --- !u!114 &-1518406181069190025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,13 +571,17 @@ MonoBehaviour:
   - {fileID: 3584395064864645737}
   - {fileID: 8121469655880870978}
   - {fileID: 6242804590271936502}
+  - {fileID: 4637514197300930891}
+  - {fileID: 3766621452843863141}
+  - {fileID: -1777041623708624079}
+  - {fileID: 930901738386776213}
   EditorParameters:
   - {fileID: -4276169407730268950}
   MasterBanks:
   - {fileID: 1694097518466003450}
   StringsBanks:
   - {fileID: 3743328676668485975}
-  cacheTime: 637968024759273111
+  cacheTime: 637968748372367002
   cacheVersion: 131591
 --- !u!114 &316210463170389488
 MonoBehaviour:
@@ -606,6 +637,33 @@ MonoBehaviour:
   - Dirt
   - Mud
   Exists: 1
+--- !u!114 &930901738386776213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Vehicles/TrentBoard/TrentBoard_On
+  m_EditorClassIdentifier: 
+  Path: event:/Vehicles/TrentBoard/TrentBoard_On
+  Guid:
+    Data1: -294059094
+    Data2: 1101747750
+    Data3: -683970388
+    Data4: 1434774456
+  Banks:
+  - {fileID: 1694097518466003450}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &1151370066955303980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -706,10 +764,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637968024757025619
+  lastModified: 637968748369686983
   FileSizes:
   - Name: Desktop
-    Value: 12955424
+    Value: 13187008
   Exists: 1
 --- !u!114 &2105311565037087084
 MonoBehaviour:
@@ -833,11 +891,38 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637968024757035584
+  lastModified: 637968748369766747
   FileSizes:
   - Name: Desktop
-    Value: 2360
+    Value: 2572
   Exists: 1
+--- !u!114 &3766621452843863141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Vehicles/HoverShip
+  m_EditorClassIdentifier: 
+  Path: event:/Vehicles/HoverShip
+  Guid:
+    Data1: 1681325336
+    Data2: 1200110263
+    Data3: -1856889972
+    Data4: -779701158
+  Banks:
+  - {fileID: 1694097518466003450}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 150
+  Length: 2650
 --- !u!114 &3949865255320204353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -862,6 +947,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &4637514197300930891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Vehicles/TrentBoard/TrentBoard_Off
+  m_EditorClassIdentifier: 
+  Path: event:/Vehicles/TrentBoard/TrentBoard_Off
+  Guid:
+    Data1: 986510087
+    Data2: 1093931272
+    Data3: -444297835
+    Data4: 1432160368
+  Banks:
+  - {fileID: 1694097518466003450}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &5105747293793322626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -905,7 +1017,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637968024759273111
+  lastModified: 637968748372367002
   FileSizes:
   - Name: Desktop
     Value: 10692384
@@ -1197,7 +1309,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637968024758164113
+  lastModified: 637968748370815788
   FileSizes:
   - Name: Desktop
     Value: 12879456
