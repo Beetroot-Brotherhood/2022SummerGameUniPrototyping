@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4525971611813500394}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: RightThighPartPos
-  m_TagString: RightThighPartPos
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,12 +44,11 @@ GameObject:
   - component: {fileID: 3656214008917371606}
   - component: {fileID: 4022216446619235551}
   - component: {fileID: 3660256936332505138}
-  - component: {fileID: 1180749880784792880}
   - component: {fileID: 1525143737809594108}
-  - component: {fileID: 6920905415494276287}
-  m_Layer: 7
+  - component: {fileID: 2565070288932362623}
+  m_Layer: 10
   m_Name: Mord_Thigh Right
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,23 +127,9 @@ CapsuleCollider:
   m_GameObject: {fileID: 7611781383620823212}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.06979744
   m_Height: 0.33459777
-  m_Direction: 1
-  m_Center: {x: 0.021082262, y: -0.15970844, z: 0.0021067075}
---- !u!136 &1180749880784792880
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7611781383620823212}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  m_Radius: 0.13
-  m_Height: 0.48
   m_Direction: 1
   m_Center: {x: 0.021082262, y: -0.15970844, z: 0.0021067075}
 --- !u!54 &1525143737809594108
@@ -163,7 +148,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &6920905415494276287
+--- !u!114 &2565070288932362623
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,8 +157,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7611781383620823212}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44c36664829a7e3489f1a21db06d5fa0, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b13b75ce950f0e4e968a02d206091e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  partInfoSO: {fileID: 11400000, guid: 7ef07cfe24e7b56498f52fa0eb0c5416, type: 2}
-  meshRenderer: {fileID: 4022216446619235551}
+  rootPart: 0
+  parent: {fileID: 0}
+  children: []

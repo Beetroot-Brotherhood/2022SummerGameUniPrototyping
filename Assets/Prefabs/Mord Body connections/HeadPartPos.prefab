@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 6753623938485265618}
   - component: {fileID: 7040398768603808020}
   - component: {fileID: 6571963656662889882}
-  m_Layer: 7
+  - component: {fileID: 5194506602655517695}
+  m_Layer: 10
   m_Name: Mord_EyeLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,6 +84,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5194506602655517695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296326269625805008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b13b75ce950f0e4e968a02d206091e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rootPart: 0
+  parent: {fileID: 3432536143903784070}
+  children: []
 --- !u!1 &664910639146625320
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,9 +108,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 664910639146625323}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: HeadPartPos
-  m_TagString: HeadPartPos
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,7 +142,8 @@ GameObject:
   - component: {fileID: 1461538320590570007}
   - component: {fileID: 1504398619364331364}
   - component: {fileID: 1735880585200127012}
-  m_Layer: 7
+  - component: {fileID: 145992677468777795}
+  m_Layer: 10
   m_Name: Mord_EyeRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,6 +215,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &145992677468777795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287803786350984396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b13b75ce950f0e4e968a02d206091e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rootPart: 0
+  parent: {fileID: 3432536143903784070}
+  children: []
 --- !u!1 &1928248422084403966
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,12 +242,11 @@ GameObject:
   - component: {fileID: 3575697751820767171}
   - component: {fileID: 796869805363727210}
   - component: {fileID: 7960746455153236888}
-  - component: {fileID: 8786312491153633438}
   - component: {fileID: 47225622767490137}
-  - component: {fileID: 3611235544363706431}
-  m_Layer: 7
+  - component: {fileID: 3432536143903784070}
+  m_Layer: 10
   m_Name: Mord_Head
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -265,7 +296,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dba139fe779f09449b99e48f8e1c53c8, type: 2}
+  - {fileID: -4565884009001823619, guid: f3fb7a7b82df23e41bdb5c3b503d67ea, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -296,22 +327,9 @@ SphereCollider:
   m_GameObject: {fileID: 1928248422084403966}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.1209738
-  m_Center: {x: 0.0011084788, y: 0.102703504, z: 0.06540788}
---- !u!135 &8786312491153633438
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1928248422084403966}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.18
   m_Center: {x: 0.0011084788, y: 0.102703504, z: 0.06540788}
 --- !u!54 &47225622767490137
 Rigidbody:
@@ -329,7 +347,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &3611235544363706431
+--- !u!114 &3432536143903784070
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -338,8 +356,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1928248422084403966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44c36664829a7e3489f1a21db06d5fa0, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b13b75ce950f0e4e968a02d206091e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  partInfoSO: {fileID: 11400000, guid: ce30668ea35539147a2dd16004c73e32, type: 2}
-  meshRenderer: {fileID: 796869805363727210}
+  rootPart: 0
+  parent: {fileID: 0}
+  children:
+  - {fileID: 5194506602655517695}
+  - {fileID: 145992677468777795}
