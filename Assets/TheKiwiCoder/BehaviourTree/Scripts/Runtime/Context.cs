@@ -21,6 +21,7 @@ namespace TheKiwiCoder {
         public CharacterController characterController;
         // Add other game specific systems here
         public PathFollow pathFollow;
+        public FieldOfView fieldOfView;
 
         public static Context CreateFromGameObject(GameObject gameObject) {
             // Fetch all commonly used components
@@ -37,6 +38,7 @@ namespace TheKiwiCoder {
 
             // Add whatever else you need here...
             context.pathFollow = gameObject.GetComponent<PathFollow>();
+            context.fieldOfView = gameObject.GetComponent<FieldOfView>();
 
             return context;
         }
