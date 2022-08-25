@@ -11,10 +11,11 @@ public class Latch : MonoBehaviour
 
     public Transform latchSpot;
     public GameObject latcherObject, humanObject;
+    public GameObject latcherCameraRoot, humanCameraRoot;
 
     public StarterAssets.ThirdPersonController latcherController, humanController;
 
-    public Cinemachine.CinemachineFreeLook cameraManager;
+    public Cinemachine.CinemachineVirtualCamera cameraManager;
 
     private PlayerInput latchInput;
     private PlayerInput humanInput;
@@ -24,8 +25,8 @@ public class Latch : MonoBehaviour
     void Start()
     {
         //latcherController.enabled = true;
-        cameraManager.Follow = latcherObject.transform;
-        cameraManager.LookAt = latcherObject.transform;
+        cameraManager.Follow = latcherCameraRoot.transform;
+        cameraManager.LookAt = latcherCameraRoot.transform;
 
         latchInput = latcherObject.GetComponent<PlayerInput>();
         humanInput = humanObject.GetComponent<PlayerInput>();
@@ -41,7 +42,7 @@ public class Latch : MonoBehaviour
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
 
-            if (hit.collider.tag == "Enemy")
+            if (hit.collider.tag == "Human")
             {
                 Debug.Log("Can Latch");
                 canLatch = true;
@@ -64,8 +65,8 @@ public class Latch : MonoBehaviour
             latcherController.enabled = false;
             humanController.enabled = true;
 
-            cameraManager.Follow = humanObject.transform;
-            cameraManager.LookAt = humanObject.transform;
+            cameraManager.Follow = humanCameraRoot.transform;
+            cameraManager.LookAt = humanCameraRoot.transform;
 
             latchInput.enabled = false;
             humanInput.enabled = true;
