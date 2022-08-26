@@ -8,8 +8,9 @@ public class Latch : MonoBehaviour
     [SerializeField]
     private float latchRange = 10.0f;
     public bool canLatch = false;
+    public float sphereRadius = 1.0f;
 
-    public GameObject latcherObject, humanObject;
+    public GameObject latcherObject;
     public GameObject latcherCameraRoot;
 
     public StarterAssets.ThirdPersonController latcherController;
@@ -20,6 +21,9 @@ public class Latch : MonoBehaviour
 
     private HumanComponents currentHumanComponenets;
 
+    public StarterAssets.StarterAssetsInputs latcherInputs;
+
+    public Collider[] colliders;
 
     // Start is called before the first frame update
     void Start()
@@ -38,37 +42,34 @@ public class Latch : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, latchRange))
+
+        if(currentHumanComponenets == null)
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
 
-            if (hit.collider.tag == "Human")
+            if (Physics.Raycast(transform.position, transform.forward, out hit, latchRange))
             {
-                humanObject = hit.transform.gameObject;
-                humanObject.TryGetComponent<HumanComponents>(out currentHumanComponenets);
-                //humanInput = humanObject.GetComponent<PlayerInput>();
-                //humanController = humanObject.GetComponent<StarterAssets.ThirdPersonController>();
-                //humanCameraRoot = humanObject.transform.GetChild(0).gameObject;
-                //humanLatchSpot = humanObject.transform;
+                //Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * colliders[0].transform, Color.yellow);
 
-                Debug.Log("Can Latch");
-                canLatch = true;
+                if (hit.collider.TryGetComponent<HumanComponents>(out currentHumanComponenets))
+                {
 
+                    Debug.Log("Can Latch");
+                    canLatch = true;
+
+                }
+                
             }
-            else
-            {
-                canLatch = false;
-            }
-
-
         }
-    }
-
-    void OnLatch() ///The latch action in new InputSystem
-    {
-        if (canLatch) /// checks to see if the player can latch (Raycast check in OnUpdate)
+        else
         {
-            Debug.Log("Latched");
+            canLatch = false;
+        }
+
+       
+
+        if (latcherInputs.onLatch && currentHumanComponenets != null)
+        {
+            latcherInputs.onLatch = false;
             latcherController.enabled = false;
             currentHumanComponenets.thirdPersonController.enabled = true;
 
@@ -79,12 +80,40 @@ public class Latch : MonoBehaviour
             latchInput.enabled = false;
             currentHumanComponenets.playerInput.enabled = true;
 
-            SkinnedMeshRenderer latchermesh = latcherObject.transform.GetComponentInChildren(typeof (SkinnedMeshRenderer)) as SkinnedMeshRenderer;
+            SkinnedMeshRenderer latchermesh = latcherObject.transform.GetComponentInChildren(typeof(SkinnedMeshRenderer)) as SkinnedMeshRenderer;
             latchermesh.enabled = false;
 
             currentHumanComponenets.latcherOnBackMesh.SetActive(true);
-
-
         }
+
+        if (currentHumanComponenets != null)
+        {
+            if (currentHumanComponenets.starterAssetsInputs.onUnLatch)
+            {
+                currentHumanComponenets.starterAssetsInputs.onUnLatch = false;
+                currentHumanComponenets.thirdPersonController.enabled = false;
+                latcherController.enabled = true;
+                
+                cameraManager.Follow = latcherCameraRoot.transform;
+                cameraManager.LookAt = latcherCameraRoot.transform;
+                latcherObject.transform.parent = null;
+
+                currentHumanComponenets.playerInput.enabled = false;
+                latchInput.enabled = true;
+                
+                SkinnedMeshRenderer latchermesh = latcherObject.transform.GetComponentInChildren(typeof(SkinnedMeshRenderer)) as SkinnedMeshRenderer;
+                latchermesh.enabled = true;
+
+                currentHumanComponenets.latcherOnBackMesh.SetActive(false);
+
+                ResetComponents();
+            }
+        }
+        
+    }
+
+    void ResetComponents()
+    {
+        currentHumanComponenets = null;
     }
 }

@@ -11,6 +11,7 @@ public class HumanComponents : MonoBehaviour
     [HideInInspector]
     public Transform latchSpot;
     public GameObject latcherOnBackMesh;
+    public StarterAssets.StarterAssetsInputs starterAssetsInputs;
 
     // Start is called before the first frame update
     void Start()

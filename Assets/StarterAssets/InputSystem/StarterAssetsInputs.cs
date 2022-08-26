@@ -14,6 +14,7 @@ namespace StarterAssets
 		public bool sprint;
 		public bool onAttack;
 		public bool onUnLatch;
+		public bool onLatch;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -54,6 +55,11 @@ namespace StarterAssets
         {
 			UnLatchInput(value.isPressed);
         }
+		public void OnLatch(InputValue value)
+		{
+			LatchInput(value.isPressed);
+		}
+
 #endif
 
 
@@ -96,6 +102,10 @@ namespace StarterAssets
         {
 			onUnLatch = state;
         }
+		private void LatchInput(bool state)
+		{
+			onLatch = state;
+		}
 	}
 	
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3694922108391324800}
   m_Layer: 0
-  m_Name: PlayerCameraRoot
+  m_Name: TerryCameraRoot
   m_TagString: CinemachineTarget
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 4682910181516604852}
   m_Layer: 0
   m_Name: Terry
-  m_TagString: Untagged
+  m_TagString: Human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,9 +194,11 @@ GameObject:
   - component: {fileID: 9057050155984029136}
   - component: {fileID: 149057909102192324}
   - component: {fileID: 4682910180640621948}
+  - component: {fileID: 378262118}
+  - component: {fileID: 378262119}
   m_Layer: 7
-  m_Name: PlayerArmature
-  m_TagString: Player
+  m_Name: TerryArmature
+  m_TagString: Human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -264,7 +266,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9057050155984029148}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26e54e5a728a9234ab24fcf1460ed8a2, type: 3}
   m_Name: 
@@ -336,6 +338,8 @@ MonoBehaviour:
   jump: 0
   sprint: 0
   onAttack: 0
+  onUnLatch: 0
+  onLatch: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -346,7 +350,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9057050155984029148}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
@@ -473,6 +477,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d42bfe4fbfb0d4b42a66d5dd78b3e231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &378262118
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9057050155984029148}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.28
+  m_Height: 1.8
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &378262119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9057050155984029148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1afe311e69aa75f43ad84735b4f9abde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInput: {fileID: 9057050155984029136}
+  thirdPersonController: {fileID: 9057050155984029143}
+  cameraRoot: {fileID: 3694922108391324807}
+  latchSpot: {fileID: 0}
+  latcherOnBackMesh: {fileID: 0}
+  starterAssetsInputs: {fileID: 4692544162154011040}
 --- !u!1001 &9279404311505573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -536,6 +572,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4070f0fad7e84814f92b0d181a153059, type: 2}
+    - target: {fileID: -3813930285083183655, guid: caa4409172ff45f449dc514745edcb3b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 06495116db35aac428bd6c2ce462bd0e, type: 2}
     - target: {fileID: -1133263531787739510, guid: caa4409172ff45f449dc514745edcb3b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -556,6 +596,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terry_MeshJoints
       objectReference: {fileID: 0}
+    - target: {fileID: 1310406012211210251, guid: caa4409172ff45f449dc514745edcb3b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 06495116db35aac428bd6c2ce462bd0e, type: 2}
+    - target: {fileID: 2009842163059287410, guid: caa4409172ff45f449dc514745edcb3b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 06495116db35aac428bd6c2ce462bd0e, type: 2}
     - target: {fileID: 3059195247955124846, guid: caa4409172ff45f449dc514745edcb3b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -576,6 +624,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4070f0fad7e84814f92b0d181a153059, type: 2}
+    - target: {fileID: 8821613527785262151, guid: caa4409172ff45f449dc514745edcb3b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 06495116db35aac428bd6c2ce462bd0e, type: 2}
     m_RemovedComponents:
     - {fileID: 5866666021909216657, guid: caa4409172ff45f449dc514745edcb3b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: caa4409172ff45f449dc514745edcb3b, type: 3}
