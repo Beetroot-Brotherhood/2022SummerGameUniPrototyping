@@ -9,28 +9,16 @@ public class Latch : MonoBehaviour
     private float latchRange = 10.0f;
     public bool canLatch = false;
 
-    private bool terryDetected = false;
+    public GameObject latcherObject, humanObject;
+    public GameObject latcherCameraRoot;
 
-    private bool trentonDetected = false;
-
-    public Transform terryLatchSpot;
-
-    public Transform trentonLatchSpot;
-    public GameObject latcherObject, terryObject, trentonObject;
-    public GameObject latcherCameraRoot, terryCameraRoot, trentonCameraRoot;
-
-    public StarterAssets.ThirdPersonController latcherController, terryController, trentonController;
+    public StarterAssets.ThirdPersonController latcherController;
 
     public Cinemachine.CinemachineVirtualCamera cameraManager;
 
     private PlayerInput latchInput;
-    private PlayerInput terryInput;
 
-    private PlayerInput trentonInput;
-
-    public GameObject trenton, terry;
-
-
+    private HumanComponents currentHumanComponenets;
 
 
     // Start is called before the first frame update
@@ -41,9 +29,6 @@ public class Latch : MonoBehaviour
         cameraManager.LookAt = latcherCameraRoot.transform;
 
         latchInput = latcherObject.GetComponent<PlayerInput>();
-        terryInput = terryObject.GetComponent<PlayerInput>();
-
-        trentonInput = trentonObject.GetComponent<PlayerInput>();
 
         latchInput.enabled = true;
         
@@ -59,25 +44,20 @@ public class Latch : MonoBehaviour
 
             if (hit.collider.tag == "Human")
             {
+                humanObject = hit.transform.gameObject;
+                humanObject.TryGetComponent<HumanComponents>(out currentHumanComponenets);
+                //humanInput = humanObject.GetComponent<PlayerInput>();
+                //humanController = humanObject.GetComponent<StarterAssets.ThirdPersonController>();
+                //humanCameraRoot = humanObject.transform.GetChild(0).gameObject;
+                //humanLatchSpot = humanObject.transform;
+
                 Debug.Log("Can Latch");
                 canLatch = true;
 
-                if (hit.collider.gameObject == trenton)
-                {
-                    trentonDetected = true;
-                    terryDetected = false;
-                }
-                else if (hit.collider.gameObject == terry)
-                {
-                    terryDetected = true;
-                    trentonDetected = false;
-                }
             }
             else
             {
                 canLatch = false;
-                terryDetected = false;
-                trentonDetected = false;
             }
 
 
@@ -88,38 +68,23 @@ public class Latch : MonoBehaviour
     {
         if (canLatch) /// checks to see if the player can latch (Raycast check in OnUpdate)
         {
-            
+            Debug.Log("Latched");
+            latcherController.enabled = false;
+            currentHumanComponenets.thirdPersonController.enabled = true;
 
-            if (trentonDetected)
-            {
-                transform.position = trentonLatchSpot.position;
-                transform.rotation = trentonLatchSpot.rotation;
-                transform.parent = trentonObject.transform;
-                latcherController.enabled = false;
-                trentonController.enabled = true;
+            cameraManager.Follow = currentHumanComponenets.cameraRoot.transform;
+            cameraManager.LookAt = currentHumanComponenets.cameraRoot.transform;
+            latcherObject.transform.parent = currentHumanComponenets.latchSpot;
 
-                cameraManager.Follow = trentonCameraRoot.transform;
-                cameraManager.LookAt = trentonCameraRoot.transform;
+            latchInput.enabled = false;
+            currentHumanComponenets.playerInput.enabled = true;
 
-                latchInput.enabled = false;
-                trentonInput.enabled = true;
+            SkinnedMeshRenderer latchermesh = latcherObject.transform.GetComponentInChildren(typeof (SkinnedMeshRenderer)) as SkinnedMeshRenderer;
+            latchermesh.enabled = false;
 
-            }
-            else if (terryDetected)
-            {
-                transform.position = terryLatchSpot.position;
-                transform.rotation = terryLatchSpot.rotation;
-                transform.parent = terryObject.transform;
-                latcherController.enabled = false;
-                terryController.enabled = true;
+            currentHumanComponenets.latcherOnBackMesh.SetActive(true);
 
-                cameraManager.Follow = terryCameraRoot.transform;
-                cameraManager.LookAt = terryCameraRoot.transform;
 
-                latchInput.enabled = false;
-                terryInput.enabled = true;
-
-            }
         }
     }
 }
