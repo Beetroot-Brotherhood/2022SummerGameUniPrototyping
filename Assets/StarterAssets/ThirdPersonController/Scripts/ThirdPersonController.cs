@@ -392,15 +392,15 @@ namespace StarterAssets
 
         public void Attack() {
             if (OnPlayerInput.instance.onAttack) {
-
+                
                 _animator.SetLayerWeight(_animator.GetLayerIndex("Attacking"), 1.0f);
                 _animator.SetBool("Attack", true);
-                OnPlayerInput.instance.onAttack = false;
+                
             }
         }
 
         public void StopAttack() {
-            _animator.SetLayerWeight(_animator.GetLayerIndex("Attacking"), 0f);
+            //_animator.SetLayerWeight(_animator.GetLayerIndex("Attacking"), 0f);
             _animator.SetBool("Attack", false);
         }
     }

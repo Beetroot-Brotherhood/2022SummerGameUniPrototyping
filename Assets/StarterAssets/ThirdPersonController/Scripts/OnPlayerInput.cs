@@ -36,5 +36,6 @@ public class OnPlayerInput : MonoBehaviour
 
     public void AttackInput(bool state) {
         onAttack = state;
+        Debug.Log("onAttack: " + onAttack);
     }
 }
