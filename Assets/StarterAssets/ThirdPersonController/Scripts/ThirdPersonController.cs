@@ -165,11 +165,7 @@ namespace StarterAssets
             GroundedCheck();
             Move();
 
-            if (_input.onAttack)
-            {
-                _animator.SetBool("Attack", true);
-                _input.onAttack = false;
-            }
+            StartAttack();
         }
 
         private void LateUpdate()
@@ -409,9 +405,20 @@ namespace StarterAssets
             playerSounds.PlayStepRight();
             }
 
+        public void StartAttack()
+        {
+            if (_input.onAttack)
+            {
+                _animator.SetBool("Attack", true);
+                _input.onAttack = false;
+                _animator.SetLayerWeight(_animator.GetLayerIndex("Attack"), 1.0f);
+            }
+        }
+
         public void StopAttack()
         {
             _animator.SetBool("Attack", false);
+            _animator.SetLayerWeight(_animator.GetLayerIndex("Attack"), 0f);
         }
     }
 }
