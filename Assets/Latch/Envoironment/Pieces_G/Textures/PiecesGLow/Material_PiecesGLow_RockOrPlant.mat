@@ -1,21 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9206420697704868178
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 12
-  hdPluginSubTargetMaterialVersions:
-    m_Keys: []
-    m_Values: 
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -23,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Material-PiecesG 1
-  m_Shader: {fileID: -6465566751694194690, guid: 811e327317f41ba4e836fcc1ff7f0fa7, type: 3}
+  m_Name: Material_PiecesGLow_RockOrPlant
+  m_Shader: {fileID: -6465566751694194690, guid: aa60f4ff3bdd6da4caf4c61071022c33, type: 3}
   m_ValidKeywords:
   - _DISABLE_SSR_TRANSPARENT
   m_InvalidKeywords:
@@ -100,24 +84,24 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_0ad850e1840b4fb9b8842d3721decaeb_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 1e927b3187cd19347aa9bcaa402674cb, type: 3}
+    - _SampleTexture2D_1394811078e244529b5e4efdab8d5645_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 63f3ed244b97a36449010b50a068b264, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_1365f887b8664087bc43147c40d1d9e0_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 2528139b0d853b842ab7dc2ae015719f, type: 3}
+    - _SampleTexture2D_445e379de0ff475192185b84a69ee6e3_Texture_1:
+        m_Texture: {fileID: 2800000, guid: f56bd741b9c3d50408c5b2293c23ae3d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_79a7456033484957afa7c9f57f9949e9_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 0064a66a06ab8094ab1938d861d812dd, type: 3}
+    - _SampleTexture2D_83640042ff1a426197e28e9a350bac87_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 996f406e1aab5a546b0a12e0de52071c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_8e00efac27b342babd06ab8d22095c84_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 1ecb5f75fba6f37429e4bfaf6f33664b, type: 3}
+    - _SampleTexture2D_e097433c003241f58b254d9b7e09e142_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 8246af27a1c60b14e82828a13264a487, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_efa521399ab24ac49fe0456df229c834_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 25199c844e3a9f845853d237e1d0883e, type: 3}
+    - _SampleTexture2D_ff0d240f2a564221a73dda0beeda9e26_Texture_1:
+        m_Texture: {fileID: 2800000, guid: b089d568f2ccf07409dd2cc87bee1611, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecularColorMap:
@@ -290,3 +274,19 @@ Material:
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
+--- !u!114 &8777976302503365710
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 12
+  hdPluginSubTargetMaterialVersions:
+    m_Keys: []
+    m_Values: 
