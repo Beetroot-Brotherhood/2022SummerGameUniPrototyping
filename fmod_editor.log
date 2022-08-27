@@ -2,14 +2,12 @@
 [LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
 [LOG] SystemI::init                            : Initialize version=20207 (125130), maxchannels=256, flags=0x00020000
 [LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=8, nSamplesPerSec=48000, nAvgBytesPerSec=1536000, nBlockAlign=32, wBitsPerSample=32, cbSize=22.
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x0000063F, SubFormat=00000003-0000-0010-8000-00AA00389B71.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
-[LOG] DownMix::init                            : dspbuffersize: 1024  rate: 48000. output speaker mode: 7, input speaker mode 3
-[LOG] DownMix::init                            : done.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000002465CEFD378 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000002472DD572B8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -23,6 +21,402 @@
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
 [LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] Manager::readBank                        : fileversion = 141, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] SystemI::createSound                     : filename = Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000024171D7B278 : node = 00000240DD359700
+[LOG] SystemI::createSound                     : add node to async list : head = 000002468F0E3BC8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000024171D7B278
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     filename = Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 9160256
+[LOG] SystemI::createSound                     :     setdata soundi = 0000024171D7CD78 : node = 00000240DD359980
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22944
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002468F0E3BC8.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000240DD359810
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     filename = Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSound                     :     setdata soundi = 0000024171D7C1A8 : node = 00000240DD3590C0
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002468F0E3BC8.  list count = 1
+[LOG] SystemI::createSound                     :     filename = Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 0000024171D784E8 : node = 000002472E3528C0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002468F0E3BC8.  list count = 2
+[LOG] SystemI::createSound                     :     filename = Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 0000024171D7C508 : node = 000002472E352640
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002468F0E3BC8.  list count = 3
+[LOG] SystemI::createSound                     :     filename = Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 0000024171D7E1B8 : node = 000002472E352F00
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002468F0E3BC8.  list count = 4
+[LOG] SystemI::createSound                     :     filename = Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 0000024171D7E368 : node = 000002472E352DC0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002468F0E3BC8.  list count = 5
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='PlanetWindLoop', format=5, channels=2, frequency=48000, lengthbytes=1197120, lengthpcm=5029154, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.891205.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000024171D7B278
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000024171D7CD78
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 9160256
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22944
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000240DD359A90
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='PlanetWindLoop', format=5, channels=2, frequency=48000, lengthbytes=1197120, lengthpcm=5029154, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.891205.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000024171D7CD78
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000024171D7C1A8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 9160256
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22944
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000240DD3591D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='PlanetWindLoop', format=5, channels=2, frequency=48000, lengthbytes=1197120, lengthpcm=5029154, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.891205.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000024171D7C1A8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000024171D784E8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 9160256
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22944
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002472E3529D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='PlanetWindLoop', format=5, channels=2, frequency=48000, lengthbytes=1197120, lengthpcm=5029154, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.891205.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000024171D784E8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000024171D7C508
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 9160256
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22944
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002472E352750
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='PlanetWindLoop', format=5, channels=2, frequency=48000, lengthbytes=1197120, lengthpcm=5029154, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.891205.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000024171D7C508
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000024171D7E1B8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 9160256
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22944
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002472E353010
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='PlanetWindLoop', format=5, channels=2, frequency=48000, lengthbytes=1197120, lengthpcm=5029154, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.891205.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000024171D7E1B8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000024171D7E368
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 9160256
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22944
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002472E352ED0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 200
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='PlanetWindLoop', format=5, channels=2, frequency=48000, lengthbytes=1197120, lengthpcm=5029154, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.891205.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000024171D7E368
+[LOG] SoundI::release                          : PlanetWindLoop (0000023E0C529DF8)
+[LOG] SoundI::release                          :     PlanetWindLoop (00000240DC620EF8)
+[LOG] SoundI::release                          :     PlanetWindLoop (0000023E0D6190A8)
+[LOG] SoundI::release                          : PlanetWindLoop (0000023E0C528EC8)
+[LOG] SoundI::release                          :     PlanetWindLoop (00000240DC61BC18)
+[LOG] SoundI::release                          :     PlanetWindLoop (0000023E0D619918)
+[LOG] SoundI::release                          : PlanetWindLoop (0000023E0C52B3E8)
+[LOG] SoundI::release                          :     PlanetWindLoop (00000240DC61E658)
+[LOG] SoundI::release                          :     PlanetWindLoop (0000023E0D619FD8)
+[LOG] SoundI::release                          : PlanetWindLoop (0000023E0C527728)
+[LOG] SoundI::release                          :     PlanetWindLoop (00000240DC617158)
+[LOG] SoundI::release                          :     PlanetWindLoop (0000023E0D61A848)
+[LOG] SoundI::release                          : PlanetWindLoop (0000023E0C52AD28)
+[LOG] SoundI::release                          :     PlanetWindLoop (00000240DC615278)
+[LOG] SoundI::release                          :     PlanetWindLoop (0000023E0D61B928)
+[LOG] SoundI::release                          : PlanetWindLoop (0000023E0C52A668)
+[LOG] SoundI::release                          :     PlanetWindLoop (00000240DC619B98)
+[LOG] SoundI::release                          :     PlanetWindLoop (0000023E0D61B418)
+[LOG] SoundI::release                          : PlanetWindLoop (0000023E0C528808)
+[LOG] SoundI::release                          :     PlanetWindLoop (00000240DC618CF8)
+[LOG] SoundI::release                          :     PlanetWindLoop (0000023E0D61CA08)
+[LOG] SoundI::release                          :  (000002479E027068)
+[LOG] SoundI::release                          :     FootstepsWood (1) (000002419F5B5828)
+[LOG] SoundI::release                          :  (000002479E02CDD8)
+[LOG] SoundI::release                          :     FootstepsWood (10) (000002472DD86A28)
+[LOG] SoundI::release                          :  (000002479E023858)
+[LOG] SoundI::release                          :     FootstepsWood (11) (00000241689CB178)
+[LOG] SoundI::release                          :  (000002479E02CAF8)
+[LOG] SoundI::release                          :     FootstepsWood (12) (000002472DD851C8)
+[LOG] SoundI::release                          :  (000002479E029008)
+[LOG] SoundI::release                          :     FootstepsWood (2) (000002472DD86D68)
+[LOG] SoundI::release                          :  (000002479E0225A8)
+[LOG] SoundI::release                          :     FootstepsWood (3) (00000240DB785508)
+[LOG] SoundI::release                          :  (000002479E026208)
+[LOG] SoundI::release                          :     FootstepsWood (4) (00000241689CCB78)
+[LOG] SoundI::release                          :  (000002479E027798)
+[LOG] SoundI::release                          :     FootstepsWood (5) (000002472DD81408)
+[LOG] SoundI::release                          :  (000002479E026658)
+[LOG] SoundI::release                          :     FootstepsWood (6) (00000240D9211388)
+[LOG] SoundI::release                          :  (000002479E02CC68)
+[LOG] SoundI::release                          :     FootstepsWood (7) (000002472DD844C8)
+[LOG] SoundI::release                          :  (000002479E0264E8)
+[LOG] SoundI::release                          :     FootstepsWood (8) (00000241892D96C8)
+[LOG] SoundI::release                          :  (000002479E027BE8)
+[LOG] SoundI::release                          :     FootstepsWood (9) (000002472DD87248)
+[LOG] SoundI::release                          :  (000002479E0250C8)
+[LOG] SoundI::release                          :     DirtFootstep (3) (00000241689CC698)
+[LOG] SoundI::release                          :  (000002479E02A878)
+[LOG] SoundI::release                          :     DirtFootstep (4) (000002472DD870A8)
+[LOG] SoundI::release                          :  (000002479E029458)
+[LOG] SoundI::release                          :     DirtFootstep (5) (000002472DD82928)
+[LOG] SoundI::release                          :  (000002479E023F88)
+[LOG] SoundI::release                          :     DirtFootstep (6) (00000240DB79E9A8)
+[LOG] SoundI::release                          :  (000002479E02BC98)
+[LOG] SoundI::release                          :     DirtFootstep (7) (000002472DD83488)
+[LOG] SoundI::release                          :  (000002479E0253A8)
+[LOG] SoundI::release                          :     DirtFootstep (8) (00000240D90CB888)
+[LOG] SoundI::release                          :  (000002479E026378)
+[LOG] SoundI::release                          :     DirtFootstep (9) (00000240DB79CC68)
+[LOG] SoundI::release                          :  (000002479E025C48)
+[LOG] SoundI::release                          :     DirtFootstep (10) (00000240DB787728)
+[LOG] SoundI::release                          :  (000002479E024C78)
+[LOG] SoundI::release                          :     DirtFootstep (11) (00000240DB78E268)
+[LOG] SoundI::release                          :  (000002479E027D58)
+[LOG] SoundI::release                          :     DirtFootstep (12) (000002472DD89128)
+[LOG] SoundI::release                          :  (000002479E022FB8)
+[LOG] SoundI::release                          :     DirtFootstep (1) (00000241689CB658)
+[LOG] SoundI::release                          :  (000002479E024DE8)
+[LOG] SoundI::release                          :     DirtFootstep (2) (00000241689CD538)
+[LOG] SoundI::release                          :  (000002479E023408)
+[LOG] SoundI::release                          :     DefaultBank 7 (00000240DB789E28)
+[LOG] SoundI::release                          :  (000002479E02A2B8)
+[LOG] SoundI::release                          :     DefaultBank 8 (000002472DD849A8)
+[LOG] SoundI::release                          :  (000002479E0246B8)
+[LOG] SoundI::release                          :     DefaultBank 9 (0000024189101578)
+[LOG] SoundI::release                          :  (000002479E0240F8)
+[LOG] SoundI::release                          :     DefaultBank 10 (000002419F5B5008)
+[LOG] SoundI::release                          :  (000002479E025DB8)
+[LOG] SoundI::release                          :     DefaultBank 11 (00000240DB7885C8)
+[LOG] SoundI::release                          :  (000002479E028318)
+[LOG] SoundI::release                          :     DefaultBank 12 (000002472DD82448)
+[LOG] SoundI::release                          :  (000002479E024548)
+[LOG] SoundI::release                          :     DefaultBank 1 (00000240DC2F5FA8)
+[LOG] SoundI::release                          :  (000002479E027348)
+[LOG] SoundI::release                          :     DefaultBank 2 (000002419F5B4E68)
+[LOG] SoundI::release                          :  (000002479E0229F8)
+[LOG] SoundI::release                          :     DefaultBank 3 (00000240DB782448)
+[LOG] SoundI::release                          :  (000002479E025688)
+[LOG] SoundI::release                          :     DefaultBank 4 (00000240DD0D9B18)
+[LOG] SoundI::release                          :  (000002479E026AA8)
+[LOG] SoundI::release                          :     DefaultBank 5 (00000240D977DA58)
+[LOG] SoundI::release                          :  (000002479E0243D8)
+[LOG] SoundI::release                          :     DefaultBank 6 (00000240DD0D97D8)
+[LOG] SoundI::release                          :  (000002479E025AD8)
+[LOG] SoundI::release                          :     MudFootstep7 (00000240DB784B48)
+[LOG] SoundI::release                          :  (000002479E021B98)
+[LOG] SoundI::release                          :     MudFootstep8 (0000024189101098)
+[LOG] SoundI::release                          :  (000002479E026D88)
+[LOG] SoundI::release                          :     MudFootstep9 (000002472DD837C8)
+[LOG] SoundI::release                          :  (000002479E023298)
+[LOG] SoundI::release                          :     MudFootstep10 (00000240DB78BB68)
+[LOG] SoundI::release                          :  (000002479E025238)
+[LOG] SoundI::release                          :     MudFootstep11 (00000240D8BC02B8)
+[LOG] SoundI::release                          :  (000002479E028BB8)
+[LOG] SoundI::release                          :     MudFootstep12 (000002472DD83968)
+[LOG] SoundI::release                          :  (000002479E02B568)
+[LOG] SoundI::release                          :     MudFootstep1 (000002472DD8ACC8)
+[LOG] SoundI::release                          :  (000002479E02B3F8)
+[LOG] SoundI::release                          :     MudFootstep2 (000002472DD8A308)
+[LOG] SoundI::release                          :  (000002479E0281A8)
+[LOG] SoundI::release                          :     MudFootstep3 (000002472DD86888)
+[LOG] SoundI::release                          :  (000002479E0288D8)
+[LOG] SoundI::release                          :     MudFootstep4 (000002472DD87728)
+[LOG] SoundI::release                          :  (000002479E023CA8)
+[LOG] SoundI::release                          :     MudFootstep5 (00000240DB781A88)
+[LOG] SoundI::release                          :  (000002479E02A598)
+[LOG] SoundI::release                          :     MudFootstep6 (000002472DD89608)
+[LOG] SoundI::release                          :  (000002479E022158)
+[LOG] SoundI::release                          :     FootstepsMetal (9) (00000240DB78F2A8)
+[LOG] SoundI::release                          :  (000002479E0222C8)
+[LOG] SoundI::release                          :     FootstepsMetal (10) (000002472DD82FA8)
+[LOG] SoundI::release                          :  (000002479E027908)
+[LOG] SoundI::release                          :     FootstepsMetal (11) (000002472DD86548)
+[LOG] SoundI::release                          :  (000002479E0271D8)
+[LOG] SoundI::release                          :     FootstepsMetal (12) (00000241689CB998)
+[LOG] SoundI::release                          :  (000002479E02B118)
+[LOG] SoundI::release                          :     FootstepsMetal (1) (000002472DD8A168)
+[LOG] SoundI::release                          :  (000002479E027EC8)
+[LOG] SoundI::release                          :     FootstepsMetal (2) (000002472DD82108)
+[LOG] SoundI::release                          : ComputerFanLoopV1 (0000023E0C529738)
+[LOG] SoundI::release                          :     ComputerFanLoopV1 (00000240DC620A18)
+[LOG] SoundI::release                          :     ComputerFanLoopV1 (0000023E0D61B5C8)
+[LOG] SoundI::release                          : ComputerFanLoopV1 (0000023E0C52AB78)
+[LOG] SoundI::release                          :     ComputerFanLoopV1 (00000240DC61F698)
+[LOG] SoundI::release                          :     ComputerFanLoopV1 (0000023E0D6195B8)
+[LOG] SoundI::release                          : ComputerFanLoopV1 (0000023E0C5282F8)
+[LOG] SoundI::release                          :     ComputerFanLoopV1 (00000240DC61DFD8)
+[LOG] SoundI::release                          :     ComputerFanLoopV1 (0000023E0D618178)
+[LOG] SoundI::release                          : ComputerFanLoopV1 (0000023E0C528B68)
+[LOG] SoundI::release                          :     ComputerFanLoopV1 (00000240DC615F78)
+[LOG] SoundI::release                          :     ComputerFanLoopV1 (0000023E0D6173F8)
+[LOG] SoundI::release                          : PlanetWindLoop (0000024171D7C508)
+[LOG] SoundI::release                          :     PlanetWindLoop (00000245418CFAA8)
+[LOG] SoundI::release                          :     PlanetWindLoop (0000024573260D48)
+[LOG] SoundI::release                          : PlanetWindLoop (0000024171D7E1B8)
+[LOG] SoundI::release                          :     PlanetWindLoop (00000245418D2348)
+[LOG] SoundI::release                          :     PlanetWindLoop (00000245732615B8)
+[LOG] SoundI::release                          : PlanetWindLoop (0000024171D7E368)
+[LOG] SoundI::release                          :     PlanetWindLoop (00000245418D0608)
+[LOG] SoundI::release                          :     PlanetWindLoop (0000024573260328)
+[LOG] SoundI::release                          : PlanetWindLoop (0000024171D784E8)
+[LOG] SoundI::release                          :     PlanetWindLoop (00000245418CF768)
+[LOG] SoundI::release                          :     PlanetWindLoop (0000024573260B98)
+[LOG] SoundI::release                          : PlanetWindLoop (0000024171D7CD78)
+[LOG] SoundI::release                          :     PlanetWindLoop (00000245418D31E8)
+[LOG] SoundI::release                          :     PlanetWindLoop (00000245732609E8)
+[LOG] SoundI::release                          : PlanetWindLoop (0000024171D7C1A8)
+[LOG] SoundI::release                          :     PlanetWindLoop (00000245418CE3E8)
+[LOG] SoundI::release                          :     PlanetWindLoop (000002457325E4C8)
+[LOG] SoundI::release                          : PlanetWindLoop (0000024171D7B278)
+[LOG] SoundI::release                          :     PlanetWindLoop (00000245418CEA68)
+[LOG] SoundI::release                          :     PlanetWindLoop (000002457325DC58)
+[LOG] SoundI::release                          :  (000002479E029738)
+[LOG] SoundI::release                          :     FootstepsStone (8) (000002472DD7AA68)
+[LOG] SoundI::release                          :  (000002479E029E68)
+[LOG] SoundI::release                          :     FootstepsStone (9) (000002472DD88908)
+[LOG] SoundI::release                          :  (000002479E02B6D8)
+[LOG] SoundI::release                          :     FootstepsStone (10) (000002472DD7F528)
+[LOG] SoundI::release                          :  (000002479E029178)
+[LOG] SoundI::release                          :     FootstepsStone (11) (000002472DD7DE68)
+[LOG] SoundI::release                          :  (000002479E029A18)
+[LOG] SoundI::release                          :     FootstepsStone (12) (000002472DD892C8)
+[LOG] SoundI::release                          :  (000002479E02B288)
+[LOG] SoundI::release                          :     FootstepsStone (1) (000002472DD88768)
+[LOG] SoundI::release                          :  (000002479E02A708)
+[LOG] SoundI::release                          :     FootstepsStone (2) (000002472DD880E8)
+[LOG] SoundI::release                          :  (000002479E028D28)
+[LOG] SoundI::release                          :     FootstepsStone (3) (000002472DD897A8)
+[LOG] SoundI::release                          :  (000002479E02A9E8)
+[LOG] SoundI::release                          :     FootstepsStone (4) (000002472DD88F88)
+[LOG] SoundI::release                          :  (000002479E028E98)
+[LOG] SoundI::release                          :     FootstepsStone (5) (000002472DD87DA8)
+[LOG] SoundI::release                          :  (000002479E02AB58)
+[LOG] SoundI::release                          :     FootstepsStone (6) (000002472DD7F048)
+[LOG] SoundI::release                          :  (000002479E029B88)
+[LOG] SoundI::release                          :     FootstepsStone (7) (000002472DD88DE8)
+[LOG] SoundI::release                          :  (000002479E026C18)
+[LOG] SoundI::release                          :     FootstepsMetal (3) (000002472DD84B48)
+[LOG] SoundI::release                          :  (000002479E027A78)
+[LOG] SoundI::release                          :     FootstepsMetal (4) (000002472DD818E8)
+[LOG] SoundI::release                          :  (000002479E024268)
+[LOG] SoundI::release                          :     FootstepsMetal (5) (00000241892D89C8)
+[LOG] SoundI::release                          :  (000002479E021D08)
+[LOG] SoundI::release                          :     FootstepsMetal (6) (00000240D8BC0C78)
+[LOG] SoundI::release                          :  (000002479E027628)
+[LOG] SoundI::release                          :     FootstepsMetal (7) (000002472DD84CE8)
+[LOG] SoundI::release                          :  (000002479E022CD8)
+[LOG] SoundI::release                          :     FootstepsMetal (8) (00000240DB789608)
+[LOG] SoundI::release                          :  (000002479E025968)
+[LOG] SoundI::release                          :     JimFootstepsCloth (9) (00000240DB7A0BC8)
+[LOG] SoundI::release                          :  (000002479E025F28)
+[LOG] SoundI::release                          :     JimFootstepsCloth (10) (00000240DC2F6488)
+[LOG] SoundI::release                          :  (000002479E023578)
+[LOG] SoundI::release                          :     JimFootstepsCloth (11) (000002419F5B5688)
+[LOG] SoundI::release                          :  (000002479E02CF48)
+[LOG] SoundI::release                          :     JimFootstepsCloth (12) (000002472DD856A8)
+[LOG] SoundI::release                          :  (000002479E025518)
+[LOG] SoundI::release                          :     JimFootstepsCloth (13) (00000240DB79C928)
+[LOG] SoundI::release                          :  (000002479E023B38)
+[LOG] SoundI::release                          :     JimFootstepsCloth (14) (00000240DB789FC8)
+[LOG] SoundI::release                          :  (000002479E0267C8)
+[LOG] SoundI::release                          :     JimFootstepsCloth (15) (00000240DD0DF618)
+[LOG] SoundI::release                          :  (000002479E02AFA8)
+[LOG] SoundI::release                          :     JimFootstepsCloth (16) (000002472DD85EC8)
+[LOG] SoundI::release                          :  (000002479E02A148)
+[LOG] SoundI::release                          :     JimFootstepsCloth (17) (000002472DD82AC8)
+[LOG] SoundI::release                          :  (000002479E026938)
+[LOG] SoundI::release                          :     JimFootstepsCloth (18) (00000240DB76D448)
+[LOG] SoundI::release                          :  (000002479E02ACC8)
+[LOG] SoundI::release                          :     JimFootstepsCloth (19) (000002472DD82C68)
+[LOG] SoundI::release                          :  (000002479E028768)
+[LOG] SoundI::release                          :     JimFootstepsCloth (1) (000002472DD866E8)
+[LOG] SoundI::release                          :  (000002479E028A48)
+[LOG] SoundI::release                          :     JimFootstepsCloth (2) (000002472DD89FC8)
+[LOG] SoundI::release                          :  (000002479E02BF78)
+[LOG] SoundI::release                          :     JimFootstepsCloth (3) (000002472DD88288)
+[LOG] SoundI::release                          :  (000002479E029FD8)
+[LOG] SoundI::release                          :     JimFootstepsCloth (4) (000002472DD82788)
+[LOG] SoundI::release                          :  (000002479E0236E8)
+[LOG] SoundI::release                          :     JimFootstepsCloth (5) (00000241689CA958)
+[LOG] SoundI::release                          :  (000002479E023128)
+[LOG] SoundI::release                          :     JimFootstepsCloth (6) (00000240DB79B0C8)
+[LOG] SoundI::release                          :  (000002479E022888)
+[LOG] SoundI::release                          :     JimFootstepsCloth (7) (00000240DB7984E8)
+[LOG] SoundI::release                          :  (000002479E021E78)
+[LOG] SoundI::release                          :     JimFootstepsCloth (8) (000002472DD83B08)
+[LOG] SoundI::release                          :  (000002479E028038)
+[LOG] SoundI::release                          :     JimFootstepsJingle (12) (000002472DD89AE8)
+[LOG] SoundI::release                          :  (000002479E022718)
+[LOG] SoundI::release                          :     JimFootstepsJingle (13) (00000241689CC4F8)
+[LOG] SoundI::release                          :  (000002479E0257F8)
+[LOG] SoundI::release                          :     JimFootstepsJingle (14) (00000241689CA7B8)
+[LOG] SoundI::release                          :  (000002479E022438)
+[LOG] SoundI::release                          :     JimFootstepsJingle (15) (00000240DB7981A8)
+[LOG] SoundI::release                          :  (000002479E026EF8)
+[LOG] SoundI::release                          :     JimFootstepsJingle (16) (00000240DB7A0208)
+[LOG] SoundI::release                          :  (000002479E0285F8)
+[LOG] SoundI::release                          :     JimFootstepsJingle (17) (000002472DD878C8)
+[LOG] SoundI::release                          :  (000002479E0292E8)
+[LOG] SoundI::release                          :     JimFootstepsJingle (18) (000002472DD815A8)
+[LOG] SoundI::release                          :  (000002479E028488)
+[LOG] SoundI::release                          :     JimFootstepsJingle (19) (000002472DD85368)
+[LOG] SoundI::release                          :  (000002479E021FE8)
+[LOG] SoundI::release                          :     JimFootstepsJingle (1) (00000241689CB318)
+[LOG] SoundI::release                          :  (000002479E022B68)
+[LOG] SoundI::release                          :     JimFootstepsJingle (2) (00000240DB78DBE8)
+[LOG] SoundI::release                          :  (000002479E0239C8)
+[LOG] SoundI::release                          :     JimFootstepsJingle (3) (00000240DB787C08)
+[LOG] SoundI::release                          :  (000002479E023E18)
+[LOG] SoundI::release                          :     JimFootstepsJingle (4) (00000241689CBE78)
+[LOG] SoundI::release                          :  (000002479E0218B8)
+[LOG] SoundI::release                          :     JimFootstepsJingle (5) (00000241689CD1F8)
+[LOG] SoundI::release                          :  (000002479E0295C8)
+[LOG] SoundI::release                          :     JimFootstepsJingle (6) (000002472DD87A68)
+[LOG] SoundI::release                          :  (000002479E026098)
+[LOG] SoundI::release                          :     JimFootstepsJingle (7) (00000241892D9A08)
+[LOG] SoundI::release                          :  (000002479E021A28)
+[LOG] SoundI::release                          :     JimFootstepsJingle (8) (00000241892D81A8)
+[LOG] SoundI::release                          :  (000002479E024B08)
+[LOG] SoundI::release                          :     JimFootstepsJingle (9) (00000241689CAAF8)
+[LOG] SoundI::release                          :  (000002479E024828)
+[LOG] SoundI::release                          :     JimFootstepsJingle (10) (00000240DB7818E8)
+[LOG] SoundI::release                          :  (000002479E02AE38)
+[LOG] SoundI::release                          :     JimFootstepsJingle (11) (000002472DD832E8)
+[LOG] Thread::callback                         : FMOD Convolution thread finished.
+[LOG] Thread::callback                         : FMOD Convolution thread finished.
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
