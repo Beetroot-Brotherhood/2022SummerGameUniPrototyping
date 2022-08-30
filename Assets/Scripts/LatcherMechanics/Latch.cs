@@ -21,15 +21,18 @@ public class Latch : MonoBehaviour
 
     private HumanComponents currentHumanComponenets;
 
+    private bool hasLatched;
+
     public StarterAssets.StarterAssetsInputs latcherInputs;
 
-    public Collider[] colliders;
+    public LayerMask layerMask;
 
     // Start is called before the first frame update
     void Start()
     {
         //latcherController.enabled = true;
         cameraManager.Follow = latcherCameraRoot.transform;
+
         cameraManager.LookAt = latcherCameraRoot.transform;
 
         latchInput = latcherObject.GetComponent<PlayerInput>();
@@ -43,10 +46,27 @@ public class Latch : MonoBehaviour
     {
         RaycastHit hit;
 
-        if(currentHumanComponenets == null)
-        {
+        Ray ray = Camera.main.ScreenPointToRay(new Vector2(Screen.width/2, Screen.height/2));
 
-            if (Physics.Raycast(transform.position, transform.forward, out hit, latchRange))
+        if(!hasLatched)
+        {
+            currentHumanComponenets = null;
+            if (Physics.Raycast(ray, out hit, latchRange, layerMask, QueryTriggerInteraction.UseGlobal)) {
+                
+                if (hit.collider.TryGetComponent<HumanComponents>(out currentHumanComponenets))
+                {
+                    canLatch = true;
+
+                }
+
+            }
+            else {
+                hit = new RaycastHit();
+                canLatch = false;
+                //ResetComponents();
+            }
+
+            /* if (Physics.Raycast(transform.position, transform.forward, out hit, latchRange))
             {
                 //Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * colliders[0].transform, Color.yellow);
 
@@ -58,17 +78,19 @@ public class Latch : MonoBehaviour
 
                 }
                 
-            }
+            } */
         }
         else
         {
+            hit = new RaycastHit();
             canLatch = false;
         }
 
        
 
-        if (latcherInputs.onLatch && currentHumanComponenets != null)
+        if (latcherInputs.onLatch && !hasLatched && currentHumanComponenets != null)
         {
+            hasLatched = true;
             latcherInputs.onLatch = false;
             latcherController.enabled = false;
             currentHumanComponenets.thirdPersonController.enabled = true;
@@ -85,11 +107,11 @@ public class Latch : MonoBehaviour
 
             currentHumanComponenets.latcherOnBackMesh.SetActive(true);
         }
-
-        if (currentHumanComponenets != null)
+        else if (hasLatched && currentHumanComponenets != null)
         {
             if (currentHumanComponenets.starterAssetsInputs.onUnLatch)
             {
+                hasLatched = false;
                 currentHumanComponenets.starterAssetsInputs.onUnLatch = false;
                 currentHumanComponenets.thirdPersonController.enabled = false;
                 latcherController.enabled = true;
@@ -106,9 +128,15 @@ public class Latch : MonoBehaviour
 
                 currentHumanComponenets.latcherOnBackMesh.SetActive(false);
 
+                
                 ResetComponents();
             }
         }
+        else {
+            latcherInputs.onLatch = false;
+        }
+
+        
         
     }
 
