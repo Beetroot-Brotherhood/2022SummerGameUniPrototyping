@@ -29,7 +29,7 @@ public class SliceMeBaby : MonoBehaviour
                 SlicedCounter slicedCounter;
                 int thisObjectSlicedCounterInt = 0;
                 hitGameobjects[i].gameObject.TryGetComponent<SlicedCounter>(out slicedCounter);
-                if (slicedCounter == null || slicedCounter.counter < 2) 
+                if (slicedCounter == null || slicedCounter.counter < 4) 
                 {
                     thisObjectSlicedCounterInt = slicedCounter ? slicedCounter.counter : 0; 
                     SlicedHull hull = hitGameobjects[i].gameObject.Slice(cutPlane.transform.position, cutPlane.transform.up, null);
