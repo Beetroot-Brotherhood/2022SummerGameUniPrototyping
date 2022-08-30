@@ -91,7 +91,7 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
                 int thisObjectSlicedCounterInt = 0;
                 hitGameobjects[i].gameObject.TryGetComponent<SlicedCounter>(out slicedCounter);
 
-                if (slicedCounter == null || slicedCounter.counter < 2)
+                if (slicedCounter == null || slicedCounter.counter < 4)
                 {
 
                     thisObjectSlicedCounterInt = slicedCounter ? slicedCounter.counter : 0;

@@ -18,7 +18,9 @@ public class WeaponControllerV2 : MonoBehaviour
     public bool isAttacking = false;
     public bool isParrying = false;
 
-   
+    public LayerMask enemyLayer;
+    public float finisherRayCastRange;
+  
 
     private void Start()
     {
@@ -65,16 +67,36 @@ public class WeaponControllerV2 : MonoBehaviour
         canAttack = false;
         canParry = false;
 
-        int rnd = Random.Range(0, 2);
 
-        if (rnd == 0)
+
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(new Vector2(Screen.width / 2, Screen.height / 2));
+        if (Physics.Raycast(ray, out hit, finisherRayCastRange, enemyLayer, QueryTriggerInteraction.UseGlobal))
         {
-            anim.SetTrigger("Attack1");
+            if(hit.collider.gameObject.TryGetComponent<YbotTestController2>(out YbotTestController2 ybotTestController2))
+            {
+                if (ybotTestController2.staggered)
+                {
+                    anim.SetTrigger("Finisher");
+                }
+                else
+                {
+                    RandomizeAttack();
+                }
+            }
+            else
+            {
+                RandomizeAttack();
+            }
+
         }
         else
         {
-            anim.SetTrigger("Attack2");
+            RandomizeAttack();
         }
+
+
+
 
         StartCoroutine(ResetAttackCooldown());
 
@@ -89,6 +111,20 @@ public class WeaponControllerV2 : MonoBehaviour
 
         
 
+    }
+
+    private void RandomizeAttack()
+    {
+        int rnd = Random.Range(0, 2);
+
+        if (rnd == 0)
+        {
+            anim.SetTrigger("Attack1");
+        }
+        else
+        {
+            anim.SetTrigger("Attack2");
+        }
     }
 
 
