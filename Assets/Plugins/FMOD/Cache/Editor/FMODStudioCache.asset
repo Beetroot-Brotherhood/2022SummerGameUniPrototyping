@@ -100,10 +100,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637975420512321364
+  lastModified: 637975533414940140
   FileSizes:
   - Name: Desktop
-    Value: 9183200
+    Value: 9887168
   Exists: 1
 --- !u!114 &-6886996333803516053
 MonoBehaviour:
@@ -589,13 +589,14 @@ MonoBehaviour:
   - {fileID: -8032719219282895052}
   - {fileID: 5396402797491340806}
   - {fileID: -2409727297267129343}
+  - {fileID: 627590971195307372}
   EditorParameters:
   - {fileID: -4276169407730268950}
   MasterBanks:
   - {fileID: 1694097518466003450}
   StringsBanks:
   - {fileID: 3743328676668485975}
-  cacheTime: 637975420517587647
+  cacheTime: 637975533418593752
   cacheVersion: 131591
 --- !u!114 &316210463170389488
 MonoBehaviour:
@@ -621,6 +622,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &627590971195307372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Environment/SewerAmbience
+  m_EditorClassIdentifier: 
+  Path: event:/Environment/SewerAmbience
+  Guid:
+    Data1: -1795255810
+    Data2: 1116878607
+    Data3: 727249038
+    Data4: 1954588155
+  Banks:
+  - {fileID: -7239724491679766044}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 52380
 --- !u!114 &650492856761913048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -789,7 +817,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637975420514237279
+  lastModified: 637975533416227208
   FileSizes:
   - Name: Desktop
     Value: 13187008
@@ -916,10 +944,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637975420514256900
+  lastModified: 637975533416257221
   FileSizes:
   - Name: Desktop
-    Value: 2616
+    Value: 2658
   Exists: 1
 --- !u!114 &3766621452843863141
 MonoBehaviour:
@@ -1097,7 +1125,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637975420517587647
+  lastModified: 637975533418593752
   FileSizes:
   - Name: Desktop
     Value: 10692384
@@ -1279,7 +1307,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637975420516757459
+  lastModified: 637975533418053628
   FileSizes:
   - Name: Desktop
     Value: 12955552
