@@ -74,7 +74,13 @@ public class WeaponControllerV2 : MonoBehaviour
             OnSlicerInput.instance.onThrowable = false;
         }
 
+        if(OnSlicerInput.instance.onKick && canAttack)
+        {
+            anim.SetTrigger("Kick");
 
+
+            OnSlicerInput.instance.onKick = false;
+        }
 
     }
 
