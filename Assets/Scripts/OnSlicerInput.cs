@@ -20,6 +20,7 @@ public class OnSlicerInput : MonoBehaviour
     [HideInInspector] public bool onSlice;
     [HideInInspector] public bool onGatherSlicedParts;
     [HideInInspector] public bool onParry;
+    [HideInInspector] public bool onThrowable;
 
     public GameObject slicer;
     
@@ -54,7 +55,10 @@ public class OnSlicerInput : MonoBehaviour
         onParry = value.isPressed;
     }
 
-
+    public void OnThrowable(InputValue value)
+    {
+        onThrowable = value.isPressed;
+    }
 
 }
 

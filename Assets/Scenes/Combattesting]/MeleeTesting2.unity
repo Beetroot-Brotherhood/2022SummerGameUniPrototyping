@@ -2779,6 +2779,37 @@ MonoBehaviour:
       Data3: 1525666470
       Data4: -506639327
     Path: event:/--- Code Slicer ---/Player/PlayerSwordHit
+--- !u!1 &1470843360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1470843361}
+  m_Layer: 0
+  m_Name: ThrowablePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1470843361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470843360}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.177, y: -0.105, z: 0.622}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1589485963}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1554433095 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 88506821347967707, guid: 5857da1b75f08a749bae7786d3647a33, type: 3}
@@ -2941,6 +2972,7 @@ Transform:
   - {fileID: 1990563944}
   - {fileID: 1356481050}
   - {fileID: 487384878}
+  - {fileID: 1470843361}
   m_Father: {fileID: 7379721569137119285}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2989,6 +3021,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   finisherRayCastRange: 5
+  throwablePoint: {fileID: 1470843361}
+  suctionThrowable: {fileID: 6249417325198546989, guid: ae33b63f87d8d1e42afabf02f6d5bb20, type: 3}
+  throwableCooldown: 1
+  canThrow: 0
+  throwForce: 6
+  throwUpwardForce: 10
+  cameraPoint: {fileID: 7379721569137119285}
 --- !u!114 &1589485966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4090,7 +4129,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.778607, y: 1}
+    m_SensorSize: {x: 1.779703, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -5075,4 +5114,5 @@ MonoBehaviour:
   onSlice: 0
   onGatherSlicedParts: 0
   onParry: 0
+  onThrowable: 0
   slicer: {fileID: 0}

@@ -20,11 +20,22 @@ public class WeaponControllerV2 : MonoBehaviour
 
     public LayerMask enemyLayer;
     public float finisherRayCastRange;
+
+    [Header("Suction Throwable Variables")]
+
+    public Transform throwablePoint;
+    public GameObject suctionThrowable;
+    public float throwableCooldown;
+    public bool canThrow = true;
+    public float throwForce;
+    public float throwUpwardForce;
+    public Transform cameraPoint;
   
 
     private void Start()
     {
         anim = GetComponent<Animator>();
+        canThrow = true;
     }
 
     private void Update()
@@ -54,14 +65,21 @@ public class WeaponControllerV2 : MonoBehaviour
 
         }
 
+        if (OnSlicerInput.instance.onThrowable && canThrow)
+        {
 
+            ThrowableFunc();
+
+
+            OnSlicerInput.instance.onThrowable = false;
+        }
 
 
 
     }
 
 
-
+    // start of attack code
     public void AttackFunc()
     {
         canAttack = false;
@@ -149,12 +167,12 @@ public class WeaponControllerV2 : MonoBehaviour
 
 
     }
+    //end of attacking code
 
 
 
 
-
-
+    // start of parry code
     public void ParryFunc()
     {
         canAttack = false;
@@ -199,8 +217,33 @@ public class WeaponControllerV2 : MonoBehaviour
 
 
     }
+    //end of parry code
 
+    //start of throwable code
 
+    public void ThrowableFunc()
+    {
+        Debug.Log("Throwable!");
 
+        canThrow = false;
 
+        GameObject projectile = Instantiate(suctionThrowable, throwablePoint.position, cameraPoint.rotation);
+
+        Rigidbody projectileRB = projectile.GetComponent<Rigidbody>();
+
+        Vector3 forceToAdd = cameraPoint.transform.forward * throwForce + transform.up * throwUpwardForce;
+
+        projectileRB.AddForce(forceToAdd, ForceMode.Impulse);
+
+        projectile.GetComponent<GatherSlicedObjects>().owner = this.gameObject;
+
+        StartCoroutine(ResetThrowableCooldown());
+    }
+
+    IEnumerator ResetThrowableCooldown()
+    {
+        yield return new WaitForSeconds(throwableCooldown);
+
+        canThrow = true;
+    }
 }
