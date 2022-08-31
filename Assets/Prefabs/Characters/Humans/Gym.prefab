@@ -116,7 +116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5950532695406346399
 Transform:
   m_ObjectHideFlags: 0
@@ -168,7 +168,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5950532695602840250}
-  m_LocalRotation: {x: -0, y: 0.05960246, z: -0, w: 0.99822223}
+  m_LocalRotation: {x: 0, y: 0.05960255, z: 0, w: 0.99822223}
   m_LocalPosition: {x: 145.5772, y: -0.2290039, z: 0.5517597}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -192,7 +192,6 @@ GameObject:
   - component: {fileID: 232204158830303267}
   - component: {fileID: 6014209888951987887}
   - component: {fileID: 8059362143403324127}
-  - component: {fileID: 1186715453232615883}
   - component: {fileID: 5950532695938249331}
   - component: {fileID: 847129679365140485}
   - component: {fileID: 847129679365140483}
@@ -441,30 +440,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1186715453232615883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8059362143403324115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e12aeb62644333944ad5eb3cd18812fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SelectAudio:
-    Guid:
-      Data1: -1315568711
-      Data2: 1081833456
-      Data3: -42814800
-      Data4: -1482734036
-    Path: event:/Environment/PlanetWind
-  SoundOcclusionWidening: 3.09
-  PlayerOcclusionWidening: 3.2
-  OcclusionLayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!114 &5950532695938249331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -507,7 +482,7 @@ MonoBehaviour:
   thirdPersonController: {fileID: 8059362143403324120}
   cameraRoot: {fileID: 2390989321117944712}
   latchSpot: {fileID: 0}
-  latcherOnBackMesh: {fileID: 0}
+  latcherOnBackMesh: {fileID: 2117129753844195031}
   starterAssetsInputs: {fileID: 6014209888951987887}
 --- !u!1001 &7498333864353222177
 PrefabInstance:
@@ -560,6 +535,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7779336074060051467, guid: 3d5dfc9259d0e7342808f3059efafcf0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -7097367157893011948, guid: 3d5dfc9259d0e7342808f3059efafcf0, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -580,16 +559,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Latcher
       objectReference: {fileID: 0}
+    - target: {fileID: -761424306205536010, guid: 3d5dfc9259d0e7342808f3059efafcf0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 638170768153675984, guid: 3d5dfc9259d0e7342808f3059efafcf0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 06495116db35aac428bd6c2ce462bd0e, type: 2}
     - target: {fileID: 919132149155446097, guid: 3d5dfc9259d0e7342808f3059efafcf0, type: 3}
       propertyPath: m_Name
       value: PlaceholderGym_MeshJoints
+      objectReference: {fileID: 0}
+    - target: {fileID: 2546625899039846516, guid: 3d5dfc9259d0e7342808f3059efafcf0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5389194193106555143, guid: 3d5dfc9259d0e7342808f3059efafcf0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c3eb278a8b980b241886c14dfda13135, type: 2}
+    - target: {fileID: 7929475207500393212, guid: 3d5dfc9259d0e7342808f3059efafcf0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9014351475465554029, guid: 3d5dfc9259d0e7342808f3059efafcf0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d5dfc9259d0e7342808f3059efafcf0, type: 3}
+--- !u!1 &2117129753844195031 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -761424306205536010, guid: 3d5dfc9259d0e7342808f3059efafcf0, type: 3}
+  m_PrefabInstance: {fileID: 7498333864353222177}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8036066151617472970 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3d5dfc9259d0e7342808f3059efafcf0, type: 3}

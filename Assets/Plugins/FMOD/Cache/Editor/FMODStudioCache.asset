@@ -1,29 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8663081562880660677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/FootStepsMultiSurfaceTest/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3098557548
-    data2: 3029766217
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-8600495221846599525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,31 +28,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 59895
---- !u!114 &-8256138596723448696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/AudioOcclusionTest/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3098557548
-    data2: 3029766217
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-7624485456783870511
+--- !u!114 &-8032719219282895052
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,10 +52,39 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 7916559122898618066}
+  - {fileID: -6065798468317983327}
   MinDistance: 1
   MaxDistance: 20
   Length: 30743
+--- !u!114 &-7716938720465340704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Testing/RadioTest
+  m_EditorClassIdentifier: 
+  Path: event:/Testing/RadioTest
+  Guid:
+    Data1: 1945087003
+    Data2: 1235160196
+    Data3: -613517134
+    Data4: -516697583
+  Banks:
+  - {fileID: 5233824090370968052}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -376953103122682386}
+  - {fileID: 650492856761913048}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 776307
 --- !u!114 &-7239724491679766044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,38 +100,11 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637974872172712024
+  lastModified: 637975392525343529
   FileSizes:
   - Name: Desktop
     Value: 9183200
   Exists: 1
---- !u!114 &-7189204176305246943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemies/Jim/FootstepClothJIM
-  m_EditorClassIdentifier: 
-  Path: event:/Enemies/Jim/FootstepClothJIM
-  Guid:
-    Data1: -106030388
-    Data2: 1097192309
-    Data3: -176338789
-    Data4: -2042774122
-  Banks:
-  - {fileID: 8430083926468423398}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 760
 --- !u!114 &-6886996333803516053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,62 +132,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-6588364357594896678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemies/Jim/HumanFootsteps
-  m_EditorClassIdentifier: 
-  Path: event:/Enemies/Jim/HumanFootsteps
-  Guid:
-    Data1: 1499407956
-    Data2: 1231715391
-    Data3: -1228178757
-    Data4: -393254616
-  Banks:
-  - {fileID: 8430083926468423398}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 7342339427773329306}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-6427091475434277086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Testing/AudioOcclusionTest
-  m_EditorClassIdentifier: 
-  Path: event:/Testing/AudioOcclusionTest
-  Guid:
-    Data1: -658833488
-    Data2: 1110972665
-    Data3: -1431518075
-    Data4: 154986206
-  Banks:
-  - {fileID: 5233824090370968052}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -8256138596723448696}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 87272
 --- !u!114 &-6258823826867117784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,6 +143,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Sparks/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3098557548
+    data2: 3029766217
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-6065798468317983327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TalkingOcclusion/Occlusion
   m_EditorClassIdentifier: 
   Name: Occlusion
   StudioPath: 
@@ -286,6 +208,35 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 121250
+--- !u!114 &-4859621614202821498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/FootStepsMultiSurfaceTest
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/FootStepsMultiSurfaceTest
+  Guid:
+    Data1: -1277280443
+    Data2: 1150038718
+    Data3: -765227117
+    Data4: -332889090
+  Banks:
+  - {fileID: 8430083926468423398}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -2498807099371759130}
+  - {fileID: -4048474732436223293}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4276169407730268950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,7 +271,7 @@ MonoBehaviour:
   - Value I
   - Value J
   Exists: 1
---- !u!114 &-4274831965095239297
+--- !u!114 &-4048474732436223293
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -330,21 +281,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/RadioTest/RadioState
+  m_Name: parameter:/FootStepsMultiSurfaceTest/Occlusion
   m_EditorClassIdentifier: 
-  Name: RadioState
+  Name: Occlusion
   StudioPath: 
   Min: 0
   Max: 1
-  Default: 1
+  Default: 0
   ID:
-    data1: 1088831446
-    data2: 1811705897
-  Type: 2
+    data1: 3098557548
+    data2: 3029766217
+  Type: 0
   IsGlobal: 0
-  Labels:
-  - Off
-  - On
+  Labels: []
   Exists: 1
 --- !u!114 &-3832691278414172713
 MonoBehaviour:
@@ -374,6 +323,36 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 104774
+--- !u!114 &-3708696628291973322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/HumanFootsteps/Footsteps
+  m_EditorClassIdentifier: 
+  Name: Footsteps
+  StudioPath: 
+  Min: 0
+  Max: 5
+  Default: 0
+  ID:
+    data1: 1613936621
+    data2: 1075788159
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - DefaultBank
+  - Wood
+  - Stone
+  - Metal
+  - Dirt
+  - Mud
+  Exists: 1
 --- !u!114 &-3604021819389602098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,7 +405,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 28500
---- !u!114 &-2128454827392962108
+--- !u!114 &-2498807099371759130
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -435,26 +414,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Testing/RadioTest
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/FootStepsMultiSurfaceTest/SurfaceType
   m_EditorClassIdentifier: 
-  Path: event:/Testing/RadioTest
-  Guid:
-    Data1: 1945087003
-    Data2: 1235160196
-    Data3: -613517134
-    Data4: -516697583
-  Banks:
-  - {fileID: 5233824090370968052}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -4274831965095239297}
-  - {fileID: -374405519880453454}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 776307
+  Name: SurfaceType
+  StudioPath: 
+  Min: 0
+  Max: 9
+  Default: 0
+  ID:
+    data1: 3520193432
+    data2: 1097992514
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - Value F
+  - Value G
+  - Value H
+  - Value I
+  - Value J
+  Exists: 1
 --- !u!114 &-1777041623708624079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,7 +490,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-374405519880453454
+--- !u!114 &-376953103122682386
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -516,19 +500,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/RadioTest/Occlusion
+  m_Name: parameter:/RadioTest/RadioState
   m_EditorClassIdentifier: 
-  Name: Occlusion
+  Name: RadioState
   StudioPath: 
   Min: 0
   Max: 1
-  Default: 0
+  Default: 1
   ID:
-    data1: 3098557548
-    data2: 3029766217
-  Type: 0
+    data1: 1088831446
+    data2: 1811705897
+  Type: 2
   IsGlobal: 0
-  Labels: []
+  Labels:
+  - Off
+  - On
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -558,16 +544,8 @@ MonoBehaviour:
   - {fileID: 2105311565037087084}
   - {fileID: 1151370066955303980}
   - {fileID: 2585847670208558920}
-  - {fileID: 7311705916423163048}
-  - {fileID: 7092745382078784620}
   - {fileID: -3832691278414172713}
-  - {fileID: -2128454827392962108}
-  - {fileID: -7624485456783870511}
-  - {fileID: -6427091475434277086}
   - {fileID: 5105747293793322626}
-  - {fileID: -6588364357594896678}
-  - {fileID: 6090574935581588058}
-  - {fileID: -7189204176305246943}
   - {fileID: 3584395064864645737}
   - {fileID: 8121469655880870978}
   - {fileID: 6242804590271936502}
@@ -575,13 +553,21 @@ MonoBehaviour:
   - {fileID: 3766621452843863141}
   - {fileID: -1777041623708624079}
   - {fileID: 930901738386776213}
+  - {fileID: -4859621614202821498}
+  - {fileID: 3779084322268948172}
+  - {fileID: 1135073264113733401}
+  - {fileID: 4002419311156275302}
+  - {fileID: 8631344442850426975}
+  - {fileID: -7716938720465340704}
+  - {fileID: -8032719219282895052}
+  - {fileID: 5396402797491340806}
   EditorParameters:
   - {fileID: -4276169407730268950}
   MasterBanks:
   - {fileID: 1694097518466003450}
   StringsBanks:
   - {fileID: 3743328676668485975}
-  cacheTime: 637974872194798787
+  cacheTime: 637975392528829377
   cacheVersion: 131591
 --- !u!114 &316210463170389488
 MonoBehaviour:
@@ -607,7 +593,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &889821506993092691
+--- !u!114 &650492856761913048
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -617,25 +603,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/LatcherScuttle/Footsteps
+  m_Name: parameter:/RadioTest/Occlusion
   m_EditorClassIdentifier: 
-  Name: Footsteps
+  Name: Occlusion
   StudioPath: 
   Min: 0
-  Max: 5
+  Max: 1
   Default: 0
   ID:
-    data1: 1613936621
-    data2: 1075788159
-  Type: 2
+    data1: 3098557548
+    data2: 3029766217
+  Type: 0
   IsGlobal: 0
-  Labels:
-  - DefaultBank
-  - Wood
-  - Stone
-  - Metal
-  - Dirt
-  - Mud
+  Labels: []
+  Exists: 1
+--- !u!114 &812688517423792549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AudioOcclusionTest/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3098557548
+    data2: 3029766217
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &930901738386776213
 MonoBehaviour:
@@ -664,6 +668,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1135073264113733401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Jim/FootstepJingleJIM
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Jim/FootstepJingleJIM
+  Guid:
+    Data1: 760845255
+    Data2: 1149890248
+    Data3: 1272316813
+    Data4: -1241839348
+  Banks:
+  - {fileID: 8430083926468423398}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 840
 --- !u!114 &1151370066955303980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -691,40 +722,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &1219664084407245393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/FootStepsMultiSurfaceTest/SurfaceType
-  m_EditorClassIdentifier: 
-  Name: SurfaceType
-  StudioPath: 
-  Min: 0
-  Max: 9
-  Default: 0
-  ID:
-    data1: 3520193432
-    data2: 1097992514
-  Type: 2
-  IsGlobal: 1
-  Labels:
-  - 0
-  - 1
-  - 2
-  - 3
-  - 4
-  - Value F
-  - Value G
-  - Value H
-  - Value I
-  - Value J
-  Exists: 1
 --- !u!114 &1643018302652655364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -764,7 +761,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637974872194788775
+  lastModified: 637975392526498845
   FileSizes:
   - Name: Desktop
     Value: 13187008
@@ -891,7 +888,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637974872194798787
+  lastModified: 637975392526518850
   FileSizes:
   - Name: Desktop
     Value: 2572
@@ -923,6 +920,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 150
   Length: 2650
+--- !u!114 &3779084322268948172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Jim/HumanFootsteps
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Jim/HumanFootsteps
+  Guid:
+    Data1: 1499407956
+    Data2: 1231715391
+    Data3: -1228178757
+    Data4: -393254616
+  Banks:
+  - {fileID: 8430083926468423398}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -3708696628291973322}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3949865255320204353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -947,6 +972,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &4002419311156275302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Jim/FootstepClothJIM
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Jim/FootstepClothJIM
+  Guid:
+    Data1: -106030388
+    Data2: 1097192309
+    Data3: -176338789
+    Data4: -2042774122
+  Banks:
+  - {fileID: 8430083926468423398}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 760
 --- !u!114 &4637514197300930891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1017,7 +1069,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637967088114054475
+  lastModified: 637975392528829377
   FileSizes:
   - Name: Desktop
     Value: 10692384
@@ -1050,6 +1102,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1500
+--- !u!114 &5396402797491340806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Testing/AudioOcclusionTest
+  m_EditorClassIdentifier: 
+  Path: event:/Testing/AudioOcclusionTest
+  Guid:
+    Data1: -658833488
+    Data2: 1110972665
+    Data3: -1431518075
+    Data4: 154986206
+  Banks:
+  - {fileID: 5233824090370968052}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 812688517423792549}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 87272
 --- !u!114 &5838240180067370526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1078,33 +1158,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 17600
---- !u!114 &6090574935581588058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemies/Jim/FootstepJingleJIM
-  m_EditorClassIdentifier: 
-  Path: event:/Enemies/Jim/FootstepJingleJIM
-  Guid:
-    Data1: 760845255
-    Data2: 1149890248
-    Data3: 1272316813
-    Data4: -1241839348
-  Banks:
-  - {fileID: 8430083926468423398}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 840
 --- !u!114 &6242804590271936502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1132,93 +1185,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 950
   Length: 198760
---- !u!114 &7092745382078784620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Footsteps/LatcherScuttle
-  m_EditorClassIdentifier: 
-  Path: event:/Footsteps/LatcherScuttle
-  Guid:
-    Data1: -2066252830
-    Data2: 1118019984
-    Data3: -1024047980
-    Data4: -1797246206
-  Banks:
-  - {fileID: 8430083926468423398}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 889821506993092691}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &7311705916423163048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemies/FootStepsMultiSurfaceTest
-  m_EditorClassIdentifier: 
-  Path: event:/Enemies/FootStepsMultiSurfaceTest
-  Guid:
-    Data1: -1277280443
-    Data2: 1150038718
-    Data3: -765227117
-    Data4: -332889090
-  Banks:
-  - {fileID: 8430083926468423398}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 1219664084407245393}
-  - {fileID: -8663081562880660677}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &7342339427773329306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/HumanFootsteps/Footsteps
-  m_EditorClassIdentifier: 
-  Name: Footsteps
-  StudioPath: 
-  Min: 0
-  Max: 5
-  Default: 0
-  ID:
-    data1: 1613936621
-    data2: 1075788159
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - DefaultBank
-  - Wood
-  - Stone
-  - Metal
-  - Dirt
-  - Mud
-  Exists: 1
 --- !u!114 &7584084762373926595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1230,30 +1196,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/SteamVent/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3098557548
-    data2: 3029766217
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &7916559122898618066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/TalkingOcclusion/Occlusion
   m_EditorClassIdentifier: 
   Name: Occlusion
   StudioPath: 
@@ -1309,8 +1251,66 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637972222939114180
+  lastModified: 637975392528259237
   FileSizes:
   - Name: Desktop
     Value: 12879456
   Exists: 1
+--- !u!114 &8565230355765984214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LatcherScuttle/Footsteps
+  m_EditorClassIdentifier: 
+  Name: Footsteps
+  StudioPath: 
+  Min: 0
+  Max: 5
+  Default: 0
+  ID:
+    data1: 1613936621
+    data2: 1075788159
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - DefaultBank
+  - Wood
+  - Stone
+  - Metal
+  - Dirt
+  - Mud
+  Exists: 1
+--- !u!114 &8631344442850426975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Footsteps/LatcherScuttle
+  m_EditorClassIdentifier: 
+  Path: event:/Footsteps/LatcherScuttle
+  Guid:
+    Data1: -2066252830
+    Data2: 1118019984
+    Data3: -1024047980
+    Data4: -1797246206
+  Banks:
+  - {fileID: 8430083926468423398}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 8565230355765984214}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0

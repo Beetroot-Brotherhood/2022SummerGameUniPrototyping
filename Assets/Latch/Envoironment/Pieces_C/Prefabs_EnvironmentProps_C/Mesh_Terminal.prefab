@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4419514284821573705}
   - component: {fileID: 1923515991893804163}
   - component: {fileID: 4164012704596096766}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mesh_Terminal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,11 +26,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121966532668597590}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 33.076134, y: -0.019251905, z: 0.6578078}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1621104762983156685}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -98,3 +99,59 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1732145861493275412, guid: 93a8ae618fcbc1a468d5d8c10fa9af81, type: 3}
+--- !u!1 &7792637521542130070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1621104762983156685}
+  - component: {fileID: 2430673482590608287}
+  m_Layer: 6
+  m_Name: SFX Terminal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1621104762983156685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7792637521542130070}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 791119811118825452}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2430673482590608287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7792637521542130070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e12aeb62644333944ad5eb3cd18812fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SelectAudio:
+    Guid:
+      Data1: 1893468043
+      Data2: 1150301275
+      Data3: 126116738
+      Data4: 1130372287
+    Path: event:/Environment/Computer
+  SoundOcclusionWidening: 1
+  PlayerOcclusionWidening: 1
+  OcclusionLayer:
+    serializedVersion: 2
+    m_Bits: 64

@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 9724200169196239}
   - component: {fileID: 2866113805570522629}
   - component: {fileID: 5835569871350673326}
-  - component: {fileID: 1930804679}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mesh_Computer (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,6 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2550307242055365847}
+  - {fileID: 7459164639766959483}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -100,13 +100,45 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3864495976087131480, guid: b1521242baa9ba44d96bee57e4d0b85b, type: 3}
---- !u!114 &1930804679
+--- !u!1 &9145576980885989752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7459164639766959483}
+  - component: {fileID: 1211805983189561684}
+  m_Layer: 6
+  m_Name: SFX Computer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7459164639766959483
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9145576980885989752}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4002951913594176874}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1211805983189561684
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4379336268105916368}
+  m_GameObject: {fileID: 9145576980885989752}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e12aeb62644333944ad5eb3cd18812fa, type: 3}
@@ -134,6 +166,10 @@ PrefabInstance:
     - target: {fileID: 5319068021634439945, guid: 17b0fd8ca83a1af46b75cc7f4986285d, type: 3}
       propertyPath: m_Name
       value: Area Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319068021634439945, guid: 17b0fd8ca83a1af46b75cc7f4986285d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5319068021634439945, guid: 17b0fd8ca83a1af46b75cc7f4986285d, type: 3}
       propertyPath: m_StaticEditorFlags

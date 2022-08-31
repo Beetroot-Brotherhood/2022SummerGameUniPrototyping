@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3550977809919850127}
   - component: {fileID: 1631267100574204485}
   - component: {fileID: 3537966189379043999}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mesh_Turret_B_Animated
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,12 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 982788267020542864}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3324755801475978580}
+  - {fileID: 4340886846104810757}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -99,6 +100,62 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8208000111688280773, guid: 0ddeb00883a0d2940bc2b4b9c33f9fbe, type: 3}
+--- !u!1 &4012712290369571959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4340886846104810757}
+  - component: {fileID: 6853669525827960511}
+  m_Layer: 6
+  m_Name: SFX TurretIdle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4340886846104810757
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012712290369571959}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 497718214870841642}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6853669525827960511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012712290369571959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e12aeb62644333944ad5eb3cd18812fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SelectAudio:
+    Guid:
+      Data1: 1893468043
+      Data2: 1150301275
+      Data3: 126116738
+      Data4: 1130372287
+    Path: event:/Environment/Computer
+  SoundOcclusionWidening: 1
+  PlayerOcclusionWidening: 1
+  OcclusionLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1001 &5598293964406941418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -106,6 +163,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 497718214870841642}
     m_Modifications:
+    - target: {fileID: 6440020884321877790, guid: b849d6ac0d007a84fb283b3558ed423a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7175014284791215038, guid: b849d6ac0d007a84fb283b3558ed423a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -153,6 +214,10 @@ PrefabInstance:
     - target: {fileID: 7555093861943814404, guid: b849d6ac0d007a84fb283b3558ed423a, type: 3}
       propertyPath: m_Name
       value: Mesh_Turret_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 7555093861943814404, guid: b849d6ac0d007a84fb283b3558ed423a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b849d6ac0d007a84fb283b3558ed423a, type: 3}
