@@ -400,7 +400,7 @@ namespace StarterAssets
             playerSounds.PlayStepLeft();
             }
 
-        void PlayStepRight() //* This will trigger the PlayerSounds script to execute the code within the PlaySteo function 
+        void PlayStepRight() //* This will trigger the PlayerSounds script to execute the code within the PlayStep function 
             {
             playerSounds.PlayStepRight();
             }
@@ -412,6 +412,8 @@ namespace StarterAssets
                 _animator.SetBool("Attack", true);
                 _input.onAttack = false;
                 _animator.SetLayerWeight(_animator.GetLayerIndex("Attack"), 1.0f);
+
+                playerSounds.PlayWeapon(); //* This will trigger the PlayerSounds script to executre the code within the PlayWeapon function
             }
         }
 

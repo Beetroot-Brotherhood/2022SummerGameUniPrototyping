@@ -9,12 +9,15 @@ public class PlayerSounds : MonoBehaviour
    [SerializeField] private FMODUnity.EventReference _footsteps;
    [SerializeField] private FMODUnity.EventReference _cloth;
    [SerializeField] private FMODUnity.EventReference _jingle;
+   [SerializeField] private FMODUnity.EventReference _weapon;
    
    private FMOD.Studio.EventInstance footsteps;
    private FMOD.Studio.EventInstance cloth;
    private FMOD.Studio.EventInstance jingle;
+   private FMOD.Studio.EventInstance weapon;
 
 
+   public Transform spanner; 
 
    public Transform leftFoot;
 
@@ -40,7 +43,18 @@ public class PlayerSounds : MonoBehaviour
         {
             jingle = FMODUnity.RuntimeManager.CreateInstance(_jingle);
         }
+
+        if (!_weapon.IsNull)
+        {
+            weapon = FMODUnity.RuntimeManager.CreateInstance(_weapon);
+        }
    }
+
+    public void PlayWeapon()
+    {
+         weapon.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(spanner.transform.position));
+         weapon.start();
+    }
 
     public void PlayStepLeft()
     {
