@@ -6,25 +6,44 @@ using UnityEngine;
 public class PlayerSounds : MonoBehaviour
 {
    
-   [SerializeField] private FMODUnity.EventReference _footsteps;
-   [SerializeField] private FMODUnity.EventReference _cloth;
-   [SerializeField] private FMODUnity.EventReference _jingle;
-   [SerializeField] private FMODUnity.EventReference _weapon;
-   
-   private FMOD.Studio.EventInstance footsteps;
-   private FMOD.Studio.EventInstance cloth;
-   private FMOD.Studio.EventInstance jingle;
-   private FMOD.Studio.EventInstance weapon;
+    [SerializeField] private FMODUnity.EventReference _footsteps;
+    [SerializeField] private FMODUnity.EventReference _cloth;
+    [SerializeField] private FMODUnity.EventReference _jingle;
+    [SerializeField] private FMODUnity.EventReference _weapon;
+    
+    private FMOD.Studio.EventInstance footsteps;
+    private FMOD.Studio.EventInstance cloth;
+    private FMOD.Studio.EventInstance jingle;
+    private FMOD.Studio.EventInstance weapon;
 
 
-   public Transform spanner; 
+    public Transform spanner; 
 
-   public Transform leftFoot;
+    public Transform leftFoot;
 
-   public Transform rightFoot;
+    public Transform rightFoot;
 
-   [SerializeField] [Range(0, 10)]
+    [SerializeField] [Range(0, 10)]
     public float surfaceType = 0; //* Creating a scroll bar in the inspector window which can be used to test the material values
+
+
+
+
+    //! Ported from CheckTerrainTexture script
+    public Transform playerTransform;
+    public Terrain t;
+    
+    public int posX;
+    public int posZ;
+    public float[] textureValues;
+
+
+    void Start () 
+    {
+        t = Terrain.activeTerrain;
+        playerTransform = gameObject.transform;
+    }
+
 
 
    private void Awake()
@@ -60,6 +79,7 @@ public class PlayerSounds : MonoBehaviour
     {
         if (footsteps.isValid())
         {
+            //GetTerrainTexture();
             //FMODUnity.RuntimeManager.AttachInstanceToGameObject(footsteps, transform);
             footsteps.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
             GroundSwitchLeft();
@@ -81,6 +101,7 @@ public class PlayerSounds : MonoBehaviour
     {
         if (footsteps.isValid())
         {
+            //GetTerrainTexture();
             //FMODUnity.RuntimeManager.AttachInstanceToGameObject(footsteps, transform);
             footsteps.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
             GroundSwitchRight();
@@ -96,6 +117,7 @@ public class PlayerSounds : MonoBehaviour
         }
 
     }
+
 
 
     private void GroundSwitchLeft()
@@ -153,7 +175,7 @@ public class PlayerSounds : MonoBehaviour
     }
 
 
- private void GroundSwitchRight()
+    private void GroundSwitchRight()
     {
         RaycastHit hit;
         Ray ray = new Ray(rightFoot.position + Vector3.up * 0.5f, -Vector3.up);
@@ -210,6 +232,36 @@ public class PlayerSounds : MonoBehaviour
 
 
 
+    //! Ported from CheckTerrainTexture script
+    public void GetTerrainTexture()
+    {
+        ConvertPosition(playerTransform.position);
+        CheckTexture();
+    }
+
+    void ConvertPosition(Vector3 playerPosition)
+    {
+        Vector3 terrainPosition = playerPosition - t.transform.position;
+    
+        Vector3 mapPosition = new Vector3
+        (terrainPosition.x / t.terrainData.size.x, 0,
+        terrainPosition.z / t.terrainData.size.z);
+    
+        float xCoord = mapPosition.x * t.terrainData.alphamapWidth;
+        float zCoord = mapPosition.z * t.terrainData.alphamapHeight;
+    
+        posX = (int)xCoord;
+        posZ = (int)zCoord;
+    }
+
+    void CheckTexture()
+  {
+    float[,,] aMap = t.terrainData.GetAlphamaps (posX, posZ, 1, 1);
+    textureValues[0] = aMap[0,0,0];
+    textureValues[1] = aMap[0,0,1];
+    textureValues[2] = aMap[0,0,2];
+    textureValues[3] = aMap[0,0,3];
+  }
 
 
 
