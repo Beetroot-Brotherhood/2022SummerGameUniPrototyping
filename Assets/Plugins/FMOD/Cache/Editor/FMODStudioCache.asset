@@ -15,11 +15,66 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637962602022171600
+  lastModified: 637976725164343733
   FileSizes:
   - Name: Desktop
     Value: 10692384
   Exists: 1
+--- !u!114 &-9100213207325170545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mech/mech_ArmMove
+  m_EditorClassIdentifier: 
+  Path: event:/Mech/mech_ArmMove
+  Guid:
+    Data1: -2079888813
+    Data2: 1082126647
+    Data3: 1512573087
+    Data4: 427796997
+  Banks:
+  - {fileID: -4842344412843522935}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2250
+--- !u!114 &-8193076097342945088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MechAIN/MechStomps
+  m_EditorClassIdentifier: 
+  Path: event:/MechAIN/MechStomps
+  Guid:
+    Data1: 1217834601
+    Data2: 1201151805
+    Data3: 1470976174
+    Data4: -1735163745
+  Banks:
+  - {fileID: 3879535657337526303}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -3930419712397638330}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7777173391698722130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,32 +131,6 @@ MonoBehaviour:
   - Metal
   - Dirt
   - Mud
-  Exists: 1
---- !u!114 &-7083889046077315077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/MechainTheme/RadioState
-  m_EditorClassIdentifier: 
-  Name: RadioState
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 1088831446
-    data2: 1811705897
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Off
-  - On
   Exists: 1
 --- !u!114 &-7077213212965445609
 MonoBehaviour:
@@ -161,6 +190,32 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5876452132706514305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MechainTheme/RadioState
+  m_EditorClassIdentifier: 
+  Name: RadioState
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 1088831446
+    data2: 1811705897
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Off
+  - On
+  Exists: 1
 --- !u!114 &-5578276961049163649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,6 +245,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5167419495182548579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mech_Fan/fanAngle
+  m_EditorClassIdentifier: 
+  Name: fanAngle
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3846333211
+    data2: 615971037
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-5098170629868656996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +297,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5087959400479764551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mech/mech_Fan
+  m_EditorClassIdentifier: 
+  Path: event:/Mech/mech_Fan
+  Guid:
+    Data1: -1297362530
+    Data2: 1302619789
+    Data3: 1915417733
+    Data4: -1916673829
+  Banks:
+  - {fileID: -4842344412843522935}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -5167419495182548579}
+  MinDistance: 1
+  MaxDistance: 50
+  Length: 12000
 --- !u!114 &-5025351630841592504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,10 +424,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637962602020945263
+  lastModified: 637976725162021638
   FileSizes:
   - Name: Desktop
-    Value: 24497984
+    Value: 25082656
   Exists: 1
 --- !u!114 &-4597689122092199292
 MonoBehaviour:
@@ -351,6 +458,36 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 776307
+--- !u!114 &-3930419712397638330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MechStomps/Footsteps
+  m_EditorClassIdentifier: 
+  Name: Footsteps
+  StudioPath: 
+  Min: 0
+  Max: 5
+  Default: 0
+  ID:
+    data1: 1613936621
+    data2: 1075788159
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - DefaultBank
+  - Wood
+  - Stone
+  - Metal
+  - Dirt
+  - Mud
+  Exists: 1
 --- !u!114 &-3292372916684437636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -478,6 +615,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-886769886745480801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mech/mech_FacesOff
+  m_EditorClassIdentifier: 
+  Path: event:/Mech/mech_FacesOff
+  Guid:
+    Data1: -402789895
+    Data2: 1332611939
+    Data3: 2103385474
+    Data4: 264866829
+  Banks:
+  - {fileID: -4842344412843522935}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 50
+  Length: 300
 --- !u!114 &-754482486958039952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -622,19 +786,25 @@ MonoBehaviour:
   - {fileID: 3064598447129638866}
   - {fileID: 8084590791877933962}
   - {fileID: 9201891526700569023}
-  - {fileID: 1412398807191682076}
   - {fileID: -4597689122092199292}
   - {fileID: -2061690393597419483}
   - {fileID: 3360173967324878149}
   - {fileID: -2318803830489419933}
-  - {fileID: 5479509034638150765}
+  - {fileID: 1027425273416738360}
+  - {fileID: -9100213207325170545}
+  - {fileID: 5816971183150374469}
+  - {fileID: 4578451364453230512}
+  - {fileID: -5087959400479764551}
+  - {fileID: -886769886745480801}
+  - {fileID: -8193076097342945088}
+  - {fileID: 2940444505138207155}
   EditorParameters:
   - {fileID: -754482486958039952}
   MasterBanks:
   - {fileID: -4842344412843522935}
   StringsBanks:
   - {fileID: 5281460975032158907}
-  cacheTime: 637962602022171600
+  cacheTime: 637976725164343733
   cacheVersion: 131591
 --- !u!114 &676395392266713971
 MonoBehaviour:
@@ -660,6 +830,35 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &1027425273416738360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MechAIN/MechainTheme
+  m_EditorClassIdentifier: 
+  Path: event:/MechAIN/MechainTheme
+  Guid:
+    Data1: 947965068
+    Data2: 1171251368
+    Data3: 2002512303
+    Data4: 1211084651
+  Banks:
+  - {fileID: 6454103502693541807}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 7008319207190326945}
+  - {fileID: -5876452132706514305}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 91200
 --- !u!114 &1112180190803027862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -683,64 +882,6 @@ MonoBehaviour:
   Type: 0
   IsGlobal: 0
   Labels: []
-  Exists: 1
---- !u!114 &1412398807191682076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/MECHAIN/MechStomps
-  m_EditorClassIdentifier: 
-  Path: event:/MECHAIN/MechStomps
-  Guid:
-    Data1: 1217834601
-    Data2: 1201151805
-    Data3: 1470976174
-    Data4: -1735163745
-  Banks:
-  - {fileID: 3879535657337526303}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 1732508628851634624}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &1732508628851634624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/MechStomps/Footsteps
-  m_EditorClassIdentifier: 
-  Name: Footsteps
-  StudioPath: 
-  Min: 0
-  Max: 5
-  Default: 0
-  ID:
-    data1: 1613936621
-    data2: 1075788159
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - DefaultBank
-  - Wood
-  - Stone
-  - Metal
-  - Dirt
-  - Mud
   Exists: 1
 --- !u!114 &2246758016339282255
 MonoBehaviour:
@@ -790,6 +931,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &2940444505138207155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mech/mech_RoomTone
+  m_EditorClassIdentifier: 
+  Path: event:/Mech/mech_RoomTone
+  Guid:
+    Data1: 1134809841
+    Data2: 1265851276
+    Data3: -1156052308
+    Data4: -557321733
+  Banks:
+  - {fileID: -4842344412843522935}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 16056
 --- !u!114 &3064598447129638866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -860,7 +1028,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637962602021344203
+  lastModified: 637976725163793232
   FileSizes:
   - Name: Desktop
     Value: 12662944
@@ -893,7 +1061,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 17600
---- !u!114 &4680208534613916040
+--- !u!114 &4578451364453230512
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -902,21 +1070,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/MechainTheme/Occlusion
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mech/mech_ArmStop
   m_EditorClassIdentifier: 
-  Name: Occlusion
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3098557548
-    data2: 3029766217
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
+  Path: event:/Mech/mech_ArmStop
+  Guid:
+    Data1: -1619047266
+    Data2: 1149382166
+    Data3: -494686051
+    Data4: 93478773
+  Banks:
+  - {fileID: -4842344412843522935}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
 --- !u!114 &5281460975032158907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -932,12 +1103,12 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637962602020975531
+  lastModified: 637976725162071593
   FileSizes:
   - Name: Desktop
-    Value: 2284
+    Value: 2620
   Exists: 1
---- !u!114 &5479509034638150765
+--- !u!114 &5816971183150374469
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -947,25 +1118,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/MECHAIN/MechainTheme
+  m_Name: event:/Mech/mech_FaceFlashes
   m_EditorClassIdentifier: 
-  Path: event:/MECHAIN/MechainTheme
+  Path: event:/Mech/mech_FaceFlashes
   Guid:
-    Data1: 947965068
-    Data2: 1171251368
-    Data3: 2002512303
-    Data4: 1211084651
+    Data1: 589002613
+    Data2: 1192168294
+    Data3: -2116220517
+    Data4: -201959360
   Banks:
-  - {fileID: 6454103502693541807}
-  IsStream: 1
+  - {fileID: -4842344412843522935}
+  IsStream: 0
   Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 4680208534613916040}
-  - {fileID: -7083889046077315077}
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 1
-  MaxDistance: 20
-  Length: 91200
+  MaxDistance: 50
+  Length: 5250
 --- !u!114 &5960602537059652942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1015,7 +1184,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637962602019873942
+  lastModified: 637976725159985480
   FileSizes:
   - Name: Desktop
     Value: 6946752
@@ -1058,6 +1227,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/MachineryFan/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3098557548
+    data2: 3029766217
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &7008319207190326945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MechainTheme/Occlusion
   m_EditorClassIdentifier: 
   Name: Occlusion
   StudioPath: 

@@ -75,7 +75,62 @@ AnimationClip:
     path: Cube
   m_PositionCurves: []
   m_ScaleCurves: []
-  m_FloatCurves: []
+  m_FloatCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.2166667
+        value: 1
+        inSlope: 1.3213217
+        outSlope: -1.5137104
+        tangentMode: 1
+        weightedMode: 3
+        inWeight: 0.13764462
+        outWeight: 0.13124886
+      - serializedVersion: 3
+        time: 3.9333334
+        value: 0.27385464
+        inSlope: -0.4229973
+        outSlope: 0.39251104
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 5.7833333
+        value: 1
+        inSlope: 3.3758163
+        outSlope: -2.3547993
+        tangentMode: 1
+        weightedMode: 3
+        inWeight: 0.061248936
+        outWeight: 0.06446291
+      - serializedVersion: 3
+        time: 8.016666
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: fanAngle
+    path: Cube/SFX Fan (1)
+    classID: 114
+    script: {fileID: 11500000, guid: 651ba77897ef3e4438858ad07216ed87, type: 3}
   m_PPtrCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
@@ -97,6 +152,13 @@ AnimationClip:
       script: {fileID: 0}
       typeID: 4
       customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 1491743976
+      attribute: 1811661374
+      script: {fileID: 11500000, guid: 651ba77897ef3e4438858ad07216ed87, type: 3}
+      typeID: 114
+      customType: 0
       isPPtrCurve: 0
     pptrCurveMapping: []
   m_AnimationClipSettings:
@@ -315,6 +377,61 @@ AnimationClip:
     path: Cube
     classID: 4
     script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2.2166667
+        value: 1
+        inSlope: 1.3213217
+        outSlope: -1.5137104
+        tangentMode: 1
+        weightedMode: 3
+        inWeight: 0.13764462
+        outWeight: 0.13124886
+      - serializedVersion: 3
+        time: 3.9333334
+        value: 0.27385464
+        inSlope: -0.4229973
+        outSlope: 0.39251104
+        tangentMode: 69
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 5.7833333
+        value: 1
+        inSlope: 3.3758163
+        outSlope: -2.3547993
+        tangentMode: 1
+        weightedMode: 3
+        inWeight: 0.061248936
+        outWeight: 0.06446291
+      - serializedVersion: 3
+        time: 8.016666
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: fanAngle
+    path: Cube/SFX Fan (1)
+    classID: 114
+    script: {fileID: 11500000, guid: 651ba77897ef3e4438858ad07216ed87, type: 3}
   m_EulerEditorCurves:
   - curve:
       serializedVersion: 2

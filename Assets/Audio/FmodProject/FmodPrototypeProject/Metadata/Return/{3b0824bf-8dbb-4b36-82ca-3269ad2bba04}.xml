@@ -28,6 +28,9 @@
 	</object>
 	<object class="MixerBusPanner" id="{468e0e32-94a8-4def-b265-591069613b3a}" />
 	<object class="ConvolutionReverbEffect" id="{c35e44d3-4d38-4f06-b850-63f92d1a9fd8}">
+		<property name="bypass">
+			<value>true</value>
+		</property>
 		<property name="endFrame">
 			<value>3057634</value>
 		</property>
