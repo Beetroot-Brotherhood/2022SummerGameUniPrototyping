@@ -26,6 +26,10 @@ namespace StarterAssets
 		public float SpeedChangeRate = 10.0f;
 
 		[Space(10)]
+		public float dodgeSpeed;
+		public float dodgeDistance;
+
+		[Space(10)]
 		[Tooltip("The height the player can jump")]
 		public float JumpHeight = 1.2f;
 		[Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
@@ -54,6 +58,7 @@ namespace StarterAssets
 		public float TopClamp = 90.0f;
 		[Tooltip("How far in degrees can you move the camera down")]
 		public float BottomClamp = -90.0f;
+		
 
 		// cinemachine
 		private float _cinemachineTargetPitch;
@@ -67,6 +72,12 @@ namespace StarterAssets
 		// timeout deltatime
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
+
+		private bool hasDodged;
+
+		private bool isDodging;
+		private bool dodgeOver;
+		private float currentDodgedDistance;
 
 	
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
@@ -121,6 +132,10 @@ namespace StarterAssets
 			Move();
 		}
 
+		void FixedUpdate() {
+			Dodge(inputDirection);
+		}
+
 		private void LateUpdate()
 		{
 			CameraRotation();
@@ -155,6 +170,8 @@ namespace StarterAssets
 			}
 		}
 
+		Vector3 inputDirection;
+
 		private void Move()
 		{
 			// set target speed based on move speed, sprint speed and if sprint is pressed
@@ -188,7 +205,7 @@ namespace StarterAssets
 			}
 
 			// normalise input direction
-			Vector3 inputDirection = new Vector3(_input.move.x, 0.0f, _input.move.y).normalized;
+			inputDirection = new Vector3(_input.move.x, 0.0f, _input.move.y).normalized;
 
 			// note: Vector2's != operator uses approximation so is not floating point error prone, and is cheaper than magnitude
 			// if there is a move input rotate player when the player is moving
@@ -198,8 +215,53 @@ namespace StarterAssets
 				inputDirection = transform.right * _input.move.x + transform.forward * _input.move.y;
 			}
 
+			if (isDodging) {
+				return;
+			}
+
 			// move the player
 			_controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+		}
+
+		bool Dodge(Vector3 inputDirection) {
+			if (isDodging && !dodgeOver) {
+				if (currentDodgedDistance < dodgeDistance) {
+					DodgeMovement(inputDirection);
+					return true;
+				}else {
+					dodgeOver = true;
+					isDodging = false;
+					return false;
+				}
+			}
+			else if (_input.sprint && !dodgeOver) {
+				
+				DodgeMovement(inputDirection);
+				isDodging = true;
+
+				return true;
+			}
+			else if (!_input.sprint && dodgeOver) {
+				dodgeOver = false;
+				currentDodgedDistance = 0;
+			}
+
+			return false;
+		}
+
+		void DodgeMovement (Vector3 inputDirection) {
+			Vector3 oldPosition = transform.position;
+			float frameDodgeDistance = Vector3.Distance((inputDirection.normalized * (dodgeSpeed * Time.fixedDeltaTime) + oldPosition), oldPosition);
+			currentDodgedDistance += frameDodgeDistance;
+			if (currentDodgedDistance > dodgeDistance) {
+				float overShootDistance = currentDodgedDistance - dodgeDistance;
+				float overShootPercentage = 1 - (overShootDistance / frameDodgeDistance);
+				_controller.Move(inputDirection.normalized * (dodgeSpeed * (Time.fixedDeltaTime * overShootPercentage)));
+				currentDodgedDistance -= overShootDistance;
+				return;
+			}
+			_controller.Move(inputDirection.normalized * (dodgeSpeed * Time.fixedDeltaTime));
+
 		}
 
 		private void JumpAndGravity()
