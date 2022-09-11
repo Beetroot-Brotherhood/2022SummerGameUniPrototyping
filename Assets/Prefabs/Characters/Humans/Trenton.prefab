@@ -1045,7 +1045,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSounds: {fileID: 2963818722130135957}
   MoveSpeed: 5
-  SprintSpeed: 9
+  SprintSpeed: 13
   RotationSmoothTime: 0.094
   SpeedChangeRate: 10
   LandingAudioClip: {fileID: 8300000, guid: ff697d3070687ce4583faa0561a145a2, type: 3}
@@ -2140,9 +2140,22 @@ MonoBehaviour:
       Data3: 1272316813
       Data4: -1241839348
     Path: event:/Enemies/Jim/FootstepJingleJIM
+  _weapon:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  spanner: {fileID: 0}
   leftFoot: {fileID: 0}
   rightFoot: {fileID: 0}
   surfaceType: 0
+  playerTransform: {fileID: 0}
+  t: {fileID: 0}
+  posX: 0
+  posZ: 0
+  textureValues: []
 --- !u!1 &3000118390726887895
 GameObject:
   m_ObjectHideFlags: 0
