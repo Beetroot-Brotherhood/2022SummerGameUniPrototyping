@@ -11,10 +11,13 @@ public class PlayerSounds : MonoBehaviour
     [SerializeField] private FMODUnity.EventReference _jingle;
     [SerializeField] private FMODUnity.EventReference _weapon;
     
+    [SerializeField] private FMODUnity.EventReference _latchedReaction;
+    
     private FMOD.Studio.EventInstance footsteps;
     private FMOD.Studio.EventInstance cloth;
     private FMOD.Studio.EventInstance jingle;
     private FMOD.Studio.EventInstance weapon;
+    private FMOD.Studio.EventInstance latchedReaction;
 
 
     public Transform spanner; 
@@ -67,7 +70,18 @@ public class PlayerSounds : MonoBehaviour
         {
             weapon = FMODUnity.RuntimeManager.CreateInstance(_weapon);
         }
+
+        if (!_latchedReaction.IsNull)
+        {
+            latchedReaction = FMODUnity.RuntimeManager.CreateInstance(_latchedReaction);
+        }
    }
+
+    public void PlayLatchedReaction()
+    {
+        latchedReaction.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+        latchedReaction.start();
+    } 
 
     public void PlayWeapon()
     {

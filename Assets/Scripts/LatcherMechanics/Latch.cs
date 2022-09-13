@@ -27,6 +27,8 @@ public class Latch : MonoBehaviour
 
     public LayerMask layerMask;
 
+    [SerializeField] private PlayerSounds playerSounds; //* This provides a reference point for the script which allows you to call the various sound functions which will be written into the 'PlayerSounds' script
+
     // Start is called before the first frame update
     void Start()
     {
@@ -106,6 +108,8 @@ public class Latch : MonoBehaviour
             latchermesh.enabled = false;
 
             currentHumanComponenets.latcherOnBackMesh.SetActive(true);
+
+            playerSounds.PlayLatchedReaction();
         }
         else if (hasLatched && currentHumanComponenets != null)
         {

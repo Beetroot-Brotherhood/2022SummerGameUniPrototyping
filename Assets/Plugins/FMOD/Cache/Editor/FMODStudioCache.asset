@@ -100,7 +100,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637984598705348842
+  lastModified: 637986849388948962
   FileSizes:
   - Name: Desktop
     Value: 9887168
@@ -517,6 +517,26 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-968323282988625292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Enemies.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Enemies.bank
+  Name: Enemies
+  StudioPath: bank:/Enemies
+  lastModified: 637986849376991110
+  FileSizes:
+  - Name: Desktop
+    Value: 1135712
+  Exists: 1
 --- !u!114 &-376953103122682386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561,6 +581,7 @@ MonoBehaviour:
   - {fileID: 1694097518466003450}
   - {fileID: 8430083926468423398}
   - {fileID: 5233824090370968052}
+  - {fileID: -968323282988625292}
   EditorEvents:
   - {fileID: -5022432813334805002}
   - {fileID: -8600495221846599525}
@@ -590,13 +611,15 @@ MonoBehaviour:
   - {fileID: 5396402797491340806}
   - {fileID: -2409727297267129343}
   - {fileID: 627590971195307372}
+  - {fileID: 9035972281296383758}
+  - {fileID: 8902129210338334172}
   EditorParameters:
   - {fileID: -4276169407730268950}
   MasterBanks:
   - {fileID: 1694097518466003450}
   StringsBanks:
   - {fileID: 3743328676668485975}
-  cacheTime: 637984598709356562
+  cacheTime: 637986849415428312
   cacheVersion: 131591
 --- !u!114 &316210463170389488
 MonoBehaviour:
@@ -817,10 +840,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637984598707538596
+  lastModified: 637986849396810435
   FileSizes:
   - Name: Desktop
-    Value: 13187008
+    Value: 13192896
   Exists: 1
 --- !u!114 &2105311565037087084
 MonoBehaviour:
@@ -944,10 +967,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637984598707558565
+  lastModified: 637986849396830439
   FileSizes:
   - Name: Desktop
-    Value: 2658
+    Value: 2780
   Exists: 1
 --- !u!114 &3766621452843863141
 MonoBehaviour:
@@ -1125,7 +1148,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637984598709356562
+  lastModified: 637986849415428312
   FileSizes:
   - Name: Desktop
     Value: 10692384
@@ -1307,7 +1330,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637984598708402045
+  lastModified: 637986849410272073
   FileSizes:
   - Name: Desktop
     Value: 12955552
@@ -1370,3 +1393,57 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &8902129210338334172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/skrleeb
+  m_EditorClassIdentifier: 
+  Path: event:/skrleeb
+  Guid:
+    Data1: -543255930
+    Data2: 1158923833
+    Data3: 1335541431
+    Data4: 49172056
+  Banks:
+  - {fileID: 1694097518466003450}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 4.6
+  MaxDistance: 200
+  Length: 5000
+--- !u!114 &9035972281296383758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Schooner Joe/DX SchoonerJoeLatchedReaction
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Schooner Joe/DX SchoonerJoeLatchedReaction
+  Guid:
+    Data1: 1922032450
+    Data2: 1267547534
+    Data3: 862884996
+    Data4: -1670013715
+  Banks:
+  - {fileID: -968323282988625292}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6101
