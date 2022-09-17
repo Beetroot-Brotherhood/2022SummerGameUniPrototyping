@@ -42,7 +42,7 @@ public class WeaponControllerV2 : MonoBehaviour
     {
         if (OnSlicerInput.instance.onSlice && canAttack)
         {
-            AttackFunc();
+            //AttackFunc();
 
 
             OnSlicerInput.instance.onSlice = false;
@@ -50,7 +50,7 @@ public class WeaponControllerV2 : MonoBehaviour
 
         if (OnSlicerInput.instance.onParry && canParry)
         {
-            ParryFunc();
+            //ParryFunc();
 
 
             OnSlicerInput.instance.onParry = false;
@@ -59,7 +59,7 @@ public class WeaponControllerV2 : MonoBehaviour
         if(parryBox.GetComponent<PlayerParryBox>().parryReactBool == true)
         {
 
-            ParryReact();
+            //ParryReact();
 
 
 
@@ -86,7 +86,7 @@ public class WeaponControllerV2 : MonoBehaviour
 
 
     // start of attack code
-    public void AttackFunc()
+   /*  public void AttackFunc()
     {
         canAttack = false;
         canParry = false;
@@ -124,7 +124,7 @@ public class WeaponControllerV2 : MonoBehaviour
 
         StartCoroutine(ResetAttackCooldown());
 
-    }
+    } */
 
     IEnumerator ResetAttackCooldown()
     {
@@ -137,7 +137,7 @@ public class WeaponControllerV2 : MonoBehaviour
 
     }
 
-    private void RandomizeAttack()
+    /* private void RandomizeAttack()
     {
         int rnd = Random.Range(0, 2);
 
@@ -149,10 +149,10 @@ public class WeaponControllerV2 : MonoBehaviour
         {
             anim.SetTrigger("Attack2");
         }
-    }
+    } */
 
 
-    public void AttackingBoolControllerTrue()
+    /* public void AttackingBoolControllerTrue()
     {
         isAttacking = true;
         hitBox.SetActive(true);
@@ -172,14 +172,14 @@ public class WeaponControllerV2 : MonoBehaviour
         anim.SetBool("Attacking", isAttacking);
 
 
-    }
+    } */
     //end of attacking code
 
 
 
 
     // start of parry code
-    public void ParryFunc()
+    /* public void ParryFunc()
     {
         canAttack = false;
         canParry = false;
@@ -187,33 +187,19 @@ public class WeaponControllerV2 : MonoBehaviour
         anim.SetTrigger("Parry");
 
         StartCoroutine(ResetParryCooldown());
-    }
+    } */
 
-    IEnumerator ResetParryCooldown()
+    /* IEnumerator ResetParryCooldown()
     {
         yield return new WaitForSeconds(parryCooldown);
 
         canAttack = true;
         canParry = true;
-    }
+    } */
 
-    public void ParryingBoolControllerTrue()
-    {
-        isParrying = true;
-        parryBox.SetActive(true);
+    
 
-        anim.SetBool("Parrying", isParrying);
-    }
-
-    public void ParryingBoolControllerFalse()
-    {
-        isParrying = false;
-        parryBox.SetActive(false);
-
-        anim.SetBool("Parrying", isParrying);
-    }
-
-    public void ParryReact()
+    /* public void ParryReact()
     {
         parryBox.GetComponent<PlayerParryBox>().parryReactBool = false;
 
@@ -222,7 +208,7 @@ public class WeaponControllerV2 : MonoBehaviour
 
 
 
-    }
+    } */
     //end of parry code
 
     //start of throwable code

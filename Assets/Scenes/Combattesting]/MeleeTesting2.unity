@@ -16479,7 +16479,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1589485963}
   - component: {fileID: 1589485964}
-  - component: {fileID: 1589485965}
   - component: {fileID: 1589485966}
   - component: {fileID: 1589485967}
   m_Layer: 0
@@ -16533,38 +16532,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1589485965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1589485962}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c26c1578046e308409e5310c6a9fe546, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackCooldown: 0.1
-  parryCooldown: 0.1
-  hitBox: {fileID: 2073886076}
-  parryBox: {fileID: 638716763}
-  anim: {fileID: 1589485964}
-  canAttack: 1
-  canParry: 1
-  isAttacking: 0
-  isParrying: 0
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 1024
-  finisherRayCastRange: 5
-  throwablePoint: {fileID: 1470843361}
-  suctionThrowable: {fileID: 6249417325198546989, guid: ae33b63f87d8d1e42afabf02f6d5bb20, type: 3}
-  throwableCooldown: 1
-  canThrow: 0
-  throwForce: 20
-  throwUpwardForce: 5
-  cameraPoint: {fileID: 7379721569137119285}
 --- !u!114 &1589485966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16628,7 +16595,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponAnimator: {fileID: 1589485964}
+  weaponHitBox: {fileID: 2073886076}
+  parryBox: {fileID: 638716763}
+  throwForce: 20
+  throwUpwardForce: 10
+  cameraPoint: {fileID: 7379721569137119285}
+  throwablePoint: {fileID: 1470843361}
+  suctionThrowable: {fileID: 6249417325198546989, guid: ae33b63f87d8d1e42afabf02f6d5bb20, type: 3}
   holdThreshold: 0.5
+  parryCooldown: 0.1
+  throwableCooldown: 0.1
 --- !u!1 &1589836065
 GameObject:
   m_ObjectHideFlags: 0
@@ -22031,7 +22007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1844a7f9fc9b4894483a59ad8a1038cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wp: {fileID: 1589485965}
+  wp: {fileID: 0}
   cutPlane: {fileID: 1990563943}
   cutPlaneSize: {x: 10, y: 0.1, z: 3}
   layerMask:
@@ -22968,7 +22944,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.9467455, y: 1}
+    m_SensorSize: {x: 1.9352942, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
