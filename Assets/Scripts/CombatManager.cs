@@ -6,6 +6,8 @@ using System;
 public class CombatManager : MonoBehaviour
 {
 
+#region Singleton
+
     public static CombatManager instance;
 
     void Awake() {
@@ -17,19 +19,24 @@ public class CombatManager : MonoBehaviour
         }
     }
 
+#endregion
+
     public Animator weaponAnimator;
 
     public float holdThreshold;
+    [SerializeField]
     private float currentHoldTime;
-    private IDictionary<AttackDirections, Action> animatorDirectionalAttacksController = new Dictionary<AttackDirections, Action>();
+    private IDictionary<AttackDirections, IDictionary<string, bool>> attackDirectionsAnimationStates = new Dictionary<AttackDirections, IDictionary<string, bool>>() {
+        { AttackDirections.Forward, new Dictionary<string, bool>() { { "ForwardAttack", true}, {"LeftAttack", false}, {"BackAttack", false}, {"RightAttack", false} }},
+        { AttackDirections.Left, new Dictionary<string, bool>() { { "ForwardAttack", false}, {"LeftAttack", true},  {"BackAttack", false}, {"RightAttack", false} }},
+        { AttackDirections.Back, new Dictionary<string, bool>() { { "ForwardAttack", false}, {"LeftAttack", false},  {"BackAttack", true}, {"RightAttack", false} }},
+        { AttackDirections.Right, new Dictionary<string, bool>() { { "ForwardAttack", false}, {"LeftAttack", false},  {"BackAttack", false}, {"RightAttack", true} }},
+    };
  
     // Start is called before the first frame update
     void Start()
     {
-        animatorDirectionalAttacksController.Add(AttackDirections.Forward, CombatManager.instance.ForwardAttack);
-        animatorDirectionalAttacksController.Add(AttackDirections.Left, CombatManager.instance.LeftAttack);
-        animatorDirectionalAttacksController.Add(AttackDirections.Back, CombatManager.instance.BackAttack);
-        animatorDirectionalAttacksController.Add(AttackDirections.Right, CombatManager.instance.RightAttack);
+
     }
 
     // Update is called once per frame
@@ -41,45 +48,27 @@ public class CombatManager : MonoBehaviour
     }
 
     void DirectionalAttacks() {
+        Debug.Log(OnSlicerInput.instance.onSlice);
         if (OnSlicerInput.instance.onSlice) {
             currentHoldTime += Time.deltaTime;
-            weaponAnimator.SetBool("Charging", true);
+            if (currentHoldTime >= holdThreshold) {
+                weaponAnimator.SetBool("Charging", true);
+            }
         }
         else {
+            
             if (currentHoldTime >= holdThreshold) {
-                animatorDirectionalAttacksController[OnSlicerInput.instance.currentAttackDirection]();
+                foreach (KeyValuePair<string, bool> keyValuePair in attackDirectionsAnimationStates[OnSlicerInput.instance.currentAttackDirection]) {
+                    weaponAnimator.SetBool(keyValuePair.Key, keyValuePair.Value);
+                }
+            }
+            else if (currentHoldTime > 0) {
+                ResetAttackAnimationStates();
+                RandomizeAttack();
             }
             currentHoldTime = 0;
             weaponAnimator.SetBool("Charging", false);
         }
-    }
-
-    public void ForwardAttack() {
-        weaponAnimator.SetBool("ForwardAttack", true);
-        weaponAnimator.SetBool("LeftAttack", false);
-        weaponAnimator.SetBool("BackAttack", false);
-        weaponAnimator.SetBool("RightAttack", false);
-    }
-    
-    public void LeftAttack() {
-        weaponAnimator.SetBool("ForwardAttack", false);
-        weaponAnimator.SetBool("LeftAttack", true);
-        weaponAnimator.SetBool("BackAttack", false);
-        weaponAnimator.SetBool("RightAttack", false);
-    }
-    
-    public void BackAttack() {
-        weaponAnimator.SetBool("ForwardAttack", false);
-        weaponAnimator.SetBool("LeftAttack", false);
-        weaponAnimator.SetBool("BackAttack", true);
-        weaponAnimator.SetBool("RightAttack", false);
-    }
-    
-    public void RightAttack() {
-        weaponAnimator.SetBool("ForwardAttack", false);
-        weaponAnimator.SetBool("LeftAttack", false);
-        weaponAnimator.SetBool("BackAttack", false);
-        weaponAnimator.SetBool("RightAttack", true);
     }
 
     public void ResetAttackAnimationStates() {
@@ -91,6 +80,20 @@ public class CombatManager : MonoBehaviour
 
     void AttackAnimationState() {
         weaponAnimator.SetFloat("AttackDirection", (int)OnSlicerInput.instance.currentAttackDirection);
+    }
+
+    private void RandomizeAttack()
+    {
+        int rnd = UnityEngine.Random.Range(0, 2);
+
+        if (rnd == 0)
+        {
+            weaponAnimator.SetTrigger("Attack1");
+        }
+        else
+        {
+            weaponAnimator.SetTrigger("Attack2");
+        }
     }
 }
 
