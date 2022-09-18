@@ -85,15 +85,16 @@ public class CombatManager : MonoBehaviour
         if (OnSlicerInput.instance.onSlice) {
             currentHoldTime += Time.deltaTime;
             if (currentHoldTime >= holdThreshold) {
+                foreach (KeyValuePair<string, bool> keyValuePair in attackDirectionsAnimationStates[OnSlicerInput.instance.currentAttackDirection]) {
+                    weaponAnimator.SetBool(keyValuePair.Key, keyValuePair.Value);
+                }
                 weaponAnimator.SetBool("Charging", true);
             }
         }
         else {
             
             if (currentHoldTime >= holdThreshold) {
-                foreach (KeyValuePair<string, bool> keyValuePair in attackDirectionsAnimationStates[OnSlicerInput.instance.currentAttackDirection]) {
-                    weaponAnimator.SetBool(keyValuePair.Key, keyValuePair.Value);
-                }
+                ResetAttackAnimationStates();
             }
             else if (currentHoldTime > 0) {
                 ResetAttackAnimationStates();
