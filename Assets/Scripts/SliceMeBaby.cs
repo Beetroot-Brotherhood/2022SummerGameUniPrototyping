@@ -43,7 +43,6 @@ public class SliceMeBaby : MonoBehaviour
                         tempRB.AddExplosionForce(20, cutPlane.transform.position, 15);
 
                         GameObject top = hull.CreateUpperHull(hitGameobjects[i].gameObject, null);
-                        
                         MeshCollider tempMeshCol2 = top.AddComponent<MeshCollider>();
                         tempMeshCol2.convex = true;
                         Rigidbody tempRB2 = top.AddComponent<Rigidbody>();
@@ -51,7 +50,6 @@ public class SliceMeBaby : MonoBehaviour
                         topSlicedCounter.IncrementCounter(thisObjectSlicedCounterInt);
                         tempRB2.AddExplosionForce(200, cutPlane.transform.position, 15);
                         Destroy(hitGameobjects[i].gameObject);
-                        
                     }
                 }
             }
