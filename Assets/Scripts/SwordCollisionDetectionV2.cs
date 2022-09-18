@@ -17,7 +17,7 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
 
     [SerializeField] private FMODUnity.EventReference _boxBreakingSound;
     [SerializeField] private FMODUnity.EventReference _swingHit;
-     
+    
     private FMOD.Studio.EventInstance boxBreakingSound;
     private FMOD.Studio.EventInstance swingHit;
 
@@ -41,66 +41,129 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
     }
 
     public void OnTriggerEnter(Collider other) {
-        if (other.tag == "Enemy") {
+        if (1<<other.gameObject.layer == layerMask) {
             hitGameobjects = Physics.OverlapBox(cutPlane.transform.position, cutPlaneSize / 2, cutPlane.transform.rotation, layerMask);
-
             //!boxLocation = other.gameObject.transform.position; //Rhys - Just trying to get the location of the box being sliced so I can attach a sound instance to it
-
             boxLocation = new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z);
-        
+
             for (int i = 0; i < hitGameobjects.Length; i++)
             {
-                if (hitGameobjects[i].TryGetComponent<DollLimbController>(out DollLimbController dollLimbController)) {
-                    if (hitGameobjects[i].transform.root.TryGetComponent<YbotTestController2>(out YbotTestController2 ybotTestController2)){
-                        if (ybotTestController2.staggered) {
-                            dollLimbController.Sliced();
-                        }else {
-                            return;
-                        }
-                    }
-                }   
-                SlicedCounter slicedCounter;
-                int thisObjectSlicedCounterInt = 0;
-                hitGameobjects[i].gameObject.TryGetComponent<SlicedCounter>(out slicedCounter);
-
-                if (slicedCounter == null || slicedCounter.counter < 4) {
-                    thisObjectSlicedCounterInt = slicedCounter ? slicedCounter.counter : 0;
-                    SlicedHull hull = hitGameobjects[i].gameObject.Slice(cutPlane.transform.position, cutPlane.transform.up, slicedMaterial);
-                    if (hull != null) {
-                        GameObject bottom = hull.CreateLowerHull(hitGameobjects[i].gameObject, slicedMaterial);
-                        MeshCollider tempMeshCol = bottom.AddComponent<MeshCollider>();
-                        tempMeshCol.convex = true;
-                        Rigidbody tempRB = bottom.AddComponent<Rigidbody>();
-                        SlicedCounter bottomSlicedCounter = bottom.AddComponent<SlicedCounter>();
-                        bottomSlicedCounter.IncrementCounter(thisObjectSlicedCounterInt);
-                        bottom.gameObject.layer = LayerMask.NameToLayer("Sliceable");
-                        bottom.gameObject.tag = "Enemy";
-                        tempRB.AddExplosionForce(20, cutPlane.transform.position, 15);
-
-                        #region Fmod
-                        boxBreakingSound.setParameterByName("BoxBreak", 2.0f);
-                        boxBreakingSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(boxLocation));
-                        boxBreakingSound.start();
-
-                        swingHit.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(boxLocation));
-                        swingHit.start();
-                        #endregion
-
-                        GameObject top = hull.CreateUpperHull(hitGameobjects[i].gameObject, slicedMaterial);
-                        MeshCollider tempMeshCol2 = top.AddComponent<MeshCollider>();
-                        tempMeshCol2.convex = true;
-                        Rigidbody tempRB2 = top.AddComponent<Rigidbody>();
-                        SlicedCounter topSlicedCounter = top.AddComponent<SlicedCounter>();
-                        topSlicedCounter.IncrementCounter(thisObjectSlicedCounterInt);
-                        top.gameObject.layer = LayerMask.NameToLayer("Sliceable");
-                        top.gameObject.tag = "Enemy";
-                        tempRB2.AddExplosionForce(200, cutPlane.transform.position, 15);
-                        Destroy(hitGameobjects[i].gameObject);
-                    }
+                if (other.tag == "Enemy") {
+                    SlicingEnemy(other, i);
+                }
+                else if (other.tag == "Terrain") {
+                    SlicingTerrain(other, i);
                 }
             }
             cutPlane.transform.Rotate(Vector3.forward * 180, Space.Self);
             this.gameObject.SetActive(false);
         }
     }
+
+//? The Slicing Functionality is very repeated and separated for easier prototyping
+#region Slicing Functionality
+    /// <summary>
+    /// Totally separated enemy slicing functionality
+    /// </summary>
+    /// <param name="other"></param>
+    /// <param name="i"></param>
+    void SlicingEnemy(Collider other, int i) {
+        if (hitGameobjects[i].TryGetComponent<DollLimbController>(out DollLimbController dollLimbController)) {
+            if (hitGameobjects[i].transform.root.TryGetComponent<YbotTestController2>(out YbotTestController2 ybotTestController2)){
+                if (ybotTestController2.staggered) {
+                    dollLimbController.Sliced();
+                }else {
+                    return;
+                }
+            }
+        }
+
+        SlicedCounter slicedCounter;
+        int thisObjectSlicedCounterInt = 0;
+        hitGameobjects[i].gameObject.TryGetComponent<SlicedCounter>(out slicedCounter);
+
+        if (slicedCounter == null || slicedCounter.counter < 4) {
+            thisObjectSlicedCounterInt = slicedCounter ? slicedCounter.counter : 0;
+            SlicedHull hull = hitGameobjects[i].gameObject.Slice(cutPlane.transform.position, cutPlane.transform.up, slicedMaterial);
+            if (hull != null) {
+                GameObject bottom = hull.CreateLowerHull(hitGameobjects[i].gameObject, slicedMaterial);
+                MeshCollider tempMeshCol = bottom.AddComponent<MeshCollider>();
+                tempMeshCol.convex = true;
+                Rigidbody tempRB = bottom.AddComponent<Rigidbody>();
+                SlicedCounter bottomSlicedCounter = bottom.AddComponent<SlicedCounter>();
+                bottomSlicedCounter.IncrementCounter(thisObjectSlicedCounterInt);
+                bottom.gameObject.layer = LayerMask.NameToLayer("Sliceable");
+                bottom.gameObject.tag = "Enemy";
+                tempRB.AddExplosionForce(200, cutPlane.transform.position, 15);
+
+                #region Fmod
+                boxBreakingSound.setParameterByName("BoxBreak", 2.0f);
+                boxBreakingSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(boxLocation));
+                boxBreakingSound.start();
+
+                swingHit.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(boxLocation));
+                swingHit.start();
+                #endregion
+
+                GameObject top = hull.CreateUpperHull(hitGameobjects[i].gameObject, slicedMaterial);
+                MeshCollider tempMeshCol2 = top.AddComponent<MeshCollider>();
+                tempMeshCol2.convex = true;
+                Rigidbody tempRB2 = top.AddComponent<Rigidbody>();
+                SlicedCounter topSlicedCounter = top.AddComponent<SlicedCounter>();
+                topSlicedCounter.IncrementCounter(thisObjectSlicedCounterInt);
+                top.gameObject.layer = LayerMask.NameToLayer("Sliceable");
+                top.gameObject.tag = "Enemy";
+                tempRB2.AddExplosionForce(200, cutPlane.transform.position, 15);
+                Destroy(hitGameobjects[i].gameObject);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Totally separated terrain slicing functionality
+    /// </summary>
+    /// <param name="other"></param>
+    /// <param name="i"></param>
+    void SlicingTerrain(Collider other, int i) {
+        SlicedCounter slicedCounter;
+        int thisObjectSlicedCounterInt = 0;
+        hitGameobjects[i].gameObject.TryGetComponent<SlicedCounter>(out slicedCounter);
+
+        if (slicedCounter == null || slicedCounter.counter < 4) {
+            thisObjectSlicedCounterInt = slicedCounter ? slicedCounter.counter : 0;
+            SlicedHull hull = hitGameobjects[i].gameObject.Slice(cutPlane.transform.position, cutPlane.transform.up, slicedMaterial);
+            if (hull != null) {
+                GameObject bottom = hull.CreateLowerHull(hitGameobjects[i].gameObject, slicedMaterial);
+                MeshCollider tempMeshCol = bottom.AddComponent<MeshCollider>();
+                tempMeshCol.convex = true;
+                Rigidbody tempRB = bottom.AddComponent<Rigidbody>();
+                SlicedCounter bottomSlicedCounter = bottom.AddComponent<SlicedCounter>();
+                bottomSlicedCounter.IncrementCounter(thisObjectSlicedCounterInt);
+                bottom.gameObject.layer = LayerMask.NameToLayer("Sliceable");
+                bottom.gameObject.tag = "Terrain";
+                tempRB.AddExplosionForce(200, cutPlane.transform.position, 15);
+
+                #region Fmod
+                boxBreakingSound.setParameterByName("BoxBreak", 2.0f);
+                boxBreakingSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(boxLocation));
+                boxBreakingSound.start();
+
+                swingHit.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(boxLocation));
+                swingHit.start();
+                #endregion
+
+                GameObject top = hull.CreateUpperHull(hitGameobjects[i].gameObject, slicedMaterial);
+                MeshCollider tempMeshCol2 = top.AddComponent<MeshCollider>();
+                tempMeshCol2.convex = true;
+                Rigidbody tempRB2 = top.AddComponent<Rigidbody>();
+                SlicedCounter topSlicedCounter = top.AddComponent<SlicedCounter>();
+                topSlicedCounter.IncrementCounter(thisObjectSlicedCounterInt);
+                top.gameObject.layer = LayerMask.NameToLayer("Sliceable");
+                top.gameObject.tag = "Terrain";
+                tempRB2.AddExplosionForce(200, cutPlane.transform.position, 15);
+                Destroy(hitGameobjects[i].gameObject);
+            }
+        }
+    }
+#endregion
 }
