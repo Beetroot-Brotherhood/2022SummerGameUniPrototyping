@@ -21475,6 +21475,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2832026, y: 1.6853535, z: 1}
   m_Center: {x: 0.069582224, y: 1.0161041, z: 0}
+--- !u!114 &1990884689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990884681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb7bfbffac702f4db7e68c3da1afda1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultStatistics:
+    stagger: 0
+  currentStatistics:
+    stagger: 0
+  maxStatistics:
+    stagger: 100
 --- !u!1 &2000252560
 GameObject:
   m_ObjectHideFlags: 0
@@ -23000,7 +23018,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.1575682, y: 1}
+    m_SensorSize: {x: 1.9467455, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

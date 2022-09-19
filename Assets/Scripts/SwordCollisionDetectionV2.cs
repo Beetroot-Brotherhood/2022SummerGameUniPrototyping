@@ -45,7 +45,7 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
             hitGameobjects = Physics.OverlapBox(cutPlane.transform.position, cutPlaneSize / 2, cutPlane.transform.rotation, layerMask);
             //!boxLocation = other.gameObject.transform.position; //Rhys - Just trying to get the location of the box being sliced so I can attach a sound instance to it
             boxLocation = new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z);
-
+            // This needs a bool to indicate when an enemy is staggered so they can be sliced
             for (int i = 0; i < hitGameobjects.Length; i++)
             {
                 if (other.tag == "Enemy") {
