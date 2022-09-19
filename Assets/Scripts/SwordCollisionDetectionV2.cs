@@ -15,6 +15,9 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
 
     public Material slicedMaterial;
 
+    [HideInInspector]
+    public AttackState currentAttackState;
+
     [SerializeField] private FMODUnity.EventReference _boxBreakingSound;
     [SerializeField] private FMODUnity.EventReference _swingHit;
     
@@ -49,7 +52,12 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
             for (int i = 0; i < hitGameobjects.Length; i++)
             {
                 if (other.tag == "Enemy") {
-                    SlicingEnemy(other, i);
+                    if (currentAttackState == AttackState.LightAttack) {
+                        
+                    }
+                    else if (currentAttackState == AttackState.HeavyAttack) {
+                        SlicingEnemy(other, i);
+                    }
                 }
                 else if (other.tag == "Terrain") {
                     SlicingTerrain(other, i);
@@ -166,4 +174,10 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
         }
     }
 #endregion
+}
+
+public enum AttackState {
+    None,
+    LightAttack,
+    HeavyAttack
 }

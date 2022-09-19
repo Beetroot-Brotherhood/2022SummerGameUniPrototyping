@@ -5,16 +5,6 @@ using UnityEngine.UI;
 
 public class GatherSlicedObjects : MonoBehaviour
 {
-    public static GatherSlicedObjects instance;
-
-    void Awake () {
-        if (instance != null) {
-            Debug.LogError("There is more than one GatherSlicedObjects!");
-        }
-        else {
-            instance = this;
-        }
-    }
     //public Text scoreText;
     public int score;
     public GameObject player;

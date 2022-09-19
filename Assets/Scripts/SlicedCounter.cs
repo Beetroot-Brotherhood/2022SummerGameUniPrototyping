@@ -30,7 +30,7 @@ public class SlicedCounter : MonoBehaviour
         timePassed += Time.deltaTime;
         gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, player.transform.position, timePassed);
         if (Vector3.Distance(player.transform.position, gameObject.transform.position) < 0.4) {
-            GatherSlicedObjects.instance.score += 10;
+            //GatherSlicedObjects.instance.score += 10;
             Destroy(this.gameObject);
         }
     }

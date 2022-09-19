@@ -34,11 +34,16 @@ public class EnemyStatisticsManager : MonoBehaviour
     public void IncreaseStagger(float staggerDamage) {
         currentStatistics.stagger += staggerDamage;
         if (currentStatistics.stagger >= maxStatistics.stagger) {
-            
+            thisYbotTestController2.staggered = true;
         }
     }
 
     public void ResetCurrentStatistics() {
         currentStatistics = defaultStatistics.DeepClone();
+    }
+
+    public void ResetStagger() {
+        thisYbotTestController2.staggered = false;
+        currentStatistics.stagger = maxStatistics.stagger;
     }
 }
