@@ -14,7 +14,17 @@ public class GatherSlicedObjects : MonoBehaviour
         else {
             instance = this;
         }
+
+        if (!_ballRoll.IsNull) // Assigns the relevant event reference to it's instance 
+            {
+                ballRoll = FMODUnity.RuntimeManager.CreateInstance(_ballRoll);
+            }
+
+            /* ballRoll.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(thisBall)); */
+            ballRoll.start();
     }
+
+
     //public Text scoreText;
     public int score;
     public GameObject player;
@@ -26,6 +36,25 @@ public class GatherSlicedObjects : MonoBehaviour
     public float recallTimer;
     private float currentRecallTimer;
     public float recallSpeed;
+
+
+    [Space] 
+    [Header("Ball Roll Sound")]
+    [Space]
+
+
+    public bool Grounded = true;
+    public float GroundedOffset = -0.14f;
+    public float GroundedRadius = 0.5f;       
+    public LayerMask GroundLayers;
+    private float ballSpeed = 0.0f;
+    private Vector3 thisBall;
+    [SerializeField] private FMODUnity.EventReference _ballRoll;
+    private FMOD.Studio.EventInstance ballRoll;
+
+
+
+
 
     // Update is called once per frame
     void Update()
@@ -60,8 +89,42 @@ public class GatherSlicedObjects : MonoBehaviour
             MoveTowardsPlayer();
         }
 
+        GroundedCheck();
+        SetParameter();
+
+        thisBall = this.gameObject.transform.position;
+        ballRoll.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(thisBall));
+
+    }
 
 
+    private void FixedUpdate()
+    {
+        ballSpeed = this.gameObject.GetComponent<Rigidbody>().velocity.magnitude;
+
+        if (!Grounded)
+        {
+            ballSpeed = 0.0f;
+        }
+    }
+
+    private void GroundedCheck() // Checking if ball is grounded
+    {
+        // set sphere position, with offset
+        Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z);
+        Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore);
+    }
+
+    private void SetParameter()
+    {
+        if (Grounded)
+        {
+            ballRoll.setParameterByName("RollingVolume", ballSpeed);
+        }
+        else
+        {
+            ballSpeed = 0.0f;
+        }
     }
 
 
@@ -73,6 +136,7 @@ public class GatherSlicedObjects : MonoBehaviour
         {
             
             Destroy(this.gameObject);
+            ballRoll.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
     }
 
