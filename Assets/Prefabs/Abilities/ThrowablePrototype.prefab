@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 8587660775520298455}
   - component: {fileID: 2749848900886680959}
   - component: {fileID: 1935670393307544703}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: ThrowablePrototype
-  m_TagString: Enemy
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
   radius: 2
   layerMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 2048
   owner: {fileID: 0}
   recallTimer: 3
   recallSpeed: 2

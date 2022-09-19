@@ -5,16 +5,7 @@ using UnityEngine.UI;
 
 public class GatherSlicedObjects : MonoBehaviour
 {
-    public static GatherSlicedObjects instance;
-
     void Awake () {
-        if (instance != null) {
-            Debug.LogError("There is more than one GatherSlicedObjects!");
-        }
-        else {
-            instance = this;
-        }
-
         if (!_ballRoll.IsNull) // Assigns the relevant event reference to it's instance 
             {
                 ballRoll = FMODUnity.RuntimeManager.CreateInstance(_ballRoll);

@@ -83,7 +83,6 @@ public class CombatManager : MonoBehaviour
     }
 
     void DirectionalAttacks() {
-        Debug.Log(OnSlicerInput.instance.onSlice);
         if (OnSlicerInput.instance.onSlice) {
             currentHoldTime += Time.deltaTime;
             if (currentHoldTime >= holdThreshold) {
