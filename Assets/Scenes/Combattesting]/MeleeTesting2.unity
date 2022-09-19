@@ -15133,6 +15133,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  _ballShoot:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &1420943506
 GameObject:
   m_ObjectHideFlags: 0
@@ -16624,6 +16631,13 @@ MonoBehaviour:
       Data3: 1248633757
       Data4: -713433145
     Path: event:/--- Code Slicer ---/Player/Heavy/HeavySwing
+  _ballShoot:
+    Guid:
+      Data1: 1340746628
+      Data2: 1254161180
+      Data3: 1797672617
+      Data4: -1377442842
+    Path: event:/--- Code Slicer ---/Player/Balls/BallShoot
 --- !u!114 &1589485967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16636,6 +16650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900faac0b6fd701498592852d50c792e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSounds: {fileID: 1589485966}
   weaponAnimator: {fileID: 1589485964}
   weaponHitBox: {fileID: 2073886076}
   parryBox: {fileID: 638716763}

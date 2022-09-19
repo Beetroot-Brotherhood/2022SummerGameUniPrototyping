@@ -443,7 +443,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637991512308305782
+  lastModified: 637991536298987167
   FileSizes:
   - Name: Desktop
     Value: 13191872
@@ -567,10 +567,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637991512311086438
+  lastModified: 637991536301407713
   FileSizes:
   - Name: Desktop
-    Value: 13178912
+    Value: 13240000
   Exists: 1
 --- !u!114 &-1282451633158703896
 MonoBehaviour:
@@ -587,10 +587,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637991512308355794
+  lastModified: 637991536299047183
   FileSizes:
   - Name: Desktop
-    Value: 2948
+    Value: 3042
   Exists: 1
 --- !u!114 &-965846939391379660
 MonoBehaviour:
@@ -646,6 +646,33 @@ MonoBehaviour:
   - MediumBox
   - LargeBox
   Exists: 1
+--- !u!114 &-724885258316092818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/--- Code Slicer ---/Player/Balls/BallBounce
+  m_EditorClassIdentifier: 
+  Path: event:/--- Code Slicer ---/Player/Balls/BallBounce
+  Guid:
+    Data1: -1019828111
+    Data2: 1199702994
+    Data3: -1819283809
+    Data4: 915982596
+  Banks:
+  - {fileID: -1363819563853733723}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 250
 --- !u!114 &-612325850653220219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -806,13 +833,15 @@ MonoBehaviour:
   - {fileID: 3222669179335741447}
   - {fileID: 7217786806302947654}
   - {fileID: 3674638079872297393}
+  - {fileID: 5300650708268464351}
+  - {fileID: -724885258316092818}
   EditorParameters:
   - {fileID: 3840399898623572621}
   MasterBanks:
   - {fileID: -3456964901717015798}
   StringsBanks:
   - {fileID: -1282451633158703896}
-  cacheTime: 637991512311726577
+  cacheTime: 637991536302057858
   cacheVersion: 131591
 --- !u!114 &439540255163333961
 MonoBehaviour:
@@ -857,7 +886,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637991512311726577
+  lastModified: 637991536302057858
   FileSizes:
   - Name: Desktop
     Value: 10692384
@@ -1156,7 +1185,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637991512306855449
+  lastModified: 637991536297346797
   FileSizes:
   - Name: Desktop
     Value: 9652096
@@ -1191,6 +1220,33 @@ MonoBehaviour:
   - Dirt
   - Mud
   Exists: 1
+--- !u!114 &5300650708268464351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/--- Code Slicer ---/Player/Balls/BallShoot
+  m_EditorClassIdentifier: 
+  Path: event:/--- Code Slicer ---/Player/Balls/BallShoot
+  Guid:
+    Data1: 1340746628
+    Data2: 1254161180
+    Data3: 1797672617
+    Data4: -1377442842
+  Banks:
+  - {fileID: -1363819563853733723}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
 --- !u!114 &5400751675069031036
 MonoBehaviour:
   m_ObjectHideFlags: 0

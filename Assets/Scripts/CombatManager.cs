@@ -10,6 +10,8 @@ public class CombatManager : MonoBehaviour
 
     public static CombatManager instance;
 
+    [SerializeField] private PlayerSounds playerSounds; // Added as the throwable item doesn't use an animation which I could use to trigger an event
+
     void Awake() {
         if (instance != null){
             Debug.LogError("More than one instance of CombatManager exists.");
@@ -171,6 +173,8 @@ public class CombatManager : MonoBehaviour
             projectile.GetComponent<GatherSlicedObjects>().owner = this.gameObject;
 
             OnSlicerInput.instance.onThrowable = false;
+
+            playerSounds.PlayBallShoot();
         }
         ResetThrowableCooldown();
     }

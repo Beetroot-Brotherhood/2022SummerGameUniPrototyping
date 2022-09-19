@@ -44,10 +44,13 @@ public class PlayerSounds : MonoBehaviour
     [SerializeField] private FMODUnity.EventReference _heavyCharge;
     [SerializeField] private FMODUnity.EventReference _heavySwing;
 
+    [SerializeField] private FMODUnity.EventReference _ballShoot;
+
     private FMOD.Studio.EventInstance swing;
     private FMOD.Studio.EventInstance swingHit;
     private FMOD.Studio.EventInstance heavyCharge;
     private FMOD.Studio.EventInstance heavySwing;
+    private FMOD.Studio.EventInstance ballShoot;
 
 
 
@@ -98,6 +101,12 @@ public class PlayerSounds : MonoBehaviour
         if (!_dodge.IsNull)
         {
             dodge = FMODUnity.RuntimeManager.CreateInstance(_dodge);
+
+        }
+
+        if (!_ballShoot.IsNull)
+        {
+            ballShoot = FMODUnity.RuntimeManager.CreateInstance(_ballShoot);
 
         }
     }
@@ -288,6 +297,12 @@ public class PlayerSounds : MonoBehaviour
         //heavyCharge.stop(); //! Need to locate the event instance active for heavyCharge in order for this to work
     }
     
+    public void PlayBallShoot()
+    {
+        ballShoot.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+        ballShoot.start();
+        //heavyCharge.stop(); //! Need to locate the event instance active for heavyCharge in order for this to work
+    }
 
 
 

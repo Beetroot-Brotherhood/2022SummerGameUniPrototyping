@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3268159671004430525}
   - component: {fileID: 8587660775520298455}
   - component: {fileID: 2749848900886680959}
+  - component: {fileID: 1935670393307544703}
   m_Layer: 10
   m_Name: ThrowablePrototype
   m_TagString: Enemy
@@ -136,3 +137,23 @@ MonoBehaviour:
   owner: {fileID: 0}
   recallTimer: 3
   recallSpeed: 2
+--- !u!114 &1935670393307544703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6249417325198546989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 753ce2ff693391f42aa548f4989753c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _collisionSounds:
+    Guid:
+      Data1: -1019828111
+      Data2: 1199702994
+      Data3: -1819283809
+      Data4: 915982596
+    Path: event:/--- Code Slicer ---/Player/Balls/BallBounce
+  RequiredVelocity: 3
