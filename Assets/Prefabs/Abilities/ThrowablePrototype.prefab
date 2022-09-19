@@ -15,10 +15,9 @@ GameObject:
   - component: {fileID: 8587660775520298455}
   - component: {fileID: 2749848900886680959}
   - component: {fileID: 1935670393307544703}
-  - component: {fileID: 5957583281350386377}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: ThrowablePrototype
-  m_TagString: Terrain
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,6 +137,19 @@ MonoBehaviour:
   owner: {fileID: 0}
   recallTimer: 3
   recallSpeed: 2
+  Grounded: 1
+  GroundedOffset: -0.14
+  GroundedRadius: 0.5
+  GroundLayers:
+    serializedVersion: 2
+    m_Bits: 513
+  _ballRoll:
+    Guid:
+      Data1: -1959209607
+      Data2: 1150171310
+      Data3: -676572006
+      Data4: 1704344362
+    Path: event:/--- Code Slicer ---/Player/Balls/BallRolling
 --- !u!114 &1935670393307544703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,28 +170,3 @@ MonoBehaviour:
       Data4: 915982596
     Path: event:/--- Code Slicer ---/Player/Balls/BallBounce
   RequiredVelocity: 3
---- !u!114 &5957583281350386377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6249417325198546989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18b539310b364344fb7cd32b6d2e9f79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Grounded: 1
-  GroundedOffset: -0.14
-  GroundedRadius: 0.5
-  GroundLayers:
-    serializedVersion: 2
-    m_Bits: 513
-  _ballRoll:
-    Guid:
-      Data1: -1959209607
-      Data2: 1150171310
-      Data3: -676572006
-      Data4: 1704344362
-    Path: event:/--- Code Slicer ---/Player/Balls/BallRolling
