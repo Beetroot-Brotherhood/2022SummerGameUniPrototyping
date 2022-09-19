@@ -15095,6 +15095,13 @@ MonoBehaviour:
       Data3: 1272316813
       Data4: -1241839348
     Path: event:/Enemies/Jim/FootstepJingleJIM
+  _dodge:
+    Guid:
+      Data1: -1281660577
+      Data2: 1296697957
+      Data3: -697599314
+      Data4: 1791914748
+    Path: event:/--- Code Slicer ---/Player/Dodge
   leftFoot: {fileID: 0}
   rightFoot: {fileID: 0}
   surfaceType: 0
@@ -15112,6 +15119,20 @@ MonoBehaviour:
       Data3: 1525666470
       Data4: -506639327
     Path: event:/--- Code Slicer ---/Player/PlayerSwordHit
+  _heavyCharge:
+    Guid:
+      Data1: -1121475474
+      Data2: 1259386877
+      Data3: -1710975343
+      Data4: 1831252046
+    Path: event:/--- Code Slicer ---/Player/Heavy/HeavyCharge
+  _heavySwing:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &1420943506
 GameObject:
   m_ObjectHideFlags: 0
@@ -16565,6 +16586,13 @@ MonoBehaviour:
       Data3: 1272316813
       Data4: -1241839348
     Path: event:/Enemies/Jim/FootstepJingleJIM
+  _dodge:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   leftFoot: {fileID: 0}
   rightFoot: {fileID: 0}
   surfaceType: 0
@@ -16582,6 +16610,20 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  _heavyCharge:
+    Guid:
+      Data1: -1121475474
+      Data2: 1259386877
+      Data3: -1710975343
+      Data4: 1831252046
+    Path: event:/--- Code Slicer ---/Player/Heavy/HeavyCharge
+  _heavySwing:
+    Guid:
+      Data1: -1064222236
+      Data2: 1287631183
+      Data3: 1248633757
+      Data4: -713433145
+    Path: event:/--- Code Slicer ---/Player/Heavy/HeavySwing
 --- !u!114 &1589485967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22943,7 +22985,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.9352942, y: 1}
+    m_SensorSize: {x: 1.1575682, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

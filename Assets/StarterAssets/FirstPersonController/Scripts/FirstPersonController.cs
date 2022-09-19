@@ -238,6 +238,7 @@ namespace StarterAssets
 				
 				DodgeMovement(inputDirection);
 				isDodging = true;
+				playerSounds.PlayDodge();
 
 				return true;
 			}

@@ -443,7 +443,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637981967050256523
+  lastModified: 637991512308305782
   FileSizes:
   - Name: Desktop
     Value: 13191872
@@ -567,10 +567,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637981967050676883
+  lastModified: 637991512311086438
   FileSizes:
   - Name: Desktop
-    Value: 12974912
+    Value: 13178912
   Exists: 1
 --- !u!114 &-1282451633158703896
 MonoBehaviour:
@@ -587,10 +587,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637981967050276544
+  lastModified: 637991512308355794
   FileSizes:
   - Name: Desktop
-    Value: 2804
+    Value: 2948
   Exists: 1
 --- !u!114 &-965846939391379660
 MonoBehaviour:
@@ -803,13 +803,16 @@ MonoBehaviour:
   - {fileID: -8962880205900734840}
   - {fileID: -6964561589434780467}
   - {fileID: -4904962942828522743}
+  - {fileID: 3222669179335741447}
+  - {fileID: 7217786806302947654}
+  - {fileID: 3674638079872297393}
   EditorParameters:
   - {fileID: 3840399898623572621}
   MasterBanks:
   - {fileID: -3456964901717015798}
   StringsBanks:
   - {fileID: -1282451633158703896}
-  cacheTime: 637981967051262385
+  cacheTime: 637991512311726577
   cacheVersion: 131591
 --- !u!114 &439540255163333961
 MonoBehaviour:
@@ -854,7 +857,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637981967051262385
+  lastModified: 637991512311726577
   FileSizes:
   - Name: Desktop
     Value: 10692384
@@ -938,6 +941,33 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &3222669179335741447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/--- Code Slicer ---/Player/Heavy/HeavyCharge
+  m_EditorClassIdentifier: 
+  Path: event:/--- Code Slicer ---/Player/Heavy/HeavyCharge
+  Guid:
+    Data1: -1121475474
+    Data2: 1259386877
+    Data3: -1710975343
+    Data4: 1831252046
+  Banks:
+  - {fileID: -1363819563853733723}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &3423462736988122003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -965,6 +995,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 950
   Length: 198760
+--- !u!114 &3674638079872297393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/--- Code Slicer ---/Player/Heavy/HeavySwing
+  m_EditorClassIdentifier: 
+  Path: event:/--- Code Slicer ---/Player/Heavy/HeavySwing
+  Guid:
+    Data1: -1064222236
+    Data2: 1287631183
+    Data3: 1248633757
+    Data4: -713433145
+  Banks:
+  - {fileID: -1363819563853733723}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &3746819332760864604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1099,7 +1156,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637981967049683302
+  lastModified: 637991512306855449
   FileSizes:
   - Name: Desktop
     Value: 9652096
@@ -1208,6 +1265,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &7217786806302947654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/--- Code Slicer ---/Player/Dodge
+  m_EditorClassIdentifier: 
+  Path: event:/--- Code Slicer ---/Player/Dodge
+  Guid:
+    Data1: -1281660577
+    Data2: 1296697957
+    Data3: -697599314
+    Data4: 1791914748
+  Banks:
+  - {fileID: -1363819563853733723}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &7304979927021808733
 MonoBehaviour:
   m_ObjectHideFlags: 0

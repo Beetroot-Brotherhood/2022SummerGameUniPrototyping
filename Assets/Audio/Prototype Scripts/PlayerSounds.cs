@@ -13,9 +13,18 @@ public class PlayerSounds : MonoBehaviour
     [SerializeField] private FMODUnity.EventReference _cloth;
     [SerializeField] private FMODUnity.EventReference _jingle;
 
+
+    [SerializeField] private FMODUnity.EventReference _dodge;
+    
+
     private FMOD.Studio.EventInstance footsteps;
     private FMOD.Studio.EventInstance cloth;
     private FMOD.Studio.EventInstance jingle;
+
+
+    private FMOD.Studio.EventInstance dodge;
+
+    
 
     public Transform leftFoot;
 
@@ -27,12 +36,18 @@ public class PlayerSounds : MonoBehaviour
     [Space] 
     [Header("Weapon banks")]
     [Space]
+
+    //public Transform sword;
    
     [SerializeField] private FMODUnity.EventReference _swing;
     [SerializeField] private FMODUnity.EventReference _swingHit;
+    [SerializeField] private FMODUnity.EventReference _heavyCharge;
+    [SerializeField] private FMODUnity.EventReference _heavySwing;
 
     private FMOD.Studio.EventInstance swing;
     private FMOD.Studio.EventInstance swingHit;
+    private FMOD.Studio.EventInstance heavyCharge;
+    private FMOD.Studio.EventInstance heavySwing;
 
 
 
@@ -65,6 +80,24 @@ public class PlayerSounds : MonoBehaviour
         if (!_swingHit.IsNull)
         {
             swing = FMODUnity.RuntimeManager.CreateInstance(_swingHit);
+
+        }
+
+        if (!_heavyCharge.IsNull)
+        {
+            heavyCharge = FMODUnity.RuntimeManager.CreateInstance(_heavyCharge);
+
+        }
+
+        if (!_heavySwing.IsNull)
+        {
+            heavySwing = FMODUnity.RuntimeManager.CreateInstance(_heavySwing);
+
+        }
+
+        if (!_dodge.IsNull)
+        {
+            dodge = FMODUnity.RuntimeManager.CreateInstance(_dodge);
 
         }
     }
@@ -234,6 +267,26 @@ public class PlayerSounds : MonoBehaviour
     }
 
 
+
+    public void PlayHeavyCharge()
+    {
+        heavyCharge.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+        heavyCharge.start();
+    }
+
+    public void PlayHeavySwing()
+    {
+        heavySwing.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+        heavySwing.start();
+        //heavyCharge.stop(); //! Need to locate the event instance active for heavyCharge in order for this to work
+    }
+
+    public void PlayDodge()
+    {
+        dodge.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+        dodge.start();
+        //heavyCharge.stop(); //! Need to locate the event instance active for heavyCharge in order for this to work
+    }
     
 
 
