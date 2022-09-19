@@ -2,6 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Krezme;
+
+[System.Serializable]
+public class Statistics{
+    public float lightAttackDamage;
+    public float heavyAttackDamage;
+}
 
 public class CombatManager : MonoBehaviour
 {
@@ -23,8 +30,14 @@ public class CombatManager : MonoBehaviour
 
 #endregion
 
-    public Animator weaponAnimator;
+    [Header("Statistics")]
+    public Statistics defaultStatistics;
+    public Statistics currentStatistics;
+    public Statistics maxStatistics;
 
+    [Header("General")]
+    public Animator weaponAnimator;
+    public SwordCollisionDetectionV2 swordCollisionDetectionV2;
     public GameObject weaponHitBox;
     public GameObject parryBox;
 
@@ -39,6 +52,9 @@ public class CombatManager : MonoBehaviour
     public float throwableCooldown;
 
     private PlayerParryBox playerParryBox;
+
+    [HideInInspector]
+    public List<EnemyStatisticsManager> hitEnemies = new List<EnemyStatisticsManager>();
 
     private float currentHoldTime;
 
@@ -62,6 +78,7 @@ public class CombatManager : MonoBehaviour
         playerParryBox = parryBox.GetComponent<PlayerParryBox>();
         currentParryCooldown = parryCooldown;
         currentThrowableCooldown = throwableCooldown;
+        ResetCurrentStatistics();
     }
 
     // Update is called once per frame
@@ -199,6 +216,10 @@ public class CombatManager : MonoBehaviour
         }
     }
 
+    public void ResetCurrentStatistics() {
+        currentStatistics = defaultStatistics.DeepClone();
+    }
+
 #region AnimationEvents
 
     public void ResetAttackAnimationStates() {
@@ -240,6 +261,18 @@ public class CombatManager : MonoBehaviour
         weaponAnimator.SetBool("Parrying", isParrying);
     }
 
+    public void SetAttackStateToNone() {
+        swordCollisionDetectionV2.currentAttackState = AttackState.None;
+        hitEnemies = new List<EnemyStatisticsManager>();
+    }
+
+    public void SetAttackStateToLightAttack(){
+        swordCollisionDetectionV2.currentAttackState = AttackState.LightAttack;
+    }
+
+    public void SetAttackStateToHeavyAttack(){
+        swordCollisionDetectionV2.currentAttackState = AttackState.HeavyAttack;
+    }
 #endregion
 }
 

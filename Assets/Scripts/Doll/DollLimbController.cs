@@ -14,7 +14,6 @@ public class DollLimbController : MonoBehaviour
     public YbotTestController2 ybotTestController2;
 
     public void Sliced() {
-        Debug.Log(gameObject.name);
         for (int i = 0; i < children.Count; i++) {
             if (children != null) {
                 children[i].Sliced();

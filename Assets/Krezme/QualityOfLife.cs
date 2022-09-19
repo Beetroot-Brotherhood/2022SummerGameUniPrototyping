@@ -48,4 +48,10 @@ namespace Krezme {
             return firstTag == secondTag ? true : false;
         }
     }
+
+    public enum Bool3D {
+        Null,
+        False,
+        True
+    }
 }

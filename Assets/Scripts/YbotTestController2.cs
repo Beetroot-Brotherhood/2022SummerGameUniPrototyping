@@ -77,7 +77,7 @@ public class YbotTestController2 : MonoBehaviour
 
 
     //stagger functions
-    void YbotStagger()
+    public void YbotStagger()
     {
         staggered = true;
         canAttack = false;
@@ -91,7 +91,7 @@ public class YbotTestController2 : MonoBehaviour
     }
 
 
-        IEnumerator YbotStaggerTimer()
+    IEnumerator YbotStaggerTimer()
     {
         
         yield return new WaitForSeconds(parryStunTime);
