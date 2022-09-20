@@ -13,6 +13,13 @@ namespace StarterAssets
 	{
 		[SerializeField] private PlayerSounds playerSounds;
 
+		[Header("Footstep Parameters")]
+
+		[SerializeField] private bool useFootsteps = true;
+
+		[SerializeField] private float baseStepSpeed = 0.5f;
+
+		private float footStepTimer = 0;		
 
 
 		[Header("Player")]
@@ -130,6 +137,13 @@ namespace StarterAssets
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
+
+			if (useFootsteps)
+			{
+				PlayFootsteps();
+			}
+
+
 		}
 
 		void FixedUpdate() {
@@ -355,7 +369,20 @@ namespace StarterAssets
 
 
 
+		private void PlayFootsteps()
+		{
+			if (!Grounded) return;
+			if (_speed <= 0) return;
+			
+			footStepTimer -= Time.deltaTime;
 
+			if (footStepTimer <= 0)
+			{
+				playerSounds.PlayStepRight(); // This will be changed in the actual project, however during the prototype I'll keep my first & third person footstep functions
+				footStepTimer = baseStepSpeed;
+			}
+
+		}
 
 
 
