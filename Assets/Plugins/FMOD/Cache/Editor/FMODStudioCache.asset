@@ -1145,6 +1145,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 87272
+--- !u!114 &-4516059873685543326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/--- Code Slicer ---/Environment/Train Announcements/TrainPlatform2
+  m_EditorClassIdentifier: 
+  Path: event:/--- Code Slicer ---/Environment/Train Announcements/TrainPlatform2
+  Guid:
+    Data1: 1951976130
+    Data2: 1319638554
+    Data3: -2141742150
+    Data4: -1381463032
+  Banks:
+  - {fileID: -2933474125096768267}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8000
 --- !u!114 &-4497405721062800356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1565,10 +1592,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637993083972459525
+  lastModified: 637993759446022862
   FileSizes:
   - Name: Desktop
-    Value: 9961824
+    Value: 10082976
   Exists: 1
 --- !u!114 &-2880387357753163404
 MonoBehaviour:
@@ -2284,13 +2311,15 @@ MonoBehaviour:
   - {fileID: 5887189253692463661}
   - {fileID: 4745142674242658708}
   - {fileID: 5001154255587455014}
+  - {fileID: 8880244092604054678}
+  - {fileID: -4516059873685543326}
   EditorParameters:
   - {fileID: -6588442744460740224}
   MasterBanks:
   - {fileID: 4104646825822150671}
   StringsBanks:
   - {fileID: 5569406687674364823}
-  cacheTime: 637993083983174201
+  cacheTime: 637993759450473850
   cacheVersion: 131591
 --- !u!114 &90753169356398386
 MonoBehaviour:
@@ -2735,7 +2764,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637993083982394029
+  lastModified: 637993759449693670
   FileSizes:
   - Name: Desktop
     Value: 13186048
@@ -3217,7 +3246,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637993083983174201
+  lastModified: 637993759450473850
   FileSizes:
   - Name: Desktop
     Value: 10692384
@@ -3517,7 +3546,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637993083974650023
+  lastModified: 637993759447553206
   FileSizes:
   - Name: Desktop
     Value: 13191872
@@ -3882,10 +3911,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637993083974690034
+  lastModified: 637993759447593209
   FileSizes:
   - Name: Desktop
-    Value: 3136
+    Value: 3256
   Exists: 1
 --- !u!114 &5745125380043643507
 MonoBehaviour:
@@ -4728,6 +4757,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 59895
+--- !u!114 &8880244092604054678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/--- Code Slicer ---/Environment/Train Announcements/TrainPlatform1
+  m_EditorClassIdentifier: 
+  Path: event:/--- Code Slicer ---/Environment/Train Announcements/TrainPlatform1
+  Guid:
+    Data1: 1866071431
+    Data2: 1314087567
+    Data3: -1726863979
+    Data4: 1599472494
+  Banks:
+  - {fileID: -2933474125096768267}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8000
 --- !u!114 &9022645573378362648
 MonoBehaviour:
   m_ObjectHideFlags: 0
