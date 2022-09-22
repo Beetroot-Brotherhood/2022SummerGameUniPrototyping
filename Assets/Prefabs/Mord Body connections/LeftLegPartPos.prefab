@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 153679705672894901}
   - component: {fileID: 8342758514915063911}
   - component: {fileID: 9015095642681020777}
-  m_Layer: 10
+  - component: {fileID: 5742605523169984464}
+  - component: {fileID: 3309431543801950993}
+  m_Layer: 11
   m_Name: Mord_FootBLeft
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,6 +102,35 @@ MonoBehaviour:
   parent: {fileID: 4375694007018375041}
   children: []
   ybotTestController2: {fileID: 0}
+--- !u!54 &5742605523169984464
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6414866039748448032}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
+--- !u!135 &3309431543801950993
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6414866039748448032}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.06740081
+  m_Center: {x: -0.0000000055879354, y: -0.022275947, z: 0.046323918}
 --- !u!1 &7232805037352955578
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,9 +143,11 @@ GameObject:
   - component: {fileID: 7388868064553788080}
   - component: {fileID: 7082665311627365101}
   - component: {fileID: 4375694007018375041}
-  m_Layer: 10
+  - component: {fileID: 4273901328669201916}
+  - component: {fileID: 1094640802718141099}
+  m_Layer: 11
   m_Name: Mord_FootALeft
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,6 +235,35 @@ MonoBehaviour:
   children:
   - {fileID: 9015095642681020777}
   ybotTestController2: {fileID: 0}
+--- !u!135 &4273901328669201916
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7232805037352955578}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.081963345
+  m_Center: {x: -0.0706948, y: -0.058111314, z: 0.025879584}
+--- !u!54 &1094640802718141099
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7232805037352955578}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &7568231697511712594
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,9 +273,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7568231697511712595}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: LeftLegPartPos
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -248,7 +310,7 @@ GameObject:
   - component: {fileID: 3204959919590594021}
   - component: {fileID: 6104203931421364603}
   - component: {fileID: 5221869579198566559}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Mord_Leg Left
   m_TagString: Enemy
   m_Icon: {fileID: 0}

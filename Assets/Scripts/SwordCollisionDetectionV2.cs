@@ -50,23 +50,23 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
     DollLimbController dollLimbController;
 
     public void OnTriggerEnter(Collider other) {
-        if (1<<other.gameObject.layer == layerMask) {
+        if (1 << other.gameObject.layer == layerMask) {
             hitGameobjects = Physics.OverlapBox(cutPlane.transform.position, cutPlaneSize / 2, cutPlane.transform.rotation, layerMask);
             //!boxLocation = other.gameObject.transform.position; //Rhys - Just trying to get the location of the box being sliced so I can attach a sound instance to it
             boxLocation = new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z);
             // This needs a bool to indicate when an enemy is staggered so they can be sliced
-            for (int i = 0; i < hitGameobjects.Length; i++)
-            {
-                if (other.tag == "Enemy") {
+            for (int i = 0; i < hitGameobjects.Length; i++) {
+                if (hitGameobjects[i].gameObject.tag == "Enemy") {
                     if (currentAttackState == AttackState.LightAttack) {
                         if (IsEnemyStaggered(i) == Bool3D.False) {
                             DealStaggerDamage(combatManager.currentStatistics.lightAttackDamage);
                         }
                         else if (IsEnemyStaggered(i) == Bool3D.Null){
-                            SlicingEnemy(other, i);
+                            Debug.Log("Please work 1");
+                            SlicingEnemy(i);
                         }
                         else {
-                            Debug.Log("C'mon dude");
+                            Debug.Log("Please work 2");
                         }
                     }
                     else if (currentAttackState == AttackState.HeavyAttack) {
@@ -74,12 +74,13 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
                             DealStaggerDamage(combatManager.currentStatistics.heavyAttackDamage);
                         }
                         else{
-                            SlicingEnemy(other, i);
+                            Debug.Log("Please work 3");
+                            SlicingEnemy(i);
                         }
                     }
                 }
-                else if (other.tag == "Terrain") {
-                    SlicingTerrain(other, i);
+                else if (hitGameobjects[i].gameObject.tag == "Terrain") {
+                    SlicingTerrain(i);
                 }
             }
             cutPlane.transform.Rotate(Vector3.forward * 180, Space.Self);
@@ -117,6 +118,8 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
                 }
             }   
         }
+        ybotTestController2 = null;
+        dollLimbController = null;
         return Bool3D.Null;
     }
 
@@ -125,13 +128,15 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
     /// </summary>
     /// <param name="other"></param>
     /// <param name="i"></param>
-    void SlicingEnemy(Collider other, int i) {
-        if (IsEnemyStaggered(i) == Bool3D.False) {
+    void SlicingEnemy(int i) {
+        Bool3D temp3DState = IsEnemyStaggered(i);
+        if (temp3DState == Bool3D.False) {
             return;
-        }else if (IsEnemyStaggered(i) == Bool3D.True) {
+        }else if (temp3DState == Bool3D.True) {
             dollLimbController.Sliced();
         }
-
+        
+        //? This is the code that actually slices the enemy
         SlicedCounter slicedCounter;
         int thisObjectSlicedCounterInt = 0;
         hitGameobjects[i].gameObject.TryGetComponent<SlicedCounter>(out slicedCounter);
@@ -178,7 +183,7 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
     /// </summary>
     /// <param name="other"></param>
     /// <param name="i"></param>
-    void SlicingTerrain(Collider other, int i) {
+    void SlicingTerrain(int i) {
         SlicedCounter slicedCounter;
         int thisObjectSlicedCounterInt = 0;
         hitGameobjects[i].gameObject.TryGetComponent<SlicedCounter>(out slicedCounter);

@@ -13,24 +13,26 @@ public class DollLimbController : MonoBehaviour
     [HideInInspector]
     public YbotTestController2 ybotTestController2;
 
-    public void Sliced() {
+    public void Sliced () {
         for (int i = 0; i < children.Count; i++) {
-            if (children != null) {
+            if (children[i] != null) {
                 children[i].Sliced();
             }
         }
-
         if (this.gameObject.TryGetComponent<Collider>(out Collider collider)) {
             collider.enabled = true;
+            collider.isTrigger = false;
         }
         if (this.gameObject.TryGetComponent<Rigidbody>(out Rigidbody rb)){
             rb.useGravity = true;
             rb.isKinematic = false;
         }
         UnParent();
+        Destroy(this);
     }
 
     public void UnParent(){
+        
         this.transform.parent = null;
     }
 }
