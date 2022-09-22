@@ -229,7 +229,7 @@ namespace StarterAssets
 				inputDirection = transform.right * _input.move.x + transform.forward * _input.move.y;
 			}
 
-			if (isDodging) {
+			if (isDodging && inputDirection != Vector3.zero) {
 				return;
 			}
 
@@ -238,7 +238,7 @@ namespace StarterAssets
 		}
 
 		bool Dodge(Vector3 inputDirection) {
-			if (isDodging && !dodgeOver) {
+			if (isDodging && !dodgeOver && inputDirection != Vector3.zero) {
 				if (currentDodgedDistance < dodgeDistance) {
 					DodgeMovement(inputDirection);
 					return true;
@@ -248,7 +248,7 @@ namespace StarterAssets
 					return false;
 				}
 			}
-			else if (_input.sprint && !dodgeOver) {
+			else if (_input.sprint && !dodgeOver && inputDirection != Vector3.zero) {
 				
 				DodgeMovement(inputDirection);
 				isDodging = true;
@@ -260,7 +260,6 @@ namespace StarterAssets
 				dodgeOver = false;
 				currentDodgedDistance = 0;
 			}
-
 			return false;
 		}
 
