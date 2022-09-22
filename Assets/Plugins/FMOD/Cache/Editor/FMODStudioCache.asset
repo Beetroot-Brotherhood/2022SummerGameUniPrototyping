@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9081623781626581557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/--- Code Slicer ---/Environment/Train/ApproachHiss2
+  m_EditorClassIdentifier: 
+  Path: event:/--- Code Slicer ---/Environment/Train/ApproachHiss2
+  Guid:
+    Data1: -142962482
+    Data2: 1158163082
+    Data3: -908683862
+    Data4: -1310613884
+  Banks:
+  - {fileID: -2933474125096768267}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 29000
 --- !u!114 &-8962880205900734840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -713,6 +740,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 776307
+--- !u!114 &-6171348789558044849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/--- Code Slicer ---/Environment/Train/TrackClacks
+  m_EditorClassIdentifier: 
+  Path: event:/--- Code Slicer ---/Environment/Train/TrackClacks
+  Guid:
+    Data1: -1951116629
+    Data2: 1341310529
+    Data3: 754007973
+    Data4: 82568131
+  Banks:
+  - {fileID: -2933474125096768267}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 32000
 --- !u!114 &-5845395421304040106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1592,10 +1646,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637993759446022862
+  lastModified: 637994131888110239
   FileSizes:
   - Name: Desktop
-    Value: 10082976
+    Value: 11685056
   Exists: 1
 --- !u!114 &-2880387357753163404
 MonoBehaviour:
@@ -1625,6 +1679,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 30
   Length: 13103
+--- !u!114 &-2806172108742107221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/--- Code Slicer ---/Environment/Train/TrainEngine
+  m_EditorClassIdentifier: 
+  Path: event:/--- Code Slicer ---/Environment/Train/TrainEngine
+  Guid:
+    Data1: -350856870
+    Data2: 1330068978
+    Data3: -110780755
+    Data4: -549774855
+  Banks:
+  - {fileID: -2933474125096768267}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 40
+  Length: 32000
 --- !u!114 &-2806044548861292776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1866,6 +1947,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-1366750628967515165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/--- Code Slicer ---/Environment/Train/TrainMX
+  m_EditorClassIdentifier: 
+  Path: event:/--- Code Slicer ---/Environment/Train/TrainMX
+  Guid:
+    Data1: 1147772733
+    Data2: 1211762151
+    Data3: 278957480
+    Data4: 1205921229
+  Banks:
+  - {fileID: -2933474125096768267}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 40
+  Length: 6057
 --- !u!114 &-1363819563853733723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2313,13 +2421,18 @@ MonoBehaviour:
   - {fileID: 5001154255587455014}
   - {fileID: 8880244092604054678}
   - {fileID: -4516059873685543326}
+  - {fileID: -2806172108742107221}
+  - {fileID: -9081623781626581557}
+  - {fileID: 7860785407179715132}
+  - {fileID: -6171348789558044849}
+  - {fileID: -1366750628967515165}
   EditorParameters:
   - {fileID: -6588442744460740224}
   MasterBanks:
   - {fileID: 4104646825822150671}
   StringsBanks:
   - {fileID: 5569406687674364823}
-  cacheTime: 637993759450473850
+  cacheTime: 637994131893113428
   cacheVersion: 131591
 --- !u!114 &90753169356398386
 MonoBehaviour:
@@ -2764,7 +2877,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637993759449693670
+  lastModified: 637994131892533300
   FileSizes:
   - Name: Desktop
     Value: 13186048
@@ -3246,7 +3359,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637993759450473850
+  lastModified: 637994131893113428
   FileSizes:
   - Name: Desktop
     Value: 10692384
@@ -3546,7 +3659,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637993759447553206
+  lastModified: 637994131889473537
   FileSizes:
   - Name: Desktop
     Value: 13191872
@@ -3911,10 +4024,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637993759447593209
+  lastModified: 637994131889523548
   FileSizes:
   - Name: Desktop
-    Value: 3256
+    Value: 3508
   Exists: 1
 --- !u!114 &5745125380043643507
 MonoBehaviour:
@@ -4433,6 +4546,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &7860785407179715132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/--- Code Slicer ---/Environment/Train/ApproachHiss1
+  m_EditorClassIdentifier: 
+  Path: event:/--- Code Slicer ---/Environment/Train/ApproachHiss1
+  Guid:
+    Data1: 1873809389
+    Data2: 1290291884
+    Data3: 152939711
+    Data4: 292721276
+  Banks:
+  - {fileID: -2933474125096768267}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 24000
 --- !u!114 &7901811107558960179
 MonoBehaviour:
   m_ObjectHideFlags: 0
