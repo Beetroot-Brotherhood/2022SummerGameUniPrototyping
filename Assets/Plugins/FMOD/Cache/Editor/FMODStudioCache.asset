@@ -1646,10 +1646,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637994736076882506
+  lastModified: 637995485854823043
   FileSizes:
   - Name: Desktop
-    Value: 11685056
+    Value: 16046016
   Exists: 1
 --- !u!114 &-2880387357753163404
 MonoBehaviour:
@@ -2042,6 +2042,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1500
+--- !u!114 &-1066466764840198964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/--- Code Slicer ---/Environment/Ambience/AmbienceSweeteners
+  m_EditorClassIdentifier: 
+  Path: event:/--- Code Slicer ---/Environment/Ambience/AmbienceSweeteners
+  Guid:
+    Data1: 349718135
+    Data2: 1163225868
+    Data3: 1358936732
+    Data4: -182049947
+  Banks:
+  - {fileID: -2933474125096768267}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 80
+  Length: 21000
 --- !u!114 &-969776377341139823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2425,13 +2452,15 @@ MonoBehaviour:
   - {fileID: -1366750628967515165}
   - {fileID: -6764456827220871095}
   - {fileID: 7419965068917307865}
+  - {fileID: 8128566618645163075}
+  - {fileID: -1066466764840198964}
   EditorParameters:
   - {fileID: -6588442744460740224}
   MasterBanks:
   - {fileID: 4104646825822150671}
   StringsBanks:
   - {fileID: 5569406687674364823}
-  cacheTime: 637994736077768266
+  cacheTime: 637995485858269316
   cacheVersion: 131591
 --- !u!114 &90753169356398386
 MonoBehaviour:
@@ -2849,7 +2878,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637994736077768266
+  lastModified: 637995485857549149
   FileSizes:
   - Name: Desktop
     Value: 13186048
@@ -3331,7 +3360,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637981967051262385
+  lastModified: 637995485858269316
   FileSizes:
   - Name: Desktop
     Value: 10692384
@@ -3631,7 +3660,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637994736077022620
+  lastModified: 637995485855403191
   FileSizes:
   - Name: Desktop
     Value: 958752
@@ -3996,10 +4025,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637994736077057655
+  lastModified: 637995485855443199
   FileSizes:
   - Name: Desktop
-    Value: 3502
+    Value: 3614
   Exists: 1
 --- !u!114 &5745125380043643507
 MonoBehaviour:
@@ -4680,6 +4709,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 17600
+--- !u!114 &8128566618645163075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/--- Code Slicer ---/Environment/Ambience/CityAmbience
+  m_EditorClassIdentifier: 
+  Path: event:/--- Code Slicer ---/Environment/Ambience/CityAmbience
+  Guid:
+    Data1: 854356522
+    Data2: 1301231552
+    Data3: -108123995
+    Data4: -1080432354
+  Banks:
+  - {fileID: -2933474125096768267}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 450000
 --- !u!114 &8349604337170520440
 MonoBehaviour:
   m_ObjectHideFlags: 0
