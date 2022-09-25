@@ -22,11 +22,11 @@ public class HasSeenTarget : DecoratorNode
     /// <returns> Node State </returns>
     protected override State OnUpdate()
     {
-        if (playOnFoundTarget && context.fieldOfView.targetvisible)
+        if (playOnFoundTarget && context.fieldOfView.targetVisible)
         {
             return RunChildren();
         }
-        else if (!playOnFoundTarget && !context.fieldOfView.targetvisible)
+        else if (!playOnFoundTarget && !context.fieldOfView.targetVisible)
         {
             return RunChildren();
         }

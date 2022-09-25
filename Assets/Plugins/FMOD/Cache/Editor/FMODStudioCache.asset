@@ -97,8 +97,8 @@ MonoBehaviour:
     Data3: -2136581231
     Data4: 399335133
   Banks:
-  - {fileID: 4104646825822150671}
   - {fileID: 2213804991741004845}
+  - {fileID: 4104646825822150671}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -656,6 +656,33 @@ MonoBehaviour:
   - Value I
   - Value J
   Exists: 1
+--- !u!114 &-6531034898709281268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/--- Code Slicer ---/Environment/Ambience/AmbienceSweeteners
+  m_EditorClassIdentifier: 
+  Path: event:/--- Code Slicer ---/Environment/Ambience/AmbienceSweeteners
+  Guid:
+    Data1: 349718135
+    Data2: 1163225868
+    Data3: 1358936732
+    Data4: -182049947
+  Banks:
+  - {fileID: -2933474125096768267}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 80
+  Length: 21000
 --- !u!114 &-6502409003103658759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1646,7 +1673,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637996368438465308
+  lastModified: 637996722348807705
   FileSizes:
   - Name: Desktop
     Value: 16046016
@@ -2452,15 +2479,15 @@ MonoBehaviour:
   - {fileID: -1366750628967515165}
   - {fileID: -6764456827220871095}
   - {fileID: 7419965068917307865}
-  - {fileID: 8128566618645163075}
-  - {fileID: -1066466764840198964}
+  - {fileID: 2541240561066566514}
+  - {fileID: -6531034898709281268}
   EditorParameters:
   - {fileID: -6588442744460740224}
   MasterBanks:
   - {fileID: 4104646825822150671}
   StringsBanks:
   - {fileID: 5569406687674364823}
-  cacheTime: 637996368440070573
+  cacheTime: 637996722348817711
   cacheVersion: 131591
 --- !u!114 &90753169356398386
 MonoBehaviour:
@@ -2878,7 +2905,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637996368439212878
+  lastModified: 637994736077768266
   FileSizes:
   - Name: Desktop
     Value: 13186048
@@ -2985,6 +3012,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &2541240561066566514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/--- Code Slicer ---/Environment/Ambience/CityAmbience
+  m_EditorClassIdentifier: 
+  Path: event:/--- Code Slicer ---/Environment/Ambience/CityAmbience
+  Guid:
+    Data1: 854356522
+    Data2: 1301231552
+    Data3: -108123995
+    Data4: -1080432354
+  Banks:
+  - {fileID: -2933474125096768267}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 450000
 --- !u!114 &2642030460359396607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3360,7 +3414,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637996368440070573
+  lastModified: 637981967051262385
   FileSizes:
   - Name: Desktop
     Value: 10692384
@@ -3660,7 +3714,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637996368438554644
+  lastModified: 637994736077022620
   FileSizes:
   - Name: Desktop
     Value: 958752
@@ -4025,7 +4079,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637996368438564605
+  lastModified: 637996722348817711
   FileSizes:
   - Name: Desktop
     Value: 3614

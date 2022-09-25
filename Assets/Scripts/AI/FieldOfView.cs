@@ -5,20 +5,24 @@ using UnityEngine;
 public class FieldOfView : MonoBehaviour
 {
     public float viewRadius;
+
     [Range(0, 360)]
     public float viewAngle;
 
     public LayerMask targetMask;
+
     public LayerMask obstacleMask;
 
     [HideInInspector]
     public List<Transform> visibleTargets = new List<Transform>();
 
-    public bool targetvisible = false;
+    public bool targetVisible = false;
+
     void Start()
     {
         StartCoroutine("FindTargetsWithDelay", 0.2f);
     }
+
     IEnumerator FindTargetsWithDelay(float delay)
     {
         while (true)
@@ -27,6 +31,7 @@ public class FieldOfView : MonoBehaviour
             FindVisibleTargets();
         }
     }
+
     void FindVisibleTargets()
     {
         visibleTargets.Clear(); /// clears list so there are no duplicate items stored in it
@@ -44,15 +49,16 @@ public class FieldOfView : MonoBehaviour
                 if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask)) /// if the raycast doesn't hit an obstacle blocking the target
                 {
                     visibleTargets.Add(target); /// adds the target to the visible targets list
-                    targetvisible = true;
+                    targetVisible = true;
                 }
                 else
                 {
-                    targetvisible = false;
+                    targetVisible = false;
                 }
             }
         }
     }
+
     public Vector3 DirFromAngle(float angleInDegrees, bool angleIsGlobal)
     {
         if (!angleIsGlobal)
