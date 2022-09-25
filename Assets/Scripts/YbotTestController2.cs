@@ -16,6 +16,8 @@ public class YbotTestController2 : MonoBehaviour
 
     public GameObject weaponHitbox;
 
+    public GameObject targetedUI;
+
 
     private void Start()
     {
@@ -26,15 +28,15 @@ public class YbotTestController2 : MonoBehaviour
     {
         if(weaponHitbox.GetComponent<ybotSwordCollisionDetection>().staggerCollision == true)
         {
-            
             YbotStagger();
         }
-
 
         if (canAttack == true)
         {
             YbotAttackFunc();
         }
+
+        Krezme.QualityOfLife.LookAtPlayer(targetedUI.transform, Camera.main.transform);
     }
 
     //attacking functions for playing animations and cooldown
@@ -52,11 +54,9 @@ public class YbotTestController2 : MonoBehaviour
 
     IEnumerator ResetYbotAttackCooldown()
     {
-
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
         anim.SetBool("Attacking", false);
-
     }
 
 

@@ -56,7 +56,7 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
             boxLocation = new Vector3(other.transform.position.x, other.transform.position.y, other.transform.position.z);
             // This needs a bool to indicate when an enemy is staggered so they can be sliced
             for (int i = 0; i < hitGameobjects.Length; i++) {
-                if (hitGameobjects[i].gameObject.tag == "Enemy") {
+                if (hitGameobjects[i].gameObject.tag == "EnemyPart") {
                     if (currentAttackState == AttackState.LightAttack) {
                         if (IsEnemyStaggered(i) == Bool3D.False) {
                             DealStaggerDamage(combatManager.currentStatistics.lightAttackDamage);
@@ -152,7 +152,7 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
                 SlicedCounter bottomSlicedCounter = bottom.AddComponent<SlicedCounter>();
                 bottomSlicedCounter.IncrementCounter(thisObjectSlicedCounterInt);
                 bottom.gameObject.layer = LayerMask.NameToLayer("Sliceable");
-                bottom.gameObject.tag = "Enemy";
+                bottom.gameObject.tag = "EnemyPart";
                 tempRB.AddExplosionForce(200, cutPlane.transform.position, 15);
 
                 #region Fmod
@@ -171,7 +171,7 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
                 SlicedCounter topSlicedCounter = top.AddComponent<SlicedCounter>();
                 topSlicedCounter.IncrementCounter(thisObjectSlicedCounterInt);
                 top.gameObject.layer = LayerMask.NameToLayer("Sliceable");
-                top.gameObject.tag = "Enemy";
+                top.gameObject.tag = "EnemyPart";
                 tempRB2.AddExplosionForce(200, cutPlane.transform.position, 15);
                 Destroy(hitGameobjects[i].gameObject);
             }

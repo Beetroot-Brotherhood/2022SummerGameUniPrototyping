@@ -47,6 +47,11 @@ namespace Krezme {
         public static bool CompareTags(string firstTag, string secondTag) {
             return firstTag == secondTag ? true : false;
         }
+
+        //function for UI sprite to look at the player
+        public static void LookAtPlayer(Transform spriteTransform, Transform playerTransform) {
+            spriteTransform.LookAt(playerTransform);
+        }
     }
 
     public enum Bool3D {
