@@ -1198,6 +1198,33 @@ MonoBehaviour:
   MinDistance: 4.6
   MaxDistance: 200
   Length: 5000
+--- !u!114 &-4897689731256263848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/--- Code Slicer ---/Environment/Train/TrainPassingWhoosh
+  m_EditorClassIdentifier: 
+  Path: event:/--- Code Slicer ---/Environment/Train/TrainPassingWhoosh
+  Guid:
+    Data1: 1445398448
+    Data2: 1148374113
+    Data3: 789077904
+    Data4: -189369740
+  Banks:
+  - {fileID: -2933474125096768267}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 10
+  Length: 16000
 --- !u!114 &-4692353169066890802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1673,10 +1700,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637996368438465308
+  lastModified: 637998824148021998
   FileSizes:
   - Name: Desktop
-    Value: 16046016
+    Value: 16252384
   Exists: 1
 --- !u!114 &-2880387357753163404
 MonoBehaviour:
@@ -2481,13 +2508,14 @@ MonoBehaviour:
   - {fileID: 7419965068917307865}
   - {fileID: 2541240561066566514}
   - {fileID: -6531034898709281268}
+  - {fileID: -4897689731256263848}
   EditorParameters:
   - {fileID: -6588442744460740224}
   MasterBanks:
   - {fileID: 4104646825822150671}
   StringsBanks:
   - {fileID: 5569406687674364823}
-  cacheTime: 637996368440070573
+  cacheTime: 637998824151355772
   cacheVersion: 131591
 --- !u!114 &90753169356398386
 MonoBehaviour:
@@ -2905,7 +2933,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637996368439212878
+  lastModified: 637998824150770036
   FileSizes:
   - Name: Desktop
     Value: 13186048
@@ -3414,7 +3442,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637996368440070573
+  lastModified: 637998824151355772
   FileSizes:
   - Name: Desktop
     Value: 10692384
@@ -3714,7 +3742,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637996368438554644
+  lastModified: 637998824148599550
   FileSizes:
   - Name: Desktop
     Value: 958752
@@ -4079,10 +4107,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637996368438564605
+  lastModified: 637998824148639555
   FileSizes:
   - Name: Desktop
-    Value: 3614
+    Value: 3658
   Exists: 1
 --- !u!114 &5745125380043643507
 MonoBehaviour:
