@@ -7,11 +7,25 @@ namespace StarterAssets
 {
 	public class StarterAssetsInputs : MonoBehaviour
 	{
+		public static StarterAssetsInputs instance;
+
+		void Awake()
+		{
+			if (instance != null)
+			{
+				Debug.LogError("More than one StarterAssetsInput!");
+			}
+			else
+			{
+				instance = this;
+			}
+		}
 		[Header("Character Input Values")]
 		public Vector2 move;
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
+		public bool onFire1;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -43,6 +57,11 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
+
+		public void OnFire1 (InputValue value)
+        {
+			onFire1 = value.isPressed;
+        }
 #endif
 
 
