@@ -123,72 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &402994753 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5053469892037826219, guid: 568a2fe3cc8970e4eaecdcac84df7e49, type: 3}
-  m_PrefabInstance: {fileID: 8243977314841200202}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7180bed9a45726747b70c8707b725f50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &903599853 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5936746702333909677, guid: 568a2fe3cc8970e4eaecdcac84df7e49, type: 3}
-  m_PrefabInstance: {fileID: 8243977314841200202}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &903599862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 903599853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf08dbd414dc2ed409b9e31ecb26d9f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  move: 0
-  turn: 0
-  look: {x: 0, y: 0}
-  jump: 1
-  sprint: 1
-  analogMovement: 0
-  cursorLocked: 1
-  cursorInputForLook: 1
---- !u!114 &903599863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 903599853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cad10e7070048af498e37f668c766aa3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSounds: {fileID: 402994753}
-  MoveSpeed: 4
-  SprintSpeed: 6
-  RotationSpeed: 1
-  SpeedChangeRate: 10
-  JumpHeight: 1.2
-  Gravity: -15
-  JumpTimeout: 0.1
-  FallTimeout: 0.15
-  Grounded: 1
-  GroundedOffset: 3
-  GroundedRadius: 0.5
-  GroundLayers:
-    serializedVersion: 2
-    m_Bits: 1
-  CinemachineCameraTarget: {fileID: 1800655632}
-  TopClamp: 90
-  BottomClamp: -90
 --- !u!1001 &936434488
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -348,11 +282,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &1800655632 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2059715811876037622, guid: 568a2fe3cc8970e4eaecdcac84df7e49, type: 3}
-  m_PrefabInstance: {fileID: 8243977314841200202}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1800655633 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2059715811876037617, guid: 568a2fe3cc8970e4eaecdcac84df7e49, type: 3}

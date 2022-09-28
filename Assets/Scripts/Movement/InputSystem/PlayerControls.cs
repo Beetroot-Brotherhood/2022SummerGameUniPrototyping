@@ -29,17 +29,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Move"",
-                    ""type"": ""Value"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""322211bc-d52b-4dcb-a053-7b332ba2309b"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Turn"",
-                    ""type"": ""Value"",
-                    ""id"": ""a62f0cc1-9819-460d-8818-704c03eb9d88"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -75,9 +66,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
             ],
             ""bindings"": [
                 {
-                    ""name"": ""WS"",
-                    ""id"": ""44dfba26-7506-4498-861c-ec7fe47c35e8"",
-                    ""path"": ""1DAxis"",
+                    ""name"": ""WASD"",
+                    ""id"": ""c5aa915f-abe8-468f-b2da-948cd74ea57b"",
+                    ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -86,68 +77,46 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""negative"",
-                    ""id"": ""b159e5f0-bf62-4c5b-89b2-5c03af0b85c4"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""591813e4-9c8c-4397-b453-f01b3fb4c1af"",
+                    ""name"": ""up"",
+                    ""id"": ""91dbeb0e-9f8a-46c6-b082-3e7c4100ca0e"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Keyboard and Mouse"",
+                    ""groups"": """",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""AD"",
-                    ""id"": ""f969d139-fbac-4c49-8917-86129dfeb7e8"",
-                    ""path"": ""1DAxis"",
+                    ""name"": ""down"",
+                    ""id"": ""3b9ac9c9-e268-4247-8c92-9a13d9a319cf"",
+                    ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Turn"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""AD"",
-                    ""id"": ""380b3415-5ec6-4b70-bceb-c9a53ed0bde5"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Turn"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""591da2e7-1712-4160-b807-66ba43796b8f"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""Turn"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""positive"",
-                    ""id"": ""1f72d87a-b328-432b-8aca-d37706eaabac"",
+                    ""name"": ""left"",
+                    ""id"": ""f3ca0d82-4ae8-48ff-a57e-3aa0a2baa094"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""0ceeb97a-5261-4319-a3f0-02a17e220bba"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""Turn"",
+                    ""groups"": """",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -178,7 +147,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""id"": ""b3d6589a-c247-4891-a522-649f24585923"",
                     ""path"": ""<Pointer>/delta"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""InvertVector2(invertX=false)"",
                     ""groups"": ""Keyboard and Mouse"",
                     ""action"": ""Look"",
                     ""isComposite"": false,
@@ -209,7 +178,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         // Mech
         m_Mech = asset.FindActionMap("Mech", throwIfNotFound: true);
         m_Mech_Move = m_Mech.FindAction("Move", throwIfNotFound: true);
-        m_Mech_Turn = m_Mech.FindAction("Turn", throwIfNotFound: true);
         m_Mech_Look = m_Mech.FindAction("Look", throwIfNotFound: true);
         m_Mech_Jump = m_Mech.FindAction("Jump", throwIfNotFound: true);
         m_Mech_Sprint = m_Mech.FindAction("Sprint", throwIfNotFound: true);
@@ -273,7 +241,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Mech;
     private IMechActions m_MechActionsCallbackInterface;
     private readonly InputAction m_Mech_Move;
-    private readonly InputAction m_Mech_Turn;
     private readonly InputAction m_Mech_Look;
     private readonly InputAction m_Mech_Jump;
     private readonly InputAction m_Mech_Sprint;
@@ -282,7 +249,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         private @PlayerControls m_Wrapper;
         public MechActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Mech_Move;
-        public InputAction @Turn => m_Wrapper.m_Mech_Turn;
         public InputAction @Look => m_Wrapper.m_Mech_Look;
         public InputAction @Jump => m_Wrapper.m_Mech_Jump;
         public InputAction @Sprint => m_Wrapper.m_Mech_Sprint;
@@ -298,9 +264,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Move.started -= m_Wrapper.m_MechActionsCallbackInterface.OnMove;
                 @Move.performed -= m_Wrapper.m_MechActionsCallbackInterface.OnMove;
                 @Move.canceled -= m_Wrapper.m_MechActionsCallbackInterface.OnMove;
-                @Turn.started -= m_Wrapper.m_MechActionsCallbackInterface.OnTurn;
-                @Turn.performed -= m_Wrapper.m_MechActionsCallbackInterface.OnTurn;
-                @Turn.canceled -= m_Wrapper.m_MechActionsCallbackInterface.OnTurn;
                 @Look.started -= m_Wrapper.m_MechActionsCallbackInterface.OnLook;
                 @Look.performed -= m_Wrapper.m_MechActionsCallbackInterface.OnLook;
                 @Look.canceled -= m_Wrapper.m_MechActionsCallbackInterface.OnLook;
@@ -317,9 +280,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
-                @Turn.started += instance.OnTurn;
-                @Turn.performed += instance.OnTurn;
-                @Turn.canceled += instance.OnTurn;
                 @Look.started += instance.OnLook;
                 @Look.performed += instance.OnLook;
                 @Look.canceled += instance.OnLook;
@@ -345,7 +305,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     public interface IMechActions
     {
         void OnMove(InputAction.CallbackContext context);
-        void OnTurn(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnSprint(InputAction.CallbackContext context);

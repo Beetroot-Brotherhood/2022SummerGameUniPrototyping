@@ -5268,6 +5268,8 @@ GameObject:
   - component: {fileID: 6424489354003333143}
   - component: {fileID: 5936746702333909671}
   - component: {fileID: 5936746702333909665}
+  - component: {fileID: 903599862}
+  - component: {fileID: 903599863}
   m_Layer: 8
   m_Name: New Controls Player
   m_TagString: Player
@@ -5414,6 +5416,58 @@ MonoBehaviour:
   m_DefaultActionMap: Mech
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &903599862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5936746702333909677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf08dbd414dc2ed409b9e31ecb26d9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  move: {x: 0, y: 0}
+  look: {x: 0, y: 0}
+  jump: 1
+  sprint: 1
+  analogMovement: 0
+  cursorLocked: 1
+  cursorInputForLook: 1
+--- !u!114 &903599863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5936746702333909677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad10e7070048af498e37f668c766aa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSounds: {fileID: 5053469892037826219}
+  MoveSpeed: 4
+  SprintSpeed: 6
+  LookSpeed: 3
+  RotationSpeed: 50
+  SpeedChangeRate: 10
+  JumpHeight: 1.2
+  Gravity: -15
+  JumpTimeout: 0.1
+  FallTimeout: 0.15
+  Grounded: 1
+  GroundedOffset: 3
+  GroundedRadius: 0.5
+  GroundLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  CinemachineCameraTarget: {fileID: 2059715811876037622}
+  TopClamp: 60
+  BottomClamp: -60
+  RightClamp: 80
+  LeftClamp: -80
 --- !u!1 &6285349182082962798
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,8 +14,10 @@ public class MechController : MonoBehaviour
 		public float MoveSpeed = 4.0f;
 		[Tooltip("Sprint speed of the character in m/s")]
 		public float SprintSpeed = 6.0f;
-		[Tooltip("Rotation speed of the character")]
-		public float RotationSpeed = 1.0f;
+		[Tooltip("Look speed of the character")]
+		public float LookSpeed = 1.0f;
+        [Tooltip("Rotation speed of the character")]
+		public float RotationSpeed = 10.0f;
 		[Tooltip("Acceleration and deceleration")]
 		public float SpeedChangeRate = 10.0f;
 
@@ -56,9 +58,14 @@ public class MechController : MonoBehaviour
 		public float TopClamp = 90.0f;
 		[Tooltip("How far in degrees can you move the camera down")]
 		public float BottomClamp = -90.0f;
+        [Tooltip("How far in degrees can you move the camera right")]
+		public float RightClamp = 90.0f;
+		[Tooltip("How far in degrees can you move the camera left")]
+		public float LeftClamp = -90.0f;
 
 		// cinemachine
-		private float _cinemachineTargetPitch;
+		private float _cinemachineTargetPitchY;
+        private float _cinemachineTargetPitchX;
 #endregion
 
 #region Player Velocity Variables
@@ -115,7 +122,7 @@ public class MechController : MonoBehaviour
     {
         JumpAndGravity();
         GroundedCheck();
-        //Move();
+        Move();
     }
 
     private void LateUpdate()
@@ -138,18 +145,22 @@ public class MechController : MonoBehaviour
             //Don't multiply mouse input by Time.deltaTime
             float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
             
-            _cinemachineTargetPitch += _playerInputs.look.y * RotationSpeed * deltaTimeMultiplier;
-            _rotationVelocity = _playerInputs.look.x * RotationSpeed * deltaTimeMultiplier;
+            _cinemachineTargetPitchY += _playerInputs.look.y * LookSpeed * deltaTimeMultiplier;
+            _cinemachineTargetPitchX += _playerInputs.look.x * LookSpeed * deltaTimeMultiplier;
+            
 
             // clamp our pitch rotation
-            _cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, BottomClamp, TopClamp);
+            _cinemachineTargetPitchY = ClampAngle(_cinemachineTargetPitchY, BottomClamp, TopClamp);
+            // clamp our pitch rotation
+            _cinemachineTargetPitchX = ClampAngle(_cinemachineTargetPitchX, LeftClamp, RightClamp);
 
             // Update Cinemachine camera target pitch
-            CinemachineCameraTarget.transform.localRotation = Quaternion.Euler(_cinemachineTargetPitch, 0.0f, 0.0f);
+            CinemachineCameraTarget.transform.localRotation = Quaternion.Euler(_cinemachineTargetPitchY, _cinemachineTargetPitchX, 0.0f);
 
+            
         }
     }
-    /* private void Move()
+    private void Move()
     {
         // set target speed based on move speed, sprint speed and if sprint is pressed
         float targetSpeed = _playerInputs.sprint ? SprintSpeed : MoveSpeed;
@@ -184,20 +195,26 @@ public class MechController : MonoBehaviour
         // normalise input direction
         Vector3 inputDirection = new Vector3(_playerInputs.move.x, 0.0f, _playerInputs.move.y).normalized;
 
+        Debug.Log(_playerInputs.move);
+
         // note: Vector2's != operator uses approximation so is not floating point error prone, and is cheaper than magnitude
         // if there is a move input rotate player when the player is moving
         if (_playerInputs.move != Vector2.zero)
         {
             // move
-            inputDirection = transform.right * _playerInputs.move.x + transform.forward * _playerInputs.move.y;
+            inputDirection = transform.right * 0 + transform.forward * _playerInputs.move.y;
+            
         }
 
+        _rotationVelocity = _playerInputs.move.x * RotationSpeed * Time.deltaTime;
+        
         // rotate the player left and right
-            transform.Rotate(Vector3.up * _rotationVelocity);
+        transform.Rotate(Vector3.up * _rotationVelocity);
+
 
         // move the player
         _controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
-    } */
+    }
     private void JumpAndGravity()
 		{
 			if (Grounded)
