@@ -18,6 +18,7 @@ public class YbotTestController2 : MonoBehaviour
 
     public GameObject targetedUI;
 
+    public GameObject chestPiece;
 
     private void Start()
     {

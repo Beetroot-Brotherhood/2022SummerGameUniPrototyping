@@ -46,6 +46,7 @@ public class CombatManager : MonoBehaviour
     public Transform cameraPoint;
     public Transform throwablePoint;
     public GameObject suctionThrowable;
+    public EnemyLockOn enemyLockOn;
 
     public float holdThreshold;
     public float parryCooldown;
@@ -218,6 +219,13 @@ public class CombatManager : MonoBehaviour
 
     public void ResetCurrentStatistics() {
         currentStatistics = defaultStatistics.DeepClone();
+    }
+
+    public void UltimateFunc() {
+        if (OnSlicerInput.instance.onUltimate) {
+            
+            OnSlicerInput.instance.onUltimate = false;
+        }
     }
 
 #region AnimationEvents

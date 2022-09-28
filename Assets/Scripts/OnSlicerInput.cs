@@ -15,8 +15,7 @@ public class OnSlicerInput : MonoBehaviour
         }
     }
 
-    [HideInInspector] public bool onRotateAntiClock;
-    [HideInInspector] public bool onRotateClock;
+    [HideInInspector] public bool onUltimate;
     [HideInInspector] public bool onSlice;
     [HideInInspector] public bool onGatherSlicedParts;
     [HideInInspector] public bool onParry;
@@ -25,13 +24,9 @@ public class OnSlicerInput : MonoBehaviour
     [HideInInspector] public AttackDirections currentAttackDirection;
 
     //public GameObject slicer;
-    
-    public void OnRotateAntiClock (InputValue value) {
-        onRotateAntiClock = value.isPressed;
-    }
 
-    public void OnRotateClock (InputValue value) {
-        onRotateClock = value.isPressed;
+    public void OnUltimate (InputValue value) {
+        onUltimate = value.isPressed;
     }
 
     public void OnSlice (InputValue value) {

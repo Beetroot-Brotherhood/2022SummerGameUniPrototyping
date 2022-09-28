@@ -1522,6 +1522,7 @@ MonoBehaviour:
   isAttacking: 0
   weaponHitbox: {fileID: 4075039528343141732}
   targetedUI: {fileID: 894245747308102999}
+  chestPiece: {fileID: 7949512891983280592}
 --- !u!143 &1493772154
 CharacterController:
   m_ObjectHideFlags: 0
@@ -3492,6 +3493,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b13b75ce950f0e4e968a02d206091e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &7949512891983280592 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4135843867609116757, guid: eba5fc90938e2154ebdaff9eb4a29f9b, type: 3}
+  m_PrefabInstance: {fileID: 6284544370575968645}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7949512891983280593 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4135843867609116756, guid: eba5fc90938e2154ebdaff9eb4a29f9b, type: 3}

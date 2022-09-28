@@ -84,7 +84,8 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
                 }
             }
             cutPlane.transform.Rotate(Vector3.forward * 180, Space.Self);
-            this.gameObject.SetActive(false);
+            //TODO
+            this.gameObject.SetActive(false); //! TODO This needs to be fixed. Make a list that will store all sliced, generated and hit objects and prevent the secondary slicing of the same object.
         }
     }
 
@@ -126,13 +127,17 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
     /// <summary>
     /// Totally separated enemy slicing functionality
     /// </summary>
-    /// <param name="other"></param>
     /// <param name="i"></param>
-    void SlicingEnemy(int i) {
-        Bool3D temp3DState = IsEnemyStaggered(i);
-        if (temp3DState == Bool3D.False) {
-            return;
-        }else if (temp3DState == Bool3D.True) {
+    /// <param name="bypass">Bypassing the stagger requirement</param>
+    void SlicingEnemy(int i, bool bypass = false) {
+        if (!bypass) {
+            Bool3D temp3DState = IsEnemyStaggered(i);
+            if (temp3DState == Bool3D.False) {
+                return;
+            }else if (temp3DState == Bool3D.True) {
+                dollLimbController.Sliced();
+            }
+        }else {
             dollLimbController.Sliced();
         }
         
