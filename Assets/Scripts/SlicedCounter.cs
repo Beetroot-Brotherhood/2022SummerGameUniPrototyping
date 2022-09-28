@@ -69,6 +69,6 @@ public class SlicedCounter : MonoBehaviour
     {
         collisionSounds.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
         collisionSounds.start();
-        collisionSounds.release();
+        //collisionSounds.release();
     }
 }
