@@ -211,7 +211,7 @@ public class CombatManager : MonoBehaviour
         if(OnSlicerInput.instance.onKick && canAttack)
         {
             weaponAnimator.SetTrigger("Kick");
-
+            FMODUnity.RuntimeManager.PlayOneShot("event:/--- Code Slicer ---/Player/Kick/KickAction");
 
             OnSlicerInput.instance.onKick = false;
         }

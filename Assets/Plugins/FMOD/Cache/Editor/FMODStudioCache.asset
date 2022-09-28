@@ -26,7 +26,7 @@ MonoBehaviour:
   Parameters:
   - {fileID: -4376084203764100919}
   MinDistance: 1
-  MaxDistance: 900
+  MaxDistance: 15
   Length: 375
 --- !u!114 &-9081623781626581557
 MonoBehaviour:
@@ -1390,6 +1390,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-4297270684904835950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/--- Code Slicer ---/Player/Kick/KickAction
+  m_EditorClassIdentifier: 
+  Path: event:/--- Code Slicer ---/Player/Kick/KickAction
+  Guid:
+    Data1: 1491036477
+    Data2: 1207420848
+    Data3: -35512132
+    Data4: -1454796439
+  Banks:
+  - {fileID: 4104646825822150671}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1240
 --- !u!114 &-4286007365553897956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1727,7 +1754,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637999307063088446
+  lastModified: 637999345933329418
   FileSizes:
   - Name: Desktop
     Value: 16252384
@@ -2534,13 +2561,15 @@ MonoBehaviour:
   - {fileID: 5967364236038614569}
   - {fileID: -9177485757220431566}
   - {fileID: 8406028547866651504}
+  - {fileID: -4297270684904835950}
+  - {fileID: 8483489414178037543}
   EditorParameters:
   - {fileID: -6588442744460740224}
   MasterBanks:
   - {fileID: 4104646825822150671}
   StringsBanks:
   - {fileID: 5569406687674364823}
-  cacheTime: 637999307066396513
+  cacheTime: 637999345936587560
   cacheVersion: 131591
 --- !u!114 &90753169356398386
 MonoBehaviour:
@@ -2958,7 +2987,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637999307065846013
+  lastModified: 637999345935901911
   FileSizes:
   - Name: Desktop
     Value: 13186048
@@ -3440,7 +3469,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637999307066396513
+  lastModified: 637999345936587560
   FileSizes:
   - Name: Desktop
     Value: 10692384
@@ -3740,10 +3769,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637999307063628945
+  lastModified: 637999345933859913
   FileSizes:
   - Name: Desktop
-    Value: 965024
+    Value: 988000
   Exists: 1
 --- !u!114 &4158535783234723730
 MonoBehaviour:
@@ -4105,10 +4134,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637999307063658969
+  lastModified: 637999345933899940
   FileSizes:
   - Name: Desktop
-    Value: 3782
+    Value: 3874
   Exists: 1
 --- !u!114 &5745125380043643507
 MonoBehaviour:
@@ -4970,6 +4999,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &8483489414178037543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/--- Code Slicer ---/Player/Kick/KickHit
+  m_EditorClassIdentifier: 
+  Path: event:/--- Code Slicer ---/Player/Kick/KickHit
+  Guid:
+    Data1: -468753783
+    Data2: 1155672729
+    Data3: 1251562662
+    Data4: -471697913
+  Banks:
+  - {fileID: 4104646825822150671}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 360
 --- !u!114 &8572180024705178869
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -26,6 +26,7 @@ public class KickBoxScript : MonoBehaviour
             if(rb != null)
             {
                 rb.AddExplosionForce(kickForce, transform.position, kickSize);
+                FMODUnity.RuntimeManager.PlayOneShot("event:/--- Code Slicer ---/Player/Kick/KickHit");
             }
 
         }

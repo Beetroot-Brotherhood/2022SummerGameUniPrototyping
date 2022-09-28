@@ -54,7 +54,7 @@ public class SlicedCounter : MonoBehaviour
         timePassed = 0;
     }
 
-    public float RequiredVelocity = 8;
+    public float RequiredVelocity = 4;
     //Creates inspector window slot in which the GameObject that contains the desired to be played RandomAudioPlayer Sctipt must be placed (In this case it should be tbe object that this script is also placed on)
 
     void OnCollisionEnter(Collision collision)
