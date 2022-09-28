@@ -20,8 +20,11 @@ public class ShootingScript : MonoBehaviour
     [HideInInspector]
     public GameObject lBullet, rBullet;
 
+    private PlayerInputs _playerInputs;
+
     void Start()
     {
+        _playerInputs = GetComponent<PlayerInputs>();
         timeremaining = lifespan;
     }
 
@@ -49,9 +52,15 @@ public class ShootingScript : MonoBehaviour
             }
         }
 
+        if(_playerInputs.fire)
+        {
+            Fire();
+            _playerInputs.fire = false;
+        }
+
     }
 
-    void OnFire()
+    void Fire()
     {
         leftGunEnd.LookAt(aim);
         rightGunEnd.LookAt(aim);

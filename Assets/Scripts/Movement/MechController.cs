@@ -195,8 +195,6 @@ public class MechController : MonoBehaviour
         // normalise input direction
         Vector3 inputDirection = new Vector3(_playerInputs.move.x, 0.0f, _playerInputs.move.y).normalized;
 
-        Debug.Log(_playerInputs.move);
-
         // note: Vector2's != operator uses approximation so is not floating point error prone, and is cheaper than magnitude
         // if there is a move input rotate player when the player is moving
         if (_playerInputs.move != Vector2.zero)

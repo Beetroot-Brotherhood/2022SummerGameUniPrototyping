@@ -6,7 +6,7 @@ public class StickingToTrack : MonoBehaviour
 {
     public bool onTrack = false;
     public GameObject dollyCart, playerObject;
-    public StarterAssets.FirstPersonController firstPersonController;
+    public MechController mechController;
     public TrainController trainController;
     
 
@@ -24,7 +24,7 @@ public class StickingToTrack : MonoBehaviour
             playerObject.transform.position = dollyCart.transform.position;
             playerObject.transform.rotation = dollyCart.transform.rotation;
             playerObject.transform.parent = dollyCart.transform;
-            firstPersonController.enabled = false;
+            mechController.enabled = false;
             trainController.enabled = true;
 
         }

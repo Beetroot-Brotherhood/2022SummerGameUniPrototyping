@@ -10,6 +10,7 @@ public class PlayerInputs : MonoBehaviour
 		public Vector2 look; // free camera look
 		public bool jump;
 		public bool sprint;
+		public bool fire;
 
     [Header("Movement Settings")]
 		public bool analogMovement;
@@ -41,6 +42,11 @@ public class PlayerInputs : MonoBehaviour
 		SprintInput(value.isPressed);
 	}
 
+	public void OnFire(InputValue value)
+	{
+		FireInput(value.isPressed);
+	}
+
 
     public void MoveInput(Vector2 newMoveDirection)
 	{
@@ -61,8 +67,13 @@ public class PlayerInputs : MonoBehaviour
 	{
 		sprint = newSprintState;
 	}
+
+	public void FireInput(bool newFireState)
+	{
+		fire = newFireState;
+	}
 		
-	private void OnApplicationFocus(bool hasFocus)
+	private void OnApplicationFocus(bool hasFocus) // locks the cursor if the game is in focus
 	{
 		SetCursorState(cursorLocked);
 	}
