@@ -19,5 +19,6 @@ public enum Materials
    Mud,
    Plastic,
    Water,
-   Glass
+   Glass,
+   Gravel
 }
