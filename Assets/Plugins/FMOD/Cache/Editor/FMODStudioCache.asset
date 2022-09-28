@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637995366910575009
+  lastModified: 637999995394386183
   FileSizes:
   - Name: Desktop
     Value: 10692384
@@ -47,6 +47,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2250
+--- !u!114 &-8680532397802301933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Testing/AudioOcclusionTest
+  m_EditorClassIdentifier: 
+  Path: event:/Testing/AudioOcclusionTest
+  Guid:
+    Data1: -658833488
+    Data2: 1110972665
+    Data3: -1431518075
+    Data4: 154986206
+  Banks:
+  - {fileID: -9194464821657531843}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -254705754030251484}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 87272
 --- !u!114 &-8193076097342945088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,12 +452,39 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637995366909064190
+  lastModified: 637999995392101217
   FileSizes:
   - Name: Desktop
-    Value: 25082656
+    Value: 26647200
   Exists: 1
---- !u!114 &-4597689122092199292
+--- !u!114 &-4095432354530624399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mech/Rain Ambience/RainRight
+  m_EditorClassIdentifier: 
+  Path: event:/Mech/Rain Ambience/RainRight
+  Guid:
+    Data1: 960973659
+    Data2: 1253067600
+    Data3: 1031345044
+    Data4: 492702563
+  Banks:
+  - {fileID: -4842344412843522935}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 50
+  Length: 72000
+--- !u!114 &-4086041994450032873
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -453,8 +508,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 7122603257510134802}
-  - {fileID: 2414646428530904628}
+  - {fileID: 1170211377498998606}
+  - {fileID: 8907679989671672738}
   MinDistance: 1
   MaxDistance: 20
   Length: 776307
@@ -488,30 +543,6 @@ MonoBehaviour:
   - Dirt
   - Mud
   Exists: 1
---- !u!114 &-3292372916684437636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/AudioOcclusionTest/Occlusion
-  m_EditorClassIdentifier: 
-  Name: Occlusion
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3098557548
-    data2: 3029766217
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-2318803830489419933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -539,34 +570,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-2061690393597419483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Testing/TalkingOcclusion
-  m_EditorClassIdentifier: 
-  Path: event:/Testing/TalkingOcclusion
-  Guid:
-    Data1: 553708907
-    Data2: 1125915434
-    Data3: 1511566982
-    Data4: 125633782
-  Banks:
-  - {fileID: -9194464821657531843}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 676395392266713971}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 30743
 --- !u!114 &-1480113649155504241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -752,6 +755,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-254705754030251484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/AudioOcclusionTest/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3098557548
+    data2: 3029766217
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -786,9 +813,6 @@ MonoBehaviour:
   - {fileID: 3064598447129638866}
   - {fileID: 8084590791877933962}
   - {fileID: 9201891526700569023}
-  - {fileID: -4597689122092199292}
-  - {fileID: -2061690393597419483}
-  - {fileID: 3360173967324878149}
   - {fileID: -2318803830489419933}
   - {fileID: 1027425273416738360}
   - {fileID: -9100213207325170545}
@@ -798,15 +822,21 @@ MonoBehaviour:
   - {fileID: -886769886745480801}
   - {fileID: -8193076097342945088}
   - {fileID: 2940444505138207155}
+  - {fileID: -4095432354530624399}
+  - {fileID: 1136632337969095553}
+  - {fileID: 6044856836975176938}
+  - {fileID: -4086041994450032873}
+  - {fileID: 404327497177059580}
+  - {fileID: -8680532397802301933}
   EditorParameters:
   - {fileID: -754482486958039952}
   MasterBanks:
   - {fileID: -4842344412843522935}
   StringsBanks:
   - {fileID: 5281460975032158907}
-  cacheTime: 637995366910575009
+  cacheTime: 637999995394386183
   cacheVersion: 131591
---- !u!114 &676395392266713971
+--- !u!114 &404327497177059580
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -815,21 +845,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/TalkingOcclusion/Occlusion
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Testing/TalkingOcclusion
   m_EditorClassIdentifier: 
-  Name: Occlusion
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3098557548
-    data2: 3029766217
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
+  Path: event:/Testing/TalkingOcclusion
+  Guid:
+    Data1: 553708907
+    Data2: 1125915434
+    Data3: 1511566982
+    Data4: 125633782
+  Banks:
+  - {fileID: -9194464821657531843}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 2864740310399078046}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 30743
 --- !u!114 &1027425273416738360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -883,6 +917,59 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &1136632337969095553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mech/Rain Ambience/MainRain
+  m_EditorClassIdentifier: 
+  Path: event:/Mech/Rain Ambience/MainRain
+  Guid:
+    Data1: 332642944
+    Data2: 1274582177
+    Data3: 461978264
+    Data4: -784345322
+  Banks:
+  - {fileID: -4842344412843522935}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 45
+  Length: 100800
+--- !u!114 &1170211377498998606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RadioTest/RadioState
+  m_EditorClassIdentifier: 
+  Name: RadioState
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 1088831446
+    data2: 1811705897
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Off
+  - On
+  Exists: 1
 --- !u!114 &2246758016339282255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -907,7 +994,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &2414646428530904628
+--- !u!114 &2864740310399078046
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -917,7 +1004,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/RadioTest/Occlusion
+  m_Name: parameter:/TalkingOcclusion/Occlusion
   m_EditorClassIdentifier: 
   Name: Occlusion
   StudioPath: 
@@ -985,34 +1072,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &3360173967324878149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Testing/AudioOcclusionTest
-  m_EditorClassIdentifier: 
-  Path: event:/Testing/AudioOcclusionTest
-  Guid:
-    Data1: -658833488
-    Data2: 1110972665
-    Data3: -1431518075
-    Data4: 154986206
-  Banks:
-  - {fileID: -9194464821657531843}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -3292372916684437636}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 87272
 --- !u!114 &3879535657337526303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1028,7 +1087,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637995366909418895
+  lastModified: 637999995393842112
   FileSizes:
   - Name: Desktop
     Value: 12662944
@@ -1103,10 +1162,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637995366909084180
+  lastModified: 637999995392146566
   FileSizes:
   - Name: Desktop
-    Value: 2620
+    Value: 2784
   Exists: 1
 --- !u!114 &5816971183150374469
 MonoBehaviour:
@@ -1169,6 +1228,33 @@ MonoBehaviour:
   - Value I
   - Value J
   Exists: 1
+--- !u!114 &6044856836975176938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mech/Rain Ambience/RainLeft
+  m_EditorClassIdentifier: 
+  Path: event:/Mech/Rain Ambience/RainLeft
+  Guid:
+    Data1: -1350257209
+    Data2: 1193442951
+    Data3: -889974377
+    Data4: -799886053
+  Banks:
+  - {fileID: -4842344412843522935}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 50
+  Length: 72000
 --- !u!114 &6454103502693541807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1184,7 +1270,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637995366908016306
+  lastModified: 637999995389479185
   FileSizes:
   - Name: Desktop
     Value: 6946752
@@ -1263,32 +1349,6 @@ MonoBehaviour:
   Type: 0
   IsGlobal: 0
   Labels: []
-  Exists: 1
---- !u!114 &7122603257510134802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/RadioTest/RadioState
-  m_EditorClassIdentifier: 
-  Name: RadioState
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 1
-  ID:
-    data1: 1088831446
-    data2: 1811705897
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Off
-  - On
   Exists: 1
 --- !u!114 &7189971675172192192
 MonoBehaviour:
@@ -1372,6 +1432,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &8907679989671672738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RadioTest/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3098557548
+    data2: 3029766217
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &9201891526700569023
 MonoBehaviour:
   m_ObjectHideFlags: 0
