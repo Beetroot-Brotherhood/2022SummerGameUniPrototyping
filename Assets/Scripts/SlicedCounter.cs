@@ -10,6 +10,7 @@ public class SlicedCounter : MonoBehaviour
     Collider collider;
     GameObject player;
     float timePassed;
+    private FMOD.Studio.EventInstance collisionSounds;
 
     public void IncrementCounter(int previousCounter) {
         counter = previousCounter + 1;
@@ -18,6 +19,8 @@ public class SlicedCounter : MonoBehaviour
     void Start () {
         rigidbody = GetComponent<Rigidbody>();
         collider = GetComponent<Collider>();
+        collisionSounds = FMODUnity.RuntimeManager.CreateInstance("event:/--- Code Slicer ---/Environment/BoxPiecesCollisionPlaceholder");
+        collisionSounds.setParameterByName("SlicesPitch", counter);
     }
 
     void Update() {
@@ -49,5 +52,23 @@ public class SlicedCounter : MonoBehaviour
         collider.isTrigger = false;
         moveTowardsPlayer = false;
         timePassed = 0;
+    }
+
+    public float RequiredVelocity = 8;
+    //Creates inspector window slot in which the GameObject that contains the desired to be played RandomAudioPlayer Sctipt must be placed (In this case it should be tbe object that this script is also placed on)
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.relativeVelocity.magnitude > RequiredVelocity)
+        {
+            PlayCollision();
+        }
+    }
+
+    public void PlayCollision()
+    {
+        collisionSounds.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+        collisionSounds.start();
+        collisionSounds.release();
     }
 }

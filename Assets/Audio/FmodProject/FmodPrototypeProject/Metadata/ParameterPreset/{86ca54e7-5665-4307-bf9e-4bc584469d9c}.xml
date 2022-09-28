@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{86ca54e7-5665-4307-bf9e-4bc584469d9c}">
+		<property name="name">
+			<value>SlicesPitch</value>
+		</property>
+		<relationship name="folder">
+			<destination>{de7fd34e-c197-4fdc-8953-d4fcb4d65a96}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{c396124e-9248-4e33-b8b8-0d0bea71b9e0}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{c396124e-9248-4e33-b8b8-0d0bea71b9e0}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>5</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

@@ -1,5 +1,33 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9177485757220431566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/--- Code Slicer ---/Environment/BoxPiecesCollisionPlaceholder
+  m_EditorClassIdentifier: 
+  Path: event:/--- Code Slicer ---/Environment/BoxPiecesCollisionPlaceholder
+  Guid:
+    Data1: 1978152258
+    Data2: 1161115131
+    Data3: -1889798996
+    Data4: 834219907
+  Banks:
+  - {fileID: 4104646825822150671}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -4376084203764100919}
+  MinDistance: 1
+  MaxDistance: 900
+  Length: 375
 --- !u!114 &-9081623781626581557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,34 +162,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 28500
---- !u!114 &-8618591864486076405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Footsteps/LatcherScuttle
-  m_EditorClassIdentifier: 
-  Path: event:/Footsteps/LatcherScuttle
-  Guid:
-    Data1: -2066252830
-    Data2: 1118019984
-    Data3: -1024047980
-    Data4: -1797246206
-  Banks:
-  - {fileID: 2213804991741004845}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -2806044548861292776}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-8292008692664676456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,33 +656,6 @@ MonoBehaviour:
   - Value I
   - Value J
   Exists: 1
---- !u!114 &-6531034898709281268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/--- Code Slicer ---/Environment/Ambience/AmbienceSweeteners
-  m_EditorClassIdentifier: 
-  Path: event:/--- Code Slicer ---/Environment/Ambience/AmbienceSweeteners
-  Guid:
-    Data1: 349718135
-    Data2: 1163225868
-    Data3: 1358936732
-    Data4: -182049947
-  Banks:
-  - {fileID: -2933474125096768267}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 80
-  Length: 21000
 --- !u!114 &-6502409003103658759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -934,6 +907,36 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-5726374386064250005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LatcherScuttle/Footsteps
+  m_EditorClassIdentifier: 
+  Name: Footsteps
+  StudioPath: 
+  Min: 0
+  Max: 5
+  Default: 0
+  ID:
+    data1: 1613936621
+    data2: 1075788159
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - DefaultBank
+  - Wood
+  - Stone
+  - Metal
+  - Dirt
+  - Mud
+  Exists: 1
 --- !u!114 &-5623332090429715660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1363,6 +1366,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 104774
+--- !u!114 &-4376084203764100919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BoxPiecesCollisionPlaceholder/SlicesPitch
+  m_EditorClassIdentifier: 
+  Name: SlicesPitch
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 4245293240
+    data2: 3939285918
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-4286007365553897956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1700,7 +1727,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637999064360840620
+  lastModified: 637999307063088446
   FileSizes:
   - Name: Desktop
     Value: 16252384
@@ -1760,36 +1787,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 60
   Length: 32000
---- !u!114 &-2806044548861292776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/LatcherScuttle/Footsteps
-  m_EditorClassIdentifier: 
-  Name: Footsteps
-  StudioPath: 
-  Min: 0
-  Max: 5
-  Default: 0
-  ID:
-    data1: 1613936621
-    data2: 1075788159
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - DefaultBank
-  - Wood
-  - Stone
-  - Metal
-  - Dirt
-  - Mud
-  Exists: 1
 --- !u!114 &-2739169758649405194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1949,6 +1946,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-1653301482760377610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/--- Code Slicer ---/Environment/Train Announcements/Ambience/CityAmbience
+  m_EditorClassIdentifier: 
+  Path: event:/--- Code Slicer ---/Environment/Train Announcements/Ambience/CityAmbience
+  Guid:
+    Data1: 854356522
+    Data2: 1301231552
+    Data3: -108123995
+    Data4: -1080432354
+  Banks:
+  - {fileID: -2933474125096768267}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 450000
 --- !u!114 &-1559264017436537617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2491,7 +2515,6 @@ MonoBehaviour:
   - {fileID: 4008494242599351812}
   - {fileID: 7585790123818520370}
   - {fileID: -664390428773086727}
-  - {fileID: -8618591864486076405}
   - {fileID: -676871432828140214}
   - {fileID: 2065567587372173101}
   - {fileID: 5887189253692463661}
@@ -2506,16 +2529,18 @@ MonoBehaviour:
   - {fileID: -1366750628967515165}
   - {fileID: -6764456827220871095}
   - {fileID: 7419965068917307865}
-  - {fileID: 2541240561066566514}
-  - {fileID: -6531034898709281268}
   - {fileID: -4897689731256263848}
+  - {fileID: -1653301482760377610}
+  - {fileID: 5967364236038614569}
+  - {fileID: -9177485757220431566}
+  - {fileID: 8406028547866651504}
   EditorParameters:
   - {fileID: -6588442744460740224}
   MasterBanks:
   - {fileID: 4104646825822150671}
   StringsBanks:
   - {fileID: 5569406687674364823}
-  cacheTime: 637999064364516142
+  cacheTime: 637999307066396513
   cacheVersion: 131591
 --- !u!114 &90753169356398386
 MonoBehaviour:
@@ -2933,7 +2958,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637999064363966019
+  lastModified: 637999307065846013
   FileSizes:
   - Name: Desktop
     Value: 13186048
@@ -3040,33 +3065,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &2541240561066566514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/--- Code Slicer ---/Environment/Ambience/CityAmbience
-  m_EditorClassIdentifier: 
-  Path: event:/--- Code Slicer ---/Environment/Ambience/CityAmbience
-  Guid:
-    Data1: 854356522
-    Data2: 1301231552
-    Data3: -108123995
-    Data4: -1080432354
-  Banks:
-  - {fileID: -2933474125096768267}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 450000
 --- !u!114 &2642030460359396607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3442,7 +3440,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637999064364516142
+  lastModified: 637999307066396513
   FileSizes:
   - Name: Desktop
     Value: 10692384
@@ -3742,10 +3740,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637999064361471217
+  lastModified: 637999307063628945
   FileSizes:
   - Name: Desktop
-    Value: 958752
+    Value: 965024
   Exists: 1
 --- !u!114 &4158535783234723730
 MonoBehaviour:
@@ -4107,10 +4105,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637999064361481217
+  lastModified: 637999307063658969
   FileSizes:
   - Name: Desktop
-    Value: 3658
+    Value: 3782
   Exists: 1
 --- !u!114 &5745125380043643507
 MonoBehaviour:
@@ -4165,6 +4163,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 776307
+--- !u!114 &5967364236038614569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/--- Code Slicer ---/Environment/Train Announcements/Ambience/AmbienceSweeteners
+  m_EditorClassIdentifier: 
+  Path: event:/--- Code Slicer ---/Environment/Train Announcements/Ambience/AmbienceSweeteners
+  Guid:
+    Data1: 349718135
+    Data2: 1163225868
+    Data3: 1358936732
+    Data4: -182049947
+  Banks:
+  - {fileID: -2933474125096768267}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 80
+  Length: 21000
 --- !u!114 &6295448436399459989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4869,6 +4894,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 950
   Length: 198760
+--- !u!114 &8406028547866651504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Testing/LatcherScuttle
+  m_EditorClassIdentifier: 
+  Path: event:/Testing/LatcherScuttle
+  Guid:
+    Data1: -2066252830
+    Data2: 1118019984
+    Data3: -1024047980
+    Data4: -1797246206
+  Banks:
+  - {fileID: 2213804991741004845}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -5726374386064250005}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8407383547633045911
 MonoBehaviour:
   m_ObjectHideFlags: 0
