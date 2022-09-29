@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{0804d717-0ec1-49a5-ba40-eb147258648e}">
+		<property name="name">
+			<value>CannonFirePitch</value>
+		</property>
+		<relationship name="folder">
+			<destination>{de7fd34e-c197-4fdc-8953-d4fcb4d65a96}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{069d7e42-677e-4a36-a9bb-484dff562e9e}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{069d7e42-677e-4a36-a9bb-484dff562e9e}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{25e6d9e8-529e-496a-be8a-3965a1d8ebdb}</destination>
+		</relationship>
+	</object>
+	<object class="ADSRModulator" id="{25e6d9e8-529e-496a-be8a-3965a1d8ebdb}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>cursorPosition</value>
+		</property>
+		<property name="finalValue">
+			<value>100</value>
+		</property>
+	</object>
+</objects>

@@ -5,7 +5,7 @@
 			<value>MainRain</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{5d8efb5d-d97b-4f05-9192-7775a00534be}</destination>
@@ -231,7 +231,6 @@
 	<object class="MixerBusEffectChain" id="{3d9c945a-a24f-47f2-abb7-2fb92365581d}">
 		<relationship name="effects">
 			<destination>{e0c1e73e-fe0c-40ab-920c-e134d9f8f909}</destination>
-			<destination>{a4037b81-21c3-487c-99ad-b96c97b30ba7}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{dea7c781-c992-414c-ab04-3b570b6f3a6f}" />
@@ -259,22 +258,20 @@
 	<object class="MixerBusEffectChain" id="{cef55f84-a522-48bb-8a2a-01c231ab0867}">
 		<relationship name="effects">
 			<destination>{33eb3bc8-a3b0-48e1-ae1a-137617364d74}</destination>
+			<destination>{a9891a72-ab52-4635-8e8c-70f87228e9a4}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{0efdf6c5-746d-4b2c-bef8-2011d49cef4a}" />
 	<object class="MixerBusFader" id="{e0c1e73e-fe0c-40ab-920c-e134d9f8f909}" />
-	<object class="SpatialiserEffect" id="{a4037b81-21c3-487c-99ad-b96c97b30ba7}">
-		<property name="maximumDistance">
-			<value>45</value>
-		</property>
-		<property name="extentMode">
-			<value>1</value>
-		</property>
-		<property name="soundSize">
-			<value>26</value>
-		</property>
-	</object>
 	<object class="MixerBusFader" id="{c966c4d8-7907-4ee3-951f-fb7e91b03362}" />
 	<object class="MixerBusFader" id="{a412f4cb-6b0d-4e67-99a0-6edbddeaf8c5}" />
 	<object class="MixerBusFader" id="{33eb3bc8-a3b0-48e1-ae1a-137617364d74}" />
+	<object class="MultibandEqEffect" id="{a9891a72-ab52-4635-8e8c-70f87228e9a4}">
+		<property name="frequencyA">
+			<value>1756.47424</value>
+		</property>
+		<property name="qualityA">
+			<value>0.602344871</value>
+		</property>
+	</object>
 </objects>

@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 637999995394386183
+  lastModified: 638000183677539599
   FileSizes:
   - Name: Desktop
     Value: 10692384
@@ -75,6 +75,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 87272
+--- !u!114 &-8374242268624319103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CannonFire/CannonFirePitch
+  m_EditorClassIdentifier: 
+  Name: CannonFirePitch
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3898706856
+    data2: 4036098318
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-8193076097342945088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +268,61 @@ MonoBehaviour:
   - Off
   - On
   Exists: 1
+--- !u!114 &-5821752752510949846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mech/LaserCannon/CannonStop
+  m_EditorClassIdentifier: 
+  Path: event:/Mech/LaserCannon/CannonStop
+  Guid:
+    Data1: -398656342
+    Data2: 1264452889
+    Data3: -396353621
+    Data4: 657551507
+  Banks:
+  - {fileID: -4842344412843522935}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 50
+  Length: 1200
+--- !u!114 &-5667936947634894581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mech/LaserCannon/CannonCharge
+  m_EditorClassIdentifier: 
+  Path: event:/Mech/LaserCannon/CannonCharge
+  Guid:
+    Data1: -524057452
+    Data2: 1161130516
+    Data3: -1138147946
+    Data4: 1362672977
+  Banks:
+  - {fileID: -4842344412843522935}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -227800563078150388}
+  MinDistance: 1
+  MaxDistance: 55
+  Length: 9000
 --- !u!114 &-5578276961049163649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,10 +531,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637999995392101217
+  lastModified: 638000183675092158
   FileSizes:
   - Name: Desktop
-    Value: 26647200
+    Value: 26801408
   Exists: 1
 --- !u!114 &-4095432354530624399
 MonoBehaviour:
@@ -594,6 +673,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-1340664861883642946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mech/LaserCannon/CannonMoving
+  m_EditorClassIdentifier: 
+  Path: event:/Mech/LaserCannon/CannonMoving
+  Guid:
+    Data1: 605133129
+    Data2: 1326675426
+    Data3: 789842318
+    Data4: 1043973140
+  Banks:
+  - {fileID: -4842344412843522935}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 55
+  Length: 6000
 --- !u!114 &-1197767157693200619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -779,6 +885,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-227800563078150388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CannonCharge/cannonChargeLevel
+  m_EditorClassIdentifier: 
+  Name: cannonChargeLevel
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1847358966
+    data2: 221075148
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -828,13 +958,17 @@ MonoBehaviour:
   - {fileID: -4086041994450032873}
   - {fileID: 404327497177059580}
   - {fileID: -8680532397802301933}
+  - {fileID: -1340664861883642946}
+  - {fileID: -5821752752510949846}
+  - {fileID: 1597907039752483451}
+  - {fileID: -5667936947634894581}
   EditorParameters:
   - {fileID: -754482486958039952}
   MasterBanks:
   - {fileID: -4842344412843522935}
   StringsBanks:
   - {fileID: 5281460975032158907}
-  cacheTime: 637999995394386183
+  cacheTime: 638000183677539599
   cacheVersion: 131591
 --- !u!114 &404327497177059580
 MonoBehaviour:
@@ -938,7 +1072,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -4842344412843522935}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
@@ -970,6 +1104,34 @@ MonoBehaviour:
   - Off
   - On
   Exists: 1
+--- !u!114 &1597907039752483451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mech/LaserCannon/CannonFire
+  m_EditorClassIdentifier: 
+  Path: event:/Mech/LaserCannon/CannonFire
+  Guid:
+    Data1: 1116363648
+    Data2: 1331382776
+    Data3: -945488235
+    Data4: -1707216567
+  Banks:
+  - {fileID: -4842344412843522935}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -8374242268624319103}
+  MinDistance: 0
+  MaxDistance: 75
+  Length: 4800
 --- !u!114 &2246758016339282255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1087,7 +1249,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637999995393842112
+  lastModified: 638000183676994051
   FileSizes:
   - Name: Desktop
     Value: 12662944
@@ -1162,10 +1324,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637999995392146566
+  lastModified: 638000183675142202
   FileSizes:
   - Name: Desktop
-    Value: 2784
+    Value: 3058
   Exists: 1
 --- !u!114 &5816971183150374469
 MonoBehaviour:
@@ -1270,7 +1432,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 637999995389479185
+  lastModified: 638000183672507036
   FileSizes:
   - Name: Desktop
     Value: 6946752
