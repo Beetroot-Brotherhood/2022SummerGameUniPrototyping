@@ -13644,6 +13644,11 @@ Transform:
   m_Father: {fileID: 989949866}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1214977947 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9186802089298730224, guid: 2b6029d8e4545a041a343ac4ef078e56, type: 3}
+  m_PrefabInstance: {fileID: 3171053464998941962}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1222843161
 GameObject:
   m_ObjectHideFlags: 0
@@ -26846,7 +26851,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2534246, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -27542,11 +27547,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 745843018080090126, guid: 2b6029d8e4545a041a343ac4ef078e56, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 745843018080090126, guid: 2b6029d8e4545a041a343ac4ef078e56, type: 3}
       propertyPath: m_TagString
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 903717617873673227, guid: 2b6029d8e4545a041a343ac4ef078e56, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 7201845648076137886}
+    - target: {fileID: 903717617873673227, guid: 2b6029d8e4545a041a343ac4ef078e56, type: 3}
+      propertyPath: canAttack
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 903717617873673227, guid: 2b6029d8e4545a041a343ac4ef078e56, type: 3}
+      propertyPath: weaponHitbox
+      value: 
+      objectReference: {fileID: 1214977947}
+    - target: {fileID: 903717617873673227, guid: 2b6029d8e4545a041a343ac4ef078e56, type: 3}
+      propertyPath: parryStunTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761159621767983261, guid: 2b6029d8e4545a041a343ac4ef078e56, type: 3}
+      propertyPath: thisYbotTestController2
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5761159621767983262, guid: 2b6029d8e4545a041a343ac4ef078e56, type: 3}
       propertyPath: m_StoppingDistance
@@ -27556,7 +27581,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8015084333117295352, guid: 2b6029d8e4545a041a343ac4ef078e56, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b6b7cd9325524cd458e82da501b1170f, type: 2}
+    m_RemovedComponents:
+    - {fileID: 5761159621767983257, guid: 2b6029d8e4545a041a343ac4ef078e56, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2b6029d8e4545a041a343ac4ef078e56, type: 3}
 --- !u!4 &3192314450529383304
 Transform:
@@ -28346,6 +28376,11 @@ MonoBehaviour:
     m_Bits: 1
   visibleTargets: []
   targetVisible: 0
+--- !u!95 &7201845648076137886 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8015084333117295352, guid: 2b6029d8e4545a041a343ac4ef078e56, type: 3}
+  m_PrefabInstance: {fileID: 3171053464998941962}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7379721569137119280
 GameObject:
   m_ObjectHideFlags: 0
