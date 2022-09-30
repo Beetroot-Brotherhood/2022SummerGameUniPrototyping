@@ -583,7 +583,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 366038728}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.021029927, y: 0.14099987, z: 0.27800176}
+  m_LocalPosition: {x: 0.021029677, y: 0.14099987, z: 0.27800164}
   m_LocalScale: {x: 0.06571701, y: 0.06571701, z: 0.06571701}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9616,6 +9616,7 @@ GameObject:
   - component: {fileID: 7089212990659757521}
   - component: {fileID: 1066063413}
   - component: {fileID: 1066063414}
+  - component: {fileID: 1658160448}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -9632,7 +9633,7 @@ Transform:
   m_GameObject: {fileID: 1459737734699577691}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 742.9, y: 29.5, z: 718.6}
-  m_LocalScale: {x: 5.0000005, y: 5.0000005, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6535880336192407559}
@@ -9782,8 +9783,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSounds: {fileID: 438189405}
-  MoveSpeed: 4
-  SprintSpeed: 6
+  MoveSpeed: 10
+  SprintSpeed: 15
   LookSpeed: 3
   RotationSpeed: 50
   SpeedChangeRate: 10
@@ -9792,8 +9793,8 @@ MonoBehaviour:
   JumpTimeout: 0.1
   FallTimeout: 0.15
   Grounded: 1
-  GroundedOffset: 19.3
-  GroundedRadius: 3
+  GroundedOffset: 5
+  GroundedRadius: 2
   GroundLayers:
     serializedVersion: 2
     m_Bits: 1
@@ -9819,6 +9820,7 @@ MonoBehaviour:
   jump: 0
   sprint: 1
   fire: 0
+  unboard: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -9874,7 +9876,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dollyCartControls: {fileID: 0}
   _controller: {fileID: 1459737734699577681}
-  _speed: 100
+  _speed: 0.5
+--- !u!65 &1658160448
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459737734699577691}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2692395480420478901
 GameObject:
   m_ObjectHideFlags: 0
@@ -10172,6 +10187,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0cc0627af0ef2d443bb4fb87b213df84, type: 3}
       propertyPath: m_Name
       value: Mesh_EnergyField
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0cc0627af0ef2d443bb4fb87b213df84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cc0627af0ef2d443bb4fb87b213df84, type: 3}

@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class TrainController : MonoBehaviour
 {
-    private StarterAssets.StarterAssetsInputs _input;
+    private PlayerInputs _input;
     public Cinemachine.CinemachineDollyCart dollyCartControls;
     public CharacterController _controller;
     public float _speed = 5.0f;
@@ -13,7 +13,8 @@ public class TrainController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _input = GetComponent<StarterAssets.StarterAssetsInputs>();
+        _input = GetComponent<PlayerInputs>();
+
     }
 
     // Update is called once per frame
@@ -24,18 +25,10 @@ public class TrainController : MonoBehaviour
 
     private void Move()
     {
-       
-        Vector3 inputDirection = new Vector3(_input.move.x, 0.0f, _input.move.y).normalized;
-        inputDirection = transform.right * _input.move.x + transform.forward * _input.move.y;
-
-        inputDirection.z = dollyCartControls.m_Position;
-
-        _controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) );
-    }
-
-    private void OnMove()
-    {
         
+        this.transform.rotation = dollyCartControls.transform.rotation; //this is the line that makes the train rotate with the track
+        dollyCartControls.m_Speed = _input.move.y * _speed;
+
     }
 
 }

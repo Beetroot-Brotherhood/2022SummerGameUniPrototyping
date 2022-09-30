@@ -11,6 +11,7 @@ public class PlayerInputs : MonoBehaviour
 		public bool jump;
 		public bool sprint;
 		public bool fire;
+		public bool unboard;
 
     [Header("Movement Settings")]
 		public bool analogMovement;
@@ -47,6 +48,11 @@ public class PlayerInputs : MonoBehaviour
 		FireInput(value.isPressed);
 	}
 
+	public void OnUnboard(InputValue value)
+	{
+		UnboardInput(value.isPressed);
+	}
+
 
     public void MoveInput(Vector2 newMoveDirection)
 	{
@@ -71,6 +77,11 @@ public class PlayerInputs : MonoBehaviour
 	public void FireInput(bool newFireState)
 	{
 		fire = newFireState;
+	}
+
+	public void UnboardInput(bool newUnboardState)
+	{
+		unboard = newUnboardState;
 	}
 		
 	private void OnApplicationFocus(bool hasFocus) // locks the cursor if the game is in focus

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class StickingToTrack : MonoBehaviour
 {
@@ -8,12 +9,15 @@ public class StickingToTrack : MonoBehaviour
     public GameObject dollyCart, playerObject;
     public MechController mechController;
     public TrainController trainController;
+
+    private PlayerInputs _input;
     
 
     // Start is called before the first frame update
     void Start()
     {
         trainController.enabled = false;
+        _input = GetComponent<PlayerInputs>();
     }
 
     // Update is called once per frame
@@ -27,6 +31,14 @@ public class StickingToTrack : MonoBehaviour
             mechController.enabled = false;
             trainController.enabled = true;
 
+        }
+        if(onTrack && _input.unboard)
+        {
+            playerObject.transform.parent = null;
+            mechController.enabled = true;
+            trainController.enabled = false;
+            onTrack = false;
+            _input.unboard = false;
         }
     }
 

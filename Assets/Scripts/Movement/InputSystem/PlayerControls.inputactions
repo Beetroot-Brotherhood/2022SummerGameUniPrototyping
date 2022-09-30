@@ -49,6 +49,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Un-board",
+                    "type": "Button",
+                    "id": "f04adb56-1774-4ab6-904e-b10a4f413e5b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -144,10 +153,21 @@
                     "name": "",
                     "id": "75fab8ff-96e3-40db-a96a-b4dbd7355f77",
                     "path": "<Mouse>/leftButton",
-                    "interactions": "Press",
+                    "interactions": "",
                     "processors": "",
                     "groups": "Keyboard and Mouse",
                     "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "20f1a014-c63e-4f6e-a0b1-c00b6b787870",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard and Mouse",
+                    "action": "Un-board",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

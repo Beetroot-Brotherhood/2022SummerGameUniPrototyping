@@ -71,6 +71,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Un-board"",
+                    ""type"": ""Button"",
+                    ""id"": ""f04adb56-1774-4ab6-904e-b10a4f413e5b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -166,10 +175,21 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""75fab8ff-96e3-40db-a96a-b4dbd7355f77"",
                     ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": ""Press"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard and Mouse"",
                     ""action"": ""Fire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""20f1a014-c63e-4f6e-a0b1-c00b6b787870"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""Un-board"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -202,6 +222,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Mech_Jump = m_Mech.FindAction("Jump", throwIfNotFound: true);
         m_Mech_Sprint = m_Mech.FindAction("Sprint", throwIfNotFound: true);
         m_Mech_Fire = m_Mech.FindAction("Fire", throwIfNotFound: true);
+        m_Mech_Unboard = m_Mech.FindAction("Un-board", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -266,6 +287,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Mech_Jump;
     private readonly InputAction m_Mech_Sprint;
     private readonly InputAction m_Mech_Fire;
+    private readonly InputAction m_Mech_Unboard;
     public struct MechActions
     {
         private @PlayerControls m_Wrapper;
@@ -275,6 +297,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_Mech_Jump;
         public InputAction @Sprint => m_Wrapper.m_Mech_Sprint;
         public InputAction @Fire => m_Wrapper.m_Mech_Fire;
+        public InputAction @Unboard => m_Wrapper.m_Mech_Unboard;
         public InputActionMap Get() { return m_Wrapper.m_Mech; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -299,6 +322,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Fire.started -= m_Wrapper.m_MechActionsCallbackInterface.OnFire;
                 @Fire.performed -= m_Wrapper.m_MechActionsCallbackInterface.OnFire;
                 @Fire.canceled -= m_Wrapper.m_MechActionsCallbackInterface.OnFire;
+                @Unboard.started -= m_Wrapper.m_MechActionsCallbackInterface.OnUnboard;
+                @Unboard.performed -= m_Wrapper.m_MechActionsCallbackInterface.OnUnboard;
+                @Unboard.canceled -= m_Wrapper.m_MechActionsCallbackInterface.OnUnboard;
             }
             m_Wrapper.m_MechActionsCallbackInterface = instance;
             if (instance != null)
@@ -318,6 +344,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Fire.started += instance.OnFire;
                 @Fire.performed += instance.OnFire;
                 @Fire.canceled += instance.OnFire;
+                @Unboard.started += instance.OnUnboard;
+                @Unboard.performed += instance.OnUnboard;
+                @Unboard.canceled += instance.OnUnboard;
             }
         }
     }
@@ -338,5 +367,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnSprint(InputAction.CallbackContext context);
         void OnFire(InputAction.CallbackContext context);
+        void OnUnboard(InputAction.CallbackContext context);
     }
 }
