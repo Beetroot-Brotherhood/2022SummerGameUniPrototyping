@@ -275,18 +275,21 @@ public class CombatManager : MonoBehaviour
 
                 YbotTestController2 tempYbotController2 = EnemyLockOn.instance.attackedTargets[enemySliceOrder[enemySliceOrderIndex]].GetComponent<YbotTestController2>();
                 
-                Debug.Log(tempYbotController2.chestPiece.GetComponent<DollLimbController>());
+                try {
+                    Debug.Log(tempYbotController2.chestPiece.GetComponent<DollLimbController>());
 
-                SwordCollisionDetectionV2.instance.SlicingEnemy(
-                    tempYbotController2.chestPiece.GetComponent<Collider>(), 
-                    tempYbotController2.chestPiece.transform.position,
-                    new Vector3(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f)).normalized,
-                    SwordCollisionDetectionV2.instance.slicedMaterial,
-                    tempYbotController2.chestPiece.transform.position,
-                    tempYbotController2.chestPiece.GetComponent<DollLimbController>(),
-                    enemySliceOrderIndex, 
-                    bypass:true
-                );
+                    SwordCollisionDetectionV2.instance.SlicingEnemy(
+                        tempYbotController2.chestPiece.GetComponent<Collider>(), 
+                        tempYbotController2.chestPiece.transform.position,
+                        new Vector3(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f)).normalized,
+                        SwordCollisionDetectionV2.instance.slicedMaterial,
+                        tempYbotController2.chestPiece.transform.position,
+                        tempYbotController2.chestPiece.GetComponent<DollLimbController>(),
+                        enemySliceOrderIndex, 
+                        bypass:true
+                    );
+                }
+                catch (Exception) {}
                 enemySliceOrderIndex++;
 
                 //TODO Add additional sounds for the ultimate
