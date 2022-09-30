@@ -6,6 +6,22 @@ using Krezme;
 
 public class SwordCollisionDetectionV2 : MonoBehaviour
 {
+
+#region Singleton
+
+    //Singleton
+    public static SwordCollisionDetectionV2 instance;
+
+    void Awake () {
+        if (instance != null) {
+            Debug.LogError("More than one instance of EnemyLockOn exist.");
+        }else {
+            instance = this;
+        }
+    }
+
+#endregion
+
     public CombatManager combatManager;
 
     public GameObject cutPlane;
@@ -63,7 +79,7 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
                         }
                         else if (IsEnemyStaggered(i) == Bool3D.Null){
                             Debug.Log("Please work 1");
-                            SlicingEnemy(i);
+                            SlicingEnemy(hitGameobjects[i], cutPlane.transform.position, cutPlane.transform.up, slicedMaterial, boxLocation, dollLimbController, i);
                         }
                         else {
                             Debug.Log("Please work 2");
@@ -75,7 +91,7 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
                         }
                         else{
                             Debug.Log("Please work 3");
-                            SlicingEnemy(i);
+                            SlicingEnemy(hitGameobjects[i], cutPlane.transform.position, cutPlane.transform.up, slicedMaterial, boxLocation, dollLimbController, i);
                         }
                     }
                 }
@@ -127,9 +143,13 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
     /// <summary>
     /// Totally separated enemy slicing functionality
     /// </summary>
+    /// <param name="hitGameObject"></param>
+    /// <param name="cutPlane"></param>
+    /// <param name="slicedMaterial"></param>
+    /// <param name="boxLocation"></param>
     /// <param name="i"></param>
     /// <param name="bypass">Bypassing the stagger requirement</param>
-    void SlicingEnemy(int i, bool bypass = false) {
+    public void SlicingEnemy(Collider hitGameObject, Vector3 cutPlanePosition, Vector3 cutPlaneUp, Material slicedMaterial, Vector3 boxLocation, DollLimbController dollLimbController, int i, bool bypass = false) {
         if (!bypass) {
             Bool3D temp3DState = IsEnemyStaggered(i);
             if (temp3DState == Bool3D.False) {
@@ -144,13 +164,13 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
         //? This is the code that actually slices the enemy
         SlicedCounter slicedCounter;
         int thisObjectSlicedCounterInt = 0;
-        hitGameobjects[i].gameObject.TryGetComponent<SlicedCounter>(out slicedCounter);
+        hitGameObject.gameObject.TryGetComponent<SlicedCounter>(out slicedCounter);
 
         if (slicedCounter == null || slicedCounter.counter < 4) {
             thisObjectSlicedCounterInt = slicedCounter ? slicedCounter.counter : 0;
-            SlicedHull hull = hitGameobjects[i].gameObject.Slice(cutPlane.transform.position, cutPlane.transform.up, slicedMaterial);
+            SlicedHull hull = hitGameObject.gameObject.Slice(cutPlanePosition, cutPlaneUp, slicedMaterial);
             if (hull != null) {
-                GameObject bottom = hull.CreateLowerHull(hitGameobjects[i].gameObject, slicedMaterial);
+                GameObject bottom = hull.CreateLowerHull(hitGameObject.gameObject, slicedMaterial);
                 MeshCollider tempMeshCol = bottom.AddComponent<MeshCollider>();
                 tempMeshCol.convex = true;
                 Rigidbody tempRB = bottom.AddComponent<Rigidbody>();
@@ -158,7 +178,7 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
                 bottomSlicedCounter.IncrementCounter(thisObjectSlicedCounterInt);
                 bottom.gameObject.layer = LayerMask.NameToLayer("Sliceable");
                 bottom.gameObject.tag = "EnemyPart";
-                tempRB.AddExplosionForce(200, cutPlane.transform.position, 15);
+                tempRB.AddExplosionForce(200, cutPlanePosition, 15);
 
                 #region Fmod
                 boxBreakingSound.setParameterByName("BoxBreak", 2.0f);
@@ -169,7 +189,7 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
                 swingHit.start();
                 #endregion
 
-                GameObject top = hull.CreateUpperHull(hitGameobjects[i].gameObject, slicedMaterial);
+                GameObject top = hull.CreateUpperHull(hitGameObject.gameObject, slicedMaterial);
                 MeshCollider tempMeshCol2 = top.AddComponent<MeshCollider>();
                 tempMeshCol2.convex = true;
                 Rigidbody tempRB2 = top.AddComponent<Rigidbody>();
@@ -177,8 +197,8 @@ public class SwordCollisionDetectionV2 : MonoBehaviour
                 topSlicedCounter.IncrementCounter(thisObjectSlicedCounterInt);
                 top.gameObject.layer = LayerMask.NameToLayer("Sliceable");
                 top.gameObject.tag = "EnemyPart";
-                tempRB2.AddExplosionForce(200, cutPlane.transform.position, 15);
-                Destroy(hitGameobjects[i].gameObject);
+                tempRB2.AddExplosionForce(200, cutPlanePosition, 15);
+                Destroy(hitGameObject.gameObject);
             }
         }
     }

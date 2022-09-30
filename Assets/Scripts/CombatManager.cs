@@ -21,7 +21,7 @@ public class CombatManager : MonoBehaviour
 
     void Awake() {
         if (instance != null){
-            Debug.LogError("More than one instance of CombatManager exists.");
+            Debug.LogError("More than one instance of CombatManager exist.");
         }
         else {
             instance = this;
@@ -51,6 +51,11 @@ public class CombatManager : MonoBehaviour
     public float holdThreshold;
     public float parryCooldown;
     public float throwableCooldown;
+
+    public float timeBetweenUltimateCuts;
+
+    [HideInInspector]
+    public List<int> enemySliceOrder = new List<int>();
 
     private PlayerParryBox playerParryBox;
 
@@ -94,6 +99,8 @@ public class CombatManager : MonoBehaviour
         ThrowableFunc();
 
         KickFunc();
+
+        Ultimate();
     }
 
     void AttackAnimationState() {
@@ -101,26 +108,28 @@ public class CombatManager : MonoBehaviour
     }
 
     void DirectionalAttacks() {
-        if (OnSlicerInput.instance.onSlice) {
-            currentHoldTime += Time.deltaTime;
-            if (currentHoldTime >= holdThreshold) {
-                foreach (KeyValuePair<string, bool> keyValuePair in attackDirectionsAnimationStates[OnSlicerInput.instance.currentAttackDirection]) {
-                    weaponAnimator.SetBool(keyValuePair.Key, keyValuePair.Value);
+        if (!OnSlicerInput.instance.onUltimate) {
+            if (OnSlicerInput.instance.onSlice) {
+                currentHoldTime += Time.deltaTime;
+                if (currentHoldTime >= holdThreshold) {
+                    foreach (KeyValuePair<string, bool> keyValuePair in attackDirectionsAnimationStates[OnSlicerInput.instance.currentAttackDirection]) {
+                        weaponAnimator.SetBool(keyValuePair.Key, keyValuePair.Value);
+                    }
+                    weaponAnimator.SetBool("Charging", true);
                 }
-                weaponAnimator.SetBool("Charging", true);
             }
-        }
-        else {
-            
-            if (currentHoldTime >= holdThreshold) {
-                ResetAttackAnimationStates();
+            else {
+                
+                if (currentHoldTime >= holdThreshold) {
+                    ResetAttackAnimationStates();
+                }
+                else if (currentHoldTime > 0) {
+                    ResetAttackAnimationStates();
+                    RandomizeAttack();
+                }
+                currentHoldTime = 0;
+                weaponAnimator.SetBool("Charging", false);
             }
-            else if (currentHoldTime > 0) {
-                ResetAttackAnimationStates();
-                RandomizeAttack();
-            }
-            currentHoldTime = 0;
-            weaponAnimator.SetBool("Charging", false);
         }
     }
 
@@ -221,10 +230,74 @@ public class CombatManager : MonoBehaviour
         currentStatistics = defaultStatistics.DeepClone();
     }
 
-    public void UltimateFunc() {
+    private bool canUltimate = true;
+
+    private float currentTimeBetweenUltimateCuts = 0;
+
+    public void Ultimate() {
+        
+        if (canUltimate) {
+            UltimatePreparation();
+        }
+
+        if (!canUltimate) {
+            UltimateFunc();
+        }
+    }
+
+    public void UltimatePreparation() {
         if (OnSlicerInput.instance.onUltimate) {
-            
-            OnSlicerInput.instance.onUltimate = false;
+            EnemyLockOn.instance.lockOn = true;
+            if (OnSlicerInput.instance.onSlice) {
+                if (EnemyLockOn.instance.visibleTargets.Count > 0) {
+                    EnemyLockOn.instance.attackedTargets = EnemyLockOn.instance.visibleTargets; //! Check if this makes a clone or a reference
+                    enemySliceOrder = QualityOfLife.RandomNumberListWithoutRepeating(0, EnemyLockOn.instance.attackedTargets.Count-1);
+                    canUltimate = false;
+                }
+                else{
+                    //! FILL this in with the code for when there are no visible targets
+                }
+            }
+        }
+        else {
+            EnemyLockOn.instance.lockOn = false;
+        }
+    }
+
+    private int enemySliceOrderIndex;
+
+    public void UltimateFunc() {
+        if (enemySliceOrderIndex < enemySliceOrder.Count) {
+            currentTimeBetweenUltimateCuts += Time.deltaTime;
+
+            if (currentTimeBetweenUltimateCuts >= timeBetweenUltimateCuts) {
+                currentTimeBetweenUltimateCuts = 0;
+
+                YbotTestController2 tempYbotController2 = EnemyLockOn.instance.attackedTargets[enemySliceOrder[enemySliceOrderIndex]].GetComponent<YbotTestController2>();
+                
+                Debug.Log(tempYbotController2.chestPiece.GetComponent<DollLimbController>());
+
+                SwordCollisionDetectionV2.instance.SlicingEnemy(
+                    tempYbotController2.chestPiece.GetComponent<Collider>(), 
+                    tempYbotController2.chestPiece.transform.position,
+                    new Vector3(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f)).normalized,
+                    SwordCollisionDetectionV2.instance.slicedMaterial,
+                    tempYbotController2.chestPiece.transform.position,
+                    tempYbotController2.chestPiece.GetComponent<DollLimbController>(),
+                    enemySliceOrderIndex, 
+                    bypass:true
+                );
+                enemySliceOrderIndex++;
+
+                //TODO Add additional sounds for the ultimate
+            }
+        }
+
+        if (enemySliceOrderIndex >= enemySliceOrder.Count) {
+            canUltimate = true;
+            enemySliceOrderIndex = 0;
+            EnemyLockOn.instance.attackedTargets.Clear();
+            enemySliceOrder.Clear();
         }
     }
 

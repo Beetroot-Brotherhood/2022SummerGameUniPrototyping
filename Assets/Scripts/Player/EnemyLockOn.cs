@@ -4,6 +4,23 @@ using UnityEngine;
 
 public class EnemyLockOn : MonoBehaviour
 {
+
+    public static EnemyLockOn instance;
+
+    void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogError("More than one instance of EnemyLockOn exist.");
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+
+    public bool lockOn;
+
     public float viewRadius;
 
     [Range(0, 360)]
@@ -15,6 +32,8 @@ public class EnemyLockOn : MonoBehaviour
 
     [HideInInspector]
     public List<Transform> visibleTargets = new List<Transform>();
+
+    public List<Transform> attackedTargets = new List<Transform>();
 
     public bool targetVisible = false;
 
@@ -45,27 +64,28 @@ public class EnemyLockOn : MonoBehaviour
 
         visibleTargets.Clear(); // clears list so there are no duplicate items stored in it
         Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, viewRadius, targetMask);
-
-        for (int i = 0; i < targetsInViewRadius.Length; i++)
-        {
-            Transform target = targetsInViewRadius[i].transform; // gets the transform for any target the enemy is looking at
-            Vector3 dirToTarget = (target.position - transform.position).normalized;
-
-            if (Vector3.Angle(transform.forward, dirToTarget) < viewAngle / 2)
+        if (lockOn) {
+            for (int i = 0; i < targetsInViewRadius.Length; i++)
             {
-                float dstToTarget = Vector3.Distance(transform.position, target.position); // gets the distance between the target and enemy
+                Transform target = targetsInViewRadius[i].transform; // gets the transform for any target the enemy is looking at
+                Vector3 dirToTarget = (target.position - transform.position).normalized;
 
-                if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask)) // if the raycast doesn't hit an obstacle blocking the target
+                if (Vector3.Angle(transform.forward, dirToTarget) < viewAngle / 2)
                 {
-                    if (target.TryGetComponent<YbotTestController2>(out YbotTestController2 ybotTestController2)) {
-                        ybotTestController2.targetedUI.SetActive(true);
-                        visibleTargets.Add(target); // adds the target to the visible targets list
-                        targetVisible = true;
+                    float dstToTarget = Vector3.Distance(transform.position, target.position); // gets the distance between the target and enemy
+
+                    if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask)) // if the raycast doesn't hit an obstacle blocking the target
+                    {
+                        if (target.TryGetComponent<YbotTestController2>(out YbotTestController2 ybotTestController2)) {
+                            ybotTestController2.targetedUI.SetActive(true);
+                            visibleTargets.Add(target); // adds the target to the visible targets list
+                            targetVisible = true;
+                        }
                     }
-                }
-                else
-                {
-                    targetVisible = false;
+                    else
+                    {
+                        targetVisible = false;
+                    }
                 }
             }
         }

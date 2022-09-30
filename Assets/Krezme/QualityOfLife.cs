@@ -52,6 +52,98 @@ namespace Krezme {
         public static void LookAtPlayer(Transform spriteTransform, Transform playerTransform) {
             spriteTransform.LookAt(playerTransform);
         }
+
+        /// <summary>
+        /// Generates all possible random numbers without repeating 
+        /// </summary>
+        /// <param name="min">The minimum generated number (including)</param>
+        /// <param name="max">The maximum generated number (including)</param>
+        /// <param name="amount">Amount of numbers you want to generate. Entering a greater amount than the numbers between "min" and "max" will not repeat numbers.</param>
+        /// <returns>Integer array of the random numbers without repetition</returns>
+        public static int[] RandomNumberArrayWithoutRepeating(int min, int max) {
+            List<int> numbers = new List<int>();
+            for (int i = min; i <= max; i++) {
+                numbers.Add(i);
+            }
+            int [] randomNumbers = new int[numbers.Count];
+            int amount = numbers.Count;
+            for (int i = 0; i < amount; i++) {
+                int randomIndex = UnityEngine.Random.Range(0, numbers.Count);
+                randomNumbers[i] = numbers[randomIndex];
+                numbers.RemoveAt(randomIndex);
+            }
+            return randomNumbers;
+        }
+
+        /// <summary>
+        /// Generate an amount of random numbers without repeating
+        /// </summary>
+        /// <param name="min">The minimum generated number (including)</param>
+        /// <param name="max">The maximum generated number (including)</param>
+        /// <param name="amount">Amount of numbers you want to generate. Entering a greater amount than the numbers between "min" and "max" will not repeat numbers.</param>
+        /// <returns>Integer array of the random numbers without repetition</returns>
+        public static int[] RandomNumberArrayWithoutRepeating(int min, int max, int amount) {
+            int [] randomNumbers = new int[amount];
+            List<int> numbers = new List<int>();
+            for (int i = min; i <= max; i++) {
+                numbers.Add(i);
+            }
+            if (numbers.Count < amount) {
+                amount = numbers.Count;
+            }
+            for (int i = 0; i < amount; i++) {
+                int randomIndex = UnityEngine.Random.Range(0, numbers.Count);
+                randomNumbers[i] = numbers[randomIndex];
+                numbers.RemoveAt(randomIndex);
+            }
+            return randomNumbers;
+        }
+
+        /// <summary>
+        /// Generates all possible random numbers without repeating 
+        /// </summary>
+        /// <param name="min">The minimum generated number (including)</param>
+        /// <param name="max">The maximum generated number (including)</param>
+        /// <param name="amount">Amount of numbers you want to generate. Entering a greater amount than the numbers between "min" and "max" will not repeat numbers.</param>
+        /// <returns>Integer list of the random numbers without repetition</returns>
+        public static List<int> RandomNumberListWithoutRepeating(int min, int max) {
+            List<int> randomNumbers = new List<int>();
+            List<int> numbers = new List<int>();
+            for (int i = min; i <= max; i++) {
+                numbers.Add(i);
+            }
+            int amount = numbers.Count;
+            for (int i = 0; i < amount; i++) {
+                int randomIndex = UnityEngine.Random.Range(0, numbers.Count);
+                randomNumbers.Add(numbers[randomIndex]);
+                numbers.RemoveAt(randomIndex);
+            }
+            return randomNumbers;
+        }
+
+        /// <summary>
+        /// Generate an amount of random numbers without repeating
+        /// </summary>
+        /// <param name="min">The minimum generated number (including)</param>
+        /// <param name="max">The maximum generated number (including)</param>
+        /// <param name="amount">Amount of numbers you want to generate. Entering a greater amount than the numbers between "min" and "max" will not repeat numbers.</param>
+        /// <returns>Integer list of the random numbers without repetition</returns>
+        public static List<int> RandomNumberListWithoutRepeating(int min, int max, int amount) {
+            List<int> randomNumbers = new List<int>();
+            List<int> numbers = new List<int>();
+            for (int i = min; i <= max; i++) {
+                numbers.Add(i);
+            }
+            if (numbers.Count < amount) {
+                amount = numbers.Count;
+            }
+            for (int i = 0; i < amount; i++) {
+                int randomIndex = UnityEngine.Random.Range(0, numbers.Count);
+                randomNumbers.Add(numbers[randomIndex]);
+                numbers.RemoveAt(randomIndex);
+            }
+            return randomNumbers;
+        }
     }
 
     public enum Bool3D {

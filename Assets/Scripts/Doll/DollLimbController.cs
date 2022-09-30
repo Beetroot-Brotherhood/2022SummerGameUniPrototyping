@@ -14,6 +14,7 @@ public class DollLimbController : MonoBehaviour
     public YbotTestController2 ybotTestController2;
 
     public void Sliced () {
+        //TODO Remove DollLimbController from this.gameObject and add the SlicedCounter script to this.gameObject
         for (int i = 0; i < children.Count; i++) {
             if (children[i] != null) {
                 children[i].Sliced();
