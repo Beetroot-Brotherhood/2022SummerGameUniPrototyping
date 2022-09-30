@@ -247,9 +247,11 @@ public class CombatManager : MonoBehaviour
 
     public void UltimatePreparation() {
         if (OnSlicerInput.instance.onUltimate) {
+            weaponAnimator.SetBool("UltimateSheath", true);
             EnemyLockOn.instance.lockOn = true;
             if (OnSlicerInput.instance.onSlice) {
                 if (EnemyLockOn.instance.visibleTargets.Count > 0) {
+                    weaponAnimator.SetBool("UltimateAttack", true);
                     EnemyLockOn.instance.attackedTargets = EnemyLockOn.instance.visibleTargets; //! Check if this makes a clone or a reference
                     enemySliceOrder = QualityOfLife.RandomNumberListWithoutRepeating(0, EnemyLockOn.instance.attackedTargets.Count-1);
                     canUltimate = false;
@@ -260,6 +262,7 @@ public class CombatManager : MonoBehaviour
             }
         }
         else {
+            ResetUltAnimParameters();
             EnemyLockOn.instance.lockOn = false;
         }
     }
@@ -268,6 +271,7 @@ public class CombatManager : MonoBehaviour
 
     public void UltimateFunc() {
         if (enemySliceOrderIndex < enemySliceOrder.Count) {
+
             currentTimeBetweenUltimateCuts += Time.deltaTime;
 
             if (currentTimeBetweenUltimateCuts >= timeBetweenUltimateCuts) {
@@ -356,6 +360,11 @@ public class CombatManager : MonoBehaviour
 
     public void SetAttackStateToHeavyAttack(){
         swordCollisionDetectionV2.currentAttackState = AttackState.HeavyAttack;
+    }
+
+    public void ResetUltAnimParameters(){
+        weaponAnimator.SetBool("UltimateSheath", false);
+        weaponAnimator.SetBool("UltimateAttack", false);
     }
 #endregion
 }
