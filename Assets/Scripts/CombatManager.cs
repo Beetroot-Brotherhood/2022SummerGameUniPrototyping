@@ -53,6 +53,10 @@ public class CombatManager : MonoBehaviour
 
     public Image ultimateBar;
 
+    // create a variable for text mesh pro text
+    public TMPro.TextMeshProUGUI ultimateChargeText;
+    public int ultimateMaxFibonacciNumber = 10;
+
     public float holdThreshold;
     public float parryCooldown;
     public float throwableCooldown;
@@ -223,8 +227,12 @@ public class CombatManager : MonoBehaviour
         }
     }
 
-    public void IncreaseUltimateCharge(float amount) {
+    public void IncreaseUltimateCharge(float amount, bool showIncreased = false) {
         currentStatistics.ultimateCharge += amount;
+        if (showIncreased) {
+            ultimateChargeText.text = "+" + amount;
+            ultimateChargeText.gameObject.SetActive(true);
+        }
         if (currentStatistics.ultimateCharge > maxStatistics.ultimateCharge) {
             currentStatistics.ultimateCharge = maxStatistics.ultimateCharge;
         }

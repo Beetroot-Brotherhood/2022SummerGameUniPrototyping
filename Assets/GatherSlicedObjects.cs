@@ -116,7 +116,7 @@ public class GatherSlicedObjects : MonoBehaviour
         gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, owner.transform.position, (Time.deltaTime * (currentRecallTimer - recallTimer)) * recallSpeed);
         if (Vector3.Distance(owner.transform.position, gameObject.transform.position) < 0.4)
         {
-            CombatManager.instance.IncreaseUltimateCharge(Mathf.Floor(Krezme.QualityOfLife.FibonacciSequenceInt(amountHeld) / 2) + amountHeld);
+            CombatManager.instance.IncreaseUltimateCharge(Mathf.Floor(Krezme.QualityOfLife.FibonacciSequenceInt(amountHeld > CombatManager.instance.ultimateMaxFibonacciNumber ? CombatManager.instance.ultimateMaxFibonacciNumber : amountHeld)) + amountHeld, showIncreased: true);
             Destroy(this.gameObject);
             ballRoll.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
