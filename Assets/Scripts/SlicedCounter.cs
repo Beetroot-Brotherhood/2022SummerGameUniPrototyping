@@ -8,7 +8,7 @@ public class SlicedCounter : MonoBehaviour
     bool moveTowardsPlayer;
     Rigidbody rigidbody;
     Collider collider;
-    GameObject player;
+    GameObject target;
     float timePassed;
     private FMOD.Studio.EventInstance collisionSounds;
 
@@ -31,23 +31,23 @@ public class SlicedCounter : MonoBehaviour
 
     void MoveTowardsPlayer () {
         timePassed += Time.deltaTime;
-        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, player.transform.position, timePassed);
-        if (Vector3.Distance(player.transform.position, gameObject.transform.position) < 0.4) {
-            //GatherSlicedObjects.instance.score += 10;
+        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, timePassed);
+        if (Vector3.Distance(target.transform.position, gameObject.transform.position) < 0.4) {
+            target.GetComponent<GatherSlicedObjects>().amountHeld += 1;
             Destroy(this.gameObject);
         }
     }
 
-    public void StartMovingTowardsPlayer (GameObject newPlayer) {
-        player = newPlayer;
+    public void StartMovingCloser (GameObject newTarget) {
+        target = newTarget;
         rigidbody.useGravity = false;
         collider.isTrigger = true;
         moveTowardsPlayer = true;
         timePassed = 0;
     }
 
-    public void StopMovingTowardsPlayer () {
-        player = null;
+    public void StopMovingCloser () {
+        target = null;
         rigidbody.useGravity = true;
         collider.isTrigger = false;
         moveTowardsPlayer = false;

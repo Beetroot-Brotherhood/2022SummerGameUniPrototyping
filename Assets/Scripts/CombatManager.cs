@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using Krezme;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class Statistics{
     public float lightAttackDamage;
     public float heavyAttackDamage;
+    public float ultimateCharge;
+    public float ultimateRechargeRPS; // Ultimate recharge rate per second
 }
 
 public class CombatManager : MonoBehaviour
@@ -47,6 +50,8 @@ public class CombatManager : MonoBehaviour
     public Transform throwablePoint;
     public GameObject suctionThrowable;
     public EnemyLockOn enemyLockOn;
+
+    public Image ultimateBar;
 
     public float holdThreshold;
     public float parryCooldown;
@@ -101,6 +106,8 @@ public class CombatManager : MonoBehaviour
         KickFunc();
 
         Ultimate();
+
+        UltimateRecharge();
     }
 
     void AttackAnimationState() {
@@ -216,6 +223,19 @@ public class CombatManager : MonoBehaviour
         }
     }
 
+    public void IncreaseUltimateCharge(float amount) {
+        currentStatistics.ultimateCharge += amount;
+        if (currentStatistics.ultimateCharge > maxStatistics.ultimateCharge) {
+            currentStatistics.ultimateCharge = maxStatistics.ultimateCharge;
+        }
+        
+        if (currentStatistics.ultimateCharge == maxStatistics.ultimateCharge) {
+            canUltimate = true;
+        }
+
+        ultimateBar.fillAmount = currentStatistics.ultimateCharge / maxStatistics.ultimateCharge;
+    }
+
     public void KickFunc() {
         if(OnSlicerInput.instance.onKick && canAttack)
         {
@@ -245,8 +265,20 @@ public class CombatManager : MonoBehaviour
         }
     }
 
+    public float currentRecharge = 0;
+
+    public void UltimateRecharge(){
+        if (currentStatistics.ultimateCharge < maxStatistics.ultimateCharge) {
+            currentRecharge += Time.deltaTime * currentStatistics.ultimateRechargeRPS;
+            if (currentRecharge >= 1) {
+                currentRecharge = -1;
+                IncreaseUltimateCharge(1);
+            }
+        }
+    }
+
     public void UltimatePreparation() {
-        if (OnSlicerInput.instance.onUltimate) {
+        if (OnSlicerInput.instance.onUltimate && canUltimate) {
             weaponAnimator.SetBool("UltimateSheath", true);
             EnemyLockOn.instance.lockOn = true;
             if (OnSlicerInput.instance.onSlice) {
@@ -255,6 +287,8 @@ public class CombatManager : MonoBehaviour
                     EnemyLockOn.instance.attackedTargets = EnemyLockOn.instance.visibleTargets; //! Check if this makes a clone or a reference
                     enemySliceOrder = QualityOfLife.RandomNumberListWithoutRepeating(0, EnemyLockOn.instance.attackedTargets.Count-1);
                     canUltimate = false;
+                    currentStatistics.ultimateCharge = 0;
+                    IncreaseUltimateCharge(0);
                 }
                 else{
                     //! FILL this in with the code for when there are no visible targets
@@ -301,7 +335,6 @@ public class CombatManager : MonoBehaviour
         }
 
         if (enemySliceOrderIndex >= enemySliceOrder.Count) {
-            canUltimate = true;
             enemySliceOrderIndex = 0;
             EnemyLockOn.instance.attackedTargets.Clear();
             enemySliceOrder.Clear();

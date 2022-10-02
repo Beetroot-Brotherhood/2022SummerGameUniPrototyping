@@ -144,6 +144,38 @@ namespace Krezme {
             }
             return randomNumbers;
         }
+
+        /// <summary>
+        /// Generates a list of the fibonacci sequence up to a certain amount
+        /// </summary>
+        /// <param name="amount"></param>
+        /// <returns></returns>
+        public static List<int> FibonacciSequenceList(int amount) {
+            List<int> fibonacciSequence = new List<int>() {
+                0,
+                1
+            };
+            for (int i = 0; i < amount-2; i++) {
+                fibonacciSequence.Add(fibonacciSequence[i] + fibonacciSequence[i + 1]);
+            }
+            return fibonacciSequence;
+        }
+
+        /// <summary>
+        /// Generates the number of the fibonacci sequence at a certain index
+        /// </summary>
+        /// <param name="requestedNumber">the sequence number requested</param>
+        /// <returns>A the specified number in the sequence</returns>
+        public static int FibonacciSequenceInt(int requestedNumber) {
+            List<int> fibonacciSequence = new List<int>() {
+                0,
+                1
+            };
+            for (int i = 0; i < requestedNumber-2; i++) {
+                fibonacciSequence.Add(fibonacciSequence[i] + fibonacciSequence[i + 1]);
+            }
+            return fibonacciSequence[requestedNumber-1];
+        }
     }
 
     public enum Bool3D {

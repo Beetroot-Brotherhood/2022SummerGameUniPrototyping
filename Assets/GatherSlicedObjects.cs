@@ -15,10 +15,8 @@ public class GatherSlicedObjects : MonoBehaviour
             ballRoll.start();
     }
 
-
     //public Text scoreText;
-    public int score;
-    public GameObject player;
+    public int amountHeld;
     public int radius;
     public LayerMask layerMask;
     List<SlicedCounter> movingParts = new List<SlicedCounter>();
@@ -43,21 +41,17 @@ public class GatherSlicedObjects : MonoBehaviour
     [SerializeField] private FMODUnity.EventReference _ballRoll;
     private FMOD.Studio.EventInstance ballRoll;
 
-
-
-
-
     // Update is called once per frame
     void Update()
     {
         //scoreText.text = "Score: " + score;
         if (OnSlicerInput.instance.onGatherSlicedParts) {
-            Collider[] objectsToGather = Physics.OverlapSphere(player.transform.position , radius, layerMask.value, QueryTriggerInteraction.UseGlobal);
+            Collider[] objectsToGather = Physics.OverlapSphere(gameObject.transform.position, radius, layerMask.value, QueryTriggerInteraction.UseGlobal);
             for (int i = 0; i < objectsToGather.Length; i++) {
                 SlicedCounter slicedCounter;
                 if (objectsToGather[i].TryGetComponent<SlicedCounter>(out slicedCounter)) {
                     if (!movingParts.Contains(slicedCounter)) {
-                        slicedCounter.StartMovingTowardsPlayer(player);
+                        slicedCounter.StartMovingCloser(gameObject);
                         movingParts.Add(slicedCounter);
                     }
                 }
@@ -66,7 +60,7 @@ public class GatherSlicedObjects : MonoBehaviour
         else {
             foreach (SlicedCounter movingPart in movingParts) {
                 try {
-                    movingPart.StopMovingTowardsPlayer();
+                    movingPart.StopMovingCloser();
                 }
                 catch (System.Exception) {
                 }
@@ -87,7 +81,6 @@ public class GatherSlicedObjects : MonoBehaviour
         ballRoll.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(thisBall));
 
     }
-
 
     private void FixedUpdate()
     {
@@ -118,21 +111,14 @@ public class GatherSlicedObjects : MonoBehaviour
         }
     }
 
-
     void MoveTowardsPlayer()
     {
-       
         gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, owner.transform.position, (Time.deltaTime * (currentRecallTimer - recallTimer)) * recallSpeed);
         if (Vector3.Distance(owner.transform.position, gameObject.transform.position) < 0.4)
         {
-            
+            CombatManager.instance.IncreaseUltimateCharge(Mathf.Floor(Krezme.QualityOfLife.FibonacciSequenceInt(amountHeld) / 2) + amountHeld);
             Destroy(this.gameObject);
             ballRoll.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
     }
-
-
-
-
-
 }
