@@ -29,6 +29,7 @@ public class DollLimbController : MonoBehaviour
             rb.isKinematic = false;
         }
         UnParent();
+        gameObject.AddComponent<SlicedCounter>();
         Destroy(this);
     }
 
