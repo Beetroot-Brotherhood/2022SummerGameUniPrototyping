@@ -60,6 +60,11 @@ public class TrainController : MonoBehaviour
         this.transform.rotation = dollyCartControls.transform.rotation; //this is the line that makes the train rotate with the track
         dollyCartControls.m_Speed = _input.move.y * _speed;
 
+        if (_input == null)
+        {
+            dollyCartControls.m_Speed = 0;
+        }
+
     }
 
     private void CameraRotation()

@@ -52,15 +52,15 @@ public class ShootingScript : MonoBehaviour
             }
         }
 
-        if(_playerInputs.fire)
+        if(_playerInputs.missileFire)
         {
-            Fire();
-            _playerInputs.fire = false;
+            MissileFire();
+            _playerInputs.missileFire = false;
         }
 
     }
 
-    void Fire()
+    void MissileFire()
     {
         leftGunEnd.LookAt(aim);
         rightGunEnd.LookAt(aim);

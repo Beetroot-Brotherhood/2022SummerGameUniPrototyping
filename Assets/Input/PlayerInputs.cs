@@ -10,7 +10,9 @@ public class PlayerInputs : MonoBehaviour
 		public Vector2 look; // free camera look
 		public bool jump;
 		public bool sprint;
-		public bool fire;
+		public bool lazerFire;
+		public bool missileFire;
+		public bool board;
 		public bool unboard;
 
     [Header("Movement Settings")]
@@ -43,16 +45,23 @@ public class PlayerInputs : MonoBehaviour
 		SprintInput(value.isPressed);
 	}
 
-	public void OnFire(InputValue value)
+	public void OnLazerFire(InputValue value)
 	{
-		FireInput(value.isPressed);
+		LazerFireInput(value.isPressed);
+	}
+	public void OnMissileFire(InputValue value)
+	{
+		MissileFireInput(value.isPressed);
 	}
 
+	public void OnBoard(InputValue value)
+	{
+		BoardInput(value.isPressed);
+	}
 	public void OnUnboard(InputValue value)
 	{
 		UnboardInput(value.isPressed);
 	}
-
 
     public void MoveInput(Vector2 newMoveDirection)
 	{
@@ -74,11 +83,19 @@ public class PlayerInputs : MonoBehaviour
 		sprint = newSprintState;
 	}
 
-	public void FireInput(bool newFireState)
+	public void LazerFireInput(bool newLazerFireState)
 	{
-		fire = newFireState;
+		lazerFire = newLazerFireState;
+	}
+	public void MissileFireInput(bool newMissileFireState)
+	{
+		missileFire = newMissileFireState;
 	}
 
+	public void BoardInput(bool newBoardState)
+	{
+		board = newBoardState;
+	}
 	public void UnboardInput(bool newUnboardState)
 	{
 		unboard = newUnboardState;
