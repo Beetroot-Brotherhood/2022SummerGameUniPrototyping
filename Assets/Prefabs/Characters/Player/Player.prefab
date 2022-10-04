@@ -583,7 +583,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 366038728}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.021029677, y: 0.14099987, z: 0.27800164}
+  m_LocalPosition: {x: 0.02103093, y: 0.14099987, z: 0.27799976}
   m_LocalScale: {x: 0.06571701, y: 0.06571701, z: 0.06571701}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9783,7 +9783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSounds: {fileID: 438189405}
-  MoveSpeed: 10
+  MoveSpeed: 4
   SprintSpeed: 15
   LookSpeed: 3
   RotationSpeed: 50
@@ -9876,7 +9876,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dollyCartControls: {fileID: 0}
   _controller: {fileID: 1459737734699577681}
-  _speed: 0.5
+  _speed: 0.1
+  LookSpeed: 3
+  CinemachineCameraTarget: {fileID: 6535880336192407552}
+  TopClamp: 60
+  BottomClamp: -60
+  RightClamp: 75
+  LeftClamp: -75
 --- !u!65 &1658160448
 BoxCollider:
   m_ObjectHideFlags: 0
