@@ -117,6 +117,11 @@ public class MechController : MonoBehaviour
         _fallTimeoutDelta = FallTimeout;
     }
 
+    void OnEnable()
+    {
+        _playerInput.SwitchCurrentActionMap("Mech");
+    }
+
     // Update is called once per frame
     void Update()
     {

@@ -69,7 +69,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""id"": ""1440a839-cbef-4785-bfca-ad18ce8d36aa"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Tap"",
                     ""initialStateCheck"": false
                 },
                 {
@@ -82,9 +82,27 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""ReadyLazer"",
+                    ""type"": ""Button"",
+                    ""id"": ""23aff37f-8074-48eb-bab6-b615d6ac180c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ReadySight"",
+                    ""type"": ""Button"",
+                    ""id"": ""db436f2a-dfc3-4e5f-a8df-8d58aa5c7cb6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Unboard"",
                     ""type"": ""Button"",
-                    ""id"": ""f04adb56-1774-4ab6-904e-b10a4f413e5b"",
+                    ""id"": ""1c8e6a53-a5c4-4f4b-9b03-22d141e12d4e"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -193,7 +211,40 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""20f1a014-c63e-4f6e-a0b1-c00b6b787870"",
+                    ""id"": ""5a911dee-eb69-4394-a7e1-c453310648de"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""LazerFire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b551efcf-fc1d-495b-ad72-92c7ce73827e"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""ReadyLazer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3cabcd9b-ab48-4229-87f5-d8221e8e22c0"",
+                    ""path"": ""<Keyboard>/t"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""ReadySight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""60543eff-356b-48b0-9c18-404a0b908086"",
                     ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -201,15 +252,116 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""Unboard"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Train"",
+            ""id"": ""bd5a0763-a024-4b29-b395-6fc78ceb5b72"",
+            ""actions"": [
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""7cbe47fd-a311-48a2-83e5-fae19b898691"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""5a911dee-eb69-4394-a7e1-c453310648de"",
-                    ""path"": ""<Mouse>/leftButton"",
+                    ""name"": ""Look"",
+                    ""type"": ""Value"",
+                    ""id"": ""39cd2d4c-132d-4f93-8816-f93fdb39ced1"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Unboard"",
+                    ""type"": ""Button"",
+                    ""id"": ""1e43e967-d960-4b6b-9fd0-b38061bac2f9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""5d513f40-2055-490d-9106-c02b7696a96f"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""bb1dec6d-be1a-4a89-ad88-ab2e45ae0b21"",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""LazerFire"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""4eaf440a-49dc-4c93-bb13-5f7d872356fa"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""4487cab6-d55b-4620-8a00-30ca9f896116"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""519c3e78-fcba-451f-b5bf-8e3074e317a5"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""24d35377-3de9-4548-acf9-16ea416a3648"",
+                    ""path"": ""<Pointer>/delta"",
+                    ""interactions"": """",
+                    ""processors"": ""InvertVector2(invertX=false)"",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2b32d747-84e6-4eb7-a5d5-e0f5cdfcf1b4"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""Unboard"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -243,7 +395,14 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Mech_Sprint = m_Mech.FindAction("Sprint", throwIfNotFound: true);
         m_Mech_LazerFire = m_Mech.FindAction("LazerFire", throwIfNotFound: true);
         m_Mech_MissileFire = m_Mech.FindAction("MissileFire", throwIfNotFound: true);
+        m_Mech_ReadyLazer = m_Mech.FindAction("ReadyLazer", throwIfNotFound: true);
+        m_Mech_ReadySight = m_Mech.FindAction("ReadySight", throwIfNotFound: true);
         m_Mech_Unboard = m_Mech.FindAction("Unboard", throwIfNotFound: true);
+        // Train
+        m_Train = asset.FindActionMap("Train", throwIfNotFound: true);
+        m_Train_Move = m_Train.FindAction("Move", throwIfNotFound: true);
+        m_Train_Look = m_Train.FindAction("Look", throwIfNotFound: true);
+        m_Train_Unboard = m_Train.FindAction("Unboard", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -309,6 +468,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Mech_Sprint;
     private readonly InputAction m_Mech_LazerFire;
     private readonly InputAction m_Mech_MissileFire;
+    private readonly InputAction m_Mech_ReadyLazer;
+    private readonly InputAction m_Mech_ReadySight;
     private readonly InputAction m_Mech_Unboard;
     public struct MechActions
     {
@@ -320,6 +481,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @Sprint => m_Wrapper.m_Mech_Sprint;
         public InputAction @LazerFire => m_Wrapper.m_Mech_LazerFire;
         public InputAction @MissileFire => m_Wrapper.m_Mech_MissileFire;
+        public InputAction @ReadyLazer => m_Wrapper.m_Mech_ReadyLazer;
+        public InputAction @ReadySight => m_Wrapper.m_Mech_ReadySight;
         public InputAction @Unboard => m_Wrapper.m_Mech_Unboard;
         public InputActionMap Get() { return m_Wrapper.m_Mech; }
         public void Enable() { Get().Enable(); }
@@ -348,6 +511,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @MissileFire.started -= m_Wrapper.m_MechActionsCallbackInterface.OnMissileFire;
                 @MissileFire.performed -= m_Wrapper.m_MechActionsCallbackInterface.OnMissileFire;
                 @MissileFire.canceled -= m_Wrapper.m_MechActionsCallbackInterface.OnMissileFire;
+                @ReadyLazer.started -= m_Wrapper.m_MechActionsCallbackInterface.OnReadyLazer;
+                @ReadyLazer.performed -= m_Wrapper.m_MechActionsCallbackInterface.OnReadyLazer;
+                @ReadyLazer.canceled -= m_Wrapper.m_MechActionsCallbackInterface.OnReadyLazer;
+                @ReadySight.started -= m_Wrapper.m_MechActionsCallbackInterface.OnReadySight;
+                @ReadySight.performed -= m_Wrapper.m_MechActionsCallbackInterface.OnReadySight;
+                @ReadySight.canceled -= m_Wrapper.m_MechActionsCallbackInterface.OnReadySight;
                 @Unboard.started -= m_Wrapper.m_MechActionsCallbackInterface.OnUnboard;
                 @Unboard.performed -= m_Wrapper.m_MechActionsCallbackInterface.OnUnboard;
                 @Unboard.canceled -= m_Wrapper.m_MechActionsCallbackInterface.OnUnboard;
@@ -373,6 +542,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @MissileFire.started += instance.OnMissileFire;
                 @MissileFire.performed += instance.OnMissileFire;
                 @MissileFire.canceled += instance.OnMissileFire;
+                @ReadyLazer.started += instance.OnReadyLazer;
+                @ReadyLazer.performed += instance.OnReadyLazer;
+                @ReadyLazer.canceled += instance.OnReadyLazer;
+                @ReadySight.started += instance.OnReadySight;
+                @ReadySight.performed += instance.OnReadySight;
+                @ReadySight.canceled += instance.OnReadySight;
                 @Unboard.started += instance.OnUnboard;
                 @Unboard.performed += instance.OnUnboard;
                 @Unboard.canceled += instance.OnUnboard;
@@ -380,6 +555,55 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         }
     }
     public MechActions @Mech => new MechActions(this);
+
+    // Train
+    private readonly InputActionMap m_Train;
+    private ITrainActions m_TrainActionsCallbackInterface;
+    private readonly InputAction m_Train_Move;
+    private readonly InputAction m_Train_Look;
+    private readonly InputAction m_Train_Unboard;
+    public struct TrainActions
+    {
+        private @PlayerControls m_Wrapper;
+        public TrainActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Move => m_Wrapper.m_Train_Move;
+        public InputAction @Look => m_Wrapper.m_Train_Look;
+        public InputAction @Unboard => m_Wrapper.m_Train_Unboard;
+        public InputActionMap Get() { return m_Wrapper.m_Train; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(TrainActions set) { return set.Get(); }
+        public void SetCallbacks(ITrainActions instance)
+        {
+            if (m_Wrapper.m_TrainActionsCallbackInterface != null)
+            {
+                @Move.started -= m_Wrapper.m_TrainActionsCallbackInterface.OnMove;
+                @Move.performed -= m_Wrapper.m_TrainActionsCallbackInterface.OnMove;
+                @Move.canceled -= m_Wrapper.m_TrainActionsCallbackInterface.OnMove;
+                @Look.started -= m_Wrapper.m_TrainActionsCallbackInterface.OnLook;
+                @Look.performed -= m_Wrapper.m_TrainActionsCallbackInterface.OnLook;
+                @Look.canceled -= m_Wrapper.m_TrainActionsCallbackInterface.OnLook;
+                @Unboard.started -= m_Wrapper.m_TrainActionsCallbackInterface.OnUnboard;
+                @Unboard.performed -= m_Wrapper.m_TrainActionsCallbackInterface.OnUnboard;
+                @Unboard.canceled -= m_Wrapper.m_TrainActionsCallbackInterface.OnUnboard;
+            }
+            m_Wrapper.m_TrainActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Move.started += instance.OnMove;
+                @Move.performed += instance.OnMove;
+                @Move.canceled += instance.OnMove;
+                @Look.started += instance.OnLook;
+                @Look.performed += instance.OnLook;
+                @Look.canceled += instance.OnLook;
+                @Unboard.started += instance.OnUnboard;
+                @Unboard.performed += instance.OnUnboard;
+                @Unboard.canceled += instance.OnUnboard;
+            }
+        }
+    }
+    public TrainActions @Train => new TrainActions(this);
     private int m_KeyboardandMouseSchemeIndex = -1;
     public InputControlScheme KeyboardandMouseScheme
     {
@@ -397,6 +621,14 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnSprint(InputAction.CallbackContext context);
         void OnLazerFire(InputAction.CallbackContext context);
         void OnMissileFire(InputAction.CallbackContext context);
+        void OnReadyLazer(InputAction.CallbackContext context);
+        void OnReadySight(InputAction.CallbackContext context);
+        void OnUnboard(InputAction.CallbackContext context);
+    }
+    public interface ITrainActions
+    {
+        void OnMove(InputAction.CallbackContext context);
+        void OnLook(InputAction.CallbackContext context);
         void OnUnboard(InputAction.CallbackContext context);
     }
 }

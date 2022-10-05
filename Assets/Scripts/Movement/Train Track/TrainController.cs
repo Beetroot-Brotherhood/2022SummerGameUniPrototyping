@@ -54,6 +54,17 @@ public class TrainController : MonoBehaviour
         CameraRotation();
     }
 
+    void OnEnable()
+    {
+        _playerInput.SwitchCurrentActionMap("Train");
+    }
+
+    void OnDisable()
+    {
+        dollyCartControls.m_Speed = 0;
+        this.transform.rotation = Quaternion.identity;
+    }
+
     private void Move()
     {
         

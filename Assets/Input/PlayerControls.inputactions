@@ -47,7 +47,7 @@
                     "id": "1440a839-cbef-4785-bfca-ad18ce8d36aa",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Tap",
                     "initialStateCheck": false
                 },
                 {
@@ -60,9 +60,27 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "ReadyLazer",
+                    "type": "Button",
+                    "id": "23aff37f-8074-48eb-bab6-b615d6ac180c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ReadySight",
+                    "type": "Button",
+                    "id": "db436f2a-dfc3-4e5f-a8df-8d58aa5c7cb6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Unboard",
                     "type": "Button",
-                    "id": "f04adb56-1774-4ab6-904e-b10a4f413e5b",
+                    "id": "1c8e6a53-a5c4-4f4b-9b03-22d141e12d4e",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -171,7 +189,40 @@
                 },
                 {
                     "name": "",
-                    "id": "20f1a014-c63e-4f6e-a0b1-c00b6b787870",
+                    "id": "5a911dee-eb69-4394-a7e1-c453310648de",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard and Mouse",
+                    "action": "LazerFire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b551efcf-fc1d-495b-ad72-92c7ce73827e",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard and Mouse",
+                    "action": "ReadyLazer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3cabcd9b-ab48-4229-87f5-d8221e8e22c0",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard and Mouse",
+                    "action": "ReadySight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "60543eff-356b-48b0-9c18-404a0b908086",
                     "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
@@ -179,15 +230,116 @@
                     "action": "Unboard",
                     "isComposite": false,
                     "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Train",
+            "id": "bd5a0763-a024-4b29-b395-6fc78ceb5b72",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "PassThrough",
+                    "id": "7cbe47fd-a311-48a2-83e5-fae19b898691",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
-                    "name": "",
-                    "id": "5a911dee-eb69-4394-a7e1-c453310648de",
-                    "path": "<Mouse>/leftButton",
+                    "name": "Look",
+                    "type": "Value",
+                    "id": "39cd2d4c-132d-4f93-8816-f93fdb39ced1",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Unboard",
+                    "type": "Button",
+                    "id": "1e43e967-d960-4b6b-9fd0-b38061bac2f9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "WASD",
+                    "id": "5d513f40-2055-490d-9106-c02b7696a96f",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "bb1dec6d-be1a-4a89-ad88-ab2e45ae0b21",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard and Mouse",
-                    "action": "LazerFire",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "4eaf440a-49dc-4c93-bb13-5f7d872356fa",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard and Mouse",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "4487cab6-d55b-4620-8a00-30ca9f896116",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard and Mouse",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "519c3e78-fcba-451f-b5bf-8e3074e317a5",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard and Mouse",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "24d35377-3de9-4548-acf9-16ea416a3648",
+                    "path": "<Pointer>/delta",
+                    "interactions": "",
+                    "processors": "InvertVector2(invertX=false)",
+                    "groups": "Keyboard and Mouse",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2b32d747-84e6-4eb7-a5d5-e0f5cdfcf1b4",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard and Mouse",
+                    "action": "Unboard",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

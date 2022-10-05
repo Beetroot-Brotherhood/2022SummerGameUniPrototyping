@@ -10,9 +10,10 @@ public class PlayerInputs : MonoBehaviour
 		public Vector2 look; // free camera look
 		public bool jump;
 		public bool sprint;
+		public bool readyLazer;
+		public bool readySight;
 		public bool lazerFire;
 		public bool missileFire;
-		public bool board;
 		public bool unboard;
 
     [Header("Movement Settings")]
@@ -45,6 +46,16 @@ public class PlayerInputs : MonoBehaviour
 		SprintInput(value.isPressed);
 	}
 
+	public void OnReadySight(InputValue value)
+	{
+		ReadySightInput(value.isPressed);
+	}
+
+	public void OnReadyLazer(InputValue value)
+	{
+		ReadyLazerInput(value.isPressed);
+	}
+
 	public void OnLazerFire(InputValue value)
 	{
 		LazerFireInput(value.isPressed);
@@ -54,14 +65,12 @@ public class PlayerInputs : MonoBehaviour
 		MissileFireInput(value.isPressed);
 	}
 
-	public void OnBoard(InputValue value)
-	{
-		BoardInput(value.isPressed);
-	}
 	public void OnUnboard(InputValue value)
 	{
 		UnboardInput(value.isPressed);
 	}
+
+
 
     public void MoveInput(Vector2 newMoveDirection)
 	{
@@ -83,6 +92,16 @@ public class PlayerInputs : MonoBehaviour
 		sprint = newSprintState;
 	}
 
+	void ReadySightInput(bool newReadySightState)
+	{
+		readySight = newReadySightState;
+	}
+
+	void ReadyLazerInput(bool newReadyLazerState)
+	{
+		readyLazer = newReadyLazerState;
+	}
+
 	public void LazerFireInput(bool newLazerFireState)
 	{
 		lazerFire = newLazerFireState;
@@ -92,10 +111,6 @@ public class PlayerInputs : MonoBehaviour
 		missileFire = newMissileFireState;
 	}
 
-	public void BoardInput(bool newBoardState)
-	{
-		board = newBoardState;
-	}
 	public void UnboardInput(bool newUnboardState)
 	{
 		unboard = newUnboardState;
