@@ -1210,16 +1210,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _input: {fileID: 545999689}
-  lazerAnim: {fileID: 1029871519}
+  lazerAnim: {fileID: 0}
   wiperAnim: {fileID: 746552053}
   monitorAnim: {fileID: 1452252341}
-  throttleAnim: {fileID: 850765693}
+  throttleAnim: {fileID: 0}
   stickAnim: {fileID: 396703801}
   lazer: 1
   wiper: 1
   monitor: 1
   throttle: 1
   stick: 1
+--- !u!95 &545999694
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545999683}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2b5a4f0d2a1d3414ab870504e955b1c7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &609317528
 GameObject:
   m_ObjectHideFlags: 0
@@ -1387,11 +1407,6 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 1427344528, guid: fda22f38e4225d44194f87cbe452f212, type: 3}
   m_PrefabInstance: {fileID: 1286422292}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &850765693 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 734945625, guid: fda22f38e4225d44194f87cbe452f212, type: 3}
-  m_PrefabInstance: {fileID: 1286422292}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &887214659
 GameObject:
   m_ObjectHideFlags: 0
@@ -1423,11 +1438,6 @@ Transform:
   m_Father: {fileID: 1734093059}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1029871519 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1093130732, guid: fda22f38e4225d44194f87cbe452f212, type: 3}
-  m_PrefabInstance: {fileID: 1286422292}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1215404891
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,7 +1764,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 2610948950160733320, guid: fda22f38e4225d44194f87cbe452f212, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99999565
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610948950160733320, guid: fda22f38e4225d44194f87cbe452f212, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610948950160733320, guid: fda22f38e4225d44194f87cbe452f212, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0029639376
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610948950160733320, guid: fda22f38e4225d44194f87cbe452f212, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.34
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1093130732, guid: fda22f38e4225d44194f87cbe452f212, type: 3}
+    - {fileID: 2080045321, guid: fda22f38e4225d44194f87cbe452f212, type: 3}
+    - {fileID: 734945625, guid: fda22f38e4225d44194f87cbe452f212, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fda22f38e4225d44194f87cbe452f212, type: 3}
 --- !u!95 &1452252341 stripped
 Animator:
