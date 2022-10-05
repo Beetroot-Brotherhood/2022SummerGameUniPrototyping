@@ -5,7 +5,7 @@ using UnityEngine;
 public class AnimationManager : MonoBehaviour
 {
     [HideInInspector] public PlayerInputs _input;
-    public Animator lazerAnim, wiperAnim, monitorAnim, throttleAnim, stickAnim;
+    public Animator mechAnim, lazerAnim, wiperAnim, monitorAnim, throttleAnim, stickAnim;
     public bool lazer = true, wiper = true, monitor = true, throttle = true, stick = true;
 
 
@@ -18,6 +18,9 @@ public class AnimationManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        mechAnim.SetFloat("Horizontal", _input.move.x);
+        mechAnim.SetFloat("Vertical", _input.move.y);
+
         if(lazer == true)
         {
             lazerAnim.enabled = true;

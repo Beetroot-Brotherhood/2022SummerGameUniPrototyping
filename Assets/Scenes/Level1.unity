@@ -1210,6 +1210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _input: {fileID: 545999689}
+  mechAnim: {fileID: 545999694}
   lazerAnim: {fileID: 0}
   wiperAnim: {fileID: 746552053}
   monitorAnim: {fileID: 1452252341}
@@ -1708,6 +1709,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 431334723, guid: fda22f38e4225d44194f87cbe452f212, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1066063413, guid: fda22f38e4225d44194f87cbe452f212, type: 3}
       propertyPath: dollyCart
       value: 
