@@ -9,7 +9,6 @@ public class TrainController : MonoBehaviour
 {
     private PlayerInputs _input;
     private PlayerInput _playerInput;
-    public Spline spline;
     public PathFollower _pathfollower;
 
     public CharacterController _controller;
