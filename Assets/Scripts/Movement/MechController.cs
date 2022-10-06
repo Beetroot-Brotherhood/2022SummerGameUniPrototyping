@@ -119,7 +119,7 @@ public class MechController : MonoBehaviour
 
     void OnEnable()
     {
-        _playerInput.SwitchCurrentActionMap("Mech");
+        //_playerInput.SwitchCurrentActionMap("Mech");
     }
 
     // Update is called once per frame

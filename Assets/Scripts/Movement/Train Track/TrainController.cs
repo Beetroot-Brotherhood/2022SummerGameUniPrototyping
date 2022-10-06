@@ -8,6 +8,8 @@ public class TrainController : MonoBehaviour
     private PlayerInputs _input;
     private PlayerInput _playerInput;
     public Cinemachine.CinemachineDollyCart dollyCartControls;
+    public Transform newdollyCart;
+    public Spline spline;
     public CharacterController _controller;
     public float _speed = 5.0f;
     public float LookSpeed = 3.0f;
@@ -47,7 +49,7 @@ public class TrainController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        //Move();
     }
     private void LateUpdate()
     {
@@ -56,7 +58,7 @@ public class TrainController : MonoBehaviour
 
     void OnEnable()
     {
-        _playerInput.SwitchCurrentActionMap("Train");
+        //_playerInput.SwitchCurrentActionMap("Train");
     }
 
     void OnDisable()
@@ -68,12 +70,20 @@ public class TrainController : MonoBehaviour
     private void Move()
     {
         
-        this.transform.rotation = dollyCartControls.transform.rotation; //this is the line that makes the train rotate with the track
-        dollyCartControls.m_Speed = _input.move.y * _speed;
+        //this.transform.rotation = dollyCartControls.transform.rotation; //this is the line that makes the train rotate with the track
+        //dollyCartControls.m_Speed = _input.move.y * _speed;
+
+
+        //newdollyCart.forward = newdollyCart.position * _input.move.y * _speed;
+        Vector3 move = newdollyCart.forward * _input.move.y * _speed;
+        newdollyCart.position = spline.WhereOnSpline(move);
+        
+        this.transform.rotation = newdollyCart.rotation; //this is the line that makes the train rotate with the trac
 
         if (_input == null)
         {
-            dollyCartControls.m_Speed = 0;
+            //dollyCartControls.m_Speed = 0;
+            newdollyCart.position = Vector3.zero;
         }
 
     }
