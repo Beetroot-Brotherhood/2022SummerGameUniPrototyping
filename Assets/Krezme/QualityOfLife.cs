@@ -151,14 +151,19 @@ namespace Krezme {
         /// <param name="amount"></param>
         /// <returns></returns>
         public static List<int> FibonacciSequenceList(int amount) {
-            List<int> fibonacciSequence = new List<int>() {
-                0,
-                1
-            };
-            for (int i = 0; i < amount-2; i++) {
-                fibonacciSequence.Add(fibonacciSequence[i] + fibonacciSequence[i + 1]);
+            if (amount >= 1) {
+                List<int> fibonacciSequence = new List<int>() {
+                    0,
+                    1
+                };
+                for (int i = 0; i < amount-2; i++) {
+                    fibonacciSequence.Add(fibonacciSequence[i] + fibonacciSequence[i + 1]);
+                }
+                return fibonacciSequence;
             }
-            return fibonacciSequence;
+            else {
+                return new List<int>() {0};
+            }
         }
 
         /// <summary>
@@ -167,14 +172,19 @@ namespace Krezme {
         /// <param name="requestedNumber">the sequence number requested</param>
         /// <returns>A the specified number in the sequence</returns>
         public static int FibonacciSequenceInt(int requestedNumber) {
-            List<int> fibonacciSequence = new List<int>() {
-                0,
-                1
-            };
-            for (int i = 0; i < requestedNumber-2; i++) {
-                fibonacciSequence.Add(fibonacciSequence[i] + fibonacciSequence[i + 1]);
+            if (requestedNumber >= 1) {
+                List<int> fibonacciSequence = new List<int>() {
+                    0,
+                    1
+                };
+                for (int i = 0; i < requestedNumber-2; i++) {
+                    fibonacciSequence.Add(fibonacciSequence[i] + fibonacciSequence[i + 1]);
+                }
+                return fibonacciSequence[requestedNumber-1];
             }
-            return fibonacciSequence[requestedNumber-1];
+            else {
+                return 0;
+            }
         }
     }
 
