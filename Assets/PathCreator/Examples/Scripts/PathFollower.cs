@@ -28,12 +28,8 @@ namespace PathCreation.Examples
                 if(stickToTrack.onTrack)
                 {
                     distanceTravelled += speed * Time.deltaTime;
-                    Debug.Log(distanceTravelled);
-                    transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction);
-                    Quaternion tempRotation = pathCreator.path.GetRotationAtDistance(distanceTravelled, endOfPathInstruction);
-                    transform.rotation = tempRotation;
-                    Debug.Log(tempRotation);
-                    transform.Rotate(new Vector3 (0,0,90), Space.Self);
+                    transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction);                   
+                    transform.rotation = pathCreator.path.GetRotationAtDistanceV2(distanceTravelled, endOfPathInstruction);
                 }
                 
             }

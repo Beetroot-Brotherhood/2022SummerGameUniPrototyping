@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using PathCreation;
+using PathCreation.Examples;
 
 public class TrainController : MonoBehaviour
 {
     private PlayerInputs _input;
     private PlayerInput _playerInput;
-    public Cinemachine.CinemachineDollyCart dollyCartControls;
-    public Transform newdollyCart;
     public Spline spline;
+    public PathFollower _pathfollower;
+
     public CharacterController _controller;
     public float _speed = 5.0f;
     public float LookSpeed = 3.0f;
@@ -49,7 +51,7 @@ public class TrainController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Move();
+        Move();
     }
     private void LateUpdate()
     {
@@ -63,27 +65,19 @@ public class TrainController : MonoBehaviour
 
     void OnDisable()
     {
-        dollyCartControls.m_Speed = 0;
+        _pathfollower.speed = 0;
         this.transform.rotation = Quaternion.identity;
     }
 
     private void Move()
     {
         
-        //this.transform.rotation = dollyCartControls.transform.rotation; //this is the line that makes the train rotate with the track
-        //dollyCartControls.m_Speed = _input.move.y * _speed;
+        _pathfollower.speed = Mathf.Lerp(_pathfollower.speed, _input.move.y * _speed, Time.deltaTime) ;
 
-
-        //newdollyCart.forward = newdollyCart.position * _input.move.y * _speed;
-        Vector3 move = newdollyCart.forward * _input.move.y * _speed;
-        newdollyCart.position = spline.WhereOnSpline(move);
-        
-        this.transform.rotation = newdollyCart.rotation; //this is the line that makes the train rotate with the trac
 
         if (_input == null)
         {
-            //dollyCartControls.m_Speed = 0;
-            newdollyCart.position = Vector3.zero;
+            _pathfollower.speed = 0;
         }
 
     }

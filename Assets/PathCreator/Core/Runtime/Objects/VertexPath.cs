@@ -198,6 +198,12 @@ namespace PathCreation {
             return GetRotation (t, endOfPathInstruction);
         }
 
+        /// Gets a rotation that will orient an object in the direction of the path at this point, with local up point along the path's normal
+        public Quaternion GetRotationAtDistanceV2 (float dst, EndOfPathInstruction endOfPathInstruction = EndOfPathInstruction.Loop) {
+            float t = dst / length;
+            return GetRotationV2 (t, endOfPathInstruction);
+        }
+
         /// Gets point on path based on 'time' (where 0 is start, and 1 is end of path).
         public Vector3 GetPointAtTime (float t, EndOfPathInstruction endOfPathInstruction = EndOfPathInstruction.Loop) {
             var data = CalculatePercentOnPathData (t, endOfPathInstruction);
@@ -224,6 +230,13 @@ namespace PathCreation {
             Vector3 direction = Vector3.Lerp (localTangents[data.previousIndex], localTangents[data.nextIndex], data.percentBetweenIndices);
             Vector3 normal = Vector3.Lerp (localNormals[data.previousIndex], localNormals[data.nextIndex], data.percentBetweenIndices);
             return Quaternion.LookRotation (MathUtility.TransformDirection (direction, transform, space), MathUtility.TransformDirection (normal, transform, space));
+        }
+
+        public Quaternion GetRotationV2 (float t, EndOfPathInstruction endOfPathInstruction = EndOfPathInstruction.Loop) {
+            var data = CalculatePercentOnPathData (t, endOfPathInstruction);
+            Vector3 direction = Vector3.Lerp (localTangents[data.previousIndex], localTangents[data.nextIndex], data.percentBetweenIndices);
+            Vector3 normal = Vector3.Lerp (localNormals[data.previousIndex], localNormals[data.nextIndex], data.percentBetweenIndices);
+            return Quaternion.LookRotation (MathUtility.TransformDirection (direction, transform, space), Vector3.up);
         }
 
         /// Finds the closest point on the path from any point in the world
