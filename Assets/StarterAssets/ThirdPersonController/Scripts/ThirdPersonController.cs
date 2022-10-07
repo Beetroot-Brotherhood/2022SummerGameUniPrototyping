@@ -396,14 +396,14 @@ namespace StarterAssets
             }
         }
         void PlayStepLeft() //* This will trigger the PlayerSounds script to execute the code within the PlayStep function 
-            {
+        {
             playerSounds.PlayStepLeft();
-            }
+        }
 
         void PlayStepRight() //* This will trigger the PlayerSounds script to execute the code within the PlayStep function 
-            {
+        {
             playerSounds.PlayStepRight();
-            }
+        }
 
         public void StartAttack()
         {
