@@ -91,45 +91,49 @@ public class PlayerSounds : MonoBehaviour
 
     public void PlayStepLeft()
     {
-        if (footsteps.isValid())
-        {
-            //GetTerrainTexture();
-            //FMODUnity.RuntimeManager.AttachInstanceToGameObject(footsteps, transform);
-            footsteps.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
-            GroundSwitchLeft();
-            footsteps.setParameterByName("Footsteps", surfaceType); //! Enable for debugging using surface slider in the inspector
-            footsteps.start();
+        try {
+            if (footsteps.isValid())
+            {
+                //GetTerrainTexture();
+                //FMODUnity.RuntimeManager.AttachInstanceToGameObject(footsteps, transform);
+                footsteps.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+                GroundSwitchLeft();
+                footsteps.setParameterByName("Footsteps", surfaceType); //! Enable for debugging using surface slider in the inspector
+                footsteps.start();
 
 
-            cloth.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
-            cloth.start();
+                cloth.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+                cloth.start();
 
-            jingle.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
-            jingle.start();
+                jingle.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+                jingle.start();
 
+            }
         }
-
+        catch (System.Exception){}
     }
 
     public void PlayStepRight()
     {
-        if (footsteps.isValid())
-        {
-            //GetTerrainTexture();
-            //FMODUnity.RuntimeManager.AttachInstanceToGameObject(footsteps, transform);
-            footsteps.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
-            GroundSwitchRight();
-            footsteps.setParameterByName("Footsteps", surfaceType); //! Enable for debugging using surface slider in the inspector
-            footsteps.start();
+        try {
+            if (footsteps.isValid())
+            {
+                //GetTerrainTexture();
+                //FMODUnity.RuntimeManager.AttachInstanceToGameObject(footsteps, transform);
+                footsteps.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+                GroundSwitchRight();
+                footsteps.setParameterByName("Footsteps", surfaceType); //! Enable for debugging using surface slider in the inspector
+                footsteps.start();
 
-            cloth.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
-            cloth.start();
-            
-            jingle.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
-            jingle.start();
+                cloth.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+                cloth.start();
+                
+                jingle.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+                jingle.start();
 
+            }
         }
-
+        catch (System.Exception){}
     }
 
 

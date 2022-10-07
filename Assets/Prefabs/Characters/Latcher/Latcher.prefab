@@ -379,6 +379,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 256
+  playerSounds: {fileID: 9126569479688040874}
 --- !u!136 &707719980
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -510,15 +511,29 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  _latchedReaction:
+    Guid:
+      Data1: 1922032450
+      Data2: 1267547534
+      Data3: 862884996
+      Data4: -1670013715
+    Path: event:/Enemies/Schooner Joe/DX SchoonerJoeLatchedReaction
   spanner: {fileID: 0}
   leftFoot: {fileID: 0}
   rightFoot: {fileID: 0}
   surfaceType: 0
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 9126569479884812977}
   t: {fileID: 0}
   posX: 0
   posZ: 0
-  textureValues: []
+  textureValues:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
 --- !u!1 &9126569479884812976
 GameObject:
   m_ObjectHideFlags: 0
