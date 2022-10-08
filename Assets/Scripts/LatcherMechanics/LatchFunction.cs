@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Latch : MonoBehaviour
+public class LatchFunction : MonoBehaviour
 {
     [SerializeField]
     private float latchRange = 10.0f;
