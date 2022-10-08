@@ -21,6 +21,14 @@ namespace Latch.Combat {
         public ShieldType shieldTypes;
     }
 
+    [System.Serializable]
+    public class ProjectileStatistics {
+        public int damage;
+        public DamageType damageType;
+        public float speed;
+        public float lifeTime;
+    }
+
     public static class CombatData
     {
         public static IDictionary<DamageType, ShieldType> superEffectiveDamageShieldMap { get; } = new Dictionary<DamageType, ShieldType>() {
@@ -57,9 +65,6 @@ namespace Latch.Combat {
             {1, 2},
             {2, 0}
         };
-
-        public static void Something () {
-        }
     }
 
     public enum ShieldType{
