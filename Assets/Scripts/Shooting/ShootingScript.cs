@@ -20,11 +20,11 @@ public class ShootingScript : MonoBehaviour
     [HideInInspector]
     public GameObject lBullet, rBullet;
 
-    private PlayerInputs _playerInputs;
+    private OnPlayerInput _playerInputs;
 
     void Start()
     {
-        _playerInputs = GetComponent<PlayerInputs>();
+        _playerInputs = GetComponent<OnPlayerInput>();
         timeremaining = lifespan;
     }
 

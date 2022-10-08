@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterController))]
-[RequireComponent(typeof(PlayerInputs))]
 public class MechController : MonoBehaviour
 {
     [SerializeField] private PlayerSounds playerSounds; //* This provides a reference point for the script which allows you to call the various sound functions which will be written into the 'PlayerSounds' script
@@ -84,7 +83,7 @@ public class MechController : MonoBehaviour
     
     private PlayerInput _playerInput;
     private CharacterController _controller;
-    private PlayerInputs _playerInputs;
+    private OnPlayerInput _playerInputManager;
     private GameObject _mainCamera;
 
     private const float _threshold = 0.01f;
@@ -109,8 +108,7 @@ public class MechController : MonoBehaviour
     void Start()
     {
         _controller = GetComponent<CharacterController>();
-        _playerInputs = GetComponent<PlayerInputs>();
-        _playerInput = GetComponent<PlayerInput>();
+        _playerInputManager = GetComponent<OnPlayerInput>();
 
         // reset our timeouts on start
         _jumpTimeoutDelta = JumpTimeout;
@@ -119,7 +117,8 @@ public class MechController : MonoBehaviour
 
     void OnEnable()
     {
-        //_playerInput.SwitchCurrentActionMap("Mech");
+        _playerInput = GetComponent<PlayerInput>();
+        _playerInput.SwitchCurrentActionMap("Mech");
     }
 
     // Update is called once per frame
@@ -128,6 +127,8 @@ public class MechController : MonoBehaviour
         JumpAndGravity();
         GroundedCheck();
         Move();
+
+        Debug.Log(_playerInput.currentActionMap.name);
     }
 
     private void LateUpdate()
@@ -145,13 +146,13 @@ public class MechController : MonoBehaviour
     private void CameraRotation()
     {
         // if there is an input
-        if (_playerInputs.look.sqrMagnitude >= _threshold)
+        if (_playerInputManager.look.sqrMagnitude >= _threshold)
         {
             //Don't multiply mouse input by Time.deltaTime
             float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
             
-            _cinemachineTargetPitchY += _playerInputs.look.y * LookSpeed * deltaTimeMultiplier;
-            _cinemachineTargetPitchX += _playerInputs.look.x * LookSpeed * deltaTimeMultiplier;
+            _cinemachineTargetPitchY += _playerInputManager.look.y * LookSpeed * deltaTimeMultiplier;
+            _cinemachineTargetPitchX += _playerInputManager.look.x * LookSpeed * deltaTimeMultiplier;
             
 
             // clamp our pitch rotation
@@ -168,19 +169,19 @@ public class MechController : MonoBehaviour
     private void Move()
     {
         // set target speed based on move speed, sprint speed and if sprint is pressed
-        float targetSpeed = _playerInputs.sprint ? SprintSpeed : MoveSpeed;
+        float targetSpeed = _playerInputManager.sprint ? SprintSpeed : MoveSpeed;
 
         // a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
 
         // note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
         // if there is no input, set the target speed to 0
-        if (_playerInputs.move == Vector2.zero) targetSpeed = 0.0f;
+        if (_playerInputManager.move == Vector2.zero) targetSpeed = 0.0f;
 
         // a reference to the players current horizontal velocity
         float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
 
         float speedOffset = 0.1f;
-        float inputMagnitude = _playerInputs.analogMovement ? _playerInputs.move.magnitude : 1f;
+        float inputMagnitude = _playerInputManager.analogMovement ? _playerInputManager.move.magnitude : 1f;
 
         // accelerate or decelerate to target speed
         if (currentHorizontalSpeed < targetSpeed - speedOffset || currentHorizontalSpeed > targetSpeed + speedOffset)
@@ -198,18 +199,18 @@ public class MechController : MonoBehaviour
         }
 
         // normalise input direction
-        Vector3 inputDirection = new Vector3(_playerInputs.move.x, 0.0f, _playerInputs.move.y).normalized;
+        Vector3 inputDirection = new Vector3(_playerInputManager.move.x, 0.0f, _playerInputManager.move.y).normalized;
 
         // note: Vector2's != operator uses approximation so is not floating point error prone, and is cheaper than magnitude
         // if there is a move input rotate player when the player is moving
-        if (_playerInputs.move != Vector2.zero)
+        if (_playerInputManager.move != Vector2.zero)
         {
             // move
-            inputDirection = transform.right * 0 + transform.forward * _playerInputs.move.y;
+            inputDirection = transform.right * 0 + transform.forward * _playerInputManager.move.y;
             
         }
 
-        _rotationVelocity = _playerInputs.move.x * RotationSpeed * Time.deltaTime;
+        _rotationVelocity = _playerInputManager.move.x * RotationSpeed * Time.deltaTime;
         
         // rotate the player left and right
         transform.Rotate(Vector3.up * _rotationVelocity);
@@ -232,7 +233,7 @@ public class MechController : MonoBehaviour
 				}
 
 				// Jump
-				if (_playerInputs.jump && _jumpTimeoutDelta <= 0.0f)
+				if (_playerInputManager.jump && _jumpTimeoutDelta <= 0.0f)
 				{
 					// the square root of H * -2 * G = how much velocity needed to reach desired height
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
@@ -256,7 +257,7 @@ public class MechController : MonoBehaviour
 				}
 
 				// if we are not grounded, do not jump
-				_playerInputs.jump = false;
+				_playerInputManager.jump = false;
 			}
 
 			// apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)

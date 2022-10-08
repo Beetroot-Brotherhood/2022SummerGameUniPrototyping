@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class AnimationManager : MonoBehaviour
 {
-    [HideInInspector] public PlayerInputs _input;
+    public OnPlayerInput _input;
     public Animator mechAnim;
 
 
     // Start is called before the first frame update
     void Start()
     {
-       _input.GetComponent<PlayerInputs>();
+
     }
 
     // Update is called once per frame
@@ -27,6 +27,15 @@ public class AnimationManager : MonoBehaviour
         else
         {
             mechAnim.SetBool("ReadyLazer", false);
+        }
+
+        if (_input.readySight)
+        {
+            mechAnim.SetBool("ReadySight", true);
+        }
+        else
+        {
+            mechAnim.SetBool("ReadySight", false);
         }
 
     }

@@ -87,7 +87,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""id"": ""23aff37f-8074-48eb-bab6-b615d6ac180c"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press"",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
@@ -100,7 +100,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Unboard"",
+                    ""name"": ""Board"",
                     ""type"": ""Button"",
                     ""id"": ""1c8e6a53-a5c4-4f4b-9b03-22d141e12d4e"",
                     ""expectedControlType"": ""Button"",
@@ -249,7 +249,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""Unboard"",
+                    ""action"": ""Board"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -278,12 +278,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Unboard"",
+                    ""name"": ""Board"",
                     ""type"": ""Button"",
-                    ""id"": ""1e43e967-d960-4b6b-9fd0-b38061bac2f9"",
+                    ""id"": ""00000e8a-e3ae-4b07-adcc-95b812395615"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press"",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
                 }
             ],
@@ -356,12 +356,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""2b32d747-84e6-4eb7-a5d5-e0f5cdfcf1b4"",
+                    ""id"": ""8f93238a-fa36-4960-a560-d213b358eb76"",
                     ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""Unboard"",
+                    ""action"": ""Board"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -397,12 +397,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Mech_MissileFire = m_Mech.FindAction("MissileFire", throwIfNotFound: true);
         m_Mech_ReadyLazer = m_Mech.FindAction("ReadyLazer", throwIfNotFound: true);
         m_Mech_ReadySight = m_Mech.FindAction("ReadySight", throwIfNotFound: true);
-        m_Mech_Unboard = m_Mech.FindAction("Unboard", throwIfNotFound: true);
+        m_Mech_Board = m_Mech.FindAction("Board", throwIfNotFound: true);
         // Train
         m_Train = asset.FindActionMap("Train", throwIfNotFound: true);
         m_Train_Move = m_Train.FindAction("Move", throwIfNotFound: true);
         m_Train_Look = m_Train.FindAction("Look", throwIfNotFound: true);
-        m_Train_Unboard = m_Train.FindAction("Unboard", throwIfNotFound: true);
+        m_Train_Board = m_Train.FindAction("Board", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -470,7 +470,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Mech_MissileFire;
     private readonly InputAction m_Mech_ReadyLazer;
     private readonly InputAction m_Mech_ReadySight;
-    private readonly InputAction m_Mech_Unboard;
+    private readonly InputAction m_Mech_Board;
     public struct MechActions
     {
         private @PlayerControls m_Wrapper;
@@ -483,7 +483,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @MissileFire => m_Wrapper.m_Mech_MissileFire;
         public InputAction @ReadyLazer => m_Wrapper.m_Mech_ReadyLazer;
         public InputAction @ReadySight => m_Wrapper.m_Mech_ReadySight;
-        public InputAction @Unboard => m_Wrapper.m_Mech_Unboard;
+        public InputAction @Board => m_Wrapper.m_Mech_Board;
         public InputActionMap Get() { return m_Wrapper.m_Mech; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -517,9 +517,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @ReadySight.started -= m_Wrapper.m_MechActionsCallbackInterface.OnReadySight;
                 @ReadySight.performed -= m_Wrapper.m_MechActionsCallbackInterface.OnReadySight;
                 @ReadySight.canceled -= m_Wrapper.m_MechActionsCallbackInterface.OnReadySight;
-                @Unboard.started -= m_Wrapper.m_MechActionsCallbackInterface.OnUnboard;
-                @Unboard.performed -= m_Wrapper.m_MechActionsCallbackInterface.OnUnboard;
-                @Unboard.canceled -= m_Wrapper.m_MechActionsCallbackInterface.OnUnboard;
+                @Board.started -= m_Wrapper.m_MechActionsCallbackInterface.OnBoard;
+                @Board.performed -= m_Wrapper.m_MechActionsCallbackInterface.OnBoard;
+                @Board.canceled -= m_Wrapper.m_MechActionsCallbackInterface.OnBoard;
             }
             m_Wrapper.m_MechActionsCallbackInterface = instance;
             if (instance != null)
@@ -548,9 +548,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @ReadySight.started += instance.OnReadySight;
                 @ReadySight.performed += instance.OnReadySight;
                 @ReadySight.canceled += instance.OnReadySight;
-                @Unboard.started += instance.OnUnboard;
-                @Unboard.performed += instance.OnUnboard;
-                @Unboard.canceled += instance.OnUnboard;
+                @Board.started += instance.OnBoard;
+                @Board.performed += instance.OnBoard;
+                @Board.canceled += instance.OnBoard;
             }
         }
     }
@@ -561,14 +561,14 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private ITrainActions m_TrainActionsCallbackInterface;
     private readonly InputAction m_Train_Move;
     private readonly InputAction m_Train_Look;
-    private readonly InputAction m_Train_Unboard;
+    private readonly InputAction m_Train_Board;
     public struct TrainActions
     {
         private @PlayerControls m_Wrapper;
         public TrainActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Train_Move;
         public InputAction @Look => m_Wrapper.m_Train_Look;
-        public InputAction @Unboard => m_Wrapper.m_Train_Unboard;
+        public InputAction @Board => m_Wrapper.m_Train_Board;
         public InputActionMap Get() { return m_Wrapper.m_Train; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -584,9 +584,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Look.started -= m_Wrapper.m_TrainActionsCallbackInterface.OnLook;
                 @Look.performed -= m_Wrapper.m_TrainActionsCallbackInterface.OnLook;
                 @Look.canceled -= m_Wrapper.m_TrainActionsCallbackInterface.OnLook;
-                @Unboard.started -= m_Wrapper.m_TrainActionsCallbackInterface.OnUnboard;
-                @Unboard.performed -= m_Wrapper.m_TrainActionsCallbackInterface.OnUnboard;
-                @Unboard.canceled -= m_Wrapper.m_TrainActionsCallbackInterface.OnUnboard;
+                @Board.started -= m_Wrapper.m_TrainActionsCallbackInterface.OnBoard;
+                @Board.performed -= m_Wrapper.m_TrainActionsCallbackInterface.OnBoard;
+                @Board.canceled -= m_Wrapper.m_TrainActionsCallbackInterface.OnBoard;
             }
             m_Wrapper.m_TrainActionsCallbackInterface = instance;
             if (instance != null)
@@ -597,9 +597,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Look.started += instance.OnLook;
                 @Look.performed += instance.OnLook;
                 @Look.canceled += instance.OnLook;
-                @Unboard.started += instance.OnUnboard;
-                @Unboard.performed += instance.OnUnboard;
-                @Unboard.canceled += instance.OnUnboard;
+                @Board.started += instance.OnBoard;
+                @Board.performed += instance.OnBoard;
+                @Board.canceled += instance.OnBoard;
             }
         }
     }
@@ -623,12 +623,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnMissileFire(InputAction.CallbackContext context);
         void OnReadyLazer(InputAction.CallbackContext context);
         void OnReadySight(InputAction.CallbackContext context);
-        void OnUnboard(InputAction.CallbackContext context);
+        void OnBoard(InputAction.CallbackContext context);
     }
     public interface ITrainActions
     {
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
-        void OnUnboard(InputAction.CallbackContext context);
+        void OnBoard(InputAction.CallbackContext context);
     }
 }

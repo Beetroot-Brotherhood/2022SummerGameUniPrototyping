@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerInputs : MonoBehaviour
+public class OnPlayerInput : MonoBehaviour
 {
     [Header("Character Input Values")]
 		public Vector2 move; // player movement
@@ -14,7 +14,7 @@ public class PlayerInputs : MonoBehaviour
 		public bool readySight;
 		public bool lazerFire;
 		public bool missileFire;
-		public bool unboard;
+		public bool onBoard;
 
     [Header("Movement Settings")]
 		public bool analogMovement;
@@ -65,9 +65,9 @@ public class PlayerInputs : MonoBehaviour
 		MissileFireInput(value.isPressed);
 	}
 
-	public void OnUnboard(InputValue value)
+	public void OnBoard(InputValue value)
 	{
-		UnboardInput(value.isPressed);
+		OnBoardInput(value.isPressed);
 	}
 
 
@@ -94,12 +94,22 @@ public class PlayerInputs : MonoBehaviour
 
 	void ReadySightInput(bool newReadySightState)
 	{
-		readySight = newReadySightState;
+		if(newReadySightState)
+		{
+			newReadySightState = false;
+			readySight = !readySight;
+		}
+
 	}
 
 	void ReadyLazerInput(bool newReadyLazerState)
 	{
-		readyLazer = newReadyLazerState;
+		if (newReadyLazerState)
+		{
+			newReadyLazerState = false;
+			readyLazer = !readyLazer;
+		}
+
 	}
 
 	public void LazerFireInput(bool newLazerFireState)
@@ -111,9 +121,15 @@ public class PlayerInputs : MonoBehaviour
 		missileFire = newMissileFireState;
 	}
 
-	public void UnboardInput(bool newUnboardState)
+	public void OnBoardInput(bool newOnBoardState)
 	{
-		unboard = newUnboardState;
+
+		if(newOnBoardState)
+		{
+			newOnBoardState = false;
+			onBoard = !onBoard;
+		}
+		
 	}
 		
 	private void OnApplicationFocus(bool hasFocus) // locks the cursor if the game is in focus

@@ -7,7 +7,7 @@ using PathCreation.Examples;
 
 public class TrainController : MonoBehaviour
 {
-    private PlayerInputs _input;
+    private OnPlayerInput _input;
     private PlayerInput _playerInput;
     public PathFollower _pathfollower;
 
@@ -42,8 +42,7 @@ public class TrainController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _input = GetComponent<PlayerInputs>();
-        _playerInput = GetComponent<PlayerInput>();
+        _input = GetComponent<OnPlayerInput>();
 
     }
 
@@ -51,6 +50,8 @@ public class TrainController : MonoBehaviour
     void Update()
     {
         Move();
+
+        Debug.Log(_playerInput.currentActionMap.name);
     }
     private void LateUpdate()
     {
@@ -59,7 +60,8 @@ public class TrainController : MonoBehaviour
 
     void OnEnable()
     {
-        //_playerInput.SwitchCurrentActionMap("Train");
+        _playerInput = GetComponent<PlayerInput>();
+        _playerInput.SwitchCurrentActionMap("Train");
     }
 
     void OnDisable()

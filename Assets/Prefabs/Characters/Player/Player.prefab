@@ -2453,7 +2453,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1024361133
 Transform:
   m_ObjectHideFlags: 0
@@ -9588,16 +9588,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2236555157119708129}
+  - component: {fileID: 1658160448}
+  - component: {fileID: 545999693}
+  - component: {fileID: 545999694}
   - component: {fileID: 1459737734699577681}
   - component: {fileID: 1459737734699577687}
+  - component: {fileID: 1183168431665829811}
   - component: {fileID: 546116216326004846}
-  - component: {fileID: 1813334470139882415}
+  - component: {fileID: 1066063414}
   - component: {fileID: 7089212990659757521}
   - component: {fileID: 1066063413}
-  - component: {fileID: 1066063414}
-  - component: {fileID: 1658160448}
-  - component: {fileID: 545999694}
-  - component: {fileID: 545999693}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -9635,6 +9635,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1658160448
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459737734699577691}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &545999693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459737734699577691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a250fe4998af34baaf2f5102338840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _input: {fileID: 0}
+  mechAnim: {fileID: 545999694}
+--- !u!95 &545999694
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459737734699577691}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2b5a4f0d2a1d3414ab870504e955b1c7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!143 &1459737734699577681
 CharacterController:
   m_ObjectHideFlags: 0
@@ -9751,6 +9798,30 @@ MonoBehaviour:
   m_DefaultActionMap: Mech
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1183168431665829811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459737734699577691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006c59437c489cb4fa8182e2fb2fdfad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  move: {x: 0, y: 0}
+  look: {x: 0, y: 0}
+  jump: 0
+  sprint: 0
+  readyLazer: 0
+  readySight: 0
+  lazerFire: 0
+  missileFire: 0
+  onBoard: 0
+  analogMovement: 0
+  cursorLocked: 1
+  cursorInputForLook: 1
 --- !u!114 &546116216326004846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9764,8 +9835,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSounds: {fileID: 438189405}
-  MoveSpeed: 4
-  SprintSpeed: 15
+  MoveSpeed: 15
+  SprintSpeed: 30
   LookSpeed: 3
   RotationSpeed: 50
   SpeedChangeRate: 10
@@ -9784,29 +9855,27 @@ MonoBehaviour:
   BottomClamp: -60
   RightClamp: 75
   LeftClamp: -75
---- !u!114 &1813334470139882415
+--- !u!114 &1066063414
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459737734699577691}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf08dbd414dc2ed409b9e31ecb26d9f3, type: 3}
+  m_Script: {fileID: 11500000, guid: e6421d1f4dd2c6443b38f38318862551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move: {x: 0, y: 0}
-  look: {x: 0, y: 0}
-  jump: 0
-  sprint: 1
-  lazerFire: 0
-  missileFire: 0
-  board: 0
-  unboard: 0
-  analogMovement: 0
-  cursorLocked: 1
-  cursorInputForLook: 1
+  _pathfollower: {fileID: 0}
+  _controller: {fileID: 1459737734699577681}
+  _speed: 100
+  LookSpeed: 3
+  CinemachineCameraTarget: {fileID: 6535880336192407552}
+  TopClamp: 60
+  BottomClamp: -60
+  RightClamp: 75
+  LeftClamp: -75
 --- !u!114 &7089212990659757521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9845,84 +9914,8 @@ MonoBehaviour:
   playerObject: {fileID: 1459737734699577691}
   mechController: {fileID: 546116216326004846}
   trainController: {fileID: 1066063414}
---- !u!114 &1066063414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459737734699577691}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6421d1f4dd2c6443b38f38318862551, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dollyCartControls: {fileID: 0}
-  _controller: {fileID: 1459737734699577681}
-  _speed: 0.1
-  LookSpeed: 3
-  CinemachineCameraTarget: {fileID: 6535880336192407552}
-  TopClamp: 60
-  BottomClamp: -60
-  RightClamp: 75
-  LeftClamp: -75
---- !u!65 &1658160448
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459737734699577691}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &545999694
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459737734699577691}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2b5a4f0d2a1d3414ab870504e955b1c7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &545999693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459737734699577691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34a250fe4998af34baaf2f5102338840, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _input: {fileID: 1813334470139882415}
-  mechAnim: {fileID: 545999694}
-  lazerAnim: {fileID: 0}
-  wiperAnim: {fileID: 1427344528}
-  monitorAnim: {fileID: 1128166116}
-  throttleAnim: {fileID: 0}
-  stickAnim: {fileID: 1744801365}
-  lazer: 1
-  wiper: 1
-  monitor: 1
-  throttle: 1
-  stick: 1
+  _pathcreator: {fileID: 0}
+  _pathfollower: {fileID: 0}
 --- !u!1 &2692395480420478901
 GameObject:
   m_ObjectHideFlags: 0
@@ -10306,6 +10299,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5b18f4f3e3c802440a68a0f7c244b590, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5b18f4f3e3c802440a68a0f7c244b590, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b18f4f3e3c802440a68a0f7c244b590, type: 3}

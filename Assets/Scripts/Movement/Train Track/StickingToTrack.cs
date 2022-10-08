@@ -24,7 +24,7 @@ public class StickingToTrack : MonoBehaviour
     public MechController mechController;
     public TrainController trainController;
 
-    private PlayerInputs _input;
+    private OnPlayerInput _input;
     private PlayerInput _playerInput;
 
     public PathCreator _pathcreator;
@@ -34,9 +34,8 @@ public class StickingToTrack : MonoBehaviour
     void Start()
     {
         trainController.enabled = false;
-        _input = GetComponent<PlayerInputs>();
+        _input = GetComponent<OnPlayerInput>();
 
-        //_playerInput.SwitchCurrentActionMap("Mech");
     }
 
     private bool hasAttached = false;
@@ -49,7 +48,7 @@ public class StickingToTrack : MonoBehaviour
             _pathfollower.distanceTravelled = _pathcreator.path.GetClosestDistanceAlongPath(dollyCart.transform.position);
         }
         
-        if (onTrack && !hasAttached)
+        if (onTrack && !hasAttached && _input.onBoard)
         {
             
             playerObject.transform.position = dollyCart.transform.position;
@@ -58,19 +57,14 @@ public class StickingToTrack : MonoBehaviour
             mechController.enabled = false;
             trainController.enabled = true;
             hasAttached = true;
-            //_playerInput.SwitchCurrentActionMap("Train");
-
-
         }
-        if(onTrack && _input.unboard)
+        if(onTrack && _input.onBoard == false)
         {
             playerObject.transform.parent = null;
             mechController.enabled = true;
             trainController.enabled = false;
             onTrack = false;
             hasAttached = false;
-            //_playerInput.SwitchCurrentActionMap("Mech");
-            _input.unboard = false;
         }
     }
 
