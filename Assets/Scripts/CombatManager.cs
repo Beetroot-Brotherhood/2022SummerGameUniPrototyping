@@ -3,57 +3,54 @@ using System.Collections.Generic;
 using UnityEngine;
 using Krezme;
 
-[System.Serializable]
-public class Statistics {
-    public WeaponStatistics weapon;
-    public ArmourStatistics[] armour;
-}
-
-[System.Serializable]
-public class WeaponStatistics{
-    public int damage;
-    public DamageType damageTypes;
-}
-
-[System.Serializable]
-public class ArmourStatistics{
-    public int health;
-    public ShieldType[] shieldTypes;
-}
-
-public class CombatManager : MonoBehaviour
-{
-    public Statistics defaultStats;
-    public Statistics currentStats;
-    public Statistics maxStats;
-
-    // Start is called before the first frame update
-    void Start()
+namespace Latch.Combat {
+    public class CombatManager : MonoBehaviour
     {
-        ResetStatistics();
+        public Statistics defaultStats;
+        public Statistics currentStats;
+        public Statistics maxStats;
+
+        // Start is called before the first frame update
+        void Start()
+        {
+            ResetStatistics();
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            
+        }
+
+        public void ResetStatistics() {
+            currentStats = defaultStats.DeepClone();
+        }
+
+        public void TakeDamage(int damage, DamageType damageType) {
+            bool damageTaken = false;
+            for (int j = 0; j < CombatData.damageShieldMaps.Length; j++) {
+                for (int i = 0; i < currentStats.armours.Length; i++) {
+                    if (CombatData.damageShieldMaps[j][damageType] == currentStats.armours[i].shieldTypes) {
+                        if (currentStats.armours[i].health > 0) {
+                            currentStats.armours[i].health -= damage / CombatData.damageEffectivenessDividerMap[j];
+                            damageTaken = true;
+                            break;
+                        }
+                    }
+                }
+                if (damageTaken) {
+                    break;
+                }
+            }
+            
+            for (int i = 0; i < currentStats.armours.Length; i++) {
+                if (currentStats.armours[i].health > 0) {
+                    return;
+                }
+            }
+
+            //TODO Trigger downed state
+            
+        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void ResetStatistics() {
-        currentStats = defaultStats.DeepClone();
-    }
-}
-
-public enum ShieldType{
-    None,
-    EnergyField,
-    ChestPlate,
-    HazardHelmet
-}
-
-public enum DamageType{
-    None,
-    Electric,
-    Plasma,
-    Metal
 }

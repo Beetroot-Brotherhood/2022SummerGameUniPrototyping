@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 19424.39, g: 9477.949, b: 10693.566, a: 1}
+  m_IndirectSpecularColor: {r: 19444.14, g: 9480.199, b: 10709.469, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -84976,9 +84976,11 @@ MonoBehaviour:
     armour: []
   maxStats:
     weapon:
-      damage: 0
-      damageTypes: 0
-    armour: []
+      damage: 10
+      damageTypes: 2
+    armour:
+    - health: 100
+      shieldTypes: 02000000
 --- !u!114 &8686850952843519851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85022,9 +85024,11 @@ MonoBehaviour:
     armour: []
   maxStats:
     weapon:
-      damage: 0
-      damageTypes: 0
-    armour: []
+      damage: 10
+      damageTypes: 2
+    armour:
+    - health: 100
+      shieldTypes: 03000000
 --- !u!114 &8686850953502508874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85068,9 +85072,11 @@ MonoBehaviour:
     armour: []
   maxStats:
     weapon:
-      damage: 0
-      damageTypes: 0
-    armour: []
+      damage: 10
+      damageTypes: 2
+    armour:
+    - health: 100
+      shieldTypes: 01000000
 --- !u!114 &8686850953732088228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86329,9 +86335,11 @@ MonoBehaviour:
     armour: []
   maxStats:
     weapon:
-      damage: 0
-      damageTypes: 0
-    armour: []
+      damage: 10
+      damageTypes: 3
+    armour:
+    - health: 100
+      shieldTypes: 01000000
 --- !u!1 &9057050155187132339
 GameObject:
   m_ObjectHideFlags: 0
@@ -86545,9 +86553,11 @@ MonoBehaviour:
     armour: []
   maxStats:
     weapon:
-      damage: 0
-      damageTypes: 0
-    armour: []
+      damage: 10
+      damageTypes: 3
+    armour:
+    - health: 100
+      shieldTypes: 03000000
 --- !u!1 &9057050155961860534
 GameObject:
   m_ObjectHideFlags: 0
@@ -86975,9 +86985,11 @@ MonoBehaviour:
     armour: []
   maxStats:
     weapon:
-      damage: 0
-      damageTypes: 0
-    armour: []
+      damage: 10
+      damageTypes: 3
+    armour:
+    - health: 100
+      shieldTypes: 02000000
 --- !u!1 &9115799944756530031
 GameObject:
   m_ObjectHideFlags: 0
@@ -87086,9 +87098,11 @@ MonoBehaviour:
     armour: []
   maxStats:
     weapon:
-      damage: 0
-      damageTypes: 0
-    armour: []
+      damage: 10
+      damageTypes: 1
+    armour:
+    - health: 100
+      shieldTypes: 01000000
 --- !u!4 &9120542568641528171
 Transform:
   m_ObjectHideFlags: 0
@@ -87133,9 +87147,11 @@ MonoBehaviour:
     armour: []
   maxStats:
     weapon:
-      damage: 0
-      damageTypes: 0
-    armour: []
+      damage: 10
+      damageTypes: 1
+    armour:
+    - health: 100
+      shieldTypes: 03000000
 --- !u!4 &9120542568686971528
 Transform:
   m_ObjectHideFlags: 0
@@ -87180,9 +87196,11 @@ MonoBehaviour:
     armour: []
   maxStats:
     weapon:
-      damage: 0
-      damageTypes: 0
-    armour: []
+      damage: 10
+      damageTypes: 1
+    armour:
+    - health: 100
+      shieldTypes: 02000000
 --- !u!4 &9120542568890136069
 Transform:
   m_ObjectHideFlags: 0
