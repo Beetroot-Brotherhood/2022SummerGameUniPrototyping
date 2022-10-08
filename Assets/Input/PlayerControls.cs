@@ -107,6 +107,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""HideUI"",
+                    ""type"": ""Button"",
+                    ""id"": ""25145e69-6ae0-4e69-b3e7-ab167d246605"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -252,6 +261,17 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""Board"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""65ecc660-ee4e-4bb2-a17e-84cc1a2772fb"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""HideUI"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -281,6 +301,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""name"": ""Board"",
                     ""type"": ""Button"",
                     ""id"": ""00000e8a-e3ae-4b07-adcc-95b812395615"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""HideUI"",
+                    ""type"": ""Button"",
+                    ""id"": ""2fd5d445-23ef-4036-8bcb-96c32d7066a8"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -364,6 +393,17 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""Board"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4799123a-667c-4128-b137-4d021529dee0"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""HideUI"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -398,11 +438,13 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Mech_ReadyLazer = m_Mech.FindAction("ReadyLazer", throwIfNotFound: true);
         m_Mech_ReadySight = m_Mech.FindAction("ReadySight", throwIfNotFound: true);
         m_Mech_Board = m_Mech.FindAction("Board", throwIfNotFound: true);
+        m_Mech_HideUI = m_Mech.FindAction("HideUI", throwIfNotFound: true);
         // Train
         m_Train = asset.FindActionMap("Train", throwIfNotFound: true);
         m_Train_Move = m_Train.FindAction("Move", throwIfNotFound: true);
         m_Train_Look = m_Train.FindAction("Look", throwIfNotFound: true);
         m_Train_Board = m_Train.FindAction("Board", throwIfNotFound: true);
+        m_Train_HideUI = m_Train.FindAction("HideUI", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -471,6 +513,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Mech_ReadyLazer;
     private readonly InputAction m_Mech_ReadySight;
     private readonly InputAction m_Mech_Board;
+    private readonly InputAction m_Mech_HideUI;
     public struct MechActions
     {
         private @PlayerControls m_Wrapper;
@@ -484,6 +527,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @ReadyLazer => m_Wrapper.m_Mech_ReadyLazer;
         public InputAction @ReadySight => m_Wrapper.m_Mech_ReadySight;
         public InputAction @Board => m_Wrapper.m_Mech_Board;
+        public InputAction @HideUI => m_Wrapper.m_Mech_HideUI;
         public InputActionMap Get() { return m_Wrapper.m_Mech; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -520,6 +564,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Board.started -= m_Wrapper.m_MechActionsCallbackInterface.OnBoard;
                 @Board.performed -= m_Wrapper.m_MechActionsCallbackInterface.OnBoard;
                 @Board.canceled -= m_Wrapper.m_MechActionsCallbackInterface.OnBoard;
+                @HideUI.started -= m_Wrapper.m_MechActionsCallbackInterface.OnHideUI;
+                @HideUI.performed -= m_Wrapper.m_MechActionsCallbackInterface.OnHideUI;
+                @HideUI.canceled -= m_Wrapper.m_MechActionsCallbackInterface.OnHideUI;
             }
             m_Wrapper.m_MechActionsCallbackInterface = instance;
             if (instance != null)
@@ -551,6 +598,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Board.started += instance.OnBoard;
                 @Board.performed += instance.OnBoard;
                 @Board.canceled += instance.OnBoard;
+                @HideUI.started += instance.OnHideUI;
+                @HideUI.performed += instance.OnHideUI;
+                @HideUI.canceled += instance.OnHideUI;
             }
         }
     }
@@ -562,6 +612,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Train_Move;
     private readonly InputAction m_Train_Look;
     private readonly InputAction m_Train_Board;
+    private readonly InputAction m_Train_HideUI;
     public struct TrainActions
     {
         private @PlayerControls m_Wrapper;
@@ -569,6 +620,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Train_Move;
         public InputAction @Look => m_Wrapper.m_Train_Look;
         public InputAction @Board => m_Wrapper.m_Train_Board;
+        public InputAction @HideUI => m_Wrapper.m_Train_HideUI;
         public InputActionMap Get() { return m_Wrapper.m_Train; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -587,6 +639,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Board.started -= m_Wrapper.m_TrainActionsCallbackInterface.OnBoard;
                 @Board.performed -= m_Wrapper.m_TrainActionsCallbackInterface.OnBoard;
                 @Board.canceled -= m_Wrapper.m_TrainActionsCallbackInterface.OnBoard;
+                @HideUI.started -= m_Wrapper.m_TrainActionsCallbackInterface.OnHideUI;
+                @HideUI.performed -= m_Wrapper.m_TrainActionsCallbackInterface.OnHideUI;
+                @HideUI.canceled -= m_Wrapper.m_TrainActionsCallbackInterface.OnHideUI;
             }
             m_Wrapper.m_TrainActionsCallbackInterface = instance;
             if (instance != null)
@@ -600,6 +655,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Board.started += instance.OnBoard;
                 @Board.performed += instance.OnBoard;
                 @Board.canceled += instance.OnBoard;
+                @HideUI.started += instance.OnHideUI;
+                @HideUI.performed += instance.OnHideUI;
+                @HideUI.canceled += instance.OnHideUI;
             }
         }
     }
@@ -624,11 +682,13 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnReadyLazer(InputAction.CallbackContext context);
         void OnReadySight(InputAction.CallbackContext context);
         void OnBoard(InputAction.CallbackContext context);
+        void OnHideUI(InputAction.CallbackContext context);
     }
     public interface ITrainActions
     {
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnBoard(InputAction.CallbackContext context);
+        void OnHideUI(InputAction.CallbackContext context);
     }
 }

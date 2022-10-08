@@ -16,6 +16,8 @@ public class OnPlayerInput : MonoBehaviour
 		public bool missileFire;
 		public bool onBoard;
 
+		public bool onHideUI;
+
     [Header("Movement Settings")]
 		public bool analogMovement;
 
@@ -64,10 +66,13 @@ public class OnPlayerInput : MonoBehaviour
 	{
 		MissileFireInput(value.isPressed);
 	}
-
 	public void OnBoard(InputValue value)
 	{
 		OnBoardInput(value.isPressed);
+	}
+	public void OnHideUI(InputValue value)
+	{
+		HideUIInput(value.isPressed);
 	}
 
 
@@ -76,22 +81,18 @@ public class OnPlayerInput : MonoBehaviour
 	{
 		move = newMoveDirection;
 	} 
-
 	public void LookInput(Vector2 newLookDirection)
 	{
 		look = newLookDirection;
 	}
-
 	public void JumpInput(bool newJumpState)
 	{
 		jump = newJumpState;
 	}
-
 	public void SprintInput(bool newSprintState)
 	{
 		sprint = newSprintState;
 	}
-
 	void ReadySightInput(bool newReadySightState)
 	{
 		if(newReadySightState)
@@ -101,7 +102,6 @@ public class OnPlayerInput : MonoBehaviour
 		}
 
 	}
-
 	void ReadyLazerInput(bool newReadyLazerState)
 	{
 		if (newReadyLazerState)
@@ -111,7 +111,6 @@ public class OnPlayerInput : MonoBehaviour
 		}
 
 	}
-
 	public void LazerFireInput(bool newLazerFireState)
 	{
 		lazerFire = newLazerFireState;
@@ -120,7 +119,6 @@ public class OnPlayerInput : MonoBehaviour
 	{
 		missileFire = newMissileFireState;
 	}
-
 	public void OnBoardInput(bool newOnBoardState)
 	{
 
@@ -131,7 +129,15 @@ public class OnPlayerInput : MonoBehaviour
 		}
 		
 	}
-		
+	public void HideUIInput(bool newHideUIState)
+	{
+		if(newHideUIState)
+		{
+			newHideUIState = false;
+			onHideUI = !onHideUI;
+		}
+	}
+
 	private void OnApplicationFocus(bool hasFocus) // locks the cursor if the game is in focus
 	{
 		SetCursorState(cursorLocked);
