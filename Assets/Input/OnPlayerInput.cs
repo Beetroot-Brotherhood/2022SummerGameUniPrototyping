@@ -121,13 +121,7 @@ public class OnPlayerInput : MonoBehaviour
 	}
 	public void OnBoardInput(bool newOnBoardState)
 	{
-
-		if(newOnBoardState)
-		{
-			newOnBoardState = false;
-			onBoard = !onBoard;
-		}
-		
+		onBoard = newOnBoardState;
 	}
 	public void HideUIInput(bool newHideUIState)
 	{

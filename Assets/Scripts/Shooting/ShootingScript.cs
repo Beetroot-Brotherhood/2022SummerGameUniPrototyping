@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class ShootingScript : MonoBehaviour
 {
+    #region Missile Variables
     public float force;
     public GameObject bulletPrefab;
     public Transform leftGunEnd, rightGunEnd;
@@ -19,6 +20,14 @@ public class ShootingScript : MonoBehaviour
 
     [HideInInspector]
     public GameObject lBullet, rBullet;
+
+    #endregion
+
+    #region Lazer Variables
+
+    public GameObject lazerGO;
+
+    #endregion
 
     private OnPlayerInput _playerInputs;
 
@@ -58,6 +67,15 @@ public class ShootingScript : MonoBehaviour
             _playerInputs.missileFire = false;
         }
 
+        if(_playerInputs.lazerFire && _playerInputs.readyLazer)
+        {
+            LazerFire();
+        }
+        else
+        {
+            lazerGO.SetActive(false);
+        }
+
     }
 
     void MissileFire()
@@ -79,5 +97,10 @@ public class ShootingScript : MonoBehaviour
         rb.AddRelativeForce(transform.forward * force);
 
         hasFired = true;
+    }
+
+    void LazerFire()
+    {
+        lazerGO.SetActive(true);
     }
 }

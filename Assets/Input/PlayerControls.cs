@@ -65,11 +65,11 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""LazerFire"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""1440a839-cbef-4785-bfca-ad18ce8d36aa"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Tap"",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
@@ -94,15 +94,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""name"": ""ReadySight"",
                     ""type"": ""Button"",
                     ""id"": ""db436f2a-dfc3-4e5f-a8df-8d58aa5c7cb6"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Board"",
-                    ""type"": ""Button"",
-                    ""id"": ""1c8e6a53-a5c4-4f4b-9b03-22d141e12d4e"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -248,17 +239,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard and Mouse"",
                     ""action"": ""ReadySight"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""60543eff-356b-48b0-9c18-404a0b908086"",
-                    ""path"": ""<Keyboard>/q"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""Board"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -437,7 +417,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Mech_MissileFire = m_Mech.FindAction("MissileFire", throwIfNotFound: true);
         m_Mech_ReadyLazer = m_Mech.FindAction("ReadyLazer", throwIfNotFound: true);
         m_Mech_ReadySight = m_Mech.FindAction("ReadySight", throwIfNotFound: true);
-        m_Mech_Board = m_Mech.FindAction("Board", throwIfNotFound: true);
         m_Mech_HideUI = m_Mech.FindAction("HideUI", throwIfNotFound: true);
         // Train
         m_Train = asset.FindActionMap("Train", throwIfNotFound: true);
@@ -512,7 +491,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Mech_MissileFire;
     private readonly InputAction m_Mech_ReadyLazer;
     private readonly InputAction m_Mech_ReadySight;
-    private readonly InputAction m_Mech_Board;
     private readonly InputAction m_Mech_HideUI;
     public struct MechActions
     {
@@ -526,7 +504,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @MissileFire => m_Wrapper.m_Mech_MissileFire;
         public InputAction @ReadyLazer => m_Wrapper.m_Mech_ReadyLazer;
         public InputAction @ReadySight => m_Wrapper.m_Mech_ReadySight;
-        public InputAction @Board => m_Wrapper.m_Mech_Board;
         public InputAction @HideUI => m_Wrapper.m_Mech_HideUI;
         public InputActionMap Get() { return m_Wrapper.m_Mech; }
         public void Enable() { Get().Enable(); }
@@ -561,9 +538,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @ReadySight.started -= m_Wrapper.m_MechActionsCallbackInterface.OnReadySight;
                 @ReadySight.performed -= m_Wrapper.m_MechActionsCallbackInterface.OnReadySight;
                 @ReadySight.canceled -= m_Wrapper.m_MechActionsCallbackInterface.OnReadySight;
-                @Board.started -= m_Wrapper.m_MechActionsCallbackInterface.OnBoard;
-                @Board.performed -= m_Wrapper.m_MechActionsCallbackInterface.OnBoard;
-                @Board.canceled -= m_Wrapper.m_MechActionsCallbackInterface.OnBoard;
                 @HideUI.started -= m_Wrapper.m_MechActionsCallbackInterface.OnHideUI;
                 @HideUI.performed -= m_Wrapper.m_MechActionsCallbackInterface.OnHideUI;
                 @HideUI.canceled -= m_Wrapper.m_MechActionsCallbackInterface.OnHideUI;
@@ -595,9 +569,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @ReadySight.started += instance.OnReadySight;
                 @ReadySight.performed += instance.OnReadySight;
                 @ReadySight.canceled += instance.OnReadySight;
-                @Board.started += instance.OnBoard;
-                @Board.performed += instance.OnBoard;
-                @Board.canceled += instance.OnBoard;
                 @HideUI.started += instance.OnHideUI;
                 @HideUI.performed += instance.OnHideUI;
                 @HideUI.canceled += instance.OnHideUI;
@@ -681,7 +652,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnMissileFire(InputAction.CallbackContext context);
         void OnReadyLazer(InputAction.CallbackContext context);
         void OnReadySight(InputAction.CallbackContext context);
-        void OnBoard(InputAction.CallbackContext context);
         void OnHideUI(InputAction.CallbackContext context);
     }
     public interface ITrainActions

@@ -43,11 +43,11 @@
                 },
                 {
                     "name": "LazerFire",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "1440a839-cbef-4785-bfca-ad18ce8d36aa",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Tap",
+                    "interactions": "",
                     "initialStateCheck": false
                 },
                 {
@@ -72,15 +72,6 @@
                     "name": "ReadySight",
                     "type": "Button",
                     "id": "db436f2a-dfc3-4e5f-a8df-8d58aa5c7cb6",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Board",
-                    "type": "Button",
-                    "id": "1c8e6a53-a5c4-4f4b-9b03-22d141e12d4e",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -226,17 +217,6 @@
                     "processors": "",
                     "groups": "Keyboard and Mouse",
                     "action": "ReadySight",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "60543eff-356b-48b0-9c18-404a0b908086",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard and Mouse",
-                    "action": "Board",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

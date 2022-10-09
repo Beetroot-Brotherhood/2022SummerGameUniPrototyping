@@ -8,7 +8,17 @@ public class DestroyObject : MonoBehaviour
     {
         if(collision.gameObject.tag == "Bullet")
         {
+            Debug.Log("Hit Building with Missile");
             Destroy(this.gameObject);
         }
     }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Lazer")
+        {
+            Debug.Log("Hit Building with Lazer");
+            Destroy(this.gameObject);
+        }
+    }
+    
 }

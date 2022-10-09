@@ -48,7 +48,7 @@ public class StickingToTrack : MonoBehaviour
             _pathfollower.distanceTravelled = _pathcreator.path.GetClosestDistanceAlongPath(dollyCart.transform.position);
         }
         
-        if (onTrack && !hasAttached && _input.onBoard)
+        if (onTrack && !hasAttached)
         {
             
             playerObject.transform.position = dollyCart.transform.position;
@@ -58,13 +58,14 @@ public class StickingToTrack : MonoBehaviour
             trainController.enabled = true;
             hasAttached = true;
         }
-        if(onTrack && _input.onBoard == false)
+        if(onTrack && _input.onBoard == true)
         {
             playerObject.transform.parent = null;
             mechController.enabled = true;
             trainController.enabled = false;
             onTrack = false;
             hasAttached = false;
+            _input.onBoard = false;
         }
     }
 
