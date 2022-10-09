@@ -10,6 +10,9 @@ namespace Latch.Combat {
         public Statistics currentStats;
         public Statistics maxStats;
 
+        [Header("Attack")]
+        public Weapon primaryAttack;
+
         // Start is called before the first frame update
         void Start()
         {

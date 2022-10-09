@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Latch.Combat {
-    public abstract class Attack : MonoBehaviour
+    public abstract class Weapon : MonoBehaviour
     {
         public virtual void AttackFunc (bool isAttacking, out bool isAttackingReturn) {
             if (isAttacking) {
@@ -14,8 +14,11 @@ namespace Latch.Combat {
             }
         }
 
+        /// <summary>
+        /// The specific attack for the weapon
+        /// </summary>
+        /// <param name="isAttacking">Used if the weapon is requires continues kicking</param>
+        /// <returns>if it is attacking</returns>
         public abstract bool AttackFire1 (bool isAttacking);
-
-
     }
 }
