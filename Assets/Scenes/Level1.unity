@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 29.836243, g: 30.66446, b: 30.647858, a: 1}
+  m_IndirectSpecularColor: {r: 29.836243, g: 30.66446, b: 30.64798, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1980,13 +1980,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9004281820054606676, guid: 1dee206b9c94e9d47978cea5f0b5d3e1, type: 3}
+      propertyPath: m_AmplitudeGain
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004281820054606676, guid: 1dee206b9c94e9d47978cea5f0b5d3e1, type: 3}
+      propertyPath: m_FrequencyGain
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004281820054606676, guid: 1dee206b9c94e9d47978cea5f0b5d3e1, type: 3}
+      propertyPath: m_PivotOffset.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 9004281820499698324, guid: 1dee206b9c94e9d47978cea5f0b5d3e1, type: 3}
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1594719933}
     - target: {fileID: 9004281820499698324, guid: 1dee206b9c94e9d47978cea5f0b5d3e1, type: 3}
       propertyPath: m_Lens.m_SensorSize.x
-      value: 1.7777778
+      value: 1.778626
       objectReference: {fileID: 0}
     - target: {fileID: 9004281820499698325, guid: 1dee206b9c94e9d47978cea5f0b5d3e1, type: 3}
       propertyPath: m_RootOrder
