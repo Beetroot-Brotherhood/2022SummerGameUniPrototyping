@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Tests.bank
   Name: Tests
   StudioPath: bank:/Tests
-  lastModified: 638006795323044718
+  lastModified: 638010194950665909
   FileSizes:
   - Name: Desktop
     Value: 10692384
@@ -323,6 +323,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 55
   Length: 9000
+--- !u!114 &-5617873692560457318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mech/Buttons/sight button
+  m_EditorClassIdentifier: 
+  Path: event:/Mech/Buttons/sight button
+  Guid:
+    Data1: 612466320
+    Data2: 1099467016
+    Data3: -807319140
+    Data4: 868110560
+  Banks:
+  - {fileID: -4842344412843522935}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 600
 --- !u!114 &-5578276961049163649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -531,10 +558,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638006795321611828
+  lastModified: 638010194948336846
   FileSizes:
   - Name: Desktop
-    Value: 26801408
+    Value: 26831456
   Exists: 1
 --- !u!114 &-4095432354530624399
 MonoBehaviour:
@@ -724,6 +751,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-1064659622189420048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mech/Buttons/arm button
+  m_EditorClassIdentifier: 
+  Path: event:/Mech/Buttons/arm button
+  Guid:
+    Data1: -1694545669
+    Data2: 1319363405
+    Data3: -815719023
+    Data4: -404172743
+  Banks:
+  - {fileID: -4842344412843522935}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 840
 --- !u!114 &-886769886745480801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -962,13 +1016,15 @@ MonoBehaviour:
   - {fileID: -5821752752510949846}
   - {fileID: 1597907039752483451}
   - {fileID: -5667936947634894581}
+  - {fileID: -5617873692560457318}
+  - {fileID: -1064659622189420048}
   EditorParameters:
   - {fileID: -754482486958039952}
   MasterBanks:
   - {fileID: -4842344412843522935}
   StringsBanks:
   - {fileID: 5281460975032158907}
-  cacheTime: 638006795323044718
+  cacheTime: 638010194950665909
   cacheVersion: 131591
 --- !u!114 &404327497177059580
 MonoBehaviour:
@@ -1249,7 +1305,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 638006795322134571
+  lastModified: 638010194950125412
   FileSizes:
   - Name: Desktop
     Value: 12662944
@@ -1324,10 +1380,10 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638006795321631342
+  lastModified: 638010194948366873
   FileSizes:
   - Name: Desktop
-    Value: 3058
+    Value: 3162
   Exists: 1
 --- !u!114 &5816971183150374469
 MonoBehaviour:
@@ -1432,7 +1488,7 @@ MonoBehaviour:
   Path: Assets/Audio/FmodProject/FmodPrototypeProject/Build/Desktop/Environment.bank
   Name: Environment
   StudioPath: bank:/Environment
-  lastModified: 638006795319714398
+  lastModified: 638010194945756245
   FileSizes:
   - Name: Desktop
     Value: 6946752

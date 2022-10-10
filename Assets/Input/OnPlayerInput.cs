@@ -99,6 +99,7 @@ public class OnPlayerInput : MonoBehaviour
 		{
 			newReadySightState = false;
 			readySight = !readySight;
+			FMODUnity.RuntimeManager.PlayOneShot("event:/Mech/Buttons/sight button");
 		}
 
 	}
@@ -108,6 +109,7 @@ public class OnPlayerInput : MonoBehaviour
 		{
 			newReadyLazerState = false;
 			readyLazer = !readyLazer;
+			FMODUnity.RuntimeManager.PlayOneShot("event:/Mech/Buttons/arm button");
 		}
 
 	}
