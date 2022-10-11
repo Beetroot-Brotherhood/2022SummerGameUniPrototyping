@@ -211,6 +211,8 @@ namespace Krezme {
             float angle = Vector3.Angle(normalisedDirection, new Vector3(target.x, 0, target.z) - new Vector3(origin.x, 0, origin.z));
             //float angle2;
 
+            Debug.Log("yes: " + Vector3.Dot(Vector3.Cross(normalisedDirection, new Vector3(target.x, 0, target.z) - new Vector3(origin.x, 0, origin.z)), projectileForward));
+
             if (Vector3.Dot(Vector3.Cross(normalisedDirection, new Vector3(target.x, 0, target.z) - new Vector3(origin.x, 0, origin.z)), projectileForward) > 0) {
                 angle = 360 - angle;
             }

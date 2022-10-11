@@ -16,12 +16,10 @@ namespace Latch.Combat {
             if (other.gameObject.tag == "Human")
             {
                 other.gameObject.GetComponent<CombatManager>().TakeDamage(projectileInfo.projectileStatistics.damage, projectileInfo.projectileStatistics.damageType);
-                Debug.Log("Maybe");
                 Destroy(gameObject);
             }
             else if (other.gameObject.tag == "Projectile") {}
             else if (other.gameObject.tag == "Untagged") {
-                Debug.Log("Hello");
                 projectileRigidbody.velocity = Vector3.zero;
                 projectileRigidbody.useGravity = false;
                 projectileRigidbody.isKinematic = false;
