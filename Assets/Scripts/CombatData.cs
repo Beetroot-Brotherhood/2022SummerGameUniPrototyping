@@ -5,14 +5,7 @@ using UnityEngine;
 namespace Latch.Combat {
     [System.Serializable]
     public class Statistics {
-        public WeaponStatistics weapon;
         public ArmourStatistics[] armours;
-    }
-
-    [System.Serializable]
-    public class WeaponStatistics{
-        public int damage;
-        public DamageType damageTypes;
     }
 
     [System.Serializable]
@@ -24,9 +17,21 @@ namespace Latch.Combat {
     [System.Serializable]
     public class ProjectileStatistics {
         public int damage;
+        public float fireRate;
         public DamageType damageType;
-        public float speed;
+        [Range(0.001f, 80f)]
+        public float angle;
+        public float mass;
         public float lifeTime;
+        public float distance;
+        public float speed;
+        public float angleBetweenObjects;
+    }
+
+    [System.Serializable]
+    public class AttackStatistics {
+        public int damage;
+        public DamageType damageType;
     }
 
     public static class CombatData

@@ -15,6 +15,7 @@ namespace StarterAssets
 		public bool onAttack;
 		public bool onUnLatch;
 		public bool onLatch;
+		public bool onFire1;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -60,8 +61,12 @@ namespace StarterAssets
 			LatchInput(value.isPressed);
 		}
 
-#endif
+		public void OnFire1(InputValue value)
+		{
+			Fire1Input(value.isPressed);
+		}
 
+#endif
 
 		public void MoveInput(Vector2 newMoveDirection)
 		{
@@ -106,6 +111,8 @@ namespace StarterAssets
 		{
 			onLatch = state;
 		}
+		private void Fire1Input(bool state){
+			onFire1 = state;
+		}
 	}
-	
 }

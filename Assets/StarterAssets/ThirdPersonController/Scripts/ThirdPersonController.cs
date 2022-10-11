@@ -80,6 +80,8 @@ namespace StarterAssets
         [Tooltip("For locking the camera position on all axis")]
         public bool LockCameraPosition = false;
 
+        public Collider attackCollider;
+
         // cinemachine
         private float _cinemachineTargetYaw;
         private float _cinemachineTargetPitch;
@@ -412,7 +414,9 @@ namespace StarterAssets
                 _animator.SetBool("Attack", true);
                 _input.onAttack = false;
                 _animator.SetLayerWeight(_animator.GetLayerIndex("Attack"), 1.0f);
-
+                if (attackCollider != null) {
+                    attackCollider.enabled = true;
+                }
                 playerSounds.PlayWeapon(); //* This will trigger the PlayerSounds script to executre the code within the PlayWeapon function
             }
         }
@@ -420,7 +424,19 @@ namespace StarterAssets
         public void StopAttack()
         {
             _animator.SetBool("Attack", false);
+            if (attackCollider != null) {
+                attackCollider.enabled = false;
+            }
             _animator.SetLayerWeight(_animator.GetLayerIndex("Attack"), 0f);
+        }
+
+        public void StartDowned() {
+            Debug.Log("DOWNED");
+            //_animator.SetBool("Downed", true);
+        }
+
+        public void StopDowned() {
+           //_animator.SetBool("Downed", false);
         }
     }
 }
