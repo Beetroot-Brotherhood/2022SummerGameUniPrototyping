@@ -27,9 +27,9 @@ public class ProjectileFire : MonoBehaviour {
         Vector3 velocity = QualityOfLife.GetVector3VelocityToArc(initialSpeed, QualityOfLife.GetRadians(initialAngle));
 
         // Rotate our velocity to match the direction between the two objects
-        float angleBetweenObjects = QualityOfLife.GetAngleBetweenObjects(Vector3.forward, projectile.position, target.position);
+        float angleBetweenObjects = QualityOfLife.GetAngleBetweenObjects(Vector3.forward, projectile.position, target.position, projectile.forward);
         Vector3 finalVelocity = Quaternion.AngleAxis(angleBetweenObjects, Vector3.up) * velocity;
- 
+
         // Fire!
         rb.velocity = finalVelocity;
     }

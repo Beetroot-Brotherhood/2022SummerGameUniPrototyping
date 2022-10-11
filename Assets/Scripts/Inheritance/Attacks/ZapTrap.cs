@@ -30,7 +30,7 @@ namespace Latch.Combat {
                 Ray ray = QualityOfLife.GetCameraCentrePointAsRay(Camera.main);
                 if (Physics.Raycast(ray, out RaycastHit hit, 1000f)) {
                     GameObject projectileInstance = Instantiate(projectile, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
-                    projectileStatistics = CalculateProjectileStatistics(projectileStatistics, Vector3.Distance(hit.point, projectileInstance.transform.position), projectileInstance.transform.position, hit.point);
+                    projectileStatistics = CalculateProjectileStatistics(projectileStatistics, Vector3.Distance(hit.point, projectileInstance.transform.position), projectileInstance.transform, hit.point);
                     projectileInstance.GetComponent<ProjectileInfo>().projectileStatistics = projectileStatistics.DeepClone();
                     projectileInstance.GetComponent<ProjectileController>().projectileOwner = owner;
                 }
@@ -41,10 +41,10 @@ namespace Latch.Combat {
             return isAttacking;
         }
 
-        public ProjectileStatistics CalculateProjectileStatistics (ProjectileStatistics projectileStatistics, float distance, Vector3 projectile, Vector3 target) {
+        public ProjectileStatistics CalculateProjectileStatistics (ProjectileStatistics projectileStatistics, float distance, Transform projectile, Vector3 target) {
             projectileStatistics.distance = distance;
-            projectileStatistics.angleBetweenObjects = QualityOfLife.GetAngleBetweenObjects(transform.forward, projectile, target);
-            projectileStatistics.speed = QualityOfLife.GetInitialSpeedToArc(projectileStatistics.angle, Physics.gravity.magnitude, projectile, target);
+            projectileStatistics.angleBetweenObjects = QualityOfLife.GetAngleBetweenObjects(transform.forward, projectile.position, target, projectile.forward);
+            projectileStatistics.speed = QualityOfLife.GetInitialSpeedToArc(projectileStatistics.angle, Physics.gravity.magnitude, projectile.position, target);
             return projectileStatistics;
         }
     }

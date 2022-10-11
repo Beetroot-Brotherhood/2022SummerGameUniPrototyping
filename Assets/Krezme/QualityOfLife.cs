@@ -204,14 +204,18 @@ namespace Krezme {
         }
 
         public static Vector3 GetVector3VelocityToArc(float initialSpeed, float radians) {
-            Debug.Log(initialSpeed * Mathf.Sin(radians));
-            Debug.Log(initialSpeed);
-            Debug.Log(Mathf.Sin(radians));
             return new Vector3(0, initialSpeed * Mathf.Sin(radians), initialSpeed * Mathf.Cos(radians));
         }
 
-        public static float GetAngleBetweenObjects(Vector3 normalisedDirection, Vector3 origin, Vector3 target) {
-            return Vector3.Angle(Vector3.forward, new Vector3(target.x, 0, target.z) - new Vector3(origin.x, 0, origin.z));
+        public static float GetAngleBetweenObjects(Vector3 normalisedDirection, Vector3 origin, Vector3 target, Vector3 projectileForward) {
+            float angle = Vector3.Angle(normalisedDirection, new Vector3(target.x, 0, target.z) - new Vector3(origin.x, 0, origin.z));
+            //float angle2;
+
+            if (Vector3.Dot(Vector3.Cross(normalisedDirection, new Vector3(target.x, 0, target.z) - new Vector3(origin.x, 0, origin.z)), projectileForward) > 0) {
+                angle = 360 - angle;
+            }
+
+            return angle;
         }
 
         /* /// <summary>
