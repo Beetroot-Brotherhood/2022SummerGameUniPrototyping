@@ -115,9 +115,9 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 0
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Height: 1.0064715
+  m_Direction: 1
+  m_Center: {x: -0.00000017029899, y: 0.0014537221, z: 0}
 --- !u!114 &2671788737440012942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,6 +139,7 @@ MonoBehaviour:
     lifeTime: 0
     distance: 0
     speed: 0
+    angleBetweenObjects: 0
   currentLifeTimer: 0
 --- !u!114 &4341436597517525631
 MonoBehaviour:
@@ -154,6 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileInfo: {fileID: 2671788737440012942}
   projectileRigidbody: {fileID: 2671788737440012937}
+  projectileOwner: {fileID: 0}
   trapCollider: {fileID: 2671788737440012943}
   stationaryTrapGO: {fileID: 6899391968659757464}
 --- !u!1 &6899391968659757464
@@ -201,7 +203,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2587863601913632571
 MonoBehaviour:

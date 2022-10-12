@@ -34,6 +34,7 @@ namespace Latch.Combat {
         }
 
         public void TakeDamage(int damage, DamageType damageType) {
+            Debug.Log(this.gameObject.name + "Took Damage: " + damage);
             bool damageTaken = false;
             for (int j = 0; j < CombatData.damageShieldMaps.Length; j++) {
                 for (int i = 0; i < currentStats.armours.Length; i++) {

@@ -24,24 +24,31 @@ namespace Latch.Combat {
         // Update is called once per frame
         void Update()
         {
-            currentTickTimer = Time.deltaTime;
-
+            currentTickTimer += Time.deltaTime;
+            //Debug.Log("Running");
             if (currentTickTimer >= tickRate) {
+                //Debug.Log("Running2");
                 currentTickTimer -= tickRate;
                 currentTickNumbers++;
                 for (int i = 0; i < combatManager.Count; i++) {
-                    combatManager[i].TakeDamage((((projectileInfo.projectileStatistics.damage / tickAmount) / 100) * 80), projectileInfo.projectileStatistics.damageType);
+                    //Debug.Log("Running3");
+                    combatManager[i].TakeDamage(Mathf.RoundToInt((((float)projectileInfo.projectileStatistics.damage / (float)tickAmount) / 100f) * 80f), projectileInfo.projectileStatistics.damageType);
                 }
             }
             
             if (currentTickNumbers >= tickAmount) {
-                Debug.Log("Is this the cause of the bug?");
                 Destroy(projectileInfo.gameObject);
             }
         }
 
         public void OnTriggerEnter(Collider other) {
             if (other.gameObject.tag == "Human") {
+                Debug.Log("Added: " + other.gameObject.name);
+                for (int i = 0; i < combatManager.Count; i++) {
+                    if (combatManager[i].gameObject == other.gameObject) {
+                        return;
+                    }
+                }
                 combatManager.Add(other.gameObject.GetComponent<CombatManager>());
             }
         }

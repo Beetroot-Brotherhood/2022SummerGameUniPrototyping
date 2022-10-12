@@ -11,9 +11,13 @@ namespace Latch.Combat {
         //create OnTriggerEnter function
         void OnTriggerEnter(Collider other)
         {
+            if (plasmaSaw.thirdPersonController.gameObject == other.gameObject) {
+                    return;
+            }
             //check if the object that entered the trigger is the player
             if (other.gameObject.tag == "Human")
             {
+                
                 other.gameObject.GetComponent<CombatManager>().TakeDamage(plasmaSaw.attackStats.damage, plasmaSaw.attackStats.damageType);
             }
         }
