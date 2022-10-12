@@ -25,6 +25,7 @@ namespace Latch.Combat {
         public float lifeTime;
         public float distance;
         public float speed;
+        public float maxSpeed;
         public float angleBetweenObjects;
     }
 

@@ -22,12 +22,12 @@ namespace Latch.Combat {
         [ContextMenu("LaunchProjectile")]
         public void LaunchProjectile() {
             //projectileRigidbody.mass = projectileInfo.projectileStatistics.mass;
-            projectileRigidbody.velocity = Quaternion.AngleAxis(projectileInfo.projectileStatistics.angleBetweenObjects, Vector3.up) * QualityOfLife.GetVector3VelocityToArc(projectileInfo.projectileStatistics.speed, QualityOfLife.GetRadians(projectileInfo.projectileStatistics.angle));
-        }
-
-        void Update()
-        {
-            
+            try {
+                projectileRigidbody.velocity = Quaternion.AngleAxis(projectileInfo.projectileStatistics.angleBetweenObjects, Vector3.up) * QualityOfLife.GetVector3VelocityToArc(projectileInfo.projectileStatistics.speed, QualityOfLife.GetRadians(projectileInfo.projectileStatistics.angle));
+            }
+            catch (System.Exception) {
+                projectileRigidbody.velocity = transform.forward * projectileInfo.projectileStatistics.maxSpeed;
+            }
         }
 
         //create a function OnTriggerEnter
