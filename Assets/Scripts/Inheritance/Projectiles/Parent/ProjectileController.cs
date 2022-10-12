@@ -22,10 +22,10 @@ namespace Latch.Combat {
         [ContextMenu("LaunchProjectile")]
         public void LaunchProjectile() {
             //projectileRigidbody.mass = projectileInfo.projectileStatistics.mass;
-            try {
+            if (projectileInfo.projectileStatistics.useArcing) {
                 projectileRigidbody.velocity = Quaternion.AngleAxis(projectileInfo.projectileStatistics.angleBetweenObjects, Vector3.up) * QualityOfLife.GetVector3VelocityToArc(projectileInfo.projectileStatistics.speed, QualityOfLife.GetRadians(projectileInfo.projectileStatistics.angle));
             }
-            catch (System.Exception) {
+            else {
                 projectileRigidbody.velocity = transform.forward * projectileInfo.projectileStatistics.maxSpeed;
             }
         }

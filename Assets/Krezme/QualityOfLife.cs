@@ -195,8 +195,10 @@ namespace Krezme {
             float verticalDistance = projectilePosition.y - targetPosition.y;
 
             float radians = GetRadians(angle);
+            //Debug.Log(Mathf.Sqrt(Mathf.Abs((0.5f * Mathf.Abs(gravity) * Mathf.Pow(distance, 2)) / (distance * Mathf.Tan(radians) + verticalDistance))));
+            //Debug.Log(Mathf.Sqrt((0.5f * Mathf.Abs(gravity) * Mathf.Pow(distance, 2)) / (distance * Mathf.Tan(radians) + verticalDistance)));
 
-            return (1 / Mathf.Cos(radians)) * Mathf.Sqrt((0.5f * Mathf.Abs(gravity) * Mathf.Pow(distance, 2)) / (distance * Mathf.Tan(radians) + verticalDistance));
+            return (1 / Mathf.Cos(radians)) * Mathf.Sqrt(Mathf.Abs((0.5f * Mathf.Abs(gravity) * Mathf.Pow(distance, 2)) / (distance * Mathf.Tan(radians) + verticalDistance)));
         }
 
         public static float GetRadians(float angle) {
@@ -210,28 +212,41 @@ namespace Krezme {
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="normalisedDirection"></param>
+        /// <param name="normalizedDirection"></param>
         /// <param name="origin"></param>
         /// <param name="target"></param>
         /// <param name="projectileForward"></param>
         /// <returns></returns>
-        public static float GetAngleBetweenObjects(Vector3 normalisedDirection, Vector3 origin, Vector3 target, Vector3 projectileForward) {
+        public static float GetAngleBetweenObjects(Vector3 normalizedDirection, Vector3 origin, Vector3 target, Vector3 projectileForward) {
 
-            float angle = Vector3.Angle(normalisedDirection, new Vector3(target.x, 0, target.z) - new Vector3(origin.x, 0, origin.z));
+            float angle = Vector3.Angle(normalizedDirection, new Vector3(target.x, 0, target.z) - new Vector3(origin.x, 0, origin.z));
 
             //!LEARN WHY THIS WORKS AND WHAT DOT AND CROSS DO 
             if (target.y >= origin.y) {
-                if (Vector3.Dot(Vector3.Cross(normalisedDirection, new Vector3(target.x, 0, target.z) - new Vector3(origin.x, 0, origin.z)), projectileForward) < 0) {
+                if (Vector3.Dot(Vector3.Cross(normalizedDirection, new Vector3(target.x, 0, target.z) - new Vector3(origin.x, 0, origin.z)), projectileForward) < 0) {
                     angle = 360 - angle;
                 }
             }
             else {
-                if (Vector3.Dot(Vector3.Cross(normalisedDirection, new Vector3(target.x, 0, target.z) - new Vector3(origin.x, 0, origin.z)), projectileForward) > 0) {
+                if (Vector3.Dot(Vector3.Cross(normalizedDirection, new Vector3(target.x, 0, target.z) - new Vector3(origin.x, 0, origin.z)), projectileForward) > 0) {
                     angle = 360 - angle;
                 }
             }
-
+            
             return angle;
+        }
+
+        public static float GetTimeToReachDestination(float speed, float distance) {
+            float timeToReachDestination = distance / speed;
+            //float timeToReachDestinationWithGravity = Mathf.Sqrt((2 * distance) / speed);
+        
+            return timeToReachDestination;
+        }
+
+        public static float GetFreeFallingDistance(float time) {
+            float freeFallingDistance = 0.5f * 9.81f * Mathf.Pow(time, 2);
+            //float freeFallingDistance = speed * time + 0.5f * -9.81f * Mathf.Pow(time, 2);
+            return freeFallingDistance;
         }
 
         #endregion

@@ -19,6 +19,7 @@ namespace Latch.Combat {
         public int damage;
         public float fireRate;
         public DamageType damageType;
+        public bool useArcing = false;
         [Range(0.001f, 80f)]
         public float angle;
         public float mass;
