@@ -108,7 +108,7 @@ namespace StarterAssets
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
         private PlayerInput _playerInput;
 #endif
-        private Animator _animator;
+        public Animator _animator;
         private CharacterController _controller;
         private StarterAssetsInputs _input;
         private GameObject _mainCamera;
@@ -137,13 +137,15 @@ namespace StarterAssets
             {
                 _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
             }
+
+            _hasAnimator = this.gameObject.TryGetComponent(out _animator);
         }
 
         private void Start()
         {
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
             
-            _hasAnimator = TryGetComponent(out _animator);
+            _hasAnimator = this.gameObject.TryGetComponent(out _animator);
             _controller = GetComponent<CharacterController>();
             _input = GetComponent<StarterAssetsInputs>();
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
@@ -432,11 +434,11 @@ namespace StarterAssets
 
         public void StartDowned() {
             Debug.Log("DOWNED");
-            //_animator.SetBool("Downed", true);
+            _animator.SetBool("Downed", true);
         }
 
         public void StopDowned() {
-           //_animator.SetBool("Downed", false);
+            _animator.SetBool("Downed", false);
         }
     }
 }

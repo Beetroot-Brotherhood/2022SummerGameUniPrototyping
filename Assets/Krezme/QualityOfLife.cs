@@ -207,12 +207,18 @@ namespace Krezme {
             return new Vector3(0, initialSpeed * Mathf.Sin(radians), initialSpeed * Mathf.Cos(radians));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="normalisedDirection"></param>
+        /// <param name="origin"></param>
+        /// <param name="target"></param>
+        /// <param name="projectileForward"></param>
+        /// <returns></returns>
         public static float GetAngleBetweenObjects(Vector3 normalisedDirection, Vector3 origin, Vector3 target, Vector3 projectileForward) {
             float angle = Vector3.Angle(normalisedDirection, new Vector3(target.x, 0, target.z) - new Vector3(origin.x, 0, origin.z));
-            //float angle2;
 
-            Debug.Log("yes: " + Vector3.Dot(Vector3.Cross(normalisedDirection, new Vector3(target.x, 0, target.z) - new Vector3(origin.x, 0, origin.z)), projectileForward));
-
+            //!LEARN WHY THIS WORKS AND WHAT DOT AND CROSS DO 
             if (Vector3.Dot(Vector3.Cross(normalisedDirection, new Vector3(target.x, 0, target.z) - new Vector3(origin.x, 0, origin.z)), projectileForward) > 0) {
                 angle = 360 - angle;
             }
