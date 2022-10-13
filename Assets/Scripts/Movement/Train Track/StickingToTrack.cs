@@ -57,6 +57,7 @@ public class StickingToTrack : MonoBehaviour
             mechController.enabled = false;
             trainController.enabled = true;
             hasAttached = true;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Mech/onTracks/engageTrack");
         }
         if(onTrack && _input.onBoard == true)
         {
@@ -66,6 +67,7 @@ public class StickingToTrack : MonoBehaviour
             onTrack = false;
             hasAttached = false;
             _input.onBoard = false;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Mech/onTracks/disengageTrack");
         }
     }
 
