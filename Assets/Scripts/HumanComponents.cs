@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.AI;
+using TheKiwiCoder;
 
 public class HumanComponents : MonoBehaviour
 {
@@ -12,6 +14,10 @@ public class HumanComponents : MonoBehaviour
     public Transform latchSpot;
     public GameObject latcherOnBackMesh;
     public StarterAssets.StarterAssetsInputs starterAssetsInputs;
+    public NavMeshAgent navMeshAgent;
+    public FieldOfView fieldOfView;
+    public BehaviourTreeRunner behaviourTreeRunner;
+
 
     // Start is called before the first frame update
     void Start()

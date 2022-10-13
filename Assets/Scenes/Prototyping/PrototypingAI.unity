@@ -801,31 +801,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -3.4011767
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.202
+      value: 1.3949999
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -2.0689921
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.67578256
+      value: -0.7971903
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0064321337
+      value: -0.0052681062
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.73704946
+      value: -0.6036651
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0058974656
+      value: -0.006956975
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1252,13 +1252,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5237638967654651996, guid: f514fc39918a99e4cb0a1af2153fb028, type: 3}
+      propertyPath: cameraManager
+      value: 
+      objectReference: {fileID: 1114396755}
     - target: {fileID: 9126569479884812976, guid: f514fc39918a99e4cb0a1af2153fb028, type: 3}
       propertyPath: m_Name
       value: Latcher
       objectReference: {fileID: 0}
     - target: {fileID: 9126569479884812976, guid: f514fc39918a99e4cb0a1af2153fb028, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9126569479884812977, guid: f514fc39918a99e4cb0a1af2153fb028, type: 3}
       propertyPath: m_RootOrder
@@ -1306,6 +1310,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f514fc39918a99e4cb0a1af2153fb028, type: 3}
+--- !u!4 &759342097 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 941849895303199621, guid: f514fc39918a99e4cb0a1af2153fb028, type: 3}
+  m_PrefabInstance: {fileID: 759342096}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &772963063
 GameObject:
   m_ObjectHideFlags: 0
@@ -1708,7 +1717,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 759342097}
   m_Lens:
     FieldOfView: 82.3896
     OrthographicSize: 10
@@ -1742,7 +1751,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114396754}
   m_LocalRotation: {x: -0, y: -0.73707753, z: -0, w: -0.6758083}
-  m_LocalPosition: {x: 0, y: 0.202, z: 0}
+  m_LocalPosition: {x: -3.4011767, y: 1.3949999, z: -2.0689921}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5798,6 +5807,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  _downed:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   spanner: {fileID: 0}
   leftFoot: {fileID: 0}
   rightFoot: {fileID: 0}
@@ -5931,6 +5947,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  _downed:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   spanner: {fileID: 0}
   leftFoot: {fileID: 0}
   rightFoot: {fileID: 0}
@@ -6037,6 +6060,13 @@ MonoBehaviour:
       Data4: 0
     Path: 
   _latchedReaction:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  _downed:
     Guid:
       Data1: 0
       Data2: 0
@@ -7178,6 +7208,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  _downed:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   spanner: {fileID: 0}
   leftFoot: {fileID: 0}
   rightFoot: {fileID: 0}
@@ -7296,6 +7333,13 @@ MonoBehaviour:
       Data4: 0
     Path: 
   _latchedReaction:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  _downed:
     Guid:
       Data1: 0
       Data2: 0
@@ -7474,6 +7518,13 @@ MonoBehaviour:
       Data4: 0
     Path: 
   _latchedReaction:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  _downed:
     Guid:
       Data1: 0
       Data2: 0
@@ -18016,6 +18067,9 @@ MonoBehaviour:
   latchSpot: {fileID: 0}
   latcherOnBackMesh: {fileID: 6189034890237867289}
   starterAssetsInputs: {fileID: 8895918262961054361}
+  navMeshAgent: {fileID: 8895918262961054364}
+  fieldOfView: {fileID: 8895918262961054365}
+  behaviourTreeRunner: {fileID: 8895918262961054362}
 --- !u!54 &2577177688660333402
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18151,6 +18205,9 @@ MonoBehaviour:
   latchSpot: {fileID: 0}
   latcherOnBackMesh: {fileID: 6189034890890636089}
   starterAssetsInputs: {fileID: 8895918263378951353}
+  navMeshAgent: {fileID: 8895918263378951355}
+  fieldOfView: {fileID: 8895918263378951356}
+  behaviourTreeRunner: {fileID: 8895918263378951354}
 --- !u!54 &2577177689043619194
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18286,6 +18343,9 @@ MonoBehaviour:
   latchSpot: {fileID: 0}
   latcherOnBackMesh: {fileID: 6189034891046243096}
   starterAssetsInputs: {fileID: 8895918264305786008}
+  navMeshAgent: {fileID: 8895918264305786011}
+  fieldOfView: {fileID: 8895918264305786012}
+  behaviourTreeRunner: {fileID: 8895918264305786009}
 --- !u!65 &2577177690306470036
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19033,7 +19093,7 @@ MonoBehaviour:
   GroundedRadius: 0.28
   GroundLayers:
     serializedVersion: 2
-    m_Bits: 577
+    m_Bits: 513
   CinemachineCameraTarget: {fileID: 7536796671298129061}
   TopClamp: 70
   BottomClamp: -30
@@ -19208,7 +19268,7 @@ MonoBehaviour:
   GroundedRadius: 0.28
   GroundLayers:
     serializedVersion: 2
-    m_Bits: 577
+    m_Bits: 513
   CinemachineCameraTarget: {fileID: 7536796671955521492}
   TopClamp: 70
   BottomClamp: -30
@@ -19419,7 +19479,7 @@ MonoBehaviour:
   GroundedRadius: 0.28
   GroundLayers:
     serializedVersion: 2
-    m_Bits: 577
+    m_Bits: 513
   CinemachineCameraTarget: {fileID: 7536796672079045687}
   TopClamp: 70
   BottomClamp: -30
@@ -20114,7 +20174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushLayers:
     serializedVersion: 2
-    m_Bits: 2147483647
+    m_Bits: 0
   canPush: 1
   strength: 1.85
 --- !u!114 &3114968063224982037
@@ -20181,7 +20241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushLayers:
     serializedVersion: 2
-    m_Bits: 2147483647
+    m_Bits: 0
   canPush: 1
   strength: 1.85
 --- !u!114 &3114968064420055602
@@ -20223,7 +20283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushLayers:
     serializedVersion: 2
-    m_Bits: 2147483647
+    m_Bits: 0
   canPush: 1
   strength: 1.85
 --- !u!1 &3193560082601876283
@@ -20709,7 +20769,7 @@ MonoBehaviour:
   GroundedRadius: 0.28
   GroundLayers:
     serializedVersion: 2
-    m_Bits: 577
+    m_Bits: 513
   CinemachineCameraTarget: {fileID: 6985208423956420532}
   TopClamp: 70
   BottomClamp: -30
@@ -20927,7 +20987,7 @@ MonoBehaviour:
   GroundedRadius: 0.28
   GroundLayers:
     serializedVersion: 2
-    m_Bits: 577
+    m_Bits: 513
   CinemachineCameraTarget: {fileID: 6985208422233616148}
   TopClamp: 70
   BottomClamp: -30
@@ -21145,7 +21205,7 @@ MonoBehaviour:
   GroundedRadius: 0.28
   GroundLayers:
     serializedVersion: 2
-    m_Bits: 577
+    m_Bits: 513
   CinemachineCameraTarget: {fileID: 6985208422825673654}
   TopClamp: 70
   BottomClamp: -30
@@ -22928,7 +22988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushLayers:
     serializedVersion: 2
-    m_Bits: 2147483647
+    m_Bits: 0
   canPush: 1
   strength: 1.85
 --- !u!114 &4820547462039289023
@@ -22945,7 +23005,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushLayers:
     serializedVersion: 2
-    m_Bits: 2147483647
+    m_Bits: 0
   canPush: 1
   strength: 1.85
 --- !u!114 &4820547462615355421
@@ -22962,7 +23022,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushLayers:
     serializedVersion: 2
-    m_Bits: 2147483647
+    m_Bits: 0
   canPush: 1
   strength: 1.85
 --- !u!137 &4837543689938424567
@@ -24297,7 +24357,7 @@ MonoBehaviour:
   GroundedRadius: 0.28
   GroundLayers:
     serializedVersion: 2
-    m_Bits: 577
+    m_Bits: 513
   CinemachineCameraTarget: {fileID: 661152414752586175}
   TopClamp: 70
   BottomClamp: -30
@@ -24472,7 +24532,7 @@ MonoBehaviour:
   GroundedRadius: 0.28
   GroundLayers:
     serializedVersion: 2
-    m_Bits: 577
+    m_Bits: 513
   CinemachineCameraTarget: {fileID: 661152413949298622}
   TopClamp: 70
   BottomClamp: -30
@@ -24665,7 +24725,7 @@ MonoBehaviour:
   GroundedRadius: 0.28
   GroundLayers:
     serializedVersion: 2
-    m_Bits: 577
+    m_Bits: 513
   CinemachineCameraTarget: {fileID: 661152414606268830}
   TopClamp: 70
   BottomClamp: -30
@@ -25176,7 +25236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushLayers:
     serializedVersion: 2
-    m_Bits: 2147483647
+    m_Bits: 0
   canPush: 1
   strength: 1.85
 --- !u!114 &5372337823528475775
@@ -25193,7 +25253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushLayers:
     serializedVersion: 2
-    m_Bits: 2147483647
+    m_Bits: 0
   canPush: 1
   strength: 1.85
 --- !u!114 &5372337823633389468
@@ -25210,7 +25270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushLayers:
     serializedVersion: 2
-    m_Bits: 2147483647
+    m_Bits: 0
   canPush: 1
   strength: 1.85
 --- !u!4 &5395329826388686309
@@ -26901,6 +26961,9 @@ MonoBehaviour:
   latchSpot: {fileID: 0}
   latcherOnBackMesh: {fileID: 2522550936136253488}
   starterAssetsInputs: {fileID: 1344383949336766097}
+  navMeshAgent: {fileID: 8335482591342705201}
+  fieldOfView: {fileID: 8335482591342705202}
+  behaviourTreeRunner: {fileID: 8335482591342705198}
 --- !u!136 &6032415679959428439
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -27251,6 +27314,9 @@ MonoBehaviour:
   latchSpot: {fileID: 0}
   latcherOnBackMesh: {fileID: 2522550936633699474}
   starterAssetsInputs: {fileID: 1344383948703009331}
+  navMeshAgent: {fileID: 8335482590894315154}
+  fieldOfView: {fileID: 8335482590894315155}
+  behaviourTreeRunner: {fileID: 8335482590894315152}
 --- !u!136 &6032415680414876149
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -27633,6 +27699,9 @@ MonoBehaviour:
   latchSpot: {fileID: 0}
   latcherOnBackMesh: {fileID: 2522550937261790258}
   starterAssetsInputs: {fileID: 1344383950421635731}
+  navMeshAgent: {fileID: 8335482590312361522}
+  fieldOfView: {fileID: 8335482590312361523}
+  behaviourTreeRunner: {fileID: 8335482590312361520}
 --- !u!136 &6032415681042987349
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -29159,6 +29228,9 @@ MonoBehaviour:
   latchSpot: {fileID: 0}
   latcherOnBackMesh: {fileID: 8149113267749785943}
   starterAssetsInputs: {fileID: 1927629413749517043}
+  navMeshAgent: {fileID: 8918802823235843666}
+  fieldOfView: {fileID: 8918802823235843667}
+  behaviourTreeRunner: {fileID: 8918802823235843664}
 --- !u!136 &6620032725848711477
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -29205,6 +29277,9 @@ MonoBehaviour:
   latchSpot: {fileID: 0}
   latcherOnBackMesh: {fileID: 8149113267662977722}
   starterAssetsInputs: {fileID: 1927629413847728400}
+  navMeshAgent: {fileID: 8918802823213637039}
+  fieldOfView: {fileID: 8918802823213637040}
+  behaviourTreeRunner: {fileID: 8918802823213637037}
 --- !u!136 &6620032726508462660
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -29237,6 +29312,9 @@ MonoBehaviour:
   latchSpot: {fileID: 0}
   latcherOnBackMesh: {fileID: 8149113268442829352}
   starterAssetsInputs: {fileID: 1927629413335263618}
+  navMeshAgent: {fileID: 8918802822853178689}
+  fieldOfView: {fileID: 8918802822853178690}
+  behaviourTreeRunner: {fileID: 8918802822853178687}
 --- !u!4 &6621398057736507249
 Transform:
   m_ObjectHideFlags: 0
@@ -38072,6 +38150,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  _downed:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   spanner: {fileID: 0}
   leftFoot: {fileID: 0}
   rightFoot: {fileID: 0}
@@ -38229,6 +38314,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  _downed:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   spanner: {fileID: 0}
   leftFoot: {fileID: 0}
   rightFoot: {fileID: 0}
@@ -38356,6 +38448,13 @@ MonoBehaviour:
       Data4: 0
     Path: 
   _latchedReaction:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  _downed:
     Guid:
       Data1: 0
       Data2: 0

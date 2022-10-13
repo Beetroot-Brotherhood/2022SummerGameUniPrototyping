@@ -102,7 +102,22 @@ public class LatchFunction : MonoBehaviour
             latcherObject.transform.parent = currentHumanComponenets.latchSpot;
 
             latchInput.enabled = false;
+            
+            if (currentHumanComponenets.behaviourTreeRunner != null)
+            {
+                currentHumanComponenets.behaviourTreeRunner.enabled = false;
+            }
+            if (currentHumanComponenets.navMeshAgent != null)
+            {
+                currentHumanComponenets.navMeshAgent.enabled = false;
+            }
+            if (currentHumanComponenets.fieldOfView != null)
+            {
+                currentHumanComponenets.fieldOfView.enabled = false;
+            }
+
             currentHumanComponenets.playerInput.enabled = true;
+
 
             SkinnedMeshRenderer latchermesh = latcherObject.transform.GetComponentInChildren(typeof(SkinnedMeshRenderer)) as SkinnedMeshRenderer;
             latchermesh.enabled = false;
@@ -124,6 +139,18 @@ public class LatchFunction : MonoBehaviour
                 cameraManager.LookAt = latcherCameraRoot.transform;
                 latcherObject.transform.parent = null;
 
+                if (currentHumanComponenets.behaviourTreeRunner != null)
+                {
+                    currentHumanComponenets.behaviourTreeRunner.enabled = true;
+                }
+                if (currentHumanComponenets.navMeshAgent != null)
+                {
+                    currentHumanComponenets.navMeshAgent.enabled = true;
+                }
+                if (currentHumanComponenets.fieldOfView != null)
+                {
+                    currentHumanComponenets.fieldOfView.enabled = true;
+                }
                 currentHumanComponenets.playerInput.enabled = false;
                 latchInput.enabled = true;
                 

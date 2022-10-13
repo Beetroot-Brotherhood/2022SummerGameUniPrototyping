@@ -294,6 +294,7 @@ namespace StarterAssets
         {
             if (Grounded)
             {
+                
                 // reset the fall timeout timer
                 _fallTimeoutDelta = FallTimeout;
 
@@ -331,6 +332,7 @@ namespace StarterAssets
             }
             else
             {
+                Debug.Log("Not Grounded");
                 // reset the jump timeout timer
                 _jumpTimeoutDelta = JumpTimeout;
 
@@ -399,6 +401,7 @@ namespace StarterAssets
                 AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
             }
         }
+
         void PlayStepLeft() //* This will trigger the PlayerSounds script to execute the code within the PlayStep function 
         {
             playerSounds.PlayStepLeft();
