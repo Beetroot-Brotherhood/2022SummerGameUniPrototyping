@@ -435,6 +435,7 @@ namespace StarterAssets
         public void StartDowned() {
             Debug.Log("DOWNED");
             _animator.SetBool("Downed", true);
+            playerSounds.PlayDowned();
         }
 
         public void StopDowned() {
