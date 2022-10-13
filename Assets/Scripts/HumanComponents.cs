@@ -18,6 +18,8 @@ public class HumanComponents : MonoBehaviour
     public FieldOfView fieldOfView;
     public BehaviourTreeRunner behaviourTreeRunner;
 
+    /* public LayerMask latchLayer;
+    public LayerMask humanLayer; */
 
     // Start is called before the first frame update
     void Start()

@@ -116,6 +116,8 @@ public class LatchFunction : MonoBehaviour
                 currentHumanComponenets.fieldOfView.enabled = false;
             }
 
+            currentHumanComponenets.gameObject.layer = LayerMask.NameToLayer("Player");
+
             currentHumanComponenets.playerInput.enabled = true;
 
 
@@ -151,9 +153,12 @@ public class LatchFunction : MonoBehaviour
                 {
                     currentHumanComponenets.fieldOfView.enabled = true;
                 }
+
                 currentHumanComponenets.playerInput.enabled = false;
                 latchInput.enabled = true;
                 
+                currentHumanComponenets.gameObject.layer = LayerMask.NameToLayer("Humans");
+
                 SkinnedMeshRenderer latchermesh = latcherObject.transform.GetComponentInChildren(typeof(SkinnedMeshRenderer)) as SkinnedMeshRenderer;
                 latchermesh.enabled = true;
 
