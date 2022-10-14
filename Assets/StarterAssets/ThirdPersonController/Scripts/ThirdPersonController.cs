@@ -141,6 +141,10 @@ namespace StarterAssets
             _hasAnimator = this.gameObject.TryGetComponent(out _animator);
         }
 
+        void OnEnable () {
+            SceneData.instance.player = this;
+        }
+
         private void Start()
         {
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
@@ -416,14 +420,18 @@ namespace StarterAssets
         {
             if (_input.onAttack)
             {
-                _animator.SetBool("Attack", true);
                 _input.onAttack = false;
-                _animator.SetLayerWeight(_animator.GetLayerIndex("Attack"), 1.0f);
-                if (attackCollider != null) {
-                    attackCollider.enabled = true;
-                }
-                playerSounds.PlayWeapon(); //* This will trigger the PlayerSounds script to executre the code within the PlayWeapon function
+                Attacking();
             }
+        }
+
+        public void Attacking () {
+            _animator.SetBool("Attack", true);
+            _animator.SetLayerWeight(_animator.GetLayerIndex("Attack"), 1.0f);
+            if (attackCollider != null) {
+                attackCollider.enabled = true;
+            }
+            //playerSounds.PlayWeapon(); //* This will trigger the PlayerSounds script to executre the code within the PlayWeapon function
         }
 
         public void StopAttack()
@@ -438,7 +446,7 @@ namespace StarterAssets
         public void StartDowned() {
             Debug.Log("DOWNED");
             _animator.SetBool("Downed", true);
-            playerSounds.PlayDowned();
+            //playerSounds.PlayDowned();
         }
 
         public void StopDowned() {

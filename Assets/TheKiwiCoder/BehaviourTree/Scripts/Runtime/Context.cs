@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Latch.Combat;
 
 namespace TheKiwiCoder {
 
@@ -22,6 +23,7 @@ namespace TheKiwiCoder {
         // Add other game specific systems here
         public PathFollow pathFollow;
         public FieldOfView fieldOfView;
+        public CombatManager combatManager;
 
         public static Context CreateFromGameObject(GameObject gameObject) {
             // Fetch all commonly used components
@@ -39,6 +41,7 @@ namespace TheKiwiCoder {
             // Add whatever else you need here...
             context.pathFollow = gameObject.GetComponent<PathFollow>();
             context.fieldOfView = gameObject.GetComponent<FieldOfView>();
+            context.combatManager = gameObject.GetComponent<CombatManager>();
 
             return context;
         }

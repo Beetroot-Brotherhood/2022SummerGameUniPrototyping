@@ -20,5 +20,7 @@ namespace Latch.Combat {
         /// <param name="isAttacking">Used if the weapon is requires continues kicking</param>
         /// <returns>if it is attacking</returns>
         public abstract bool AttackFire1 (bool isAttacking);
+
+        public abstract void Shoot (Vector3 target);
     }
 }

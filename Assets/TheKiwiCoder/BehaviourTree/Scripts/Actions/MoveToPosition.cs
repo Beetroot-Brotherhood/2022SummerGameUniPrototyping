@@ -12,17 +12,18 @@ public class MoveToPosition : ActionNode
     public float tolerance = 1.0f;
 
     protected override void OnStart() {
-        context.agent.stoppingDistance = stoppingDistance;
-        context.agent.speed = speed;
-        context.agent.destination = blackboard.moveToPosition;
-        context.agent.updateRotation = updateRotation;
-        context.agent.acceleration = acceleration;
+        
     }
 
     protected override void OnStop() {
     }
 
     protected override State OnUpdate() {
+        context.agent.destination = blackboard.moveToPosition;
+        context.agent.stoppingDistance = stoppingDistance;
+        context.agent.speed = speed;
+        context.agent.updateRotation = updateRotation;
+        context.agent.acceleration = acceleration;
         if (context.agent.pathPending) {
             return State.Running;
         }

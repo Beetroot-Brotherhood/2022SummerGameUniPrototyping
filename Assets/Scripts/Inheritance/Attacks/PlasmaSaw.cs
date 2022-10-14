@@ -12,5 +12,9 @@ namespace Latch.Combat {
             thirdPersonController.StartAttack();
             return isAttacking;
         }
+
+        public override void Shoot (Vector3 target) {
+            thirdPersonController.Attacking();
+        }
     }
 }
